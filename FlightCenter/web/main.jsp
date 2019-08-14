@@ -11,7 +11,7 @@
 <%@page import="java.util.concurrent.ThreadLocalRandom"%>
 
 	<section class="text-center">
-		<div class="bd-example container pt-2" style = "margin-top: 50px">
+		<div>
                     <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
 		    <ol class="carousel-indicators">
                       <!-- 3 screen for 3 recommanded city(flight) -->  
@@ -22,7 +22,7 @@
 		    <div class="carousel-inner">
 		      <div class="carousel-item active">
 		      	<a href="./flights.jsp">
-                                    <img class="bd-placeholder-img bd-placeholder-img-lg d-block w-100 scrollimg" src="./resources/seoul1.jpg" height ="600"/>
+                                    <img class="bd-placeholder-img bd-placeholder-img-lg d-block w-100 scrollimg" src="./resources/seoul.jpg" height ="680"/>
                                 <div class="carousel-caption d-none d-md-block">
                                     <p class="anthy1"style = "font-size: 70px">Seoul</p>
                                     <p class="anthy1">Click here to book a flight to Seoul, South Korea.</p>
@@ -31,7 +31,7 @@
 		      </div>
 		      <div class="carousel-item">
 		      	<a href="./flights.jsp">
-                                    <img class="bd-placeholder-img bd-placeholder-img-lg d-block w-100 scrollimg" src="./resources/budapest.jpg" height ="600"/>
+                                    <img class="bd-placeholder-img bd-placeholder-img-lg d-block w-100 scrollimg" src="./resources/budapest.jpg" height ="680"/>
                                 <div class="carousel-caption d-none d-md-block">
                                     <p class="anthy1"style = "font-size: 70px">Budapest</p>
                                     <p class="anthy1">Click here to book a flight to Budapest, Hungary.</p>
@@ -40,7 +40,7 @@
 		      </div>
                       <div class="carousel-item">
 		      	<a href="./flights.jsp">
-                                    <img class="bd-placeholder-img bd-placeholder-img-lg d-block w-100 scrollimg" src="./resources/dubai.jpg" height ="600" />
+                                    <img class="bd-placeholder-img bd-placeholder-img-lg d-block w-100 scrollimg" src="./resources/dubai.jpg" height ="680" />
                                 <div class="carousel-caption d-none d-md-block">
                                     <p class="anthy1"style = "font-size: 70px">Dubai</p>
                                     <p class="anthy1">Click here to book a flight to Dubai, UAE.</p>

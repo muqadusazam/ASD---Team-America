@@ -23,10 +23,10 @@
         
     </head>
 
-    <body>
-    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #e3f2fd;">
-    <img src="./resources/logo.png" width="40" height="40">
-    <a class="navbar-brand" style="font-size: 35px;margin-left: 20px"  href="#">FC</a>
+    <body style="background-color: #eeeeee">
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #eeeeee;">
+    <img src="./resources/logo.png" width="30" height="30">
+    <a class="navbar-brand" style="font-size: 31px;margin-left: 20px; padding:0px"  href="#">FC</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -54,5 +54,9 @@
         </ul>
       
     </div>
+
   </nav>
+            <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #393e46;">
+            </nav>
+
  <main role = "main">

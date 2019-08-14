@@ -8,7 +8,7 @@
 	<jsp:param name="title" value="Flight Center/account"/>
 </jsp:include>
 
-<div class="col-12 col-md-3 col-xl-2 bd-sidebar" style = "margin-top: 100px; padding: 5px; float:left; background-color:#f6f6f6">
+<div class="col-12 col-md-3 col-xl-2 bd-sidebar" style = "margin-top: 100px; padding: 5px; float:left; background-color:#cecece">
     <ul class="navbar-nav mr-auto">
     <li class="toc-entry toc-h2 active anthy3"><a href="account.jsp" class ="anthy2">Profile</a></li>
     <li class="toc-entry toc-h2 anthy3"><a href="#" class ="anthy2">Booking History</a></li>
@@ -23,7 +23,7 @@
 
         <h1>Profile _ Kyle</h1>  
         
-        <%-- write your code here please ?*.?(???)?.*? --%>
+        <%-- write your code here please --%>
         
 </div>
         

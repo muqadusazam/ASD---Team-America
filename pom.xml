@@ -66,6 +66,9 @@
                                     <destFileName>webapp-runner.jar</destFileName>
                                 </artifactItem>
                             </artifactItems>
+                            <processTypes>
+                                <web>java $JAVA_OPTS -cp target/classes:target/dependency/* Main</web>
+                            </processTypes>
                         </configuration>
                     </execution>
                 </executions>

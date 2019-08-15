@@ -34,3 +34,5 @@ anthy4{
 li:hover {
     font-weight: bold;
 }
+
+.glyphicon-calendar:before{content:"\e109"}

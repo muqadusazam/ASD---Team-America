@@ -18,14 +18,80 @@
 
 </div>
 
-<div  class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content">
+<div class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content">
 
-        <h1>Reschedule ticket page comes here _ Liam</h1>
+    <h1><p>Reschedule ticket</p></h1>
+    
+    <table class="table table-hover">
+        <tbody>
+        <tr>
+            <td><b>Ticket ID:</b></td>
+            <td>124244</td>
+        </tr>
+        <tr>
+            <td><b>Name:</b></td>
+            <td>John Smith</td>
+        </tr>
+        <tr>
+            <td><b>Price:</b></td>
+            <td>$2,500</td>
+        </tr>
+        <tr>
+            <td><b>Airline:</b></td>
+            <td>Qantas </td>
+        </tr>
         
-        <%-- write your code here please --%>
+        <tr><td><br></td></tr>
         
-</div>
+        <tr>
+            <td><b>Departure:</b></td>
+            <td>Sydney International Airport</td>
+        </tr>
+        <tr>
+            <td><b>Departure date:</b></td>
+            <td>15-08-2019</td>
+            <td><input type="date" class="form-control" name="dep_date"></td>
+        </tr>
+        <tr>
+            <td><b>Departure time:</b></td>
+            <td>10:00PM</td>
+            <td><input type="time" class="form-control" name="dep_time"></td>
+        </tr>
+        <tr>
+            <td><b>Terminal:</b></td>
+            <td>T1</td>
+        </tr>
+        <tr>
+            <td><b>Gate:</b></td>
+            <td>1</td>
+        </tr>
         
+        <tr><td><br></td></tr>
         
-        
+        <tr>
+            <td><b>Destination:</b></td>
+            <td>Seoul-Incheon International Airport</td>
+        </tr>
+        <tr>
+            <td><b>Destination arrival date:</b></td>
+            <td>16-08-2019</td>
+            <td><input type="date" class="form-control" name="arr_date"></td>
+        </tr>
+        <tr>
+            <td><b>Destination arrival time (AEST):&nbsp&nbsp</b></td>
+            <td>09:00AM</td>
+            <td><input type="time" class="form-control" name="arr_time"></td>
+        </tr>
+        <tr>
+            <td><b>Terminal:</b></td>
+            <td>T2</td>
+        </tr>
+        <tr>
+            <td><b>Gate:</b></td>
+            <td>5</td>
+        </tr>
+        </tbody>
+    </table>
+</div>    
+
 <jsp:include page = "fc_footer.jsp"/>

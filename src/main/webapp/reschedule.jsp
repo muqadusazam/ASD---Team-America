@@ -18,19 +18,34 @@
 
 </div>
 
-<div class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content">
-
+<div class="mx-auto" style="float: left">
+    <form>
     <h1><p>Reschedule ticket</p></h1>
     
     <table class="table table-hover">
         <tbody>
         <tr>
             <td><b>Ticket ID:</b></td>
-            <td>124244</td>
+            <td>12345898</td>
         </tr>
         <tr>
-            <td><b>Name:</b></td>
-            <td>John Smith</td>
+            <td><b>Customer ID:</b></td>
+            <td>123456</td>
+        </tr>
+        
+        <tr><td><br></td></tr>
+        
+        <tr>
+            <td><b>First name:</b></td>
+            <td>John</td>
+        </tr>
+        <tr>
+            <td><b>Last name:</b></td>
+            <td>Smith</td>
+        </tr>
+        <tr>
+            <td><b>DOB:</b></td>
+            <td>01/01/1990</td>
         </tr>
         <tr>
             <td><b>Price:</b></td>
@@ -44,6 +59,10 @@
         <tr><td><br></td></tr>
         
         <tr>
+            <td><b>Flight ID:</b></td>
+            <td>123ABC</td>
+        </tr>
+        <tr>
             <td><b>Departure:</b></td>
             <td>Sydney International Airport</td>
         </tr>
@@ -53,7 +72,7 @@
             <td><input type="date" class="form-control" name="dep_date"></td>
         </tr>
         <tr>
-            <td><b>Departure time:</b></td>
+            <td><b>Departure time (AEST):</b></td>
             <td>10:00PM</td>
             <td><input type="time" class="form-control" name="dep_time"></td>
         </tr>
@@ -64,6 +83,10 @@
         <tr>
             <td><b>Gate:</b></td>
             <td>1</td>
+        </tr>
+        <tr>
+            <td><b>Seat number:</b></td>
+            <td>23A</td>
         </tr>
         
         <tr><td><br></td></tr>
@@ -90,8 +113,17 @@
             <td><b>Gate:</b></td>
             <td>5</td>
         </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td>
+                <button type="submit" class="btn btn-success" style="float: right">Submit</button>
+                <button type="reset" class="btn btn-danger" style="float: right">Cancel</button>
+            </td>
+        </tr>
         </tbody>
     </table>
+    </form>
 </div>    
 
 <jsp:include page = "fc_footer.jsp"/>

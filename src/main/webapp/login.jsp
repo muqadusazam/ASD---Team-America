@@ -3,6 +3,7 @@
 	<jsp:param name="title" value="login"/>
 </jsp:include>
 
+<form action = "loginAction.jsp" method = "post">
         <div style = "margin-top: 100px"> <h1><b><center>Login</center></b></h1></div>
         <div class="container w-25" style = "margin-top:100px">
             <div class="form-group">
@@ -13,4 +14,5 @@
             </div>
             <button type="submit" class="btn btn-primary">Submit</button>
         </div>
+</form>
 <jsp:include page = "fc_footer.jsp"/>

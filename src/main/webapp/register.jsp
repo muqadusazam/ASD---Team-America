@@ -33,6 +33,11 @@
             <label>Password:</label>
             <input type="password" class="form-control" name="password" placeholder="Enter a password" required>
         </div>
+        
+        <div class="form-group">
+            <label>Passport Number:</label>
+            <input type="text" class="form-control" name="passport" placeholder="Initials (capital) followed by 3 integers" required>
+        </div>
 
         <div class="form-group">
             <label>DOB:</label>
@@ -40,7 +45,7 @@
         </div>
 
         <button type="submit" class="btn btn-success">Register</button>
-        <button type="button" class="btn btn-danger" onclick="location.href = 'index.html'">Cancel</button>
+        <button type="button" class="btn btn-danger" onclick="location.href = 'main.jsp'">Cancel</button>
     </form>
 
     </div>

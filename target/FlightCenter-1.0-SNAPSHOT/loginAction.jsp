@@ -13,15 +13,15 @@
     </head>
     <body>
         <%
-            String email = request.getParameter("email");
-            String password = request.getParameter("password");
+            String email = (String)session.getAttribute("email");
+            String password = (String)session.getAttribute("password");
             
-            if (email == null){
-                out.println("Please provide the email");
-            } else if (password == null){
-                out.println("Please provide the password");
-            }
+//            if (email == null){
+//                out.println("Please provide the email");
+//            } else if (password == null){
+//                out.println("Please provide the password");
+//            }
         %>
-        <h1>Hello World!</h1>
+        <h1>Welcome! <%=email%>, your password is <%=password%></h1>
     </body>
 </html>

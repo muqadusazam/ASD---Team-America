@@ -13,7 +13,14 @@
     </head>
     <body>
         <%
+            String email = request.getParameter("email");
+            String password = request.getParameter("password");
             
+            if (email == null){
+                out.println("Please provide the email");
+            } else if (password == null){
+                out.println("Please provide the password");
+            }
         %>
         <h1>Hello World!</h1>
     </body>

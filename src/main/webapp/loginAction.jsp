@@ -1,8 +1,3 @@
-<%-- 
-    Document   : loginAction
-    Created on : 16/08/2019, 3:51:30 PM
-    Author     : Muqadus
---%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -23,5 +18,6 @@
 //            }
         %>
         <h1>Welcome! <%=email%>, your password is <%=password%></h1>
+        <a href="main.jsp" class="btn btn-secondary"> Home </a>
     </body>
 </html>

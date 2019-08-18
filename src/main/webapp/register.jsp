@@ -1,8 +1,3 @@
-<%--
-    Document   : register
-    Created on : Aug 13, 2019, 2:28:54 PM
-    Author     : kelvin
---%>
 
 <!-- Header file contains Boostrap CSS and page formatting for all pages -->
 <jsp:include page="fc_header.jsp">

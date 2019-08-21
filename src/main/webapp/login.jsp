@@ -18,6 +18,5 @@
 <%
  session.setAttribute("email", "hello@gmail.com");
  session.setAttribute("password", "abc123");
- //tesing
  %>
 <jsp:include page = "fc_footer.jsp"/>

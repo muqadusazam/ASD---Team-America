@@ -18,6 +18,7 @@
 //            }
         %>
         <h1>Welcome! <%=email%>, your password is <%=password%></h1>
+        <h1>this is the test</h1>
         <a href="main.jsp" class="btn btn-secondary"> Home </a>
     </body>
 </html>

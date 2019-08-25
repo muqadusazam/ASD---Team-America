@@ -4,7 +4,7 @@ import java.io.Serializable;
 
 /**
  *
- * @author Liam
+ * @author William
  */
 public class Staff implements Serializable{
     

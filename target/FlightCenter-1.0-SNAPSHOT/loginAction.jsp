@@ -16,6 +16,7 @@
 //            } else if (password == null){
 //                out.println("Please provide the password");
 //            }
+            //testing
         %>
         <h1>Welcome! <%=email%>, your password is <%=password%></h1>
         <a href="main.jsp" class="btn btn-secondary"> Home </a>

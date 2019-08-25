@@ -49,6 +49,10 @@ public class Flight implements Serializable{
         
     }
     
+    public String getID() {
+        return this.id;
+    }
+    
     public String getAirline() {
         return airline;
     }

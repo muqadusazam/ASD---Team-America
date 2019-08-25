@@ -54,7 +54,7 @@ public class Customer implements Serializable{
         this.last_name = last_name;
     }
     
-    public String email() {
+    public String getEmail() {
         return email;
     }
     

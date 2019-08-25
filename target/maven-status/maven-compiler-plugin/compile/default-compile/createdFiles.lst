@@ -1,2 +1,1 @@
-fc\controller\ConnServlet.class
-fc\model\dao\MongoDBConnector.class
+fc\controller\RegisterServlet.class

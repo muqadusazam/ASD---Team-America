@@ -1,8 +1,4 @@
-<%-- 
-    Document   : main
-    Created on : 2019. 8. 13, ?? 5:28:10
-    Author     : el181
---%>
+
 <jsp:include page="fc_header.jsp">
 	<jsp:param name="title" value="Flight Center/main"/>
 </jsp:include>

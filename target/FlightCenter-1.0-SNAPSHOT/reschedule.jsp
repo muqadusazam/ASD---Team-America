@@ -1,8 +1,3 @@
-<%-- 
-    Document   : reschedule
-    Created on : 2019. 8. 13, ?? 9:37:24
-    Author     : el181
---%>
 
 <jsp:include page="fc_header.jsp">
 	<jsp:param name="title" value="Flight Center/account/reschedule"/>

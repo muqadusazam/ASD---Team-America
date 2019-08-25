@@ -220,9 +220,6 @@ public class MongoDBConnector {
         return new Document("id", ticket.getID())
                 .append("customer_id", ticket.getCustomerID())
                 .append("flight_id", ticket.getFlightID())
-                .append("passenger_first_name", ticket.getPassengerFirstName())
-                .append("passenger_last_name", ticket.getPassengerLastName())
-                .append("passenger_dob", ticket.getPassengerDOB())
                 .append("passenger_seat_num", ticket.getPassengerSeatNum());
     }
     
@@ -270,9 +267,6 @@ public class MongoDBConnector {
         return new Ticket((String) doc.get("id"),
                 (String) doc.get("customer_id"),
                 (String) doc.get("flight_id"),
-                (String) doc.get("passenger_first_name"),
-                (String) doc.get("passenger_last_name"),
-                (String) doc.get("passenger_dob"),
                 (String) doc.get("passenger_seat_num"));
     }
 }

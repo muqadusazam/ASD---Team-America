@@ -21,7 +21,7 @@
         <div class="form-row">
             <div class="form-group col-md-6">
                 <label for="inputFirstName">First Name</label>
-                <input type="text" class="form-control" id="inputFirstName" placeholder="First Nmae">
+                <input type="text" class="form-control" id="inputFirstName" placeholder="First Name">
             </div>
             <div class="form-group col-md-6">
                 <label for="inputLastName">Last Name</label>

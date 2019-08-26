@@ -9,7 +9,6 @@
     </head>
     <body>
         <% 
-            
             String[] admin = new String[2];
             admin[0] = "aemail";
             admin[1] = "apassword";

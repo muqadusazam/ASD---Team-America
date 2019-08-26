@@ -9,16 +9,18 @@ public class user  implements Serializable{
     private String email;
     private String password;
     private String passport_number;
+    private String DOB;
 
     public user() {
     }
 
-    public user(String first_name, String last_name, String email, String password, String passport_number) {
+    public user(String first_name, String last_name, String email, String password, String passport_number, String DOB) {
         this.first_name = first_name;
         this.last_name = last_name;
         this.email = email;
         this.password = password;
         this.passport_number = passport_number;
+        this.DOB = DOB;
     }
 
     public boolean match(String email){
@@ -58,6 +60,14 @@ public class user  implements Serializable{
 
     public void setPassword(String password) {
         this.password = password;
+    }
+    
+    public String getDOB(){
+        return DOB;
+    }
+    
+    public void setDOB(String DOB){
+        this.DOB = DOB;
     }
 
 }

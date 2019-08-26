@@ -45,9 +45,18 @@
             <td>Cl1993@gmail.com</td>
             <td>19/02/1993</td>
             <td>
-                <form action="userDetail_management.jsp" method="POST">
-                    <button type="submit" name="ID" class="btn btn-primary">View</button> 
-                </form>
+                <div style="width:150px;">
+                    <div style="float: left;"> 
+                        <form action="userDetail_management.jsp" method="POST">
+                            <button type="submit" name="ID" class="btn btn-primary">View</button> 
+                        </form>
+                    </div>
+                    <div style="float: right;"> 
+                        <form action="userTicket_management.jsp" method="POST">
+                            <button type="submit" class="btn btn-info">Tickets</button>
+                        </form>
+                    </div>
+                </div>
             </td>
         </tr>
         <tr>
@@ -57,9 +66,18 @@
             <td>jamesftw@gmail.com</td>
             <td>01/06/1978</td>
             <td>
-                <form action="userDetail_management.jsp" method="POST">
-                    <button type="submit" name="ID" class="btn btn-primary">View</button> 
-                </form>
+                <div style="width:150px;">
+                    <div style="float: left;"> 
+                        <form action="userDetail_management.jsp" method="POST">
+                            <button type="submit" name="ID" class="btn btn-primary">View</button> 
+                        </form>
+                    </div>
+                    <div style="float: right;"> 
+                        <form action="userTicket_management.jsp" method="POST">
+                            <button type="submit" class="btn btn-info">Tickets</button>
+                        </form>
+                    </div>
+                </div>
             </td>
         </tr>
         <tr>
@@ -69,9 +87,18 @@
             <td>radiation@gmail.com</td>
             <td>26/04/1986</td>
             <td>
-                <form action="userDetail_management.jsp" method="POST">
-                    <button type="submit" name="ID" class="btn btn-primary">View</button> 
-                </form>
+                <div style="width:150px;">
+                    <div style="float: left;"> 
+                        <form action="userDetail_management.jsp" method="POST">
+                            <button type="submit" name="ID" class="btn btn-primary">View</button> 
+                        </form>
+                    </div>
+                    <div style="float: right;"> 
+                        <form action="userTicket_management.jsp" method="POST">
+                            <button type="submit" class="btn btn-info">Tickets</button>
+                        </form>
+                    </div>
+                </div>
             </td>
         </tr>
         <tr>
@@ -81,9 +108,18 @@
             <td>AGT@gmail.com</td>
             <td>15/11/1968</td>
             <td>
-                <form action="userDetail_management.jsp" method="POST">
-                    <button type="submit" name="ID" class="btn btn-primary">View</button> 
-                </form>
+                <div style="width:150px;">
+                    <div style="float: left;"> 
+                        <form action="userDetail_management.jsp" method="POST">
+                            <button type="submit" name="ID" class="btn btn-primary">View</button> 
+                        </form>
+                    </div>
+                    <div style="float: right;"> 
+                        <form action="userTicket_management.jsp" method="POST">
+                            <button type="submit" class="btn btn-info">Tickets</button>
+                        </form>
+                    </div>
+                </div>
             </td>
         </tr>
         <tr>
@@ -93,9 +129,18 @@
             <td>Cl1993@gmail.com</td>
             <td>19/02/1993</td>
             <td>
-                <form action="userDetail_management.jsp" method="POST">
-                    <button type="submit" name="ID" class="btn btn-primary">View</button> 
-                </form>
+                <div style="width:150px;">
+                    <div style="float: left;"> 
+                        <form action="userDetail_management.jsp" method="POST">
+                            <button type="submit" name="ID" class="btn btn-primary">View</button> 
+                        </form>
+                    </div>
+                    <div style="float: right;"> 
+                        <form action="userTicket_management.jsp" method="POST">
+                            <button type="submit" class="btn btn-info">Tickets</button>
+                        </form>
+                    </div>
+                </div>
             </td>
         </tr>
         <tr>
@@ -105,9 +150,18 @@
             <td>king@gmail.com</td>
             <td>26/04/1976</td>
             <td>
-                <form action="userDetail_management.jsp" method="POST">
-                    <button type="submit" name="ID" class="btn btn-primary">View</button> 
-                </form>
+                <div style="width:150px;">
+                    <div style="float: left;"> 
+                        <form action="userDetail_management.jsp" method="POST">
+                            <button type="submit" name="ID" class="btn btn-primary">View</button> 
+                        </form>
+                    </div>
+                    <div style="float: right;"> 
+                        <form action="userTicket_management.jsp" method="POST">
+                            <button type="submit" class="btn btn-info">Tickets</button>
+                        </form>
+                    </div>
+                </div>
             </td>
         </tr>
         <tr>
@@ -117,9 +171,18 @@
             <td>thisismyemail@gmail.com</td>
             <td>16/08/2019</td>
             <td>
-                <form action="userDetail_management.jsp" method="POST">
-                    <button type="submit" name="ID" class="btn btn-primary">View</button> 
-                </form>
+                <div style="width:150px;">
+                    <div style="float: left;"> 
+                        <form action="userDetail_management.jsp" method="POST">
+                            <button type="submit" name="ID" class="btn btn-primary">View</button> 
+                        </form>
+                    </div>
+                    <div style="float: right;"> 
+                        <form action="userTicket_management.jsp" method="POST">
+                            <button type="submit" class="btn btn-info">Tickets</button>
+                        </form>
+                    </div>
+                </div>
             </td>
         </tr>
         <tr>
@@ -129,9 +192,18 @@
             <td>drivecar@gmail.com</td>
             <td>12/01/1993</td>
             <td>
-                <form action="userDetail_management.jsp" method="POST">
-                    <button type="submit" name="ID" class="btn btn-primary">View</button> 
-                </form>
+                <div style="width:150px;">
+                    <div style="float: left;"> 
+                        <form action="userDetail_management.jsp" method="POST">
+                            <button type="submit" name="ID" class="btn btn-primary">View</button> 
+                        </form>
+                    </div>
+                    <div style="float: right;"> 
+                        <form action="userTicket_management.jsp" method="POST">
+                            <button type="submit" class="btn btn-info">Tickets</button>
+                        </form>
+                    </div>
+                </div>
             </td>
         </tr>
     </table>

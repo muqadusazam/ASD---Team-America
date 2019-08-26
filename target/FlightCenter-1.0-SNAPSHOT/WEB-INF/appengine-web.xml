@@ -3,7 +3,7 @@
     <!--
       Name of the app on GAE
     -->
-    <application>ars-project</application>
+    <application>ars-project-249805</application>
     <version>1</version>
     <runtime>java8</runtime>
     <!--

@@ -1,4 +1,5 @@
 <%@page import="fc.model.dao.MongoDBConnector"%>
+<%@page import="fc.model.*"%>
 <%@page contentType="text/html" pageEncoding="UTF-8" import="fc.model.*"%>
 
 <jsp:include page="fc_header.jsp">

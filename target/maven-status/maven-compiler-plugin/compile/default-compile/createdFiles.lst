@@ -1,8 +1,0 @@
-fc\model\Customer.class
-fc\controller\RegisterServlet.class
-fc\model\Tickets.class
-fc\model\Customers.class
-fc\model\Ticket.class
-fc\model\dao\MongoDBConnector.class
-fc\model\Flights.class
-fc\model\Flight.class

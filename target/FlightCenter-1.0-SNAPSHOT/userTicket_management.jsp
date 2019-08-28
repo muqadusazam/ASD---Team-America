@@ -1,5 +1,6 @@
+
 <jsp:include page="fc_header.jsp">
-    <jsp:param name="title" value="Flight Center/account/user_management"/>
+    <jsp:param name="title" value="Flight Center/account/userTicket_management"/>
 </jsp:include>
 <div class="col-12 col-md-3 col-xl-2 bd-sidebar" style = "margin-top: 100px; padding: 5px; float:left; background-color:#cecece">
     <ul class="navbar-nav mr-auto">
@@ -12,55 +13,37 @@
 </div>
 
 <div class="mx-auto" style="width: 800px; text-align: center;" >
-    <h1>User: Carol Lee</h1>
+    <h1>User: Carol Lee's Ticket History</h1>
+
+    <div class="input-group mb-3">
+        <input type="text" class="form-control" aria-label="Recipient's username" aria-describedby="button-addon2">
+        <div class="input-group-append">
+            <button class="btn btn-outline-secondary" type="button" id="button-addon2">Search</button>        
+        </div>
+    </div>
 </div>
 
-<div class="mx-auto" style="width: 950px;">
-    <form action="user_management.jsp" class="margin1">
-        <div class="form-row">
-            <div class="form-group col-md-6">
-                <label for="inputEmail4">Email</label>
-                <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
-            </div>
-            <div class="form-group col-md-6">
-                <label for="inputPassword4">Password</label>
-                <input type="password" class="form-control" id="inputPassword4" placeholder="Password">
-            </div>
-        </div>
-        <div class="form-group">
-            <label for="inputAddress">Address</label>
-            <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
-        </div>
-        <div class="form-group">
-            <label for="inputAddress2">Address 2</label>
-            <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
-        </div>
-        <div class="form-row">
-            <div class="form-group col-md-6">
-                <label for="inputCity">City</label>
-                <input type="text" class="form-control" id="inputCity">
-            </div>
-            <div class="form-group col-md-4">
-                <label for="inputState">State</label>
-                <select id="inputState" class="form-control">
-                    <option selected>Choose...</option>
-                    <option>NSW</option>
-                    <option>QLD</option>
-                    <option>NT</option>
-                    <option>WA</option>
-                    <option>SA</option>
-                    <option>TAS</option>
-                    <option>VIC</option>
-                </select>
-            </div>
-            <div class="form-group col-md-2">
-                <label for="inputZip">Post Code</label>
-                <input type="text" class="form-control" id="inputZip">
-            </div>
-        </div>
-        <button type="submit" class="btn btn-primary">Edit</button>
-        <button type="submit" class="btn btn-danger">Delete</button>
-    </form>
+<div class="mx-auto" style="width: 950px; text-align: center;">
+    <table class="table table-striped">
+        <thead class="thead-dark">
+            <tr>
+                <th>Ticket ID</th>
+                <th>Flight No.</th>
+                <th>Flight date</th>
+                <th>Seat Number</th>   
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tr>
+            <td>12394</td>
+            <td>CA100</td>
+            <td>13/09/2019</td>
+            <td>A50</td>
+            <td><form action="userTicket_management.jsp" method="POST">
+                    <button type="submit" name="ID" class="btn btn-primary">Reschedule</button> 
+            </form></td>
+        </tr>
+    </table>
 </div>
 
 

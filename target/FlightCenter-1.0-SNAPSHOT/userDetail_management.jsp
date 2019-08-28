@@ -1,6 +1,6 @@
 
 <jsp:include page="fc_header.jsp">
-    <jsp:param name="title" value="Flight Center/account/user_management"/>
+    <jsp:param name="title" value="Flight Center/account/userDetail_management"/>
 </jsp:include>
 <div class="col-12 col-md-3 col-xl-2 bd-sidebar" style = "margin-top: 100px; padding: 5px; float:left; background-color:#cecece">
     <ul class="navbar-nav mr-auto">

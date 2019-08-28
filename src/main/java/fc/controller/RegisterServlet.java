@@ -58,44 +58,44 @@ public class RegisterServlet extends HttpServlet {
             throws ServletException, IOException {
         Map<String,String> errors = new HashMap<String,String>();
         
-        processRequest(request, response);
+      //  processRequest(request, response);
         HttpSession session = request.getSession();
         
         String firstName = request.getParameter("fname");
         if (!validate(namePattern, firstName)){
-            errors.put(firstName, "Incorrect name format");
+            errors.put("fNameErr", "Incorrect name format");
         }
         
         String lastName = request.getParameter("lname");
         if (!validate(namePattern, lastName)){
-            errors.put(lastName, "Incorrect name format");
+            errors.put("lNameErr", "Incorrect name format");
         }
         
         String email = request.getParameter("email");
         if (!validate(emailPattern, email)){
-            errors.put(email, "Incorrect email format");
+            errors.put("emailErr", "Incorrect email format");
         }
         
         String password = request.getParameter("password");
         if (!validate(passwordPattern, password)){
-            errors.put(password, "Incorrect password format");
+            errors.put("passwordErr", "Incorrect password format");
         }
         
         String passport = request.getParameter("passport");
         if (!validate(passportPattern, passport)){
-            errors.put(passport, "Incorrect passport format");
+            errors.put("passportErr", "Incorrect passport format");
         }
         
         String DOB = request.getParameter("DOB");
         
-        if (errors.isEmpty()){
+        if (errors.isEmpty()) {
             //redirect to next page if no error
-            //response.sendRedirect(link);
+            response.sendRedirect("user_management.jsp");
         }
         else {
             //put errors in request scope and forward them back to register.jsp
-            //request.setAttribute("errors", errors);
-            //request.getRequestDispatcher("register.jsp").forward(request, response);
+            request.setAttribute("errors", errors);
+            request.getRequestDispatcher("register.jsp").forward(request, response);
         }
     }
 

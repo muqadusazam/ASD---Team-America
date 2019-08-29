@@ -1,4 +1,5 @@
-<%@page import="fc.model.dao.MongoDBConnector"%>
+<%@page import="java.util.ArrayList"%>
+<%@page import="fc.model.dao.*"%>
 <%@page import="fc.model.*"%>
 <%@page contentType="text/html" pageEncoding="UTF-8" import="fc.model.*"%>
 
@@ -15,7 +16,29 @@
     </ul>
 
 </div>
-
+<%
+    MongoDBManager_Customers db = new MongoDBManager_Customers();
+    
+    Customer testcust = new Customer("2", 
+                "John", 
+                "Smith", 
+                "johnsmith@gmail.com", 
+                "password", 
+                "01/01/2000");
+    
+    db.add(testcust);
+    
+    // Get all customers in the db
+    ArrayList<Customer> list = db.getCustomers();
+    for (Customer customer: list) {
+        %>
+        ID: <%= customer.getID() %> First Name: <%= customer.getFirstName() %> Last Name: <%= customer.getLastName() %>
+        <%
+    }
+    
+    // Get specific Customer by ID
+    Customer cust = db.getCustomer("2");
+%>  
 <div class="mx-auto" style="float: left">
     <form>
     <h1><p>Reschedule ticket</p></h1>

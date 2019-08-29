@@ -18,25 +18,24 @@ import static com.mongodb.client.model.Filters.eq;
  */
 public class MongoDBConnector {
     
-    private static final String KEY = "@ds029496.mlab.com:29496/heroku_59pxdn6j"; 
-    private static final String CUSTOMERS = "ASD---Team-America-Customers";
-    private static final String TICKETS = "ASD---Team-America-Tickets";
-    private static final String FLIGHTS = "ASD---Team-America-Flights";
+    private static final String OWNER = "admin";
+    private static final String PASSWORD = "qwerty123";
+    private static final String KEY = "@ds263927.mlab.com:63927/heroku_dlsrflnl"; 
     
-    private String owner;
-    private String password;
-    
+    private static final String CUSTOMER_COLLECTION = "ASD.Customers(William)";
+    private static final String TICKET_COLLECTION = "ASD.Tickets(William)";
+    private static final String STAFF_COLLECTION = "ASD.Staff(William)";
+  
     private List<Document> customers = new ArrayList();
     private List<Document> tickets = new ArrayList();
-    private List<Document> flights = new ArrayList();
+    private List<Document> staffs = new ArrayList();
     
-    public MongoDBConnector(String owner, String password) throws UnknownHostException {
-        this.owner = owner;
-        this.password = password;
+    public MongoDBConnector() throws UnknownHostException {
+        
     }
     
     private MongoClientURI generateURI() {
-        return new MongoClientURI("mongodb://" + this.owner + ":" + this.password + this.KEY);
+        return new MongoClientURI("mongodb://" + this.OWNER + ":" + this.PASSWORD + this.KEY);
     }
     
     public MongoDatabase getMongoDB(){
@@ -53,7 +52,7 @@ public class MongoDBConnector {
         try (MongoClient client = new MongoClient(uri)) {
             MongoDatabase db = client.getDatabase(uri.getDatabase());
             customers.add(generateDoc(customer));
-            MongoCollection<Document> customerList = db.getCollection(CUSTOMERS); //Create a collection on mLab
+            MongoCollection<Document> customerList = db.getCollection(CUSTOMER_COLLECTION); //Create a collection on mLab
             customerList.insertMany(customers);
         }
     }
@@ -71,7 +70,7 @@ public class MongoDBConnector {
         MongoClientURI uri = generateURI();
         try (MongoClient client = new MongoClient(uri)) {
             MongoDatabase db = client.getDatabase(uri.getDatabase());
-            MongoCollection<Document> customerList = db.getCollection(CUSTOMERS);
+            MongoCollection<Document> customerList = db.getCollection(CUSTOMER_COLLECTION);
             try (MongoCursor<Document> cursor = customerList.find().iterator()) {
                 while (cursor.hasNext()) {
                     System.out.println(cursor.next().toJson());
@@ -86,7 +85,7 @@ public class MongoDBConnector {
         try (MongoClient client = new MongoClient(uri)) {
             MongoDatabase db = client.getDatabase(uri.getDatabase());
             customers = new Customers();
-            MongoCollection<Document> customerlist = db.getCollection(CUSTOMERS);
+            MongoCollection<Document> customerlist = db.getCollection(CUSTOMER_COLLECTION);
             for (Document doc : customerlist.find()) {
                 Customer customer = convertToCustomer(doc);
                 customers.addCustomer(customer);
@@ -100,7 +99,7 @@ public class MongoDBConnector {
         Customer customer;
         try (MongoClient client = new MongoClient(uri)) {
             MongoDatabase db = client.getDatabase(uri.getDatabase());
-            MongoCollection<Document> flightList = db.getCollection(CUSTOMERS);
+            MongoCollection<Document> flightList = db.getCollection(CUSTOMER_COLLECTION);
             Document doc = flightList.find(and(eq("id", id))).first();
             customer = convertToCustomer(doc);
         }
@@ -112,7 +111,7 @@ public class MongoDBConnector {
         Customer customer;
         try (MongoClient client = new MongoClient(uri)) {
             MongoDatabase db = client.getDatabase(uri.getDatabase());
-            MongoCollection<Document> customerList = db.getCollection(CUSTOMERS);
+            MongoCollection<Document> customerList = db.getCollection(CUSTOMER_COLLECTION);
             Document doc = customerList.find(and(eq("email", email), eq("password", password))).first();
             customer = convertToCustomer(doc);
         }
@@ -133,7 +132,7 @@ public class MongoDBConnector {
         try (MongoClient client = new MongoClient(uri)) {
             MongoDatabase db = client.getDatabase(uri.getDatabase());
             customers.add(generateDoc(flight));
-            MongoCollection<Document> flightList = db.getCollection(FLIGHTS); //Create a collection on mLab
+            MongoCollection<Document> flightList = db.getCollection(FLIGHT_COLLECTION); //Create a collection on mLab
             flightList.insertMany(customers);
         }
     }
@@ -156,7 +155,7 @@ public class MongoDBConnector {
         MongoClientURI uri = generateURI();
         try (MongoClient client = new MongoClient(uri)) {
             MongoDatabase db = client.getDatabase(uri.getDatabase());
-            MongoCollection<Document> customerList = db.getCollection(FLIGHTS);
+            MongoCollection<Document> customerList = db.getCollection(FLIGHT_COLLECTION);
             try (MongoCursor<Document> cursor = customerList.find().iterator()) {
                 while (cursor.hasNext()) {
                     System.out.println(cursor.next().toJson());
@@ -171,7 +170,7 @@ public class MongoDBConnector {
         try (MongoClient client = new MongoClient(uri)) {
             MongoDatabase db = client.getDatabase(uri.getDatabase());
             flights = new Flights();
-            MongoCollection<Document> customerlist = db.getCollection(FLIGHTS);
+            MongoCollection<Document> customerlist = db.getCollection(FLIGHT_COLLECTION);
             for (Document doc : customerlist.find()) {
                 Flight flight = convertToFlight(doc);
                 flights.addFlight(flight);
@@ -185,7 +184,7 @@ public class MongoDBConnector {
         Flight flight;
         try (MongoClient client = new MongoClient(uri)) {
             MongoDatabase db = client.getDatabase(uri.getDatabase());
-            MongoCollection<Document> flightList = db.getCollection(FLIGHTS);
+            MongoCollection<Document> flightList = db.getCollection(FLIGHT_COLLECTION);
             Document doc = flightList.find(and(eq("id", id))).first();
             flight = convertToFlight(doc);
         }
@@ -211,7 +210,7 @@ public class MongoDBConnector {
         try (MongoClient client = new MongoClient(uri)) {
             MongoDatabase db = client.getDatabase(uri.getDatabase());
             customers.add(generateDoc(ticket));
-            MongoCollection<Document> customerList = db.getCollection(TICKETS); //Create a collection on mLab
+            MongoCollection<Document> customerList = db.getCollection(FLIGHT_COLLECTION); //Create a collection on mLab
             customerList.insertMany(customers);
         }
     }
@@ -226,11 +225,11 @@ public class MongoDBConnector {
                 .append("passenger_seat_num", ticket.getPassengerSeatNum());
     }
     
-    public void showTickets() {
+    public void showStaff() {
         MongoClientURI uri = generateURI();
         try (MongoClient client = new MongoClient(uri)) {
             MongoDatabase db = client.getDatabase(uri.getDatabase());
-            MongoCollection<Document> customerList = db.getCollection(TICKETS);
+            MongoCollection<Document> customerList = db.getCollection(STAFF_COLLECTION);
             try (MongoCursor<Document> cursor = customerList.find().iterator()) {
                 while (cursor.hasNext()) {
                     System.out.println(cursor.next().toJson());

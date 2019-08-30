@@ -62,7 +62,7 @@ public class LoginServlet extends HttpServlet {
 //            request.getRequestDispatcher("login.jsp").forward(request, response);
 //        }
         
-        session.setAttribute(email, db);
+        session.setAttribute(customer.getID(), "customer_ID");
     }
     
         //regex for validating input from register.jsp form

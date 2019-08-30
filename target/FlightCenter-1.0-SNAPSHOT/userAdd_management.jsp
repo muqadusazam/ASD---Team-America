@@ -21,36 +21,41 @@
         <div class="form-row">
             <div class="form-group col-md-6">
                 <label>First Name</label>
-                <input type="text" class="form-control" id="inputFirstName" placeholder="First Name" name="fname" value="${param.firstName}">
+                <input type="text" class="form-control" id="inputFirstName" name="fname" value="${param.firstName}"
+                       placeholder="Enter your first name" required>
                 <span class="error">${errors.fNameErr}</span>
             </div>
             <div class="form-group col-md-6">
                 <label>Last Name</label>
-                <input type="text" class="form-control" id="inputLastName" placeholder="Last Name" name="lname" value="${param.lastName}">
+                <input type="text" class="form-control" id="inputLastName" name="lname" value="${param.lastName}"
+                       placeholder="Enter your last name" required>
                 <span class="error">${errors.lNameErr}</span>
             </div>
         </div>
         <div class="form-row">
             <div class="form-group col-md-6">
                 <label>Email</label>
-                <input type="email" class="form-control" id="inputEmail4" placeholder="Email" name="email" value="${param.email}">
+                <input type="email" class="form-control" name="email" value="${param.email}"
+                       placeholder="Enter your email address" required>
                 <span class="error">${errors.emailErr}</span>
             </div>
             <div class="form-group col-md-6">
                 <label>Password</label>
-                <input type="password" class="form-control" id="inputPassword4" placeholder="Password" name="password" value="${param.password}">
+                <input type="password" class="form-control" name="password" value="${param.password}"
+                       placeholder="Enter a password" required>
                 <span class="error">${errors.passwordErr}</span>
             </div>
         </div>
         <div class="form-group">
             <label>Passport Number</label>
-            <input type="text" class="form-control" id="inputAddress" placeholder="AU12345" name="passport" value="${param.passport}">
+            <input type="text" class="form-control" name="passport" value="${param.passport}"
+                   placeholder="Initials (capital) followed by 3 integers" required>
             <span class="error">${errors.passportErr}</span>
         </div>
         <div class="form-row">
             <div class="form-group col-md-6">
                 <label>Date of Birth</label>
-                <input type="date" class="form-control" id="inputCity" name="DOB" value="${param.dob}">
+                <input type="date" class="form-control" name="DOB" required>
             </div>
 
         </div>

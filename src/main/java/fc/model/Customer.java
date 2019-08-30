@@ -13,19 +13,21 @@ public class Customer implements Serializable{
     private String last_name;
     private String email;
     private String password;
+    private String passport;
     private String dob;
     
     public Customer() {
     }
     
     public Customer(String id, String first_name, String last_name, String email,
-            String password, String dob) {
+            String password, String passport, String dob) {
         
         this.id = id;
         this.first_name = first_name;
         this.last_name = last_name;
         this.email = email;
         this.password = password;
+        this.passport = passport;
         this.dob = dob;
         
     }
@@ -68,6 +70,14 @@ public class Customer implements Serializable{
     
     public void setPassword(String password) {
         this.password = password;
+    }
+    
+    public String getPassport() {
+        return this.passport;
+    }
+    
+    public void setPassport(String passport) {
+        this.passport = passport;
     }
     
     public String getDOB() {

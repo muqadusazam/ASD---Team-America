@@ -1,4 +1,5 @@
 <%@page import="fc.model.dao.*"%>
+<%@page import="fc.controller.*" %>
 <%@page import="java.util.ArrayList"%>
 <%@page contentType="text/html" pageEncoding="UTF-8" import="fc.model.*"%>
 
@@ -24,7 +25,7 @@
 
         MongoDBManager_Tickets dbt = new MongoDBManager_Tickets();
         Ticket tick = dbt.getTicket(cust);
-        session.setAttribute("ticket", tick);
+        session.setAttribute("oldTicket", tick);
         
         Customer customer = (Customer)session.getAttribute("loggedIn");
         Ticket ticket = (Ticket)session.getAttribute("ticket");
@@ -40,6 +41,7 @@
         } else {
             MongoDBManager_Flights dbf = new MongoDBManager_Flights();
             Flight flight = dbf.getFlight(ticket.getFlightID());
+            session.setAttribute("oldFlight", flight);
     %>
     <form>
     <h1><p>Reschedule ticket</p></h1>
@@ -119,7 +121,7 @@
         <tr><td><br></td></tr>
         
         <%
-            ArrayList<Flight> flights = dbf.getFlightsByDestination(flight.getDestination());
+            ArrayList<Flight> flights = dbf.getFlights(flight);
             if (flights == null) {
         %>
                 <h2 class="text-warning"> There are no available tickets. </h2>
@@ -129,12 +131,13 @@
         <tr>
             <td><b>Choose new ticket: &nbsp&nbsp</b></td>
             <td>
-                <form action="reschedule_action.jsp" method="POST">
-                    <select name="tickets" default="-- Select Ticket --">
+                <form action="RescheduleServlet" method="post">
+                    <select name="newFlight" value="<%= flight.getID() %>">
+                        <option selected="true" disabled="disabled">-- Select Ticket --</option>
                         <%
                             for (Flight f: flights) {
                         %>
-                                <option value="<%= f.getID() %>"> 
+                                <option name="<%= f.getID() %>" value="<%= f.getID() %>"> 
                                     Departure: <%= f.getOrigin() %> @ <%= f.getDepartureTime() %> <%= f.getDepartureDate() %>; 
                                     Destination: <%= f.getDestination()%> @ <%= f.getArrivalTime() %> <%= f.getArrivalDate() %>; 
                                 </option>
@@ -142,7 +145,7 @@
                             }
                         %>
                     </select>
-                </form>
+                <span class="error text-danger"><em>${errors.dateErr}</em></span>
             </td>
         </tr>
         
@@ -154,6 +157,8 @@
                 <button type="reset" class="btn btn-danger" style="float: right">Cancel</button>
             </td>
         </tr>
+        </form>
+
         <%
             }
         %>
@@ -162,7 +167,6 @@
     </form>
 </div>
 <%  }
-    session.invalidate();
 %>
 
 <jsp:include page = "fc_footer.jsp"/>

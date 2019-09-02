@@ -34,6 +34,15 @@ public class MongoDBManager_Tickets extends MongoDBConnector {
         }
     }
     
+    public void update(Ticket ticket) {
+        MongoClientURI uri = generateURI();
+        try (MongoClient client = new MongoClient(uri)) {
+            MongoDatabase db = client.getDatabase(uri.getDatabase());
+            MongoCollection<Document> ticketDB = db.getCollection(TICKET_COLLECTION);
+            ticketDB.deleteOne(convertToDoc(ticket));
+        }
+    }
+    
     public Ticket getTicket(String id) {
         MongoClientURI uri = generateURI();
         Ticket ticket;

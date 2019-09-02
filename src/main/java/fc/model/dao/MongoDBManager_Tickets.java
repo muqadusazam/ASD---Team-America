@@ -42,6 +42,22 @@ public class MongoDBManager_Tickets extends MongoDBConnector {
             MongoCollection<Document> ticketDB = db.getCollection(TICKET_COLLECTION);
             Document doc = ticketDB.find(and(eq("id", id))).first();
             ticket = convertToTicket(doc);
+        } catch (NullPointerException ex) {
+            return null;
+        }
+        return ticket;
+    }
+    
+    public Ticket getTicket(Customer customer) {
+        MongoClientURI uri = generateURI();
+        Ticket ticket;
+        try (MongoClient client = new MongoClient(uri)) {
+            MongoDatabase db = client.getDatabase(uri.getDatabase());
+            MongoCollection<Document> ticketDB = db.getCollection(TICKET_COLLECTION);
+            Document doc = ticketDB.find(and(eq("customer_id", customer.getID()))).first();
+            ticket = convertToTicket(doc);
+        } catch (NullPointerException ex) {
+            return null;
         }
         return ticket;
     }
@@ -57,6 +73,8 @@ public class MongoDBManager_Tickets extends MongoDBConnector {
                 Ticket ticket = convertToTicket(doc);
                 tickets.add(ticket);
             }
+        } catch (NullPointerException ex) {
+            return null;
         }
         return tickets;
     }
@@ -74,6 +92,8 @@ public class MongoDBManager_Tickets extends MongoDBConnector {
                     tickets.add(ticket);
                 }
             }
+        } catch (NullPointerException ex) {
+            return null;
         }
         return tickets;
     }
@@ -91,6 +111,8 @@ public class MongoDBManager_Tickets extends MongoDBConnector {
                     tickets.add(ticket);
                 }
             }
+        } catch (NullPointerException ex) {
+            return null;
         }
         return tickets;
     }

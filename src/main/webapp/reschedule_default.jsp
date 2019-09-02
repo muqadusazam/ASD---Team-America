@@ -17,27 +17,15 @@
 
 </div>
 <%
-    MongoDBManager_Customers db = new MongoDBManager_Customers();
+    MongoDBManager_Tickets dbt = new MongoDBManager_Tickets();
     
-    Customer testcust = new Customer("2", 
-                "John", 
-                "Smith", 
-                "johnsmith@gmail.com", 
-                "password", 
-                "01/01/2000");
+    Ticket ticket = new Ticket("234323",
+            "2",
+            "3",
+            "23A"
+    );
     
-    db.add(testcust);
-    
-    // Get all customers in the db
-    ArrayList<Customer> list = db.getCustomers();
-    for (Customer customer: list) {
-        %>
-        ID: <%= customer.getID() %> First Name: <%= customer.getFirstName() %> Last Name: <%= customer.getLastName() %>
-        <%
-    }
-    
-    // Get specific Customer by ID
-    Customer cust = db.getCustomer("2");
+    dbt.add(ticket);
 %>  
 <div class="mx-auto" style="float: left">
     <form>

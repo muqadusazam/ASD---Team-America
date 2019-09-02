@@ -42,6 +42,8 @@ public class MongoDBManager_Flights extends MongoDBConnector {
             MongoCollection<Document> flightDB = db.getCollection(FLIGHT_COLLECTION);
             Document doc = flightDB.find(and(eq("id", id))).first();
             flight = convertToFlight(doc);
+        } catch (NullPointerException ex) {
+            return null;
         }
         return flight;
     }
@@ -58,6 +60,8 @@ public class MongoDBManager_Flights extends MongoDBConnector {
                 Flight flight = convertToFlight(doc);
                 flights.add(flight);
             }
+        } catch (NullPointerException ex) {
+            return null;
         }
         return flights;
     }
@@ -75,6 +79,8 @@ public class MongoDBManager_Flights extends MongoDBConnector {
                     flights.add(flight);
                 }
             }
+        } catch (NullPointerException ex) {
+            return null;
         }
         return flights;
     }

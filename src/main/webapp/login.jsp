@@ -15,8 +15,4 @@
             <button type="submit" class="btn btn-primary">Submit</button>
         </div>
 </form>
-<%
- session.setAttribute("email", "hello@gmail.com");
- session.setAttribute("password", "abc123");
- %>
 <jsp:include page = "fc_footer.jsp"/>

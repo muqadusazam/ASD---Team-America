@@ -1,5 +1,7 @@
 package fc.controller;
 
+import fc.model.Customer;
+import fc.model.dao.MongoDBManager_Customers;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
@@ -90,12 +92,16 @@ public class RegisterServlet extends HttpServlet {
         
         if (errors.isEmpty()) {
             //redirect to next page if no error
+            int key = 100000 + (new Random().nextInt(99999));
+            MongoDBManager_Customers customerDB = new MongoDBManager_Customers();
+            customerDB.add(new Customer(Integer.toString(key), firstName, lastName, email, password, passport, DOB));
+
             response.sendRedirect("user_management.jsp");
         }
         else {
             //put errors in request scope and forward them back to register.jsp
             request.setAttribute("errors", errors);
-            request.getRequestDispatcher("register.jsp").forward(request, response);
+            request.getRequestDispatcher("userAdd_management.jsp").forward(request, response);
         }
     }
 

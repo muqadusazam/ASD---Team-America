@@ -57,7 +57,7 @@
                 <div style="width:150px;">
                     <div style="float: left;"> 
                         <form action="userDetail_management.jsp" method="POST">
-                            <button type="submit" name="ID" class="btn btn-primary">View</button> 
+                            <button type="submit" name="ID" value="<%= customer.getID() %>" class="btn btn-primary">View</button> 
                         </form>
                     </div>
                     <div style="float: right;"> 

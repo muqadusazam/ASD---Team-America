@@ -60,7 +60,8 @@
 
         </div>
         <button type="submit" class="btn btn-success">Create</button>
-        <button type="submit" class="btn btn-secondary">Cancel</button>
+        <button type="button" class="btn btn-secondary" onclick="location.href='user_management.jsp'">Cancel</button>
+
     </form>
 </div>
 <jsp:include page = "fc_footer.jsp"/>

@@ -24,6 +24,7 @@
                 "Smith", 
                 "johnsmith@gmail.com", 
                 "password", 
+                "AU102",
                 "01/01/2000");
     
     db.add(testcust);

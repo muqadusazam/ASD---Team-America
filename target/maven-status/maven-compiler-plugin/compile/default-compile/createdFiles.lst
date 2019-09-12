@@ -9,5 +9,6 @@ fc\model\Flights.class
 model\user.class
 fc\model\Flight.class
 fc\controller\RegisterServlet.class
+fc\controller\LoginServlet.class
 fc\model\Tickets.class
 fc\model\dao\MongoDBManager_Flights.class

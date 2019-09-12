@@ -1,0 +1,517 @@
+[
+  {
+    "comments": [
+      {
+        "line": 1,
+        "value": "# Login Feature"
+      },
+      {
+        "line": 2,
+        "value": "# language: en"
+      }
+    ],
+    "line": 5,
+    "elements": [
+      {
+        "line": 10,
+        "name": "User nevigates to mLab login page",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 6853811100,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "I am on login page",
+            "match": {
+              "location": "LoginFeature.i_am_on_login_main_page()"
+            },
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "line": 13,
+        "name": "Successful login to mLab",
+        "description": "",
+        "id": "loginfeature;successful-login-to-mlab",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 1806372800,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "I fill in \"Email\" with \"\u003cmLab email\u003e\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Email",
+                  "offset": 11
+                },
+                {
+                  "val": "\u003cmLab email\u003e",
+                  "offset": 24
+                }
+              ],
+              "location": "LoginFeature.i_fill_in_with(String,String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1264835400,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "I fill in \"Password\" with \"\u003cmLab Password\u003e\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Password",
+                  "offset": 11
+                },
+                {
+                  "val": "\u003cmLab Password\u003e",
+                  "offset": 27
+                }
+              ],
+              "location": "LoginFeature.i_fill_in_with(String,String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 542600,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "I should see \"main.jsp\" main page",
+            "match": {
+              "arguments": [
+                {
+                  "val": "main.jsp",
+                  "offset": 14
+                }
+              ],
+              "location": "LoginFeature.i_should_see_main_page(String)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 10,
+        "name": "User nevigates to mLab login page",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 5085752500,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "I am on login page",
+            "match": {
+              "location": "LoginFeature.i_am_on_login_main_page()"
+            },
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "line": 24,
+        "name": "Failed login to mLab using wrong credentials",
+        "description": "",
+        "id": "loginfeature;failed-login-to-mlab-using-wrong-credentials;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 1565821400,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "I fill in \"Email\" with \"\u003cemail\u003e\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Email",
+                  "offset": 11
+                },
+                {
+                  "val": "\u003cemail\u003e",
+                  "offset": 24
+                }
+              ],
+              "location": "LoginFeature.i_fill_in_with(String,String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1428479900,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "I fill in \"Password\" with \"\u003cPassword\u003e\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Password",
+                  "offset": 11
+                },
+                {
+                  "val": "\u003cPassword\u003e",
+                  "offset": 27
+                }
+              ],
+              "location": "LoginFeature.i_fill_in_with(String,String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 88800,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "I should see \"login.jsp\" login page",
+            "match": {
+              "arguments": [
+                {
+                  "val": "login.jsp",
+                  "offset": 14
+                }
+              ],
+              "location": "LoginFeature.i_should_see_login_page(String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 3,
+            "name": "@Login"
+          }
+        ]
+      },
+      {
+        "line": 10,
+        "name": "User nevigates to mLab login page",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 5549814300,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "I am on login page",
+            "match": {
+              "location": "LoginFeature.i_am_on_login_main_page()"
+            },
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "line": 25,
+        "name": "Failed login to mLab using wrong credentials",
+        "description": "",
+        "id": "loginfeature;failed-login-to-mlab-using-wrong-credentials;;3",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 1624818100,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "I fill in \"Email\" with \"\u003cemail\u003e\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Email",
+                  "offset": 11
+                },
+                {
+                  "val": "\u003cemail\u003e",
+                  "offset": 24
+                }
+              ],
+              "location": "LoginFeature.i_fill_in_with(String,String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1366850000,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "I fill in \"Password\" with \"\u003cPassword\u003e\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Password",
+                  "offset": 11
+                },
+                {
+                  "val": "\u003cPassword\u003e",
+                  "offset": 27
+                }
+              ],
+              "location": "LoginFeature.i_fill_in_with(String,String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 110800,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "I should see \"login.jsp\" login page",
+            "match": {
+              "arguments": [
+                {
+                  "val": "login.jsp",
+                  "offset": 14
+                }
+              ],
+              "location": "LoginFeature.i_should_see_login_page(String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 3,
+            "name": "@Login"
+          }
+        ]
+      },
+      {
+        "line": 10,
+        "name": "User nevigates to mLab login page",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 13050842100,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "I am on login page",
+            "match": {
+              "location": "LoginFeature.i_am_on_login_main_page()"
+            },
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "line": 26,
+        "name": "Failed login to mLab using wrong credentials",
+        "description": "",
+        "id": "loginfeature;failed-login-to-mlab-using-wrong-credentials;;4",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 1679763600,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "I fill in \"Email\" with \"\u003cemail\u003e\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Email",
+                  "offset": 11
+                },
+                {
+                  "val": "\u003cemail\u003e",
+                  "offset": 24
+                }
+              ],
+              "location": "LoginFeature.i_fill_in_with(String,String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1582214600,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "I fill in \"Password\" with \"\u003cPassword\u003e\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Password",
+                  "offset": 11
+                },
+                {
+                  "val": "\u003cPassword\u003e",
+                  "offset": 27
+                }
+              ],
+              "location": "LoginFeature.i_fill_in_with(String,String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 86400,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "I should see \"login.jsp\" login page",
+            "match": {
+              "arguments": [
+                {
+                  "val": "login.jsp",
+                  "offset": 14
+                }
+              ],
+              "location": "LoginFeature.i_should_see_login_page(String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 3,
+            "name": "@Login"
+          }
+        ]
+      },
+      {
+        "line": 10,
+        "name": "User nevigates to mLab login page",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 5185893400,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "I am on login page",
+            "match": {
+              "location": "LoginFeature.i_am_on_login_main_page()"
+            },
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "line": 27,
+        "name": "Failed login to mLab using wrong credentials",
+        "description": "",
+        "id": "loginfeature;failed-login-to-mlab-using-wrong-credentials;;5",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 1730514700,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "I fill in \"Email\" with \"\u003cemail\u003e\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Email",
+                  "offset": 11
+                },
+                {
+                  "val": "\u003cemail\u003e",
+                  "offset": 24
+                }
+              ],
+              "location": "LoginFeature.i_fill_in_with(String,String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1148513500,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "I fill in \"Password\" with \"\u003cPassword\u003e\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Password",
+                  "offset": 11
+                },
+                {
+                  "val": "\u003cPassword\u003e",
+                  "offset": 27
+                }
+              ],
+              "location": "LoginFeature.i_fill_in_with(String,String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 46700,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "I should see \"login.jsp\" login page",
+            "match": {
+              "arguments": [
+                {
+                  "val": "login.jsp",
+                  "offset": 14
+                }
+              ],
+              "location": "LoginFeature.i_should_see_login_page(String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 3,
+            "name": "@Login"
+          }
+        ]
+      }
+    ],
+    "name": "LoginFeature",
+    "description": "As a admin\r\nI want to login into mLab account using my admin credentials\r\nIn order to connect to mLab cloud database",
+    "id": "loginfeature",
+    "keyword": "Feature",
+    "uri": "LoginFeature.feature",
+    "tags": [
+      {
+        "line": 3,
+        "name": "@Login"
+      }
+    ]
+  }
+]

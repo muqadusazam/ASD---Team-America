@@ -35,7 +35,6 @@ public class LoginServlet extends HttpServlet {
         HttpSession session = request.getSession();
         
         
-        
         String email = request.getParameter("email");
         if (!validate(emailPattern, email)){
             errors.put("emailErr", "Incorrect email format");

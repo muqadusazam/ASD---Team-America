@@ -8,18 +8,18 @@
         <div class="container w-25" style = "margin-top:100px">
             <div class="form-group">
             <label>Email:</label>
-            <input type="email" class="form-control" name="email" value="${param.email}"
+            <input type="email" class="form-control" name="email" id="Email" value="${param.email}"
                    placeholder="Enter your email address" required>
             <span class="error text-danger"><em>${errors.emailErr}</em></span>
         </div>
 
         <div class="form-group">
             <label>Password:</label>
-            <input type="password" class="form-control" name="password" value="${param.password}"
+            <input type="password" class="form-control" name="password" id="Password" value="${param.password}"
                    placeholder="Enter a password" required>
             <span class="error text-danger"><em>${errors.passwordErr}</em></span>
         </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="submit" id="BtnLogin" class="btn btn-primary">Submit</button>
         </div>
 </form>
 <jsp:include page = "fc_footer.jsp"/>

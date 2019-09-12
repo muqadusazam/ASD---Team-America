@@ -17,17 +17,13 @@
     </properties>
     
     <dependencies>
+        <!-- GAE SDK dependency -->
         <dependency>
             <groupId>com.google.appengine</groupId>
             <artifactId>appengine-api-1.0-sdk</artifactId>
             <version>1.9.65</version>
         </dependency>
-        <dependency>
-            <groupId>javax</groupId>
-            <artifactId>javaee-web-api</artifactId>
-            <version>7.0</version>
-            <scope>provided</scope>
-        </dependency>
+        <!-- mLab MongoDB driver dependency -->
         <dependency>
             <groupId>org.mongodb</groupId>
             <artifactId>mongodb-driver</artifactId>
@@ -49,6 +45,17 @@
             <type>jar</type>
         </dependency>
         <dependency>
+            <groupId>javax</groupId>
+            <artifactId>javaee-web-api</artifactId>
+            <version>7.0</version>
+            <scope>provided</scope>
+        </dependency>  
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>jstl</artifactId>
+            <version>1.2</version>
+        </dependency> 
+        <dependency>
             <groupId>info.cukes</groupId>
             <artifactId>cucumber-core</artifactId>
             <version>1.2.5</version>
@@ -59,16 +66,14 @@
             <artifactId>cucumber-java</artifactId>
             <version>1.2.5</version>
             <scope>test</scope>
-        </dependency> 
-        <dependency>
-            <groupId>javax.servlet</groupId>
-            <artifactId>jstl</artifactId>
-            <version>1.2</version>
-        </dependency>
+        </dependency>    
+       
+        <!-- Selenium dependency for firefox webdriver-->
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-firefox-driver</artifactId>
             <version>3.141.59</version>
+            <scope>test</scope>
             <type>jar</type>
         </dependency>
         <!-- Selenium dependency for Java-->
@@ -83,6 +88,7 @@
             <artifactId>selenium-support</artifactId>
             <version>3.11.0</version>
         </dependency>
+        <!-- JUnit dependency-->
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
@@ -96,11 +102,10 @@
             <artifactId>hamcrest-core</artifactId>
             <version>1.3</version>
             <scope>test</scope>
-        </dependency>
+        </dependency>               
     </dependencies>
-
     <build>
-        <plugins>
+        <plugins>            
             <plugin>
                 <groupId>com.google.cloud.tools</groupId>
                 <artifactId>appengine-maven-plugin</artifactId>
@@ -116,7 +121,6 @@
                     <address>0.0.0.0</address>
                 </configuration>
             </plugin>
-            
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>

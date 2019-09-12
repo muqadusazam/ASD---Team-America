@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="25" failures="0" name="test.RunTest" time="31.322" errors="10" skipped="10">
+<testsuite tests="25" failures="0" name="test.RunTest" time="34.943" errors="10" skipped="10">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_221\jre\bin"/>
@@ -14,10 +14,10 @@
     <property name="user.country" value="AU"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="sun.os.patch.level" value=""/>
+    <property name="test" value="test.RunTest"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
     <property name="user.dir" value="C:\Users\muqad\Documents\Uni Work\ASD\ASD---Team-America"/>
     <property name="java.runtime.version" value="1.8.0_221-b11"/>
-    <property name="netbeans.deploy" value="true"/>
     <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
     <property name="java.endorsed.dirs" value="C:\Program Files\Java\jdk1.8.0_221\jre\lib\endorsed"/>
     <property name="os.arch" value="amd64"/>
@@ -27,7 +27,7 @@
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="user.variant" value=""/>
     <property name="os.name" value="Windows 10"/>
-    <property name="maven.ext.class.path" value="C:\Program Files\NetBeans 8.2\java\maven-nblib\netbeans-eventspy.jar"/>
+    <property name="maven.ext.class.path" value="C:\Program Files\NetBeans 8.2\java\maven-nblib\netbeans-eventspy.jar;C:\Program Files\NetBeans 8.2\java\maven-nblib\netbeans-eventspy.jar"/>
     <property name="classworlds.conf" value="C:\Program Files\NetBeans 8.2\java\maven\bin\m2.conf"/>
     <property name="sun.jnu.encoding" value="Cp1252"/>
     <property name="java.library.path" value="C:\Program Files\Java\jdk1.8.0_221\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Web Drivers;C:\Users\muqad\AppData\Local\Microsoft\WindowsApps;C:\Users\muqad\AppData\Local\GitHubDesktop\bin;."/>
@@ -45,7 +45,7 @@
     <property name="java.vm.specification.version" value="1.8"/>
     <property name="sun.arch.data.model" value="64"/>
     <property name="java.home" value="C:\Program Files\Java\jdk1.8.0_221\jre"/>
-    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher -Dnetbeans.deploy=true -Dnetbeans.deploy.clientUrlPart=/main.jsp -Dmaven.ext.class.path=C:\Program Files\NetBeans 8.2\java\maven-nblib\netbeans-eventspy.jar -Dfile.encoding=UTF-8 package"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher -Dtest=test.RunTest -Dmaven.ext.class.path=C:\Program Files\NetBeans 8.2\java\maven-nblib\netbeans-eventspy.jar;C:\Program Files\NetBeans 8.2\java\maven-nblib\netbeans-eventspy.jar -Dfile.encoding=UTF-8 surefire:test"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
     <property name="user.language" value="en"/>
     <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
@@ -59,7 +59,6 @@
     <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
     <property name="sun.cpu.endian" value="little"/>
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
-    <property name="netbeans.deploy.clientUrlPart" value="/main.jsp"/>
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
@@ -70,15 +69,15 @@ For documentation on this error, please visit: https://www.seleniumhq.org/except
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
 System info: host: &apos;DESKTOP-GS5KILN&apos;, ip: &apos;192.168.1.9&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_221&apos;
 Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 69.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20190827005903, moz:geckodriverVersion: 0.25.0, moz:headless: false, moz:processID: 8908, moz:profile: C:\Users\muqad\AppData\Loca..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: b221d9a1-660e-4c51-b217-877b4ab8e5d2
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 69.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20190827005903, moz:geckodriverVersion: 0.25.0, moz:headless: false, moz:processID: 3320, moz:profile: C:\Users\muqad\AppData\Loca..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: b7734831-3d78-46ac-9361-faffd64da024
 *** Element info: {Using=id, value=email}" type="org.openqa.selenium.NoSuchElementException">org.openqa.selenium.NoSuchElementException: Unable to locate element: #email
 For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
 System info: host: &apos;DESKTOP-GS5KILN&apos;, ip: &apos;192.168.1.9&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_221&apos;
 Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 69.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20190827005903, moz:geckodriverVersion: 0.25.0, moz:headless: false, moz:processID: 8908, moz:profile: C:\Users\muqad\AppData\Loca..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: b221d9a1-660e-4c51-b217-877b4ab8e5d2
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 69.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20190827005903, moz:geckodriverVersion: 0.25.0, moz:headless: false, moz:processID: 3320, moz:profile: C:\Users\muqad\AppData\Loca..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: b7734831-3d78-46ac-9361-faffd64da024
 *** Element info: {Using=id, value=email}
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
@@ -108,15 +107,15 @@ For documentation on this error, please visit: https://www.seleniumhq.org/except
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
 System info: host: &apos;DESKTOP-GS5KILN&apos;, ip: &apos;192.168.1.9&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_221&apos;
 Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 69.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20190827005903, moz:geckodriverVersion: 0.25.0, moz:headless: false, moz:processID: 8908, moz:profile: C:\Users\muqad\AppData\Loca..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: b221d9a1-660e-4c51-b217-877b4ab8e5d2
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 69.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20190827005903, moz:geckodriverVersion: 0.25.0, moz:headless: false, moz:processID: 3320, moz:profile: C:\Users\muqad\AppData\Loca..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: b7734831-3d78-46ac-9361-faffd64da024
 *** Element info: {Using=id, value=email}" type="org.openqa.selenium.NoSuchElementException">org.openqa.selenium.NoSuchElementException: Unable to locate element: #email
 For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
 System info: host: &apos;DESKTOP-GS5KILN&apos;, ip: &apos;192.168.1.9&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_221&apos;
 Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 69.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20190827005903, moz:geckodriverVersion: 0.25.0, moz:headless: false, moz:processID: 8908, moz:profile: C:\Users\muqad\AppData\Loca..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: b221d9a1-660e-4c51-b217-877b4ab8e5d2
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 69.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20190827005903, moz:geckodriverVersion: 0.25.0, moz:headless: false, moz:processID: 3320, moz:profile: C:\Users\muqad\AppData\Loca..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: b7734831-3d78-46ac-9361-faffd64da024
 *** Element info: {Using=id, value=email}
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
@@ -139,25 +138,25 @@ Session ID: b221d9a1-660e-4c51-b217-877b4ab8e5d2
   <testcase classname="Scenario: Successful login to mLab" name="And I fill in \&quot;Password\&quot; with \&quot;&lt;mLab Password&gt;\&quot;" time="0.003">
     <skipped/>
   </testcase>
-  <testcase classname="Scenario: Successful login to mLab" name="Then I should see \&quot;main.jsp\&quot; page" time="0.003">
+  <testcase classname="Scenario: Successful login to mLab" name="Then I should see \&quot;main.jsp\&quot; page" time="0.004">
     <skipped/>
   </testcase>
   <testcase classname="| Test | !23 | Incorrect credentials. Try again. |" name="Given I am on login page" time="0"/>
-  <testcase classname="| Test | !23 | Incorrect credentials. Try again. |" name="When I fill in \&quot;Email\&quot; with \&quot;&lt;email&gt;\&quot;" time="0.001">
+  <testcase classname="| Test | !23 | Incorrect credentials. Try again. |" name="When I fill in \&quot;Email\&quot; with \&quot;&lt;email&gt;\&quot;" time="0.002">
     <error message="Unable to locate element: #email
 For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
 System info: host: &apos;DESKTOP-GS5KILN&apos;, ip: &apos;192.168.1.9&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_221&apos;
 Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 69.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20190827005903, moz:geckodriverVersion: 0.25.0, moz:headless: false, moz:processID: 12708, moz:profile: C:\Users\muqad\AppData\Loca..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 50a187bc-0647-40ca-8efd-9e1f6a76de31
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 69.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20190827005903, moz:geckodriverVersion: 0.25.0, moz:headless: false, moz:processID: 18276, moz:profile: C:\Users\muqad\AppData\Loca..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 8a1654e4-8c4e-423d-a68a-33af3af043e7
 *** Element info: {Using=id, value=email}" type="org.openqa.selenium.NoSuchElementException">org.openqa.selenium.NoSuchElementException: Unable to locate element: #email
 For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
 System info: host: &apos;DESKTOP-GS5KILN&apos;, ip: &apos;192.168.1.9&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_221&apos;
 Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 69.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20190827005903, moz:geckodriverVersion: 0.25.0, moz:headless: false, moz:processID: 12708, moz:profile: C:\Users\muqad\AppData\Loca..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 50a187bc-0647-40ca-8efd-9e1f6a76de31
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 69.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20190827005903, moz:geckodriverVersion: 0.25.0, moz:headless: false, moz:processID: 18276, moz:profile: C:\Users\muqad\AppData\Loca..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 8a1654e4-8c4e-423d-a68a-33af3af043e7
 *** Element info: {Using=id, value=email}
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
@@ -181,21 +180,21 @@ Session ID: 50a187bc-0647-40ca-8efd-9e1f6a76de31
     &amp;#27;[32mGiven &amp;#27;[0m&amp;#27;[32mI am on login page&amp;#27;[0m                    &amp;#27;[90m# LoginFeature.i_am_on_login_page()&amp;#27;[0m
 </system-out>
   </testcase>
-  <testcase classname="| Test | !23 | Incorrect credentials. Try again. |" name="| Test | !23 | Incorrect credentials. Try again. |" time="0.001">
+  <testcase classname="| Test | !23 | Incorrect credentials. Try again. |" name="| Test | !23 | Incorrect credentials. Try again. |" time="0.003">
     <error message="Unable to locate element: #email
 For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
 System info: host: &apos;DESKTOP-GS5KILN&apos;, ip: &apos;192.168.1.9&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_221&apos;
 Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 69.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20190827005903, moz:geckodriverVersion: 0.25.0, moz:headless: false, moz:processID: 12708, moz:profile: C:\Users\muqad\AppData\Loca..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 50a187bc-0647-40ca-8efd-9e1f6a76de31
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 69.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20190827005903, moz:geckodriverVersion: 0.25.0, moz:headless: false, moz:processID: 18276, moz:profile: C:\Users\muqad\AppData\Loca..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 8a1654e4-8c4e-423d-a68a-33af3af043e7
 *** Element info: {Using=id, value=email}" type="org.openqa.selenium.NoSuchElementException">org.openqa.selenium.NoSuchElementException: Unable to locate element: #email
 For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
 System info: host: &apos;DESKTOP-GS5KILN&apos;, ip: &apos;192.168.1.9&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_221&apos;
 Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 69.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20190827005903, moz:geckodriverVersion: 0.25.0, moz:headless: false, moz:processID: 12708, moz:profile: C:\Users\muqad\AppData\Loca..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 50a187bc-0647-40ca-8efd-9e1f6a76de31
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 69.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20190827005903, moz:geckodriverVersion: 0.25.0, moz:headless: false, moz:processID: 18276, moz:profile: C:\Users\muqad\AppData\Loca..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 8a1654e4-8c4e-423d-a68a-33af3af043e7
 *** Element info: {Using=id, value=email}
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
@@ -215,28 +214,28 @@ Session ID: 50a187bc-0647-40ca-8efd-9e1f6a76de31
 	at ✽.When I fill in &quot;Email&quot; with &quot;&lt;email&gt;&quot;(LoginFeature.feature:19)
 </error>
   </testcase>
-  <testcase classname="| Test | !23 | Incorrect credentials. Try again. |" name="And I fill in \&quot;Password\&quot; with \&quot;&lt;Password&gt;\&quot;" time="0.001">
+  <testcase classname="| Test | !23 | Incorrect credentials. Try again. |" name="And I fill in \&quot;Password\&quot; with \&quot;&lt;Password&gt;\&quot;" time="0.003">
     <skipped/>
   </testcase>
-  <testcase classname="| Test | !23 | Incorrect credentials. Try again. |" name="Then I should see \&quot;login.jsp\&quot; page" time="0.002">
+  <testcase classname="| Test | !23 | Incorrect credentials. Try again. |" name="Then I should see \&quot;login.jsp\&quot; page" time="0.004">
     <skipped/>
   </testcase>
   <testcase classname="| Test |  | Please enter password. |" name="Given I am on login page" time="0"/>
-  <testcase classname="| Test |  | Please enter password. |" name="When I fill in \&quot;Email\&quot; with \&quot;&lt;email&gt;\&quot;" time="0.001">
+  <testcase classname="| Test |  | Please enter password. |" name="When I fill in \&quot;Email\&quot; with \&quot;&lt;email&gt;\&quot;" time="0">
     <error message="Unable to locate element: #email
 For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
 System info: host: &apos;DESKTOP-GS5KILN&apos;, ip: &apos;192.168.1.9&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_221&apos;
 Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 69.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20190827005903, moz:geckodriverVersion: 0.25.0, moz:headless: false, moz:processID: 9708, moz:profile: C:\Users\muqad\AppData\Loca..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 5ea215df-9301-467c-abbf-e3614d76309e
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 69.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20190827005903, moz:geckodriverVersion: 0.25.0, moz:headless: false, moz:processID: 12112, moz:profile: C:\Users\muqad\AppData\Loca..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: b6cb8142-a2df-4b94-afbb-0a8439cbdb3f
 *** Element info: {Using=id, value=email}" type="org.openqa.selenium.NoSuchElementException">org.openqa.selenium.NoSuchElementException: Unable to locate element: #email
 For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
 System info: host: &apos;DESKTOP-GS5KILN&apos;, ip: &apos;192.168.1.9&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_221&apos;
 Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 69.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20190827005903, moz:geckodriverVersion: 0.25.0, moz:headless: false, moz:processID: 9708, moz:profile: C:\Users\muqad\AppData\Loca..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 5ea215df-9301-467c-abbf-e3614d76309e
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 69.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20190827005903, moz:geckodriverVersion: 0.25.0, moz:headless: false, moz:processID: 12112, moz:profile: C:\Users\muqad\AppData\Loca..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: b6cb8142-a2df-4b94-afbb-0a8439cbdb3f
 *** Element info: {Using=id, value=email}
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
@@ -266,15 +265,15 @@ For documentation on this error, please visit: https://www.seleniumhq.org/except
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
 System info: host: &apos;DESKTOP-GS5KILN&apos;, ip: &apos;192.168.1.9&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_221&apos;
 Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 69.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20190827005903, moz:geckodriverVersion: 0.25.0, moz:headless: false, moz:processID: 9708, moz:profile: C:\Users\muqad\AppData\Loca..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 5ea215df-9301-467c-abbf-e3614d76309e
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 69.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20190827005903, moz:geckodriverVersion: 0.25.0, moz:headless: false, moz:processID: 12112, moz:profile: C:\Users\muqad\AppData\Loca..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: b6cb8142-a2df-4b94-afbb-0a8439cbdb3f
 *** Element info: {Using=id, value=email}" type="org.openqa.selenium.NoSuchElementException">org.openqa.selenium.NoSuchElementException: Unable to locate element: #email
 For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
 System info: host: &apos;DESKTOP-GS5KILN&apos;, ip: &apos;192.168.1.9&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_221&apos;
 Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 69.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20190827005903, moz:geckodriverVersion: 0.25.0, moz:headless: false, moz:processID: 9708, moz:profile: C:\Users\muqad\AppData\Loca..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 5ea215df-9301-467c-abbf-e3614d76309e
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 69.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20190827005903, moz:geckodriverVersion: 0.25.0, moz:headless: false, moz:processID: 12112, moz:profile: C:\Users\muqad\AppData\Loca..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: b6cb8142-a2df-4b94-afbb-0a8439cbdb3f
 *** Element info: {Using=id, value=email}
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
@@ -307,15 +306,15 @@ For documentation on this error, please visit: https://www.seleniumhq.org/except
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
 System info: host: &apos;DESKTOP-GS5KILN&apos;, ip: &apos;192.168.1.9&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_221&apos;
 Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 69.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20190827005903, moz:geckodriverVersion: 0.25.0, moz:headless: false, moz:processID: 20072, moz:profile: C:\Users\muqad\AppData\Loca..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: d16fa826-5334-4fb1-b301-f9ac379cd759
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 69.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20190827005903, moz:geckodriverVersion: 0.25.0, moz:headless: false, moz:processID: 9412, moz:profile: C:\Users\muqad\AppData\Loca..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: ea5ff523-9b60-4c43-b286-3230bc394a5b
 *** Element info: {Using=id, value=email}" type="org.openqa.selenium.NoSuchElementException">org.openqa.selenium.NoSuchElementException: Unable to locate element: #email
 For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
 System info: host: &apos;DESKTOP-GS5KILN&apos;, ip: &apos;192.168.1.9&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_221&apos;
 Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 69.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20190827005903, moz:geckodriverVersion: 0.25.0, moz:headless: false, moz:processID: 20072, moz:profile: C:\Users\muqad\AppData\Loca..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: d16fa826-5334-4fb1-b301-f9ac379cd759
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 69.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20190827005903, moz:geckodriverVersion: 0.25.0, moz:headless: false, moz:processID: 9412, moz:profile: C:\Users\muqad\AppData\Loca..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: ea5ff523-9b60-4c43-b286-3230bc394a5b
 *** Element info: {Using=id, value=email}
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
@@ -345,15 +344,15 @@ For documentation on this error, please visit: https://www.seleniumhq.org/except
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
 System info: host: &apos;DESKTOP-GS5KILN&apos;, ip: &apos;192.168.1.9&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_221&apos;
 Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 69.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20190827005903, moz:geckodriverVersion: 0.25.0, moz:headless: false, moz:processID: 20072, moz:profile: C:\Users\muqad\AppData\Loca..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: d16fa826-5334-4fb1-b301-f9ac379cd759
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 69.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20190827005903, moz:geckodriverVersion: 0.25.0, moz:headless: false, moz:processID: 9412, moz:profile: C:\Users\muqad\AppData\Loca..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: ea5ff523-9b60-4c43-b286-3230bc394a5b
 *** Element info: {Using=id, value=email}" type="org.openqa.selenium.NoSuchElementException">org.openqa.selenium.NoSuchElementException: Unable to locate element: #email
 For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
 System info: host: &apos;DESKTOP-GS5KILN&apos;, ip: &apos;192.168.1.9&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_221&apos;
 Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 69.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20190827005903, moz:geckodriverVersion: 0.25.0, moz:headless: false, moz:processID: 20072, moz:profile: C:\Users\muqad\AppData\Loca..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: d16fa826-5334-4fb1-b301-f9ac379cd759
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 69.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20190827005903, moz:geckodriverVersion: 0.25.0, moz:headless: false, moz:processID: 9412, moz:profile: C:\Users\muqad\AppData\Loca..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: ea5ff523-9b60-4c43-b286-3230bc394a5b
 *** Element info: {Using=id, value=email}
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
@@ -380,21 +379,21 @@ Session ID: d16fa826-5334-4fb1-b301-f9ac379cd759
     <skipped/>
   </testcase>
   <testcase classname="|  |  | Please enter your credentials. |" name="Given I am on login page" time="0"/>
-  <testcase classname="|  |  | Please enter your credentials. |" name="When I fill in \&quot;Email\&quot; with \&quot;&lt;email&gt;\&quot;" time="0.001">
+  <testcase classname="|  |  | Please enter your credentials. |" name="When I fill in \&quot;Email\&quot; with \&quot;&lt;email&gt;\&quot;" time="0">
     <error message="Unable to locate element: #email
 For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
 System info: host: &apos;DESKTOP-GS5KILN&apos;, ip: &apos;192.168.1.9&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_221&apos;
 Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 69.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20190827005903, moz:geckodriverVersion: 0.25.0, moz:headless: false, moz:processID: 16972, moz:profile: C:\Users\muqad\AppData\Loca..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 00e96fa5-9071-4ea2-8689-f93a0b54354f
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 69.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20190827005903, moz:geckodriverVersion: 0.25.0, moz:headless: false, moz:processID: 12772, moz:profile: C:\Users\muqad\AppData\Loca..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 4a9f0b6f-290b-4492-b042-592746d3e292
 *** Element info: {Using=id, value=email}" type="org.openqa.selenium.NoSuchElementException">org.openqa.selenium.NoSuchElementException: Unable to locate element: #email
 For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
 System info: host: &apos;DESKTOP-GS5KILN&apos;, ip: &apos;192.168.1.9&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_221&apos;
 Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 69.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20190827005903, moz:geckodriverVersion: 0.25.0, moz:headless: false, moz:processID: 16972, moz:profile: C:\Users\muqad\AppData\Loca..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 00e96fa5-9071-4ea2-8689-f93a0b54354f
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 69.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20190827005903, moz:geckodriverVersion: 0.25.0, moz:headless: false, moz:processID: 12772, moz:profile: C:\Users\muqad\AppData\Loca..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 4a9f0b6f-290b-4492-b042-592746d3e292
 *** Element info: {Using=id, value=email}
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
@@ -424,15 +423,15 @@ For documentation on this error, please visit: https://www.seleniumhq.org/except
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
 System info: host: &apos;DESKTOP-GS5KILN&apos;, ip: &apos;192.168.1.9&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_221&apos;
 Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 69.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20190827005903, moz:geckodriverVersion: 0.25.0, moz:headless: false, moz:processID: 16972, moz:profile: C:\Users\muqad\AppData\Loca..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 00e96fa5-9071-4ea2-8689-f93a0b54354f
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 69.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20190827005903, moz:geckodriverVersion: 0.25.0, moz:headless: false, moz:processID: 12772, moz:profile: C:\Users\muqad\AppData\Loca..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 4a9f0b6f-290b-4492-b042-592746d3e292
 *** Element info: {Using=id, value=email}" type="org.openqa.selenium.NoSuchElementException">org.openqa.selenium.NoSuchElementException: Unable to locate element: #email
 For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
 System info: host: &apos;DESKTOP-GS5KILN&apos;, ip: &apos;192.168.1.9&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_221&apos;
 Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 69.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20190827005903, moz:geckodriverVersion: 0.25.0, moz:headless: false, moz:processID: 16972, moz:profile: C:\Users\muqad\AppData\Loca..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 00e96fa5-9071-4ea2-8689-f93a0b54354f
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 69.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20190827005903, moz:geckodriverVersion: 0.25.0, moz:headless: false, moz:processID: 12772, moz:profile: C:\Users\muqad\AppData\Loca..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 4a9f0b6f-290b-4492-b042-592746d3e292
 *** Element info: {Using=id, value=email}
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)

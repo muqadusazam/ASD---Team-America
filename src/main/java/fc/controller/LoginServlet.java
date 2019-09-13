@@ -48,12 +48,13 @@ public class LoginServlet extends HttpServlet {
         MongoDBManager_Customers db = new MongoDBManager_Customers(); 
         Customer customer = db.getCustomer(email, password);
         
-        if (customer != null){
-            response.sendRedirect("main.jsp");
-        } else{
+
+        if (customer == null){
+            errors.put("noCustomer", "Customer does not exist");
             request.setAttribute("errors", errors);
             request.getRequestDispatcher("login.jsp").forward(request, response);
-            response.sendRedirect("login.jsp");
+        }else{
+                    response.sendRedirect("main.jsp");         
         }
 //        if (errors.isEmpty()) { //redirect to next page if no error is detected in errors map
 //            response.sendRedirect("main.jsp");

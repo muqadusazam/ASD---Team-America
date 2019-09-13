@@ -21,7 +21,7 @@
         "steps": [
           {
             "result": {
-              "duration": 5376687700,
+              "duration": 4606757000,
               "status": "passed"
             },
             "line": 11,
@@ -43,8 +43,9 @@
         "steps": [
           {
             "result": {
-              "duration": 1273456400,
-              "status": "passed"
+              "duration": 560592000,
+              "error_message": "org.openqa.selenium.WebDriverException: Failed to decode response from marionette\nBuild info: version: \u00273.141.59\u0027, revision: \u0027e82be7d358\u0027, time: \u00272018-11-14T08:17:03\u0027\nSystem info: host: \u0027DESKTOP-GS5KILN\u0027, ip: \u0027172.19.115.121\u0027, os.name: \u0027Windows 10\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u00271.8.0_221\u0027\nDriver info: org.openqa.selenium.firefox.FirefoxDriver\nCapabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 69.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20190827005903, moz:geckodriverVersion: 0.25.0, moz:headless: false, moz:processID: 12240, moz:profile: C:\\Users\\muqad\\AppData\\Loca..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}\nSession ID: 5f75352a-c25f-4ba9-b52c-533a05819ed5\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\r\n\tat sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\r\n\tat java.lang.reflect.Constructor.newInstance(Constructor.java:423)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:277)\r\n\tat test.LoginFeature.i_fill_in_with(LoginFeature.java:36)\r\n\tat ✽.When I fill in \"Email\" with \"\u003cmLab email\u003e\"(LoginFeature.feature:14)\r\n",
+              "status": "failed"
             },
             "line": 14,
             "name": "I fill in \"Email\" with \"\u003cmLab email\u003e\"",
@@ -65,8 +66,7 @@
           },
           {
             "result": {
-              "duration": 825436900,
-              "status": "passed"
+              "status": "skipped"
             },
             "line": 15,
             "name": "I fill in \"Password\" with \"\u003cmLab Password\u003e\"",
@@ -87,8 +87,7 @@
           },
           {
             "result": {
-              "duration": 433400,
-              "status": "passed"
+              "status": "skipped"
             },
             "line": 16,
             "name": "I should see \"main.jsp\" main page",
@@ -114,7 +113,7 @@
         "steps": [
           {
             "result": {
-              "duration": 4295313700,
+              "duration": 4301801600,
               "status": "passed"
             },
             "line": 11,
@@ -136,7 +135,7 @@
         "steps": [
           {
             "result": {
-              "duration": 1218945200,
+              "duration": 1273410600,
               "status": "passed"
             },
             "line": 19,
@@ -158,7 +157,7 @@
           },
           {
             "result": {
-              "duration": 790242800,
+              "duration": 838901300,
               "status": "passed"
             },
             "line": 20,
@@ -180,7 +179,7 @@
           },
           {
             "result": {
-              "duration": 49900,
+              "duration": 624000,
               "status": "passed"
             },
             "line": 21,
@@ -213,7 +212,7 @@
         "steps": [
           {
             "result": {
-              "duration": 3794762700,
+              "duration": 3795355400,
               "status": "passed"
             },
             "line": 11,
@@ -235,7 +234,7 @@
         "steps": [
           {
             "result": {
-              "duration": 1326817000,
+              "duration": 1242585600,
               "status": "passed"
             },
             "line": 19,
@@ -257,7 +256,7 @@
           },
           {
             "result": {
-              "duration": 860159400,
+              "duration": 782264600,
               "status": "passed"
             },
             "line": 20,
@@ -279,7 +278,7 @@
           },
           {
             "result": {
-              "duration": 53500,
+              "duration": 47200,
               "status": "passed"
             },
             "line": 21,
@@ -312,7 +311,7 @@
         "steps": [
           {
             "result": {
-              "duration": 3837374300,
+              "duration": 2813498900,
               "status": "passed"
             },
             "line": 11,
@@ -334,8 +333,9 @@
         "steps": [
           {
             "result": {
-              "duration": 1265615800,
-              "status": "passed"
+              "duration": 7276500,
+              "error_message": "org.openqa.selenium.NoSuchWindowException: Browsing context has been discarded\nBuild info: version: \u00273.141.59\u0027, revision: \u0027e82be7d358\u0027, time: \u00272018-11-14T08:17:03\u0027\nSystem info: host: \u0027DESKTOP-GS5KILN\u0027, ip: \u0027172.19.115.121\u0027, os.name: \u0027Windows 10\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u00271.8.0_221\u0027\nDriver info: org.openqa.selenium.firefox.FirefoxDriver\nCapabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 69.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20190827005903, moz:geckodriverVersion: 0.25.0, moz:headless: false, moz:processID: 20584, moz:profile: C:\\Users\\muqad\\AppData\\Loca..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}\nSession ID: d2df66c0-9eaa-4fde-ab56-dc8fa1f3c9da\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\r\n\tat sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\r\n\tat java.lang.reflect.Constructor.newInstance(Constructor.java:423)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:277)\r\n\tat test.LoginFeature.i_fill_in_with(LoginFeature.java:36)\r\n\tat ✽.When I fill in \"Email\" with \"\u003cemail\u003e\"(LoginFeature.feature:19)\r\n",
+              "status": "failed"
             },
             "line": 19,
             "name": "I fill in \"Email\" with \"\u003cemail\u003e\"",
@@ -356,8 +356,7 @@
           },
           {
             "result": {
-              "duration": 790753300,
-              "status": "passed"
+              "status": "skipped"
             },
             "line": 20,
             "name": "I fill in \"Password\" with \"\u003cPassword\u003e\"",
@@ -378,8 +377,7 @@
           },
           {
             "result": {
-              "duration": 45200,
-              "status": "passed"
+              "status": "skipped"
             },
             "line": 21,
             "name": "I should see \"login.jsp\" login page",
@@ -411,7 +409,7 @@
         "steps": [
           {
             "result": {
-              "duration": 3795497500,
+              "duration": 3028506200,
               "status": "passed"
             },
             "line": 11,
@@ -433,8 +431,9 @@
         "steps": [
           {
             "result": {
-              "duration": 1271517200,
-              "status": "passed"
+              "duration": 550391300,
+              "error_message": "org.openqa.selenium.WebDriverException: Failed to decode response from marionette\nBuild info: version: \u00273.141.59\u0027, revision: \u0027e82be7d358\u0027, time: \u00272018-11-14T08:17:03\u0027\nSystem info: host: \u0027DESKTOP-GS5KILN\u0027, ip: \u0027172.19.115.121\u0027, os.name: \u0027Windows 10\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u00271.8.0_221\u0027\nDriver info: org.openqa.selenium.firefox.FirefoxDriver\nCapabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 69.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20190827005903, moz:geckodriverVersion: 0.25.0, moz:headless: false, moz:processID: 15328, moz:profile: C:\\Users\\muqad\\AppData\\Loca..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}\nSession ID: 0b65b1c6-a705-4d5e-a9b7-daff4c95c848\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\r\n\tat sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\r\n\tat java.lang.reflect.Constructor.newInstance(Constructor.java:423)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:277)\r\n\tat test.LoginFeature.i_fill_in_with(LoginFeature.java:36)\r\n\tat ✽.When I fill in \"Email\" with \"\u003cemail\u003e\"(LoginFeature.feature:19)\r\n",
+              "status": "failed"
             },
             "line": 19,
             "name": "I fill in \"Email\" with \"\u003cemail\u003e\"",
@@ -455,8 +454,7 @@
           },
           {
             "result": {
-              "duration": 827184100,
-              "status": "passed"
+              "status": "skipped"
             },
             "line": 20,
             "name": "I fill in \"Password\" with \"\u003cPassword\u003e\"",
@@ -477,8 +475,7 @@
           },
           {
             "result": {
-              "duration": 46400,
-              "status": "passed"
+              "status": "skipped"
             },
             "line": 21,
             "name": "I should see \"login.jsp\" login page",

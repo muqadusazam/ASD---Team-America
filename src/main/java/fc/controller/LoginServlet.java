@@ -53,6 +53,7 @@ public class LoginServlet extends HttpServlet {
         } else{
             request.setAttribute("errors", errors);
             request.getRequestDispatcher("login.jsp").forward(request, response);
+            response.sendRedirect("login.jsp");
         }
 //        if (errors.isEmpty()) { //redirect to next page if no error is detected in errors map
 //            response.sendRedirect("main.jsp");

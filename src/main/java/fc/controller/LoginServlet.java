@@ -43,7 +43,6 @@ public class LoginServlet extends HttpServlet {
         String password = request.getParameter("password");
         if (!validate(passwordPattern, password)){
             errors.put("passwordErr", "Password must contain at least 5 letters and 1 number");
-            return;
         }
 
        

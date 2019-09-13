@@ -21,7 +21,7 @@ public class LoginFeature {
     WebDriver driver;
     
     @Given("^I am on login page$")
-    public void i_am_on_login_main_page() throws Throwable {
+    public void i_am_on_login_page() throws Throwable {
         //System.setProperty("webdriver.chrome.driver", "C:\\Web Drivers\\chromedriver.exe");
         //WebDriver driverClass = new ChromeDriver.class;
         Class<? extends WebDriver> driverClass = FirefoxDriver.class;

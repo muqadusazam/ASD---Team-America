@@ -21,13 +21,13 @@
         "steps": [
           {
             "result": {
-              "duration": 6769903400,
+              "duration": 5376687700,
               "status": "passed"
             },
             "line": 11,
             "name": "I am on login page",
             "match": {
-              "location": "LoginFeature.i_am_on_login_main_page()"
+              "location": "LoginFeature.i_am_on_login_page()"
             },
             "keyword": "Given "
           }
@@ -43,7 +43,7 @@
         "steps": [
           {
             "result": {
-              "duration": 1392058600,
+              "duration": 1273456400,
               "status": "passed"
             },
             "line": 14,
@@ -65,7 +65,7 @@
           },
           {
             "result": {
-              "duration": 896761600,
+              "duration": 825436900,
               "status": "passed"
             },
             "line": 15,
@@ -87,7 +87,7 @@
           },
           {
             "result": {
-              "duration": 570400,
+              "duration": 433400,
               "status": "passed"
             },
             "line": 16,
@@ -114,13 +114,13 @@
         "steps": [
           {
             "result": {
-              "duration": 4418318700,
+              "duration": 4295313700,
               "status": "passed"
             },
             "line": 11,
             "name": "I am on login page",
             "match": {
-              "location": "LoginFeature.i_am_on_login_main_page()"
+              "location": "LoginFeature.i_am_on_login_page()"
             },
             "keyword": "Given "
           }
@@ -136,7 +136,7 @@
         "steps": [
           {
             "result": {
-              "duration": 1336712200,
+              "duration": 1218945200,
               "status": "passed"
             },
             "line": 19,
@@ -158,7 +158,7 @@
           },
           {
             "result": {
-              "duration": 1018507600,
+              "duration": 790242800,
               "status": "passed"
             },
             "line": 20,
@@ -180,7 +180,7 @@
           },
           {
             "result": {
-              "duration": 161700,
+              "duration": 49900,
               "status": "passed"
             },
             "line": 21,
@@ -213,13 +213,13 @@
         "steps": [
           {
             "result": {
-              "duration": 4558631100,
+              "duration": 3794762700,
               "status": "passed"
             },
             "line": 11,
             "name": "I am on login page",
             "match": {
-              "location": "LoginFeature.i_am_on_login_main_page()"
+              "location": "LoginFeature.i_am_on_login_page()"
             },
             "keyword": "Given "
           }
@@ -235,7 +235,7 @@
         "steps": [
           {
             "result": {
-              "duration": 1412034600,
+              "duration": 1326817000,
               "status": "passed"
             },
             "line": 19,
@@ -257,7 +257,7 @@
           },
           {
             "result": {
-              "duration": 914543100,
+              "duration": 860159400,
               "status": "passed"
             },
             "line": 20,
@@ -279,7 +279,7 @@
           },
           {
             "result": {
-              "duration": 132500,
+              "duration": 53500,
               "status": "passed"
             },
             "line": 21,
@@ -312,13 +312,13 @@
         "steps": [
           {
             "result": {
-              "duration": 5068638600,
+              "duration": 3837374300,
               "status": "passed"
             },
             "line": 11,
             "name": "I am on login page",
             "match": {
-              "location": "LoginFeature.i_am_on_login_main_page()"
+              "location": "LoginFeature.i_am_on_login_page()"
             },
             "keyword": "Given "
           }
@@ -334,7 +334,7 @@
         "steps": [
           {
             "result": {
-              "duration": 1422584300,
+              "duration": 1265615800,
               "status": "passed"
             },
             "line": 19,
@@ -356,7 +356,7 @@
           },
           {
             "result": {
-              "duration": 1466830800,
+              "duration": 790753300,
               "status": "passed"
             },
             "line": 20,
@@ -378,7 +378,7 @@
           },
           {
             "result": {
-              "duration": 133200,
+              "duration": 45200,
               "status": "passed"
             },
             "line": 21,
@@ -411,13 +411,13 @@
         "steps": [
           {
             "result": {
-              "duration": 4510199400,
+              "duration": 3795497500,
               "status": "passed"
             },
             "line": 11,
             "name": "I am on login page",
             "match": {
-              "location": "LoginFeature.i_am_on_login_main_page()"
+              "location": "LoginFeature.i_am_on_login_page()"
             },
             "keyword": "Given "
           }
@@ -433,7 +433,7 @@
         "steps": [
           {
             "result": {
-              "duration": 1349783200,
+              "duration": 1271517200,
               "status": "passed"
             },
             "line": 19,
@@ -455,7 +455,7 @@
           },
           {
             "result": {
-              "duration": 924131300,
+              "duration": 827184100,
               "status": "passed"
             },
             "line": 20,
@@ -477,7 +477,7 @@
           },
           {
             "result": {
-              "duration": 52600,
+              "duration": 46400,
               "status": "passed"
             },
             "line": 21,

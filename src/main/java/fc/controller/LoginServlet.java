@@ -44,31 +44,28 @@ public class LoginServlet extends HttpServlet {
         if (!validate(passwordPattern, password)){
             errors.put("passwordErr", "Password must contain at least 5 letters and 1 number");
         }
-        
+
+       
         MongoDBManager_Customers db = new MongoDBManager_Customers(); 
         Customer customer = db.getCustomer(email, password);
-        
-
         if (customer == null){
-            errors.put("noCustomer", "Customer does not exist");
+           errors.put("noCustomer", "Customer does not exist");
+
+        }
+
+        if (errors.isEmpty()) { //redirect to next page if no error is detected in errors map
+            response.sendRedirect("main.jsp");
+        }
+        else { //put errors in request scope and forward them back to register.jsp to display error messages
             request.setAttribute("errors", errors);
             request.getRequestDispatcher("login.jsp").forward(request, response);
-        }else{
-                    response.sendRedirect("main.jsp");         
         }
-//        if (errors.isEmpty()) { //redirect to next page if no error is detected in errors map
-//            response.sendRedirect("main.jsp");
-//        }
-//        else { //put errors in request scope and forward them back to register.jsp to display error messages
-//            request.setAttribute("errors", errors);
-//            request.getRequestDispatcher("login.jsp").forward(request, response);
-//        }
         
         session.setAttribute(customer.getID(), "customer_ID");
     }
     
         //regex for validating input from register.jsp form
-    private String emailPattern = "([a-zA-Z0-9]+)(([._-])([a-zA-Z0-9]+))*(@)([a-z]+)(.)([a-z]{3})((([.])[a-z]{0,2})*)";   
+    private String emailPattern = "(([a-zA-Z0-9]+)(@)([a-zA-Z0-9]+)[.]([a-zA-Z0-9]+))";
     private String passwordPattern = "[a-z]{5,}[0-9]+"; //5 or more chars, 1 or more ints
     
     public boolean validate(String pattern, String input){ //return false if input does not match pattern

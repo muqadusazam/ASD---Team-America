@@ -54,6 +54,8 @@ public class MongoDBManager_Customers extends MongoDBConnector {
             MongoCollection<Document> customerDB = db.getCollection(CUSTOMER_COLLECTION);
             Document doc = customerDB.find(and(eq("email", email), eq("password", password))).first();
             customer = convertToCustomer(doc);
+        } catch(NullPointerException x){
+            return null;
         }
         return customer;
     }

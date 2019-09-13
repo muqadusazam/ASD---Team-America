@@ -18,7 +18,10 @@
             <input type="password" class="form-control" name="password" id="Password" value="${param.password}"
                    placeholder="Enter a password" required>
             <span class="error text-danger"><em>${errors.passwordErr}</em></span>
-        </div>
+           <div>
+                <span class="error text-danger"><em>${errors.noCustomer}</em></span>
+            </div>
+        </div class="form-group">
             <button type="submit" id="BtnLogin" class="btn btn-primary">Submit</button>
         </div>
 </form>

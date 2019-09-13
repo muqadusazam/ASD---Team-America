@@ -16,5 +16,5 @@ public abstract class MongoDB {
     
     protected final String CUSTOMER_COLLECTION = "ASD.Customers(MUQADUS)";
     protected final String TICKET_COLLECTION   = "ASD.Tickets(MUQADUS)";
-    protected final String FLIGHT_COLLECTION  = "ASD.Flights(MUQADUS)";
+    protected final String FLIGHT_COLLECTION  = "ASD.Flights(Anthea)";
 }

@@ -17,15 +17,18 @@
 
 </div>
 <%
-    MongoDBManager_Tickets dbt = new MongoDBManager_Tickets();
+    MongoDBManager_Customers dbc = new MongoDBManager_Customers();
     
-    Ticket ticket = new Ticket("234323",
-            "2",
-            "3",
-            "23A"
-    );
+    Customer cust = new Customer("2",
+            "John",
+            "Smith",
+            "john.smith@gmail.com",
+            "123",
+            "124AH3",
+            "01/01/2000");
     
-    dbt.add(ticket);
+    dbc.add(cust);
+    
 %>  
 <div class="mx-auto" style="float: left">
     <form>

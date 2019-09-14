@@ -1,7 +1,8 @@
 <%@page import="fc.model.dao.*"%>
+<%@page import="fc.model.*"%>
 <%@page import="fc.controller.*" %>
 <%@page import="java.util.ArrayList"%>
-<%@page contentType="text/html" pageEncoding="UTF-8" import="fc.model.*"%>
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 
 <jsp:include page="fc_header.jsp">
 	<jsp:param name="title" value="Flight Center/account/reschedule"/>
@@ -28,7 +29,7 @@
         session.setAttribute("oldTicket", tick);
         
         Customer customer = (Customer)session.getAttribute("loggedIn");
-        Ticket ticket = (Ticket)session.getAttribute("ticket");
+        Ticket ticket = (Ticket)session.getAttribute("oldTicket");
         
         if (customer == null) {
     %>
@@ -43,9 +44,24 @@
             Flight flight = dbf.getFlight(ticket.getFlightID());
             session.setAttribute("oldFlight", flight);
     %>
-    <form>
     <h1><p>Reschedule ticket</p></h1>
-    
+    <%
+        if (session.getAttribute("errors") != null) {
+    %>
+        <div class="alert alert-danger" role="alert">
+        <strong>Error!</strong> ${errors.dateErr}
+        </div>
+    <%
+        session.setAttribute("errors", null);
+        } else if (session.getAttribute("success") != null) {
+    %>
+    <div class="alert alert-success" role="alert">
+        <strong>Success!</strong> <%= session.getAttribute("success") %>
+    </div>
+    <%
+        session.setAttribute("success", null);
+        }
+    %>
     <table class="table table-hover">
         <tbody>
         <tr>
@@ -131,7 +147,7 @@
         <tr>
             <td><b>Choose new ticket: &nbsp&nbsp</b></td>
             <td>
-                <form action="RescheduleServlet" method="post">
+                <form action="RescheduleServlet" method="POST">
                     <select name="newFlight" value="<%= flight.getID() %>">
                         <option selected="true" disabled="disabled">-- Select Ticket --</option>
                         <%
@@ -145,26 +161,18 @@
                             }
                         %>
                     </select>
+                    <button type="submit" class="btn btn-success" style="float: right">Submit</button>
+                    <button type="reset" class="btn btn-danger" style="float: right">Cancel</button>
+                </form>
                 <span class="error text-danger"><em>${errors.dateErr}</em></span>
             </td>
         </tr>
-        
-        <tr>
-            <td></td>
-            <td></td>
-            <td>
-                <button type="submit" class="btn btn-success" style="float: right">Submit</button>
-                <button type="reset" class="btn btn-danger" style="float: right">Cancel</button>
-            </td>
-        </tr>
-        </form>
 
         <%
             }
         %>
         </tbody>
     </table>
-    </form>
 </div>
 <%  }
 %>

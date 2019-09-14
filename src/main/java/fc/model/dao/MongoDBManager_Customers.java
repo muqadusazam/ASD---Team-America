@@ -22,7 +22,7 @@ public class MongoDBManager_Customers extends MongoDBConnector {
             MongoDatabase db = client.getDatabase(uri.getDatabase());
             MongoCollection<Document> customerDB = db.getCollection(CUSTOMER_COLLECTION);
             customerDB.insertOne(convertToDoc(customer));
-        }
+        } 
     }
     
     public void remove(Customer customer) {
@@ -42,6 +42,8 @@ public class MongoDBManager_Customers extends MongoDBConnector {
             MongoCollection<Document> customerDB = db.getCollection(CUSTOMER_COLLECTION);
             Document doc = customerDB.find(eq("id", id)).first();
             customer = convertToCustomer(doc);
+        } catch (NullPointerException ex) {
+            return null;
         }
         return customer;
     }
@@ -54,6 +56,8 @@ public class MongoDBManager_Customers extends MongoDBConnector {
             MongoCollection<Document> customerDB = db.getCollection(CUSTOMER_COLLECTION);
             Document doc = customerDB.find(and(eq("email", email), eq("password", password))).first();
             customer = convertToCustomer(doc);
+        } catch (NullPointerException ex) {
+            return null;
         }
         return customer;
     }
@@ -69,6 +73,8 @@ public class MongoDBManager_Customers extends MongoDBConnector {
                 Customer customer = convertToCustomer(doc);
                 customers.add(customer);
             }
+        } catch (NullPointerException ex) {
+            return null;
         }
         return customers;
     }

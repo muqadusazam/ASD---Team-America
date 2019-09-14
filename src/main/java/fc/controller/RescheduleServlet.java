@@ -31,7 +31,7 @@ public class RescheduleServlet extends HttpServlet {
         Map<String,String> errors = new HashMap<String,String>();
         HttpSession session = request.getSession();
         
-        Ticket oldTicket = (Ticket)session.getAttribute("ticket");
+        Ticket oldTicket = (Ticket)session.getAttribute("oldTicket");
         
         MongoDBManager_Flights dbf = new MongoDBManager_Flights();
         Flight flight = dbf.getFlight(oldTicket.getFlightID());
@@ -41,7 +41,7 @@ public class RescheduleServlet extends HttpServlet {
         String oldDestDate = flight.getArrivalDate();
         String oldDestTime = flight.getArrivalTime();
         
-        String newFlightID = request.getParameter("tickets");
+        String newFlightID = request.getParameter("newFlight");
         Flight newFlight = dbf.getFlight(newFlightID);
         
         String newDepDate = newFlight.getDepartureDate();
@@ -58,7 +58,6 @@ public class RescheduleServlet extends HttpServlet {
         }
         
         if (errors.isEmpty()) {
-            response.sendRedirect("rescheduleSuccess.jsp");
             MongoDBManager_Tickets dbt = new MongoDBManager_Tickets();
             
             Ticket newTicket = new Ticket(oldTicket.getID(),
@@ -68,9 +67,12 @@ public class RescheduleServlet extends HttpServlet {
             
             dbt.remove(oldTicket);
             dbt.add(newTicket);
+            
+            session.setAttribute("success", "The ticket has been successfully rescheduled!");
+            response.sendRedirect("reschedule.jsp");
         } else {
-            request.setAttribute("errors", errors);
-            request.getRequestDispatcher("reschedule.jsp").forward(request, response);
+            session.setAttribute("errors", errors);
+            response.sendRedirect("reschedule.jsp");
         }
     }
     

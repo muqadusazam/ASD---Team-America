@@ -21,8 +21,8 @@ import fc.model.dao.*;
  *
  * @author kelvin
  */
-@WebServlet(name = "RegisterServlet", urlPatterns = {"/RegisterServlet"})
-public class RegisterServlet extends HttpServlet {
+@WebServlet(name = "RegisterAdminServlet", urlPatterns = {"/RegisterAdminServlet"})
+public class RegisterAdminServlet extends HttpServlet {
     /**
      * Handles the HTTP <code>POST</code> method.
      *

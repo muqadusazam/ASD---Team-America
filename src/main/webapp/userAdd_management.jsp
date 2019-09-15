@@ -17,7 +17,7 @@
 </div>
 
 <div class="mx-auto" style="width: 950px;">
-    <form action="RegisterServlet" method="post" class="margin1">
+    <form action="RegisterAdminServlet" method="post" class="margin1">
         <div class="form-row">
             <div class="form-group col-md-6">
                 <label>First Name</label>

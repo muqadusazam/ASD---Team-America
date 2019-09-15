@@ -19,7 +19,7 @@ import java.util.regex.Pattern;
  * @author kelvin
  */
 @WebServlet(name = "RegisterServlet", urlPatterns = {"/RegisterServlet"})
-public class RegisterServlet extends HttpServlet {
+public class RegisterAdminServlet extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>

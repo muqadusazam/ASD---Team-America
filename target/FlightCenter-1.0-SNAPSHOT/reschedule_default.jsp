@@ -16,20 +16,6 @@
     </ul>
 
 </div>
-<%
-    MongoDBManager_Customers dbc = new MongoDBManager_Customers();
-    
-    Customer cust = new Customer("2",
-            "John",
-            "Smith",
-            "john.smith@gmail.com",
-            "123",
-            "124AH3",
-            "01/01/2000");
-    
-    dbc.add(cust);
-    
-%>  
 <div class="mx-auto" style="float: left">
     <form>
     <h1><p>Reschedule ticket</p></h1>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="25" failures="0" name="test.RunTest" time="72.819" errors="0" skipped="0">
+<testsuite tests="49" failures="0" name="test.RunTest" time="82.265" errors="12" skipped="6">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_221\jre\bin"/>
@@ -68,23 +68,479 @@
   <testcase classname="Scenario: Successful login to mLab" name="Then I should see \&quot;main.jsp\&quot; main page" time="0"/>
   <testcase classname="Scenario: Successful login to mLab" name="Scenario: Successful login to mLab" time="0"/>
   <testcase classname="| Test | !23 | Incorrect credentials. Try again. |" name="Given I am on login page" time="0"/>
-  <testcase classname="| Test | !23 | Incorrect credentials. Try again. |" name="When I fill in \&quot;Email\&quot; with \&quot;&lt;email&gt;\&quot;" time="0"/>
+  <testcase classname="| Test | !23 | Incorrect credentials. Try again. |" name="When I fill in \&quot;Email\&quot; with \&quot;Test\&quot;" time="0"/>
   <testcase classname="| Test | !23 | Incorrect credentials. Try again. |" name="And I fill in \&quot;Password\&quot; with \&quot;!23\&quot;" time="0"/>
   <testcase classname="| Test | !23 | Incorrect credentials. Try again. |" name="Then I should see \&quot;login.jsp\&quot; login page" time="0"/>
   <testcase classname="| Test | !23 | Incorrect credentials. Try again. |" name="| Test | !23 | Incorrect credentials. Try again. |" time="0"/>
   <testcase classname="| Test |  | Please enter password. |" name="Given I am on login page" time="0"/>
-  <testcase classname="| Test |  | Please enter password. |" name="When I fill in \&quot;Email\&quot; with \&quot;&lt;email&gt;\&quot;" time="0"/>
+  <testcase classname="| Test |  | Please enter password. |" name="When I fill in \&quot;Email\&quot; with \&quot;Test\&quot;" time="0"/>
   <testcase classname="| Test |  | Please enter password. |" name="And I fill in \&quot;Password\&quot; with \&quot;\&quot;" time="0"/>
   <testcase classname="| Test |  | Please enter password. |" name="Then I should see \&quot;login.jsp\&quot; login page" time="0"/>
   <testcase classname="| Test |  | Please enter password. |" name="| Test |  | Please enter password. |" time="0"/>
   <testcase classname="|  | 123 | Please enter username. |" name="Given I am on login page" time="0"/>
-  <testcase classname="|  | 123 | Please enter username. |" name="When I fill in \&quot;Email\&quot; with \&quot;&lt;email&gt;\&quot;" time="0"/>
+  <testcase classname="|  | 123 | Please enter username. |" name="When I fill in \&quot;Email\&quot; with \&quot;\&quot;" time="0"/>
   <testcase classname="|  | 123 | Please enter username. |" name="And I fill in \&quot;Password\&quot; with \&quot;123\&quot;" time="0"/>
   <testcase classname="|  | 123 | Please enter username. |" name="Then I should see \&quot;login.jsp\&quot; login page" time="0"/>
   <testcase classname="|  | 123 | Please enter username. |" name="|  | 123 | Please enter username. |" time="0"/>
   <testcase classname="|  |  | Please enter your credentials. |" name="Given I am on login page" time="0"/>
-  <testcase classname="|  |  | Please enter your credentials. |" name="When I fill in \&quot;Email\&quot; with \&quot;&lt;email&gt;\&quot;" time="0"/>
+  <testcase classname="|  |  | Please enter your credentials. |" name="When I fill in \&quot;Email\&quot; with \&quot;\&quot;" time="0"/>
   <testcase classname="|  |  | Please enter your credentials. |" name="And I fill in \&quot;Password\&quot; with \&quot;\&quot;" time="0"/>
   <testcase classname="|  |  | Please enter your credentials. |" name="Then I should see \&quot;login.jsp\&quot; login page" time="0"/>
   <testcase classname="|  |  | Please enter your credentials. |" name="|  |  | Please enter your credentials. |" time="0"/>
+  <testcase classname="Scenario: Successful registration" name="Given I am on register page" time="0"/>
+  <testcase classname="Scenario: Successful registration" name="When I fill in with \&quot;Test\&quot; and \&quot;Tester\&quot; and \&quot;test@tester.com\&quot; and \&quot;abcde1\&quot; and \&quot;TT999\&quot; and \&quot;1992-12-12\&quot;" time="0.015">
+    <error message="Unable to locate element: #first_name
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DESKTOP-GS5KILN&apos;, ip: &apos;192.168.1.2&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_221&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 69.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20190827005903, moz:geckodriverVersion: 0.25.0, moz:headless: false, moz:processID: 16140, moz:profile: C:\Users\muqad\AppData\Loca..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 5cb45b5e-834a-4bf1-a4df-c1d69c90f93a
+*** Element info: {Using=id, value=first_name}" type="org.openqa.selenium.NoSuchElementException">org.openqa.selenium.NoSuchElementException: Unable to locate element: #first_name
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DESKTOP-GS5KILN&apos;, ip: &apos;192.168.1.2&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_221&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 69.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20190827005903, moz:geckodriverVersion: 0.25.0, moz:headless: false, moz:processID: 16140, moz:profile: C:\Users\muqad\AppData\Loca..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 5cb45b5e-834a-4bf1-a4df-c1d69c90f93a
+*** Element info: {Using=id, value=first_name}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:372)
+	at org.openqa.selenium.By$ById.findElement(By.java:188)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at test.RegisterFeature.i_fill_in_with(RegisterFeature.java:41)
+	at ✽.When I fill in with &quot;Test&quot; and &quot;Tester&quot; and &quot;test@tester.com&quot; and &quot;abcde1&quot; and &quot;TT999&quot; and &quot;1992-12-12&quot;(RegisterFeature.feature:13)
+</error>
+    <system-out>
+  Background: User navigates to FlightCenter Register page &amp;#27;[90m# RegisterFeature.feature:9&amp;#27;[0m
+    &amp;#27;[32mGiven &amp;#27;[0m&amp;#27;[32mI am on register page&amp;#27;[0m                            &amp;#27;[90m# RegisterFeature.i_am_on_register_page()&amp;#27;[0m
+</system-out>
+  </testcase>
+  <testcase classname="Scenario: Successful registration" name="Scenario: Successful registration" time="0.015">
+    <error message="Unable to locate element: #first_name
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DESKTOP-GS5KILN&apos;, ip: &apos;192.168.1.2&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_221&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 69.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20190827005903, moz:geckodriverVersion: 0.25.0, moz:headless: false, moz:processID: 16140, moz:profile: C:\Users\muqad\AppData\Loca..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 5cb45b5e-834a-4bf1-a4df-c1d69c90f93a
+*** Element info: {Using=id, value=first_name}" type="org.openqa.selenium.NoSuchElementException">org.openqa.selenium.NoSuchElementException: Unable to locate element: #first_name
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DESKTOP-GS5KILN&apos;, ip: &apos;192.168.1.2&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_221&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 69.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20190827005903, moz:geckodriverVersion: 0.25.0, moz:headless: false, moz:processID: 16140, moz:profile: C:\Users\muqad\AppData\Loca..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 5cb45b5e-834a-4bf1-a4df-c1d69c90f93a
+*** Element info: {Using=id, value=first_name}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:372)
+	at org.openqa.selenium.By$ById.findElement(By.java:188)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at test.RegisterFeature.i_fill_in_with(RegisterFeature.java:41)
+	at ✽.When I fill in with &quot;Test&quot; and &quot;Tester&quot; and &quot;test@tester.com&quot; and &quot;abcde1&quot; and &quot;TT999&quot; and &quot;1992-12-12&quot;(RegisterFeature.feature:13)
+</error>
+  </testcase>
+  <testcase classname="Scenario: Successful registration" name="Then I should see registerSuccess page" time="0.015">
+    <skipped/>
+  </testcase>
+  <testcase classname="|  | One | user@one.co | abcde1 | UO001 | 1994-04-15 | Missing first name. |" name="Given I am on register page" time="0"/>
+  <testcase classname="|  | One | user@one.co | abcde1 | UO001 | 1994-04-15 | Missing first name. |" name="When I fill in with \&quot;\&quot; and \&quot;One\&quot; and \&quot;user@one.co\&quot; and \&quot;abcde1\&quot; and \&quot;UO001\&quot; and \&quot;1994-04-15\&quot;" time="0">
+    <error message="Unable to locate element: #first_name
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DESKTOP-GS5KILN&apos;, ip: &apos;192.168.1.2&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_221&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 69.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20190827005903, moz:geckodriverVersion: 0.25.0, moz:headless: false, moz:processID: 22252, moz:profile: C:\Users\muqad\AppData\Loca..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: d8f60646-0151-4534-b8b4-43d4bda9bfdc
+*** Element info: {Using=id, value=first_name}" type="org.openqa.selenium.NoSuchElementException">org.openqa.selenium.NoSuchElementException: Unable to locate element: #first_name
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DESKTOP-GS5KILN&apos;, ip: &apos;192.168.1.2&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_221&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 69.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20190827005903, moz:geckodriverVersion: 0.25.0, moz:headless: false, moz:processID: 22252, moz:profile: C:\Users\muqad\AppData\Loca..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: d8f60646-0151-4534-b8b4-43d4bda9bfdc
+*** Element info: {Using=id, value=first_name}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:372)
+	at org.openqa.selenium.By$ById.findElement(By.java:188)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at test.RegisterFeature.i_fill_in_with(RegisterFeature.java:41)
+	at ✽.When I fill in with &quot;&quot; and &quot;One&quot; and &quot;user@one.co&quot; and &quot;abcde1&quot; and &quot;UO001&quot; and &quot;1994-04-15&quot;(RegisterFeature.feature:17)
+</error>
+    <system-out>
+  Background: User navigates to FlightCenter Register page &amp;#27;[90m# RegisterFeature.feature:9&amp;#27;[0m
+    &amp;#27;[32mGiven &amp;#27;[0m&amp;#27;[32mI am on register page&amp;#27;[0m                            &amp;#27;[90m# RegisterFeature.i_am_on_register_page()&amp;#27;[0m
+</system-out>
+  </testcase>
+  <testcase classname="|  | One | user@one.co | abcde1 | UO001 | 1994-04-15 | Missing first name. |" name="|  | One | user@one.co | abcde1 | UO001 | 1994-04-15 | Missing first name. |" time="0">
+    <error message="Unable to locate element: #first_name
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DESKTOP-GS5KILN&apos;, ip: &apos;192.168.1.2&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_221&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 69.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20190827005903, moz:geckodriverVersion: 0.25.0, moz:headless: false, moz:processID: 22252, moz:profile: C:\Users\muqad\AppData\Loca..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: d8f60646-0151-4534-b8b4-43d4bda9bfdc
+*** Element info: {Using=id, value=first_name}" type="org.openqa.selenium.NoSuchElementException">org.openqa.selenium.NoSuchElementException: Unable to locate element: #first_name
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DESKTOP-GS5KILN&apos;, ip: &apos;192.168.1.2&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_221&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 69.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20190827005903, moz:geckodriverVersion: 0.25.0, moz:headless: false, moz:processID: 22252, moz:profile: C:\Users\muqad\AppData\Loca..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: d8f60646-0151-4534-b8b4-43d4bda9bfdc
+*** Element info: {Using=id, value=first_name}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:372)
+	at org.openqa.selenium.By$ById.findElement(By.java:188)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at test.RegisterFeature.i_fill_in_with(RegisterFeature.java:41)
+	at ✽.When I fill in with &quot;&quot; and &quot;One&quot; and &quot;user@one.co&quot; and &quot;abcde1&quot; and &quot;UO001&quot; and &quot;1994-04-15&quot;(RegisterFeature.feature:17)
+</error>
+  </testcase>
+  <testcase classname="|  | One | user@one.co | abcde1 | UO001 | 1994-04-15 | Missing first name. |" name="Then I should stay on register page" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="| Ben | Ten | ben@ten.co | abcde1 |  | 2000-01-01 | Missing password. |" name="Given I am on register page" time="0"/>
+  <testcase classname="| Ben | Ten | ben@ten.co | abcde1 |  | 2000-01-01 | Missing password. |" name="When I fill in with \&quot;Ben\&quot; and \&quot;Ten\&quot; and \&quot;ben@ten.co\&quot; and \&quot;abcde1\&quot; and \&quot;\&quot; and \&quot;2000-01-01\&quot;" time="0">
+    <error message="Unable to locate element: #first_name
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DESKTOP-GS5KILN&apos;, ip: &apos;192.168.1.2&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_221&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 69.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20190827005903, moz:geckodriverVersion: 0.25.0, moz:headless: false, moz:processID: 23116, moz:profile: C:\Users\muqad\AppData\Loca..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 0c829c64-0f28-402d-b05f-d297b1a529ca
+*** Element info: {Using=id, value=first_name}" type="org.openqa.selenium.NoSuchElementException">org.openqa.selenium.NoSuchElementException: Unable to locate element: #first_name
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DESKTOP-GS5KILN&apos;, ip: &apos;192.168.1.2&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_221&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 69.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20190827005903, moz:geckodriverVersion: 0.25.0, moz:headless: false, moz:processID: 23116, moz:profile: C:\Users\muqad\AppData\Loca..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 0c829c64-0f28-402d-b05f-d297b1a529ca
+*** Element info: {Using=id, value=first_name}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:372)
+	at org.openqa.selenium.By$ById.findElement(By.java:188)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at test.RegisterFeature.i_fill_in_with(RegisterFeature.java:41)
+	at ✽.When I fill in with &quot;Ben&quot; and &quot;Ten&quot; and &quot;ben@ten.co&quot; and &quot;abcde1&quot; and &quot;&quot; and &quot;2000-01-01&quot;(RegisterFeature.feature:17)
+</error>
+    <system-out>
+  Background: User navigates to FlightCenter Register page &amp;#27;[90m# RegisterFeature.feature:9&amp;#27;[0m
+    &amp;#27;[32mGiven &amp;#27;[0m&amp;#27;[32mI am on register page&amp;#27;[0m                            &amp;#27;[90m# RegisterFeature.i_am_on_register_page()&amp;#27;[0m
+</system-out>
+  </testcase>
+  <testcase classname="| Ben | Ten | ben@ten.co | abcde1 |  | 2000-01-01 | Missing password. |" name="| Ben | Ten | ben@ten.co | abcde1 |  | 2000-01-01 | Missing password. |" time="0">
+    <error message="Unable to locate element: #first_name
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DESKTOP-GS5KILN&apos;, ip: &apos;192.168.1.2&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_221&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 69.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20190827005903, moz:geckodriverVersion: 0.25.0, moz:headless: false, moz:processID: 23116, moz:profile: C:\Users\muqad\AppData\Loca..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 0c829c64-0f28-402d-b05f-d297b1a529ca
+*** Element info: {Using=id, value=first_name}" type="org.openqa.selenium.NoSuchElementException">org.openqa.selenium.NoSuchElementException: Unable to locate element: #first_name
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DESKTOP-GS5KILN&apos;, ip: &apos;192.168.1.2&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_221&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 69.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20190827005903, moz:geckodriverVersion: 0.25.0, moz:headless: false, moz:processID: 23116, moz:profile: C:\Users\muqad\AppData\Loca..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 0c829c64-0f28-402d-b05f-d297b1a529ca
+*** Element info: {Using=id, value=first_name}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:372)
+	at org.openqa.selenium.By$ById.findElement(By.java:188)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at test.RegisterFeature.i_fill_in_with(RegisterFeature.java:41)
+	at ✽.When I fill in with &quot;Ben&quot; and &quot;Ten&quot; and &quot;ben@ten.co&quot; and &quot;abcde1&quot; and &quot;&quot; and &quot;2000-01-01&quot;(RegisterFeature.feature:17)
+</error>
+  </testcase>
+  <testcase classname="| Ben | Ten | ben@ten.co | abcde1 |  | 2000-01-01 | Missing password. |" name="Then I should stay on register page" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="| Donald | Trump | trump@gov.us |  | DT001 | 1950-11-13 | Missing passport number. |" name="Given I am on register page" time="0"/>
+  <testcase classname="| Donald | Trump | trump@gov.us |  | DT001 | 1950-11-13 | Missing passport number. |" name="When I fill in with \&quot;Donald\&quot; and \&quot;Trump\&quot; and \&quot;trump@gov.us\&quot; and \&quot;\&quot; and \&quot;DT001\&quot; and \&quot;1950-11-13\&quot;" time="0">
+    <error message="Unable to locate element: #first_name
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DESKTOP-GS5KILN&apos;, ip: &apos;192.168.1.2&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_221&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 69.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20190827005903, moz:geckodriverVersion: 0.25.0, moz:headless: false, moz:processID: 24048, moz:profile: C:\Users\muqad\AppData\Loca..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: ee65a534-7612-464e-9cc6-a96b4c8e68b5
+*** Element info: {Using=id, value=first_name}" type="org.openqa.selenium.NoSuchElementException">org.openqa.selenium.NoSuchElementException: Unable to locate element: #first_name
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DESKTOP-GS5KILN&apos;, ip: &apos;192.168.1.2&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_221&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 69.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20190827005903, moz:geckodriverVersion: 0.25.0, moz:headless: false, moz:processID: 24048, moz:profile: C:\Users\muqad\AppData\Loca..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: ee65a534-7612-464e-9cc6-a96b4c8e68b5
+*** Element info: {Using=id, value=first_name}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:372)
+	at org.openqa.selenium.By$ById.findElement(By.java:188)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at test.RegisterFeature.i_fill_in_with(RegisterFeature.java:41)
+	at ✽.When I fill in with &quot;Donald&quot; and &quot;Trump&quot; and &quot;trump@gov.us&quot; and &quot;&quot; and &quot;DT001&quot; and &quot;1950-11-13&quot;(RegisterFeature.feature:17)
+</error>
+    <system-out>
+  Background: User navigates to FlightCenter Register page &amp;#27;[90m# RegisterFeature.feature:9&amp;#27;[0m
+    &amp;#27;[32mGiven &amp;#27;[0m&amp;#27;[32mI am on register page&amp;#27;[0m                            &amp;#27;[90m# RegisterFeature.i_am_on_register_page()&amp;#27;[0m
+</system-out>
+  </testcase>
+  <testcase classname="| Donald | Trump | trump@gov.us |  | DT001 | 1950-11-13 | Missing passport number. |" name="| Donald | Trump | trump@gov.us |  | DT001 | 1950-11-13 | Missing passport number. |" time="0">
+    <error message="Unable to locate element: #first_name
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DESKTOP-GS5KILN&apos;, ip: &apos;192.168.1.2&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_221&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 69.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20190827005903, moz:geckodriverVersion: 0.25.0, moz:headless: false, moz:processID: 24048, moz:profile: C:\Users\muqad\AppData\Loca..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: ee65a534-7612-464e-9cc6-a96b4c8e68b5
+*** Element info: {Using=id, value=first_name}" type="org.openqa.selenium.NoSuchElementException">org.openqa.selenium.NoSuchElementException: Unable to locate element: #first_name
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DESKTOP-GS5KILN&apos;, ip: &apos;192.168.1.2&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_221&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 69.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20190827005903, moz:geckodriverVersion: 0.25.0, moz:headless: false, moz:processID: 24048, moz:profile: C:\Users\muqad\AppData\Loca..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: ee65a534-7612-464e-9cc6-a96b4c8e68b5
+*** Element info: {Using=id, value=first_name}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:372)
+	at org.openqa.selenium.By$ById.findElement(By.java:188)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at test.RegisterFeature.i_fill_in_with(RegisterFeature.java:41)
+	at ✽.When I fill in with &quot;Donald&quot; and &quot;Trump&quot; and &quot;trump@gov.us&quot; and &quot;&quot; and &quot;DT001&quot; and &quot;1950-11-13&quot;(RegisterFeature.feature:17)
+</error>
+  </testcase>
+  <testcase classname="| Donald | Trump | trump@gov.us |  | DT001 | 1950-11-13 | Missing passport number. |" name="Then I should stay on register page" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="| Dobby |  | dobby@do.b | abcde1 | DD001 | 1960-12-28 | Missing last name. |" name="Given I am on register page" time="0"/>
+  <testcase classname="| Dobby |  | dobby@do.b | abcde1 | DD001 | 1960-12-28 | Missing last name. |" name="When I fill in with \&quot;Dobby\&quot; and \&quot;\&quot; and \&quot;dobby@do.b\&quot; and \&quot;abcde1\&quot; and \&quot;DD001\&quot; and \&quot;1960-12-28\&quot;" time="0">
+    <error message="Unable to locate element: #first_name
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DESKTOP-GS5KILN&apos;, ip: &apos;192.168.1.2&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_221&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 69.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20190827005903, moz:geckodriverVersion: 0.25.0, moz:headless: false, moz:processID: 24968, moz:profile: C:\Users\muqad\AppData\Loca..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 391d7741-d4be-4212-97c0-da2cb2445d4a
+*** Element info: {Using=id, value=first_name}" type="org.openqa.selenium.NoSuchElementException">org.openqa.selenium.NoSuchElementException: Unable to locate element: #first_name
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DESKTOP-GS5KILN&apos;, ip: &apos;192.168.1.2&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_221&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 69.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20190827005903, moz:geckodriverVersion: 0.25.0, moz:headless: false, moz:processID: 24968, moz:profile: C:\Users\muqad\AppData\Loca..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 391d7741-d4be-4212-97c0-da2cb2445d4a
+*** Element info: {Using=id, value=first_name}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:372)
+	at org.openqa.selenium.By$ById.findElement(By.java:188)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at test.RegisterFeature.i_fill_in_with(RegisterFeature.java:41)
+	at ✽.When I fill in with &quot;Dobby&quot; and &quot;&quot; and &quot;dobby@do.b&quot; and &quot;abcde1&quot; and &quot;DD001&quot; and &quot;1960-12-28&quot;(RegisterFeature.feature:17)
+</error>
+    <system-out>
+  Background: User navigates to FlightCenter Register page &amp;#27;[90m# RegisterFeature.feature:9&amp;#27;[0m
+    &amp;#27;[32mGiven &amp;#27;[0m&amp;#27;[32mI am on register page&amp;#27;[0m                            &amp;#27;[90m# RegisterFeature.i_am_on_register_page()&amp;#27;[0m
+</system-out>
+  </testcase>
+  <testcase classname="| Dobby |  | dobby@do.b | abcde1 | DD001 | 1960-12-28 | Missing last name. |" name="| Dobby |  | dobby@do.b | abcde1 | DD001 | 1960-12-28 | Missing last name. |" time="0">
+    <error message="Unable to locate element: #first_name
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DESKTOP-GS5KILN&apos;, ip: &apos;192.168.1.2&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_221&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 69.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20190827005903, moz:geckodriverVersion: 0.25.0, moz:headless: false, moz:processID: 24968, moz:profile: C:\Users\muqad\AppData\Loca..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 391d7741-d4be-4212-97c0-da2cb2445d4a
+*** Element info: {Using=id, value=first_name}" type="org.openqa.selenium.NoSuchElementException">org.openqa.selenium.NoSuchElementException: Unable to locate element: #first_name
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DESKTOP-GS5KILN&apos;, ip: &apos;192.168.1.2&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_221&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 69.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20190827005903, moz:geckodriverVersion: 0.25.0, moz:headless: false, moz:processID: 24968, moz:profile: C:\Users\muqad\AppData\Loca..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 391d7741-d4be-4212-97c0-da2cb2445d4a
+*** Element info: {Using=id, value=first_name}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:372)
+	at org.openqa.selenium.By$ById.findElement(By.java:188)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at test.RegisterFeature.i_fill_in_with(RegisterFeature.java:41)
+	at ✽.When I fill in with &quot;Dobby&quot; and &quot;&quot; and &quot;dobby@do.b&quot; and &quot;abcde1&quot; and &quot;DD001&quot; and &quot;1960-12-28&quot;(RegisterFeature.feature:17)
+</error>
+  </testcase>
+  <testcase classname="| Dobby |  | dobby@do.b | abcde1 | DD001 | 1960-12-28 | Missing last name. |" name="Then I should stay on register page" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="| Poo | Head | poo@head.aus | abcde1 | PH001 |  | Missing DOB. |" name="Given I am on register page" time="0"/>
+  <testcase classname="| Poo | Head | poo@head.aus | abcde1 | PH001 |  | Missing DOB. |" name="When I fill in with \&quot;Poo\&quot; and \&quot;Head\&quot; and \&quot;poo@head.aus\&quot; and \&quot;abcde1\&quot; and \&quot;PH001\&quot; and \&quot;\&quot;" time="0">
+    <error message="Unable to locate element: #first_name
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DESKTOP-GS5KILN&apos;, ip: &apos;192.168.1.2&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_221&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 69.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20190827005903, moz:geckodriverVersion: 0.25.0, moz:headless: false, moz:processID: 25612, moz:profile: C:\Users\muqad\AppData\Loca..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 5d2075e0-d72b-4d2c-89ff-db368afbfda8
+*** Element info: {Using=id, value=first_name}" type="org.openqa.selenium.NoSuchElementException">org.openqa.selenium.NoSuchElementException: Unable to locate element: #first_name
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DESKTOP-GS5KILN&apos;, ip: &apos;192.168.1.2&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_221&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 69.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20190827005903, moz:geckodriverVersion: 0.25.0, moz:headless: false, moz:processID: 25612, moz:profile: C:\Users\muqad\AppData\Loca..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 5d2075e0-d72b-4d2c-89ff-db368afbfda8
+*** Element info: {Using=id, value=first_name}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:372)
+	at org.openqa.selenium.By$ById.findElement(By.java:188)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at test.RegisterFeature.i_fill_in_with(RegisterFeature.java:41)
+	at ✽.When I fill in with &quot;Poo&quot; and &quot;Head&quot; and &quot;poo@head.aus&quot; and &quot;abcde1&quot; and &quot;PH001&quot; and &quot;&quot;(RegisterFeature.feature:17)
+</error>
+    <system-out>
+  Background: User navigates to FlightCenter Register page &amp;#27;[90m# RegisterFeature.feature:9&amp;#27;[0m
+    &amp;#27;[32mGiven &amp;#27;[0m&amp;#27;[32mI am on register page&amp;#27;[0m                            &amp;#27;[90m# RegisterFeature.i_am_on_register_page()&amp;#27;[0m
+</system-out>
+  </testcase>
+  <testcase classname="| Poo | Head | poo@head.aus | abcde1 | PH001 |  | Missing DOB. |" name="| Poo | Head | poo@head.aus | abcde1 | PH001 |  | Missing DOB. |" time="0">
+    <error message="Unable to locate element: #first_name
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DESKTOP-GS5KILN&apos;, ip: &apos;192.168.1.2&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_221&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 69.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20190827005903, moz:geckodriverVersion: 0.25.0, moz:headless: false, moz:processID: 25612, moz:profile: C:\Users\muqad\AppData\Loca..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 5d2075e0-d72b-4d2c-89ff-db368afbfda8
+*** Element info: {Using=id, value=first_name}" type="org.openqa.selenium.NoSuchElementException">org.openqa.selenium.NoSuchElementException: Unable to locate element: #first_name
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DESKTOP-GS5KILN&apos;, ip: &apos;192.168.1.2&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_221&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 69.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20190827005903, moz:geckodriverVersion: 0.25.0, moz:headless: false, moz:processID: 25612, moz:profile: C:\Users\muqad\AppData\Loca..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 5d2075e0-d72b-4d2c-89ff-db368afbfda8
+*** Element info: {Using=id, value=first_name}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:372)
+	at org.openqa.selenium.By$ById.findElement(By.java:188)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at test.RegisterFeature.i_fill_in_with(RegisterFeature.java:41)
+	at ✽.When I fill in with &quot;Poo&quot; and &quot;Head&quot; and &quot;poo@head.aus&quot; and &quot;abcde1&quot; and &quot;PH001&quot; and &quot;&quot;(RegisterFeature.feature:17)
+</error>
+  </testcase>
+  <testcase classname="| Poo | Head | poo@head.aus | abcde1 | PH001 |  | Missing DOB. |" name="Then I should stay on register page" time="0">
+    <skipped/>
+  </testcase>
 </testsuite>

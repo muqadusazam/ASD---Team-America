@@ -21,8 +21,9 @@
         "steps": [
           {
             "result": {
-              "duration": 5693941700,
-              "status": "passed"
+              "duration": 1408341140,
+              "error_message": "org.openqa.selenium.WebDriverException: Cannot find firefox binary in PATH. Make sure firefox is installed. OS appears to be: MAC\nBuild info: version: \u00273.141.59\u0027, revision: \u0027e82be7d358\u0027, time: \u00272018-11-14T08:17:03\u0027\nSystem info: host: \u0027Williams-MacBook-Pro.local\u0027, ip: \u0027fe80:0:0:0:1041:dea5:c478:6dc5%en0\u0027, os.name: \u0027Mac OS X\u0027, os.arch: \u0027x86_64\u0027, os.version: \u002710.14.4\u0027, java.version: \u00271.8.0_181\u0027\nDriver info: driver.version: FirefoxDriver\n\tat org.openqa.selenium.firefox.FirefoxBinary.\u003cinit\u003e(FirefoxBinary.java:100)\n\tat java.util.Optional.orElseGet(Optional.java:267)\n\tat org.openqa.selenium.firefox.FirefoxOptions.getBinary(FirefoxOptions.java:216)\n\tat org.openqa.selenium.firefox.FirefoxDriver.toExecutor(FirefoxDriver.java:187)\n\tat org.openqa.selenium.firefox.FirefoxDriver.\u003cinit\u003e(FirefoxDriver.java:147)\n\tat org.openqa.selenium.firefox.FirefoxDriver.\u003cinit\u003e(FirefoxDriver.java:125)\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\n\tat sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\n\tat java.lang.reflect.Constructor.newInstance(Constructor.java:423)\n\tat java.lang.Class.newInstance(Class.java:442)\n\tat test.LoginFeature.i_am_on_login_page(LoginFeature.java:29)\n\tat ✽.Given I am on login page(LoginFeature.feature:11)\n",
+              "status": "failed"
             },
             "line": 11,
             "name": "I am on login page",
@@ -43,8 +44,7 @@
         "steps": [
           {
             "result": {
-              "duration": 1248245200,
-              "status": "passed"
+              "status": "skipped"
             },
             "line": 14,
             "name": "I fill in \"Email\" with \"\u003cmLab email\u003e\"",
@@ -65,8 +65,7 @@
           },
           {
             "result": {
-              "duration": 811019900,
-              "status": "passed"
+              "status": "skipped"
             },
             "line": 15,
             "name": "I fill in \"Password\" with \"\u003cmLab Password\u003e\"",
@@ -87,8 +86,7 @@
           },
           {
             "result": {
-              "duration": 649100,
-              "status": "passed"
+              "status": "skipped"
             },
             "line": 16,
             "name": "I should see \"main.jsp\" main page",
@@ -114,8 +112,9 @@
         "steps": [
           {
             "result": {
-              "duration": 4315283800,
-              "status": "passed"
+              "duration": 291166602,
+              "error_message": "org.openqa.selenium.WebDriverException: Cannot find firefox binary in PATH. Make sure firefox is installed. OS appears to be: MAC\nBuild info: version: \u00273.141.59\u0027, revision: \u0027e82be7d358\u0027, time: \u00272018-11-14T08:17:03\u0027\nSystem info: host: \u0027Williams-MacBook-Pro.local\u0027, ip: \u0027fe80:0:0:0:1041:dea5:c478:6dc5%en0\u0027, os.name: \u0027Mac OS X\u0027, os.arch: \u0027x86_64\u0027, os.version: \u002710.14.4\u0027, java.version: \u00271.8.0_181\u0027\nDriver info: driver.version: FirefoxDriver\n\tat org.openqa.selenium.firefox.FirefoxBinary.\u003cinit\u003e(FirefoxBinary.java:100)\n\tat java.util.Optional.orElseGet(Optional.java:267)\n\tat org.openqa.selenium.firefox.FirefoxOptions.getBinary(FirefoxOptions.java:216)\n\tat org.openqa.selenium.firefox.FirefoxDriver.toExecutor(FirefoxDriver.java:187)\n\tat org.openqa.selenium.firefox.FirefoxDriver.\u003cinit\u003e(FirefoxDriver.java:147)\n\tat org.openqa.selenium.firefox.FirefoxDriver.\u003cinit\u003e(FirefoxDriver.java:125)\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\n\tat sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\n\tat java.lang.reflect.Constructor.newInstance(Constructor.java:423)\n\tat java.lang.Class.newInstance(Class.java:442)\n\tat test.LoginFeature.i_am_on_login_page(LoginFeature.java:29)\n\tat ✽.Given I am on login page(LoginFeature.feature:11)\n",
+              "status": "failed"
             },
             "line": 11,
             "name": "I am on login page",
@@ -136,8 +135,7 @@
         "steps": [
           {
             "result": {
-              "duration": 1255980000,
-              "status": "passed"
+              "status": "skipped"
             },
             "line": 19,
             "name": "I fill in \"Email\" with \"\u003cemail\u003e\"",
@@ -158,8 +156,7 @@
           },
           {
             "result": {
-              "duration": 807227900,
-              "status": "passed"
+              "status": "skipped"
             },
             "line": 20,
             "name": "I fill in \"Password\" with \"\u003cPassword\u003e\"",
@@ -180,8 +177,7 @@
           },
           {
             "result": {
-              "duration": 49200,
-              "status": "passed"
+              "status": "skipped"
             },
             "line": 21,
             "name": "I should see \"login.jsp\" login page",
@@ -213,8 +209,9 @@
         "steps": [
           {
             "result": {
-              "duration": 3843138000,
-              "status": "passed"
+              "duration": 297002265,
+              "error_message": "org.openqa.selenium.WebDriverException: Cannot find firefox binary in PATH. Make sure firefox is installed. OS appears to be: MAC\nBuild info: version: \u00273.141.59\u0027, revision: \u0027e82be7d358\u0027, time: \u00272018-11-14T08:17:03\u0027\nSystem info: host: \u0027Williams-MacBook-Pro.local\u0027, ip: \u0027fe80:0:0:0:1041:dea5:c478:6dc5%en0\u0027, os.name: \u0027Mac OS X\u0027, os.arch: \u0027x86_64\u0027, os.version: \u002710.14.4\u0027, java.version: \u00271.8.0_181\u0027\nDriver info: driver.version: FirefoxDriver\n\tat org.openqa.selenium.firefox.FirefoxBinary.\u003cinit\u003e(FirefoxBinary.java:100)\n\tat java.util.Optional.orElseGet(Optional.java:267)\n\tat org.openqa.selenium.firefox.FirefoxOptions.getBinary(FirefoxOptions.java:216)\n\tat org.openqa.selenium.firefox.FirefoxDriver.toExecutor(FirefoxDriver.java:187)\n\tat org.openqa.selenium.firefox.FirefoxDriver.\u003cinit\u003e(FirefoxDriver.java:147)\n\tat org.openqa.selenium.firefox.FirefoxDriver.\u003cinit\u003e(FirefoxDriver.java:125)\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\n\tat sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\n\tat java.lang.reflect.Constructor.newInstance(Constructor.java:423)\n\tat java.lang.Class.newInstance(Class.java:442)\n\tat test.LoginFeature.i_am_on_login_page(LoginFeature.java:29)\n\tat ✽.Given I am on login page(LoginFeature.feature:11)\n",
+              "status": "failed"
             },
             "line": 11,
             "name": "I am on login page",
@@ -235,8 +232,7 @@
         "steps": [
           {
             "result": {
-              "duration": 1242426900,
-              "status": "passed"
+              "status": "skipped"
             },
             "line": 19,
             "name": "I fill in \"Email\" with \"\u003cemail\u003e\"",
@@ -257,8 +253,7 @@
           },
           {
             "result": {
-              "duration": 799835400,
-              "status": "passed"
+              "status": "skipped"
             },
             "line": 20,
             "name": "I fill in \"Password\" with \"\u003cPassword\u003e\"",
@@ -279,8 +274,7 @@
           },
           {
             "result": {
-              "duration": 45800,
-              "status": "passed"
+              "status": "skipped"
             },
             "line": 21,
             "name": "I should see \"login.jsp\" login page",
@@ -312,8 +306,9 @@
         "steps": [
           {
             "result": {
-              "duration": 3827573600,
-              "status": "passed"
+              "duration": 295480469,
+              "error_message": "org.openqa.selenium.WebDriverException: Cannot find firefox binary in PATH. Make sure firefox is installed. OS appears to be: MAC\nBuild info: version: \u00273.141.59\u0027, revision: \u0027e82be7d358\u0027, time: \u00272018-11-14T08:17:03\u0027\nSystem info: host: \u0027Williams-MacBook-Pro.local\u0027, ip: \u0027fe80:0:0:0:1041:dea5:c478:6dc5%en0\u0027, os.name: \u0027Mac OS X\u0027, os.arch: \u0027x86_64\u0027, os.version: \u002710.14.4\u0027, java.version: \u00271.8.0_181\u0027\nDriver info: driver.version: FirefoxDriver\n\tat org.openqa.selenium.firefox.FirefoxBinary.\u003cinit\u003e(FirefoxBinary.java:100)\n\tat java.util.Optional.orElseGet(Optional.java:267)\n\tat org.openqa.selenium.firefox.FirefoxOptions.getBinary(FirefoxOptions.java:216)\n\tat org.openqa.selenium.firefox.FirefoxDriver.toExecutor(FirefoxDriver.java:187)\n\tat org.openqa.selenium.firefox.FirefoxDriver.\u003cinit\u003e(FirefoxDriver.java:147)\n\tat org.openqa.selenium.firefox.FirefoxDriver.\u003cinit\u003e(FirefoxDriver.java:125)\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\n\tat sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\n\tat java.lang.reflect.Constructor.newInstance(Constructor.java:423)\n\tat java.lang.Class.newInstance(Class.java:442)\n\tat test.LoginFeature.i_am_on_login_page(LoginFeature.java:29)\n\tat ✽.Given I am on login page(LoginFeature.feature:11)\n",
+              "status": "failed"
             },
             "line": 11,
             "name": "I am on login page",
@@ -334,8 +329,7 @@
         "steps": [
           {
             "result": {
-              "duration": 1241526900,
-              "status": "passed"
+              "status": "skipped"
             },
             "line": 19,
             "name": "I fill in \"Email\" with \"\u003cemail\u003e\"",
@@ -356,8 +350,7 @@
           },
           {
             "result": {
-              "duration": 803853900,
-              "status": "passed"
+              "status": "skipped"
             },
             "line": 20,
             "name": "I fill in \"Password\" with \"\u003cPassword\u003e\"",
@@ -378,8 +371,7 @@
           },
           {
             "result": {
-              "duration": 63400,
-              "status": "passed"
+              "status": "skipped"
             },
             "line": 21,
             "name": "I should see \"login.jsp\" login page",
@@ -411,8 +403,9 @@
         "steps": [
           {
             "result": {
-              "duration": 4346618600,
-              "status": "passed"
+              "duration": 284653874,
+              "error_message": "org.openqa.selenium.WebDriverException: Cannot find firefox binary in PATH. Make sure firefox is installed. OS appears to be: MAC\nBuild info: version: \u00273.141.59\u0027, revision: \u0027e82be7d358\u0027, time: \u00272018-11-14T08:17:03\u0027\nSystem info: host: \u0027Williams-MacBook-Pro.local\u0027, ip: \u0027fe80:0:0:0:1041:dea5:c478:6dc5%en0\u0027, os.name: \u0027Mac OS X\u0027, os.arch: \u0027x86_64\u0027, os.version: \u002710.14.4\u0027, java.version: \u00271.8.0_181\u0027\nDriver info: driver.version: FirefoxDriver\n\tat org.openqa.selenium.firefox.FirefoxBinary.\u003cinit\u003e(FirefoxBinary.java:100)\n\tat java.util.Optional.orElseGet(Optional.java:267)\n\tat org.openqa.selenium.firefox.FirefoxOptions.getBinary(FirefoxOptions.java:216)\n\tat org.openqa.selenium.firefox.FirefoxDriver.toExecutor(FirefoxDriver.java:187)\n\tat org.openqa.selenium.firefox.FirefoxDriver.\u003cinit\u003e(FirefoxDriver.java:147)\n\tat org.openqa.selenium.firefox.FirefoxDriver.\u003cinit\u003e(FirefoxDriver.java:125)\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\n\tat sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\n\tat java.lang.reflect.Constructor.newInstance(Constructor.java:423)\n\tat java.lang.Class.newInstance(Class.java:442)\n\tat test.LoginFeature.i_am_on_login_page(LoginFeature.java:29)\n\tat ✽.Given I am on login page(LoginFeature.feature:11)\n",
+              "status": "failed"
             },
             "line": 11,
             "name": "I am on login page",
@@ -433,8 +426,7 @@
         "steps": [
           {
             "result": {
-              "duration": 1252926500,
-              "status": "passed"
+              "status": "skipped"
             },
             "line": 19,
             "name": "I fill in \"Email\" with \"\u003cemail\u003e\"",
@@ -455,8 +447,7 @@
           },
           {
             "result": {
-              "duration": 824903400,
-              "status": "passed"
+              "status": "skipped"
             },
             "line": 20,
             "name": "I fill in \"Password\" with \"\u003cPassword\u003e\"",
@@ -477,8 +468,7 @@
           },
           {
             "result": {
-              "duration": 51600,
-              "status": "passed"
+              "status": "skipped"
             },
             "line": 21,
             "name": "I should see \"login.jsp\" login page",
@@ -503,7 +493,7 @@
       }
     ],
     "name": "LoginFeature",
-    "description": "As a admin\r\nI want to login into mLab account using my admin credentials\r\nIn order to connect to mLab cloud database",
+    "description": "As a admin\nI want to login into mLab account using my admin credentials\nIn order to connect to mLab cloud database",
     "id": "loginfeature",
     "keyword": "Feature",
     "uri": "LoginFeature.feature",

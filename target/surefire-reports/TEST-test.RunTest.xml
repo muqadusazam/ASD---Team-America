@@ -1,89 +1,404 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="25" failures="0" name="test.RunTest" time="32.598" errors="0" skipped="0">
+<testsuite tests="25" failures="0" name="test.RunTest" time="2.944" errors="10" skipped="15">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
-    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_221\jre\bin"/>
-    <property name="java.vm.version" value="25.221-b11"/>
+    <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/jre/lib"/>
+    <property name="java.vm.version" value="25.181-b13"/>
+    <property name="gopherProxySet" value="false"/>
     <property name="java.vm.vendor" value="Oracle Corporation"/>
     <property name="java.vendor.url" value="http://java.oracle.com/"/>
-    <property name="path.separator" value=";"/>
+    <property name="path.separator" value=":"/>
     <property name="guice.disable.misplaced.annotation.check" value="true"/>
     <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
     <property name="file.encoding.pkg" value="sun.io"/>
-    <property name="user.script" value=""/>
     <property name="user.country" value="AU"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
-    <property name="sun.os.patch.level" value=""/>
+    <property name="sun.os.patch.level" value="unknown"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
-    <property name="user.dir" value="C:\Users\muqad\Documents\Uni Work\ASD\ASD---Team-America"/>
-    <property name="java.runtime.version" value="1.8.0_221-b11"/>
-    <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
-    <property name="java.endorsed.dirs" value="C:\Program Files\Java\jdk1.8.0_221\jre\lib\endorsed"/>
-    <property name="os.arch" value="amd64"/>
-    <property name="java.io.tmpdir" value="C:\Users\muqad\AppData\Local\Temp\"/>
+    <property name="user.dir" value="/Users/william/Documents/Uni/2019 Sem 2/Advanced Software Development/ASD---Team-America"/>
+    <property name="java.runtime.version" value="1.8.0_181-b13"/>
+    <property name="netbeans.deploy" value="true"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.CGraphicsEnvironment"/>
+    <property name="java.endorsed.dirs" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/jre/lib/endorsed"/>
+    <property name="os.arch" value="x86_64"/>
+    <property name="java.io.tmpdir" value="/var/folders/vp/x3kzn9lx2px4827rgdl23cz00000gn/T/"/>
     <property name="line.separator" value="
 "/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
-    <property name="user.variant" value=""/>
-    <property name="os.name" value="Windows 10"/>
-    <property name="maven.ext.class.path" value="C:\Program Files\NetBeans 8.2\java\maven-nblib\netbeans-eventspy.jar"/>
-    <property name="classworlds.conf" value="C:\Program Files\NetBeans 8.2\java\maven\bin\m2.conf"/>
-    <property name="sun.jnu.encoding" value="Cp1252"/>
-    <property name="java.library.path" value="C:\Program Files\Java\jdk1.8.0_221\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Web Drivers;C:\Users\muqad\AppData\Local\Microsoft\WindowsApps;C:\Users\muqad\AppData\Local\GitHubDesktop\bin;C:\Program Files\heroku\bin;."/>
+    <property name="os.name" value="Mac OS X"/>
+    <property name="maven.ext.class.path" value="/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/java/maven-nblib/netbeans-eventspy.jar"/>
+    <property name="classworlds.conf" value="/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/java/maven/bin/m2.conf"/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="java.library.path" value="/Users/william/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:."/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.class.version" value="52.0"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
-    <property name="os.version" value="10.0"/>
-    <property name="user.home" value="C:\Users\muqad"/>
+    <property name="os.version" value="10.14.4"/>
+    <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="user.home" value="/Users/william"/>
     <property name="user.timezone" value="Australia/Sydney"/>
-    <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
+    <property name="java.awt.printerjob" value="sun.lwawt.macosx.CPrinterJob"/>
     <property name="java.specification.version" value="1.8"/>
     <property name="file.encoding" value="UTF-8"/>
-    <property name="user.name" value="muqad"/>
-    <property name="java.class.path" value="C:\Program Files\NetBeans 8.2\java\maven\boot\plexus-classworlds-2.4.jar"/>
+    <property name="user.name" value="william"/>
+    <property name="java.class.path" value="/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/java/maven/boot/plexus-classworlds-2.4.jar"/>
     <property name="java.vm.specification.version" value="1.8"/>
     <property name="sun.arch.data.model" value="64"/>
-    <property name="java.home" value="C:\Program Files\Java\jdk1.8.0_221\jre"/>
-    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher -Dmaven.ext.class.path=C:\Program Files\NetBeans 8.2\java\maven-nblib\netbeans-eventspy.jar -Dfile.encoding=UTF-8 clean install"/>
+    <property name="java.home" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/jre"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher -Dnetbeans.deploy=true -Dnetbeans.deploy.clientUrlPart=/main.jsp -Dmaven.ext.class.path=/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/java/maven-nblib/netbeans-eventspy.jar package"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
     <property name="user.language" value="en"/>
-    <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
+    <property name="awt.toolkit" value="sun.lwawt.macosx.LWCToolkit"/>
     <property name="java.vm.info" value="mixed mode"/>
-    <property name="java.version" value="1.8.0_221"/>
-    <property name="java.ext.dirs" value="C:\Program Files\Java\jdk1.8.0_221\jre\lib\ext;C:\Windows\Sun\Java\lib\ext"/>
-    <property name="sun.boot.class.path" value="C:\Program Files\Java\jdk1.8.0_221\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_221\jre\lib\rt.jar;C:\Program Files\Java\jdk1.8.0_221\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.8.0_221\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_221\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_221\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_221\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_221\jre\classes"/>
+    <property name="java.version" value="1.8.0_181"/>
+    <property name="java.ext.dirs" value="/Users/william/Library/Java/Extensions:/Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/jre/lib/ext:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java"/>
+    <property name="sun.boot.class.path" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/jre/lib/resources.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/jre/lib/rt.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/jre/lib/sunrsasign.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/jre/lib/jsse.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/jre/lib/jce.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/jre/lib/charsets.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/jre/lib/jfr.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/jre/classes"/>
     <property name="java.vendor" value="Oracle Corporation"/>
-    <property name="maven.home" value="C:\Program Files\NetBeans 8.2\java\maven"/>
-    <property name="file.separator" value="\"/>
+    <property name="maven.home" value="/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/java/maven"/>
+    <property name="file.separator" value="/"/>
     <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
     <property name="sun.cpu.endian" value="little"/>
-    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
-    <property name="sun.desktop" value="windows"/>
-    <property name="sun.cpu.isalist" value="amd64"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeBig"/>
+    <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="netbeans.deploy.clientUrlPart" value="/main.jsp"/>
+    <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase classname="Scenario: Successful login to mLab" name="Given I am on login page" time="0"/>
-  <testcase classname="Scenario: Successful login to mLab" name="When I fill in \&quot;Email\&quot; with \&quot;&lt;mLab email&gt;\&quot;" time="0"/>
-  <testcase classname="Scenario: Successful login to mLab" name="And I fill in \&quot;Password\&quot; with \&quot;&lt;mLab Password&gt;\&quot;" time="0"/>
-  <testcase classname="Scenario: Successful login to mLab" name="Then I should see \&quot;main.jsp\&quot; main page" time="0"/>
-  <testcase classname="Scenario: Successful login to mLab" name="Scenario: Successful login to mLab" time="0.001"/>
-  <testcase classname="| Test | !23 | Incorrect credentials. Try again. |" name="Given I am on login page" time="0"/>
-  <testcase classname="| Test | !23 | Incorrect credentials. Try again. |" name="When I fill in \&quot;Email\&quot; with \&quot;&lt;email&gt;\&quot;" time="0"/>
-  <testcase classname="| Test | !23 | Incorrect credentials. Try again. |" name="And I fill in \&quot;Password\&quot; with \&quot;&lt;Password&gt;\&quot;" time="0"/>
-  <testcase classname="| Test | !23 | Incorrect credentials. Try again. |" name="Then I should see \&quot;login.jsp\&quot; login page" time="0"/>
-  <testcase classname="| Test | !23 | Incorrect credentials. Try again. |" name="| Test | !23 | Incorrect credentials. Try again. |" time="0"/>
-  <testcase classname="| Test |  | Please enter password. |" name="Given I am on login page" time="0"/>
-  <testcase classname="| Test |  | Please enter password. |" name="When I fill in \&quot;Email\&quot; with \&quot;&lt;email&gt;\&quot;" time="0"/>
-  <testcase classname="| Test |  | Please enter password. |" name="And I fill in \&quot;Password\&quot; with \&quot;&lt;Password&gt;\&quot;" time="0"/>
-  <testcase classname="| Test |  | Please enter password. |" name="Then I should see \&quot;login.jsp\&quot; login page" time="0"/>
-  <testcase classname="| Test |  | Please enter password. |" name="| Test |  | Please enter password. |" time="0"/>
-  <testcase classname="|  | 123 | Please enter username. |" name="Given I am on login page" time="0"/>
-  <testcase classname="|  | 123 | Please enter username. |" name="When I fill in \&quot;Email\&quot; with \&quot;&lt;email&gt;\&quot;" time="0"/>
-  <testcase classname="|  | 123 | Please enter username. |" name="And I fill in \&quot;Password\&quot; with \&quot;&lt;Password&gt;\&quot;" time="0"/>
-  <testcase classname="|  | 123 | Please enter username. |" name="Then I should see \&quot;login.jsp\&quot; login page" time="0"/>
-  <testcase classname="|  | 123 | Please enter username. |" name="|  | 123 | Please enter username. |" time="0.001"/>
-  <testcase classname="|  |  | Please enter your credentials. |" name="Given I am on login page" time="0"/>
-  <testcase classname="|  |  | Please enter your credentials. |" name="When I fill in \&quot;Email\&quot; with \&quot;&lt;email&gt;\&quot;" time="0"/>
-  <testcase classname="|  |  | Please enter your credentials. |" name="And I fill in \&quot;Password\&quot; with \&quot;&lt;Password&gt;\&quot;" time="0"/>
-  <testcase classname="|  |  | Please enter your credentials. |" name="Then I should see \&quot;login.jsp\&quot; login page" time="0"/>
-  <testcase classname="|  |  | Please enter your credentials. |" name="|  |  | Please enter your credentials. |" time="0"/>
+  <testcase classname="Scenario: Successful login to mLab" name="Given I am on login page" time="0.004">
+    <error message="Cannot find firefox binary in PATH. Make sure firefox is installed. OS appears to be: MAC
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;Williams-MacBook-Pro.local&apos;, ip: &apos;fe80:0:0:0:1041:dea5:c478:6dc5%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.14.4&apos;, java.version: &apos;1.8.0_181&apos;
+Driver info: driver.version: FirefoxDriver" type="org.openqa.selenium.WebDriverException">org.openqa.selenium.WebDriverException: Cannot find firefox binary in PATH. Make sure firefox is installed. OS appears to be: MAC
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;Williams-MacBook-Pro.local&apos;, ip: &apos;fe80:0:0:0:1041:dea5:c478:6dc5%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.14.4&apos;, java.version: &apos;1.8.0_181&apos;
+Driver info: driver.version: FirefoxDriver
+	at org.openqa.selenium.firefox.FirefoxBinary.&lt;init&gt;(FirefoxBinary.java:100)
+	at java.util.Optional.orElseGet(Optional.java:267)
+	at org.openqa.selenium.firefox.FirefoxOptions.getBinary(FirefoxOptions.java:216)
+	at org.openqa.selenium.firefox.FirefoxDriver.toExecutor(FirefoxDriver.java:187)
+	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:147)
+	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:125)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at java.lang.Class.newInstance(Class.java:442)
+	at test.LoginFeature.i_am_on_login_page(LoginFeature.java:29)
+	at ✽.Given I am on login page(LoginFeature.feature:11)
+</error>
+    <system-out># Login Feature
+# language: en
+@Login
+Feature: LoginFeature
+  As a admin
+  I want to login into mLab account using my admin credentials
+  In order to connect to mLab cloud database
+17:48:20.831 [main] INFO io.github.bonigarcia.wdm.WebDriverManager - Reading https://api.github.com/repos/mozilla/geckodriver/releases to seek wires, geckodriver
+17:48:21.324 [main] INFO io.github.bonigarcia.wdm.WebDriverManager - Latest version of wires, geckodriver is 0.25.0
+17:48:21.333 [main] INFO io.github.bonigarcia.wdm.Downloader - Using binary driver previously downloaded
+17:48:21.333 [main] INFO io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.gecko.driver as /Users/william/.m2/repository/webdriver/geckodriver/macos/0.25.0/geckodriver
+</system-out>
+  </testcase>
+  <testcase classname="Scenario: Successful login to mLab" name="Scenario: Successful login to mLab" time="0.006">
+    <error message="Cannot find firefox binary in PATH. Make sure firefox is installed. OS appears to be: MAC
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;Williams-MacBook-Pro.local&apos;, ip: &apos;fe80:0:0:0:1041:dea5:c478:6dc5%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.14.4&apos;, java.version: &apos;1.8.0_181&apos;
+Driver info: driver.version: FirefoxDriver" type="org.openqa.selenium.WebDriverException">org.openqa.selenium.WebDriverException: Cannot find firefox binary in PATH. Make sure firefox is installed. OS appears to be: MAC
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;Williams-MacBook-Pro.local&apos;, ip: &apos;fe80:0:0:0:1041:dea5:c478:6dc5%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.14.4&apos;, java.version: &apos;1.8.0_181&apos;
+Driver info: driver.version: FirefoxDriver
+	at org.openqa.selenium.firefox.FirefoxBinary.&lt;init&gt;(FirefoxBinary.java:100)
+	at java.util.Optional.orElseGet(Optional.java:267)
+	at org.openqa.selenium.firefox.FirefoxOptions.getBinary(FirefoxOptions.java:216)
+	at org.openqa.selenium.firefox.FirefoxDriver.toExecutor(FirefoxDriver.java:187)
+	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:147)
+	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:125)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at java.lang.Class.newInstance(Class.java:442)
+	at test.LoginFeature.i_am_on_login_page(LoginFeature.java:29)
+	at ✽.Given I am on login page(LoginFeature.feature:11)
+</error>
+  </testcase>
+  <testcase classname="Scenario: Successful login to mLab" name="When I fill in \&quot;Email\&quot; with \&quot;&lt;mLab email&gt;\&quot;" time="0.006">
+    <skipped/>
+  </testcase>
+  <testcase classname="Scenario: Successful login to mLab" name="And I fill in \&quot;Password\&quot; with \&quot;&lt;mLab Password&gt;\&quot;" time="0.006">
+    <skipped/>
+  </testcase>
+  <testcase classname="Scenario: Successful login to mLab" name="Then I should see \&quot;main.jsp\&quot; main page" time="0.006">
+    <skipped/>
+  </testcase>
+  <testcase classname="| Test | !23 | Incorrect credentials. Try again. |" name="Given I am on login page" time="0.001">
+    <error message="Cannot find firefox binary in PATH. Make sure firefox is installed. OS appears to be: MAC
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;Williams-MacBook-Pro.local&apos;, ip: &apos;fe80:0:0:0:1041:dea5:c478:6dc5%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.14.4&apos;, java.version: &apos;1.8.0_181&apos;
+Driver info: driver.version: FirefoxDriver" type="org.openqa.selenium.WebDriverException">org.openqa.selenium.WebDriverException: Cannot find firefox binary in PATH. Make sure firefox is installed. OS appears to be: MAC
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;Williams-MacBook-Pro.local&apos;, ip: &apos;fe80:0:0:0:1041:dea5:c478:6dc5%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.14.4&apos;, java.version: &apos;1.8.0_181&apos;
+Driver info: driver.version: FirefoxDriver
+	at org.openqa.selenium.firefox.FirefoxBinary.&lt;init&gt;(FirefoxBinary.java:100)
+	at java.util.Optional.orElseGet(Optional.java:267)
+	at org.openqa.selenium.firefox.FirefoxOptions.getBinary(FirefoxOptions.java:216)
+	at org.openqa.selenium.firefox.FirefoxDriver.toExecutor(FirefoxDriver.java:187)
+	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:147)
+	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:125)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at java.lang.Class.newInstance(Class.java:442)
+	at test.LoginFeature.i_am_on_login_page(LoginFeature.java:29)
+	at ✽.Given I am on login page(LoginFeature.feature:11)
+</error>
+    <system-out>
+  Scenario: Successful login to mLab                &amp;#27;[90m# LoginFeature.feature:13&amp;#27;[0m
+    &amp;#27;[36mWhen &amp;#27;[0m&amp;#27;[36mI fill in &quot;&amp;#27;[0m&amp;#27;[36m&amp;#27;[1mEmail&amp;#27;[0m&amp;#27;[36m&quot; with &quot;&amp;#27;[0m&amp;#27;[36m&amp;#27;[1m&lt;mLab email&gt;&amp;#27;[0m&amp;#27;[36m&quot;&amp;#27;[0m      &amp;#27;[90m# LoginFeature.i_fill_in_with(String,String)&amp;#27;[0m
+    &amp;#27;[36mAnd &amp;#27;[0m&amp;#27;[36mI fill in &quot;&amp;#27;[0m&amp;#27;[36m&amp;#27;[1mPassword&amp;#27;[0m&amp;#27;[36m&quot; with &quot;&amp;#27;[0m&amp;#27;[36m&amp;#27;[1m&lt;mLab Password&gt;&amp;#27;[0m&amp;#27;[36m&quot;&amp;#27;[0m &amp;#27;[90m# LoginFeature.i_fill_in_with(String,String)&amp;#27;[0m
+    &amp;#27;[36mThen &amp;#27;[0m&amp;#27;[36mI should see &quot;&amp;#27;[0m&amp;#27;[36m&amp;#27;[1mmain.jsp&amp;#27;[0m&amp;#27;[36m&quot; main page&amp;#27;[0m          &amp;#27;[90m# LoginFeature.i_should_see_main_page(String)&amp;#27;[0m
+
+  Scenario Outline: Failed login to mLab using wrong credentials &amp;#27;[90m# LoginFeature.feature:18&amp;#27;[0m
+    &amp;#27;[36mWhen &amp;#27;[0m&amp;#27;[36mI fill in &quot;Email&quot; with &quot;&lt;email&gt;&quot;&amp;#27;[0m
+    &amp;#27;[36mAnd &amp;#27;[0m&amp;#27;[36mI fill in &quot;Password&quot; with &quot;&lt;Password&gt;&quot;&amp;#27;[0m
+    &amp;#27;[36mThen &amp;#27;[0m&amp;#27;[36mI should see &quot;login.jsp&quot; login page&amp;#27;[0m
+
+    Examples: 
+17:48:21.680 [main] DEBUG io.github.bonigarcia.wdm.WebDriverManager - Latest version of wires, geckodriver is 0.25.0 (recently resolved)
+17:48:21.683 [main] INFO io.github.bonigarcia.wdm.WebDriverManager - Found geckodriver in cache: /Users/william/.m2/repository/webdriver/geckodriver/macos/0.25.0/geckodriver 
+17:48:21.683 [main] DEBUG io.github.bonigarcia.wdm.WebDriverManager - Driver for wires, geckodriver (latest version) found in cache /Users/william/.m2/repository/webdriver/geckodriver/macos/0.25.0/geckodriver
+17:48:21.684 [main] INFO io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.gecko.driver as /Users/william/.m2/repository/webdriver/geckodriver/macos/0.25.0/geckodriver
+</system-out>
+  </testcase>
+  <testcase classname="| Test | !23 | Incorrect credentials. Try again. |" name="| Test | !23 | Incorrect credentials. Try again. |" time="0.002">
+    <error message="Cannot find firefox binary in PATH. Make sure firefox is installed. OS appears to be: MAC
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;Williams-MacBook-Pro.local&apos;, ip: &apos;fe80:0:0:0:1041:dea5:c478:6dc5%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.14.4&apos;, java.version: &apos;1.8.0_181&apos;
+Driver info: driver.version: FirefoxDriver" type="org.openqa.selenium.WebDriverException">org.openqa.selenium.WebDriverException: Cannot find firefox binary in PATH. Make sure firefox is installed. OS appears to be: MAC
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;Williams-MacBook-Pro.local&apos;, ip: &apos;fe80:0:0:0:1041:dea5:c478:6dc5%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.14.4&apos;, java.version: &apos;1.8.0_181&apos;
+Driver info: driver.version: FirefoxDriver
+	at org.openqa.selenium.firefox.FirefoxBinary.&lt;init&gt;(FirefoxBinary.java:100)
+	at java.util.Optional.orElseGet(Optional.java:267)
+	at org.openqa.selenium.firefox.FirefoxOptions.getBinary(FirefoxOptions.java:216)
+	at org.openqa.selenium.firefox.FirefoxDriver.toExecutor(FirefoxDriver.java:187)
+	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:147)
+	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:125)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at java.lang.Class.newInstance(Class.java:442)
+	at test.LoginFeature.i_am_on_login_page(LoginFeature.java:29)
+	at ✽.Given I am on login page(LoginFeature.feature:11)
+</error>
+  </testcase>
+  <testcase classname="| Test | !23 | Incorrect credentials. Try again. |" name="When I fill in \&quot;Email\&quot; with \&quot;&lt;email&gt;\&quot;" time="0.004">
+    <skipped/>
+  </testcase>
+  <testcase classname="| Test | !23 | Incorrect credentials. Try again. |" name="And I fill in \&quot;Password\&quot; with \&quot;&lt;Password&gt;\&quot;" time="0.004">
+    <skipped/>
+  </testcase>
+  <testcase classname="| Test | !23 | Incorrect credentials. Try again. |" name="Then I should see \&quot;login.jsp\&quot; login page" time="0.005">
+    <skipped/>
+  </testcase>
+  <testcase classname="| Test |  | Please enter password. |" name="Given I am on login page" time="0.001">
+    <error message="Cannot find firefox binary in PATH. Make sure firefox is installed. OS appears to be: MAC
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;Williams-MacBook-Pro.local&apos;, ip: &apos;fe80:0:0:0:1041:dea5:c478:6dc5%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.14.4&apos;, java.version: &apos;1.8.0_181&apos;
+Driver info: driver.version: FirefoxDriver" type="org.openqa.selenium.WebDriverException">org.openqa.selenium.WebDriverException: Cannot find firefox binary in PATH. Make sure firefox is installed. OS appears to be: MAC
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;Williams-MacBook-Pro.local&apos;, ip: &apos;fe80:0:0:0:1041:dea5:c478:6dc5%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.14.4&apos;, java.version: &apos;1.8.0_181&apos;
+Driver info: driver.version: FirefoxDriver
+	at org.openqa.selenium.firefox.FirefoxBinary.&lt;init&gt;(FirefoxBinary.java:100)
+	at java.util.Optional.orElseGet(Optional.java:267)
+	at org.openqa.selenium.firefox.FirefoxOptions.getBinary(FirefoxOptions.java:216)
+	at org.openqa.selenium.firefox.FirefoxDriver.toExecutor(FirefoxDriver.java:187)
+	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:147)
+	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:125)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at java.lang.Class.newInstance(Class.java:442)
+	at test.LoginFeature.i_am_on_login_page(LoginFeature.java:29)
+	at ✽.Given I am on login page(LoginFeature.feature:11)
+</error>
+    <system-out>
+  @Login
+  Scenario Outline: Failed login to mLab using wrong credentials &amp;#27;[90m# LoginFeature.feature:24&amp;#27;[0m
+    &amp;#27;[36mWhen &amp;#27;[0m&amp;#27;[36mI fill in &quot;&amp;#27;[0m&amp;#27;[36m&amp;#27;[1mEmail&amp;#27;[0m&amp;#27;[36m&quot; with &quot;&amp;#27;[0m&amp;#27;[36m&amp;#27;[1m&lt;email&gt;&amp;#27;[0m&amp;#27;[36m&quot;&amp;#27;[0m                        &amp;#27;[90m# LoginFeature.i_fill_in_with(String,String)&amp;#27;[0m
+    &amp;#27;[36mAnd &amp;#27;[0m&amp;#27;[36mI fill in &quot;&amp;#27;[0m&amp;#27;[36m&amp;#27;[1mPassword&amp;#27;[0m&amp;#27;[36m&quot; with &quot;&amp;#27;[0m&amp;#27;[36m&amp;#27;[1m&lt;Password&gt;&amp;#27;[0m&amp;#27;[36m&quot;&amp;#27;[0m                   &amp;#27;[90m# LoginFeature.i_fill_in_with(String,String)&amp;#27;[0m
+    &amp;#27;[36mThen &amp;#27;[0m&amp;#27;[36mI should see &quot;&amp;#27;[0m&amp;#27;[36m&amp;#27;[1mlogin.jsp&amp;#27;[0m&amp;#27;[36m&quot; login page&amp;#27;[0m                     &amp;#27;[90m# LoginFeature.i_should_see_login_page(String)&amp;#27;[0m
+17:48:21.982 [main] DEBUG io.github.bonigarcia.wdm.WebDriverManager - Latest version of wires, geckodriver is 0.25.0 (recently resolved)
+17:48:21.984 [main] INFO io.github.bonigarcia.wdm.WebDriverManager - Found geckodriver in cache: /Users/william/.m2/repository/webdriver/geckodriver/macos/0.25.0/geckodriver 
+17:48:21.985 [main] DEBUG io.github.bonigarcia.wdm.WebDriverManager - Driver for wires, geckodriver (latest version) found in cache /Users/william/.m2/repository/webdriver/geckodriver/macos/0.25.0/geckodriver
+17:48:21.989 [main] INFO io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.gecko.driver as /Users/william/.m2/repository/webdriver/geckodriver/macos/0.25.0/geckodriver
+</system-out>
+  </testcase>
+  <testcase classname="| Test |  | Please enter password. |" name="| Test |  | Please enter password. |" time="0.001">
+    <error message="Cannot find firefox binary in PATH. Make sure firefox is installed. OS appears to be: MAC
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;Williams-MacBook-Pro.local&apos;, ip: &apos;fe80:0:0:0:1041:dea5:c478:6dc5%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.14.4&apos;, java.version: &apos;1.8.0_181&apos;
+Driver info: driver.version: FirefoxDriver" type="org.openqa.selenium.WebDriverException">org.openqa.selenium.WebDriverException: Cannot find firefox binary in PATH. Make sure firefox is installed. OS appears to be: MAC
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;Williams-MacBook-Pro.local&apos;, ip: &apos;fe80:0:0:0:1041:dea5:c478:6dc5%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.14.4&apos;, java.version: &apos;1.8.0_181&apos;
+Driver info: driver.version: FirefoxDriver
+	at org.openqa.selenium.firefox.FirefoxBinary.&lt;init&gt;(FirefoxBinary.java:100)
+	at java.util.Optional.orElseGet(Optional.java:267)
+	at org.openqa.selenium.firefox.FirefoxOptions.getBinary(FirefoxOptions.java:216)
+	at org.openqa.selenium.firefox.FirefoxDriver.toExecutor(FirefoxDriver.java:187)
+	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:147)
+	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:125)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at java.lang.Class.newInstance(Class.java:442)
+	at test.LoginFeature.i_am_on_login_page(LoginFeature.java:29)
+	at ✽.Given I am on login page(LoginFeature.feature:11)
+</error>
+  </testcase>
+  <testcase classname="| Test |  | Please enter password. |" name="When I fill in \&quot;Email\&quot; with \&quot;&lt;email&gt;\&quot;" time="0.003">
+    <skipped/>
+  </testcase>
+  <testcase classname="| Test |  | Please enter password. |" name="And I fill in \&quot;Password\&quot; with \&quot;&lt;Password&gt;\&quot;" time="0.004">
+    <skipped/>
+  </testcase>
+  <testcase classname="| Test |  | Please enter password. |" name="Then I should see \&quot;login.jsp\&quot; login page" time="0.004">
+    <skipped/>
+  </testcase>
+  <testcase classname="|  | 123 | Please enter username. |" name="Given I am on login page" time="0.001">
+    <error message="Cannot find firefox binary in PATH. Make sure firefox is installed. OS appears to be: MAC
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;Williams-MacBook-Pro.local&apos;, ip: &apos;fe80:0:0:0:1041:dea5:c478:6dc5%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.14.4&apos;, java.version: &apos;1.8.0_181&apos;
+Driver info: driver.version: FirefoxDriver" type="org.openqa.selenium.WebDriverException">org.openqa.selenium.WebDriverException: Cannot find firefox binary in PATH. Make sure firefox is installed. OS appears to be: MAC
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;Williams-MacBook-Pro.local&apos;, ip: &apos;fe80:0:0:0:1041:dea5:c478:6dc5%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.14.4&apos;, java.version: &apos;1.8.0_181&apos;
+Driver info: driver.version: FirefoxDriver
+	at org.openqa.selenium.firefox.FirefoxBinary.&lt;init&gt;(FirefoxBinary.java:100)
+	at java.util.Optional.orElseGet(Optional.java:267)
+	at org.openqa.selenium.firefox.FirefoxOptions.getBinary(FirefoxOptions.java:216)
+	at org.openqa.selenium.firefox.FirefoxDriver.toExecutor(FirefoxDriver.java:187)
+	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:147)
+	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:125)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at java.lang.Class.newInstance(Class.java:442)
+	at test.LoginFeature.i_am_on_login_page(LoginFeature.java:29)
+	at ✽.Given I am on login page(LoginFeature.feature:11)
+</error>
+    <system-out>
+  @Login
+  Scenario Outline: Failed login to mLab using wrong credentials &amp;#27;[90m# LoginFeature.feature:25&amp;#27;[0m
+    &amp;#27;[36mWhen &amp;#27;[0m&amp;#27;[36mI fill in &quot;&amp;#27;[0m&amp;#27;[36m&amp;#27;[1mEmail&amp;#27;[0m&amp;#27;[36m&quot; with &quot;&amp;#27;[0m&amp;#27;[36m&amp;#27;[1m&lt;email&gt;&amp;#27;[0m&amp;#27;[36m&quot;&amp;#27;[0m                        &amp;#27;[90m# LoginFeature.i_fill_in_with(String,String)&amp;#27;[0m
+    &amp;#27;[36mAnd &amp;#27;[0m&amp;#27;[36mI fill in &quot;&amp;#27;[0m&amp;#27;[36m&amp;#27;[1mPassword&amp;#27;[0m&amp;#27;[36m&quot; with &quot;&amp;#27;[0m&amp;#27;[36m&amp;#27;[1m&lt;Password&gt;&amp;#27;[0m&amp;#27;[36m&quot;&amp;#27;[0m                   &amp;#27;[90m# LoginFeature.i_fill_in_with(String,String)&amp;#27;[0m
+    &amp;#27;[36mThen &amp;#27;[0m&amp;#27;[36mI should see &quot;&amp;#27;[0m&amp;#27;[36m&amp;#27;[1mlogin.jsp&amp;#27;[0m&amp;#27;[36m&quot; login page&amp;#27;[0m                     &amp;#27;[90m# LoginFeature.i_should_see_login_page(String)&amp;#27;[0m
+17:48:22.287 [main] DEBUG io.github.bonigarcia.wdm.WebDriverManager - Latest version of wires, geckodriver is 0.25.0 (recently resolved)
+17:48:22.289 [main] INFO io.github.bonigarcia.wdm.WebDriverManager - Found geckodriver in cache: /Users/william/.m2/repository/webdriver/geckodriver/macos/0.25.0/geckodriver 
+17:48:22.289 [main] DEBUG io.github.bonigarcia.wdm.WebDriverManager - Driver for wires, geckodriver (latest version) found in cache /Users/william/.m2/repository/webdriver/geckodriver/macos/0.25.0/geckodriver
+17:48:22.290 [main] INFO io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.gecko.driver as /Users/william/.m2/repository/webdriver/geckodriver/macos/0.25.0/geckodriver
+</system-out>
+  </testcase>
+  <testcase classname="|  | 123 | Please enter username. |" name="|  | 123 | Please enter username. |" time="0.001">
+    <error message="Cannot find firefox binary in PATH. Make sure firefox is installed. OS appears to be: MAC
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;Williams-MacBook-Pro.local&apos;, ip: &apos;fe80:0:0:0:1041:dea5:c478:6dc5%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.14.4&apos;, java.version: &apos;1.8.0_181&apos;
+Driver info: driver.version: FirefoxDriver" type="org.openqa.selenium.WebDriverException">org.openqa.selenium.WebDriverException: Cannot find firefox binary in PATH. Make sure firefox is installed. OS appears to be: MAC
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;Williams-MacBook-Pro.local&apos;, ip: &apos;fe80:0:0:0:1041:dea5:c478:6dc5%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.14.4&apos;, java.version: &apos;1.8.0_181&apos;
+Driver info: driver.version: FirefoxDriver
+	at org.openqa.selenium.firefox.FirefoxBinary.&lt;init&gt;(FirefoxBinary.java:100)
+	at java.util.Optional.orElseGet(Optional.java:267)
+	at org.openqa.selenium.firefox.FirefoxOptions.getBinary(FirefoxOptions.java:216)
+	at org.openqa.selenium.firefox.FirefoxDriver.toExecutor(FirefoxDriver.java:187)
+	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:147)
+	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:125)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at java.lang.Class.newInstance(Class.java:442)
+	at test.LoginFeature.i_am_on_login_page(LoginFeature.java:29)
+	at ✽.Given I am on login page(LoginFeature.feature:11)
+</error>
+  </testcase>
+  <testcase classname="|  | 123 | Please enter username. |" name="When I fill in \&quot;Email\&quot; with \&quot;&lt;email&gt;\&quot;" time="0.003">
+    <skipped/>
+  </testcase>
+  <testcase classname="|  | 123 | Please enter username. |" name="And I fill in \&quot;Password\&quot; with \&quot;&lt;Password&gt;\&quot;" time="0.003">
+    <skipped/>
+  </testcase>
+  <testcase classname="|  | 123 | Please enter username. |" name="Then I should see \&quot;login.jsp\&quot; login page" time="0.003">
+    <skipped/>
+  </testcase>
+  <testcase classname="|  |  | Please enter your credentials. |" name="Given I am on login page" time="0.001">
+    <error message="Cannot find firefox binary in PATH. Make sure firefox is installed. OS appears to be: MAC
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;Williams-MacBook-Pro.local&apos;, ip: &apos;fe80:0:0:0:1041:dea5:c478:6dc5%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.14.4&apos;, java.version: &apos;1.8.0_181&apos;
+Driver info: driver.version: FirefoxDriver" type="org.openqa.selenium.WebDriverException">org.openqa.selenium.WebDriverException: Cannot find firefox binary in PATH. Make sure firefox is installed. OS appears to be: MAC
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;Williams-MacBook-Pro.local&apos;, ip: &apos;fe80:0:0:0:1041:dea5:c478:6dc5%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.14.4&apos;, java.version: &apos;1.8.0_181&apos;
+Driver info: driver.version: FirefoxDriver
+	at org.openqa.selenium.firefox.FirefoxBinary.&lt;init&gt;(FirefoxBinary.java:100)
+	at java.util.Optional.orElseGet(Optional.java:267)
+	at org.openqa.selenium.firefox.FirefoxOptions.getBinary(FirefoxOptions.java:216)
+	at org.openqa.selenium.firefox.FirefoxDriver.toExecutor(FirefoxDriver.java:187)
+	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:147)
+	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:125)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at java.lang.Class.newInstance(Class.java:442)
+	at test.LoginFeature.i_am_on_login_page(LoginFeature.java:29)
+	at ✽.Given I am on login page(LoginFeature.feature:11)
+</error>
+    <system-out>
+  @Login
+  Scenario Outline: Failed login to mLab using wrong credentials &amp;#27;[90m# LoginFeature.feature:26&amp;#27;[0m
+    &amp;#27;[36mWhen &amp;#27;[0m&amp;#27;[36mI fill in &quot;&amp;#27;[0m&amp;#27;[36m&amp;#27;[1mEmail&amp;#27;[0m&amp;#27;[36m&quot; with &quot;&amp;#27;[0m&amp;#27;[36m&amp;#27;[1m&lt;email&gt;&amp;#27;[0m&amp;#27;[36m&quot;&amp;#27;[0m                        &amp;#27;[90m# LoginFeature.i_fill_in_with(String,String)&amp;#27;[0m
+    &amp;#27;[36mAnd &amp;#27;[0m&amp;#27;[36mI fill in &quot;&amp;#27;[0m&amp;#27;[36m&amp;#27;[1mPassword&amp;#27;[0m&amp;#27;[36m&quot; with &quot;&amp;#27;[0m&amp;#27;[36m&amp;#27;[1m&lt;Password&gt;&amp;#27;[0m&amp;#27;[36m&quot;&amp;#27;[0m                   &amp;#27;[90m# LoginFeature.i_fill_in_with(String,String)&amp;#27;[0m
+    &amp;#27;[36mThen &amp;#27;[0m&amp;#27;[36mI should see &quot;&amp;#27;[0m&amp;#27;[36m&amp;#27;[1mlogin.jsp&amp;#27;[0m&amp;#27;[36m&quot; login page&amp;#27;[0m                     &amp;#27;[90m# LoginFeature.i_should_see_login_page(String)&amp;#27;[0m
+17:48:22.576 [main] DEBUG io.github.bonigarcia.wdm.WebDriverManager - Latest version of wires, geckodriver is 0.25.0 (recently resolved)
+17:48:22.578 [main] INFO io.github.bonigarcia.wdm.WebDriverManager - Found geckodriver in cache: /Users/william/.m2/repository/webdriver/geckodriver/macos/0.25.0/geckodriver 
+17:48:22.578 [main] DEBUG io.github.bonigarcia.wdm.WebDriverManager - Driver for wires, geckodriver (latest version) found in cache /Users/william/.m2/repository/webdriver/geckodriver/macos/0.25.0/geckodriver
+17:48:22.579 [main] INFO io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.gecko.driver as /Users/william/.m2/repository/webdriver/geckodriver/macos/0.25.0/geckodriver
+</system-out>
+  </testcase>
+  <testcase classname="|  |  | Please enter your credentials. |" name="|  |  | Please enter your credentials. |" time="0.001">
+    <error message="Cannot find firefox binary in PATH. Make sure firefox is installed. OS appears to be: MAC
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;Williams-MacBook-Pro.local&apos;, ip: &apos;fe80:0:0:0:1041:dea5:c478:6dc5%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.14.4&apos;, java.version: &apos;1.8.0_181&apos;
+Driver info: driver.version: FirefoxDriver" type="org.openqa.selenium.WebDriverException">org.openqa.selenium.WebDriverException: Cannot find firefox binary in PATH. Make sure firefox is installed. OS appears to be: MAC
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;Williams-MacBook-Pro.local&apos;, ip: &apos;fe80:0:0:0:1041:dea5:c478:6dc5%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.14.4&apos;, java.version: &apos;1.8.0_181&apos;
+Driver info: driver.version: FirefoxDriver
+	at org.openqa.selenium.firefox.FirefoxBinary.&lt;init&gt;(FirefoxBinary.java:100)
+	at java.util.Optional.orElseGet(Optional.java:267)
+	at org.openqa.selenium.firefox.FirefoxOptions.getBinary(FirefoxOptions.java:216)
+	at org.openqa.selenium.firefox.FirefoxDriver.toExecutor(FirefoxDriver.java:187)
+	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:147)
+	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:125)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at java.lang.Class.newInstance(Class.java:442)
+	at test.LoginFeature.i_am_on_login_page(LoginFeature.java:29)
+	at ✽.Given I am on login page(LoginFeature.feature:11)
+</error>
+  </testcase>
+  <testcase classname="|  |  | Please enter your credentials. |" name="When I fill in \&quot;Email\&quot; with \&quot;&lt;email&gt;\&quot;" time="0.004">
+    <skipped/>
+  </testcase>
+  <testcase classname="|  |  | Please enter your credentials. |" name="And I fill in \&quot;Password\&quot; with \&quot;&lt;Password&gt;\&quot;" time="0.004">
+    <skipped/>
+  </testcase>
+  <testcase classname="|  |  | Please enter your credentials. |" name="Then I should see \&quot;login.jsp\&quot; login page" time="0.004">
+    <skipped/>
+  </testcase>
 </testsuite>

@@ -19,16 +19,5 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class RescheduleUnitTest {
     
-    WebDriver driver;
-    
-    //Sets starting page to reschedule.jsp
-    @Given("^I am on reschedule page$")
-    public void i_am_on_register_page() throws Throwable{
-        Class<? extends WebDriver> driverClass = FirefoxDriver.class;
-        WebDriverManager.getInstance(driverClass).setup();
-        driver = driverClass.newInstance();
-        driver.get("https://arsproject.herokuapp.com/reschedule.jsp");
-        driver.navigate().to(driver.getCurrentUrl());
-        System.out.println("Given statement executed successfully!");
-    }
+
 }

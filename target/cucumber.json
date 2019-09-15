@@ -21,7 +21,7 @@
         "steps": [
           {
             "result": {
-              "duration": 5693941700,
+              "duration": 7163929100,
               "status": "passed"
             },
             "line": 11,
@@ -43,8 +43,9 @@
         "steps": [
           {
             "result": {
-              "duration": 1248245200,
-              "status": "passed"
+              "duration": 1154769800,
+              "error_message": "org.openqa.selenium.NoSuchElementException: Unable to locate element: #Email\nFor documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html\nBuild info: version: \u00273.141.59\u0027, revision: \u0027e82be7d358\u0027, time: \u00272018-11-14T08:17:03\u0027\nSystem info: host: \u0027DESKTOP-GS5KILN\u0027, ip: \u0027192.168.1.2\u0027, os.name: \u0027Windows 10\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u00271.8.0_221\u0027\nDriver info: org.openqa.selenium.firefox.FirefoxDriver\nCapabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 69.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20190827005903, moz:geckodriverVersion: 0.25.0, moz:headless: false, moz:processID: 23104, moz:profile: C:\\Users\\muqad\\AppData\\Loca..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}\nSession ID: 3e3f125e-33bb-4dfa-9385-6c15b18958f9\n*** Element info: {Using\u003did, value\u003dEmail}\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\r\n\tat sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\r\n\tat java.lang.reflect.Constructor.newInstance(Constructor.java:423)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:372)\r\n\tat org.openqa.selenium.By$ById.findElement(By.java:188)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)\r\n\tat test.LoginFeature.i_fill_in_with(LoginFeature.java:38)\r\n\tat ✽.When I fill in \"Email\" with \"\u003cmLab email\u003e\"(LoginFeature.feature:14)\r\n",
+              "status": "failed"
             },
             "line": 14,
             "name": "I fill in \"Email\" with \"\u003cmLab email\u003e\"",
@@ -65,8 +66,7 @@
           },
           {
             "result": {
-              "duration": 811019900,
-              "status": "passed"
+              "status": "skipped"
             },
             "line": 15,
             "name": "I fill in \"Password\" with \"\u003cmLab Password\u003e\"",
@@ -87,8 +87,7 @@
           },
           {
             "result": {
-              "duration": 649100,
-              "status": "passed"
+              "status": "skipped"
             },
             "line": 16,
             "name": "I should see \"main.jsp\" main page",
@@ -114,7 +113,7 @@
         "steps": [
           {
             "result": {
-              "duration": 4315283800,
+              "duration": 4992916900,
               "status": "passed"
             },
             "line": 11,
@@ -136,8 +135,9 @@
         "steps": [
           {
             "result": {
-              "duration": 1255980000,
-              "status": "passed"
+              "duration": 1116661100,
+              "error_message": "org.openqa.selenium.NoSuchElementException: Unable to locate element: #Email\nFor documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html\nBuild info: version: \u00273.141.59\u0027, revision: \u0027e82be7d358\u0027, time: \u00272018-11-14T08:17:03\u0027\nSystem info: host: \u0027DESKTOP-GS5KILN\u0027, ip: \u0027192.168.1.2\u0027, os.name: \u0027Windows 10\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u00271.8.0_221\u0027\nDriver info: org.openqa.selenium.firefox.FirefoxDriver\nCapabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 69.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20190827005903, moz:geckodriverVersion: 0.25.0, moz:headless: false, moz:processID: 24052, moz:profile: C:\\Users\\muqad\\AppData\\Loca..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}\nSession ID: 8f3ae61d-ac6d-418e-a692-ddc43d6d3b3d\n*** Element info: {Using\u003did, value\u003dEmail}\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\r\n\tat sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\r\n\tat java.lang.reflect.Constructor.newInstance(Constructor.java:423)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:372)\r\n\tat org.openqa.selenium.By$ById.findElement(By.java:188)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)\r\n\tat test.LoginFeature.i_fill_in_with(LoginFeature.java:38)\r\n\tat ✽.When I fill in \"Email\" with \"\u003cemail\u003e\"(LoginFeature.feature:19)\r\n",
+              "status": "failed"
             },
             "line": 19,
             "name": "I fill in \"Email\" with \"\u003cemail\u003e\"",
@@ -158,8 +158,7 @@
           },
           {
             "result": {
-              "duration": 807227900,
-              "status": "passed"
+              "status": "skipped"
             },
             "line": 20,
             "name": "I fill in \"Password\" with \"\u003cPassword\u003e\"",
@@ -180,8 +179,7 @@
           },
           {
             "result": {
-              "duration": 49200,
-              "status": "passed"
+              "status": "skipped"
             },
             "line": 21,
             "name": "I should see \"login.jsp\" login page",
@@ -213,7 +211,7 @@
         "steps": [
           {
             "result": {
-              "duration": 3843138000,
+              "duration": 5382535300,
               "status": "passed"
             },
             "line": 11,
@@ -235,8 +233,9 @@
         "steps": [
           {
             "result": {
-              "duration": 1242426900,
-              "status": "passed"
+              "duration": 1133814800,
+              "error_message": "org.openqa.selenium.NoSuchElementException: Unable to locate element: #Email\nFor documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html\nBuild info: version: \u00273.141.59\u0027, revision: \u0027e82be7d358\u0027, time: \u00272018-11-14T08:17:03\u0027\nSystem info: host: \u0027DESKTOP-GS5KILN\u0027, ip: \u0027192.168.1.2\u0027, os.name: \u0027Windows 10\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u00271.8.0_221\u0027\nDriver info: org.openqa.selenium.firefox.FirefoxDriver\nCapabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 69.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20190827005903, moz:geckodriverVersion: 0.25.0, moz:headless: false, moz:processID: 32036, moz:profile: C:\\Users\\muqad\\AppData\\Loca..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}\nSession ID: 79e4b528-83d9-4088-9bb8-4ff36c843ae0\n*** Element info: {Using\u003did, value\u003dEmail}\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\r\n\tat sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\r\n\tat java.lang.reflect.Constructor.newInstance(Constructor.java:423)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:372)\r\n\tat org.openqa.selenium.By$ById.findElement(By.java:188)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)\r\n\tat test.LoginFeature.i_fill_in_with(LoginFeature.java:38)\r\n\tat ✽.When I fill in \"Email\" with \"\u003cemail\u003e\"(LoginFeature.feature:19)\r\n",
+              "status": "failed"
             },
             "line": 19,
             "name": "I fill in \"Email\" with \"\u003cemail\u003e\"",
@@ -257,8 +256,7 @@
           },
           {
             "result": {
-              "duration": 799835400,
-              "status": "passed"
+              "status": "skipped"
             },
             "line": 20,
             "name": "I fill in \"Password\" with \"\u003cPassword\u003e\"",
@@ -279,8 +277,7 @@
           },
           {
             "result": {
-              "duration": 45800,
-              "status": "passed"
+              "status": "skipped"
             },
             "line": 21,
             "name": "I should see \"login.jsp\" login page",
@@ -312,7 +309,7 @@
         "steps": [
           {
             "result": {
-              "duration": 3827573600,
+              "duration": 5324478000,
               "status": "passed"
             },
             "line": 11,
@@ -334,8 +331,9 @@
         "steps": [
           {
             "result": {
-              "duration": 1241526900,
-              "status": "passed"
+              "duration": 1125034500,
+              "error_message": "org.openqa.selenium.NoSuchElementException: Unable to locate element: #Email\nFor documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html\nBuild info: version: \u00273.141.59\u0027, revision: \u0027e82be7d358\u0027, time: \u00272018-11-14T08:17:03\u0027\nSystem info: host: \u0027DESKTOP-GS5KILN\u0027, ip: \u0027192.168.1.2\u0027, os.name: \u0027Windows 10\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u00271.8.0_221\u0027\nDriver info: org.openqa.selenium.firefox.FirefoxDriver\nCapabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 69.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20190827005903, moz:geckodriverVersion: 0.25.0, moz:headless: false, moz:processID: 30240, moz:profile: C:\\Users\\muqad\\AppData\\Loca..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}\nSession ID: 84dfb422-06dd-429d-98a0-9a62b3070852\n*** Element info: {Using\u003did, value\u003dEmail}\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\r\n\tat sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\r\n\tat java.lang.reflect.Constructor.newInstance(Constructor.java:423)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:372)\r\n\tat org.openqa.selenium.By$ById.findElement(By.java:188)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)\r\n\tat test.LoginFeature.i_fill_in_with(LoginFeature.java:38)\r\n\tat ✽.When I fill in \"Email\" with \"\u003cemail\u003e\"(LoginFeature.feature:19)\r\n",
+              "status": "failed"
             },
             "line": 19,
             "name": "I fill in \"Email\" with \"\u003cemail\u003e\"",
@@ -356,8 +354,7 @@
           },
           {
             "result": {
-              "duration": 803853900,
-              "status": "passed"
+              "status": "skipped"
             },
             "line": 20,
             "name": "I fill in \"Password\" with \"\u003cPassword\u003e\"",
@@ -378,8 +375,7 @@
           },
           {
             "result": {
-              "duration": 63400,
-              "status": "passed"
+              "status": "skipped"
             },
             "line": 21,
             "name": "I should see \"login.jsp\" login page",
@@ -411,7 +407,7 @@
         "steps": [
           {
             "result": {
-              "duration": 4346618600,
+              "duration": 4974367100,
               "status": "passed"
             },
             "line": 11,
@@ -433,8 +429,9 @@
         "steps": [
           {
             "result": {
-              "duration": 1252926500,
-              "status": "passed"
+              "duration": 1132509200,
+              "error_message": "org.openqa.selenium.NoSuchElementException: Unable to locate element: #Email\nFor documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html\nBuild info: version: \u00273.141.59\u0027, revision: \u0027e82be7d358\u0027, time: \u00272018-11-14T08:17:03\u0027\nSystem info: host: \u0027DESKTOP-GS5KILN\u0027, ip: \u0027192.168.1.2\u0027, os.name: \u0027Windows 10\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u00271.8.0_221\u0027\nDriver info: org.openqa.selenium.firefox.FirefoxDriver\nCapabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 69.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20190827005903, moz:geckodriverVersion: 0.25.0, moz:headless: false, moz:processID: 32416, moz:profile: C:\\Users\\muqad\\AppData\\Loca..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}\nSession ID: 23fe8a4f-780f-40a3-ac89-d665911fe604\n*** Element info: {Using\u003did, value\u003dEmail}\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\r\n\tat sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\r\n\tat java.lang.reflect.Constructor.newInstance(Constructor.java:423)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:372)\r\n\tat org.openqa.selenium.By$ById.findElement(By.java:188)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)\r\n\tat test.LoginFeature.i_fill_in_with(LoginFeature.java:38)\r\n\tat ✽.When I fill in \"Email\" with \"\u003cemail\u003e\"(LoginFeature.feature:19)\r\n",
+              "status": "failed"
             },
             "line": 19,
             "name": "I fill in \"Email\" with \"\u003cemail\u003e\"",
@@ -455,8 +452,7 @@
           },
           {
             "result": {
-              "duration": 824903400,
-              "status": "passed"
+              "status": "skipped"
             },
             "line": 20,
             "name": "I fill in \"Password\" with \"\u003cPassword\u003e\"",
@@ -477,8 +473,7 @@
           },
           {
             "result": {
-              "duration": 51600,
-              "status": "passed"
+              "status": "skipped"
             },
             "line": 21,
             "name": "I should see \"login.jsp\" login page",

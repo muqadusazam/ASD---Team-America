@@ -17,7 +17,7 @@
 
 <div class="mx-auto" style="float: left">
     <%
-        /*
+        
         Customer testcust = new Customer("2", 
                 "John", 
                 "Smith", 
@@ -26,8 +26,8 @@
                 "01/01/2000");
         
         session.setAttribute("loggedIn", testcust);
-        */
-        /*
+        
+        
         Flight testflight = new Flight("3",  //id
                 "Qantas", //airline
                 "Sydney", //origin
@@ -47,10 +47,10 @@
                 "23A"
         );
         session.setAttribute("ticket", testticket);
-        */
+        
         MongoDBConnector manager = (MongoDBConnector)session.getAttribute("manager");
-        //Customer customer = (Customer)session.getAttribute("loggedIn");
-        //Ticket ticket = (Ticket)session.getAttribute("ticket");
+        Customer customer = (Customer)session.getAttribute("loggedIn");
+        Ticket ticket = (Ticket)session.getAttribute("ticket");
         
         if (customer == null) {
     %>

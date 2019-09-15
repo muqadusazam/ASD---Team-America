@@ -15,6 +15,7 @@ import static com.mongodb.client.model.Filters.eq;
  * @author Liam
  */
 public class MongoDBManager_Customers extends MongoDBConnector {
+
     
     public void add(Customer customer) {
         MongoClientURI uri = generateURI();

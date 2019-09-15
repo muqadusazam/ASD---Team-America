@@ -28,10 +28,10 @@ public class LoginFeature {
         WebDriverManager.getInstance(driverClass).setup();
         driver = driverClass.newInstance();
         driver.get("https://arsproject.herokuapp.com/login.jsp");
-        //driver.navigate().to(driver.getCurrentUrl());
+        driver.navigate().to(driver.getCurrentUrl());
     }
     
-    @When("^I fill in \"([^\"]*)\" with \"([^\"]*)\"$")
+    @When("^I fill in with \"([^\"]*)\" and \"([^\"]*)\"$")
     public void i_fill_in_with(String arg1, String arg2) throws Throwable {
         driver.get("https://arsproject.herokuapp.com/login.jsp");
         driver.navigate().to(driver.getCurrentUrl());
@@ -40,15 +40,15 @@ public class LoginFeature {
         driver.findElement(By.id("BtnLogin")).click();
     }
     
-    @Then("^I should see \"([^\"]*)\" main page$")
+    @Then("^I should see main page$")
     public void i_should_see_main_page(String arg1) throws Throwable {
+        System.out.println("Signed in successfully.");
         driver.get("https://arsproject.herokuapp.com/main.jsp");
         driver.navigate().to(driver.getCurrentUrl());
-        System.out.println("Signed in successfully.");
     }
     
-    @Then("^I should see \"([^\"]*)\" login page$")
-    public void i_should_see_login_page(String arg1) throws Throwable {
+    @Then("^I should stay on login page$")
+    public void i_should_stay_on_login_page(String arg1) throws Throwable {
         System.out.println("Sign in unsuccessful");
     } 
 }

@@ -42,6 +42,8 @@ public class MongoDBManager_Flights extends MongoDBConnector {
             MongoCollection<Document> flightDB = db.getCollection(FLIGHT_COLLECTION);
             Document doc = flightDB.find(and(eq("id", id))).first();
             flight = convertToFlight(doc);
+        } catch (NullPointerException ex) {
+            return null;
         }
         return flight;
     }
@@ -58,6 +60,27 @@ public class MongoDBManager_Flights extends MongoDBConnector {
                 Flight flight = convertToFlight(doc);
                 flights.add(flight);
             }
+        } catch (NullPointerException ex) {
+            return null;
+        }
+        return flights;
+    }
+    
+    public ArrayList<Flight> getFlights(Flight flight) {
+        MongoClientURI uri = generateURI();
+        ArrayList<Flight> flights;
+        try (MongoClient client = new MongoClient(uri)) {
+            MongoDatabase db = client.getDatabase(uri.getDatabase());
+            flights = new ArrayList<>();
+            MongoCollection<Document> flightlist = db.getCollection(FLIGHT_COLLECTION);
+            for (Document doc : flightlist.find()) {
+                Flight f = convertToFlight(doc);
+                if (f.getDestination().equals(flight.getDestination()) && f.getID() != flight.getID()) {
+                    flights.add(f);
+                }
+            }
+        } catch (NullPointerException ex) {
+            return null;
         }
         return flights;
     }
@@ -75,6 +98,8 @@ public class MongoDBManager_Flights extends MongoDBConnector {
                     flights.add(flight);
                 }
             }
+        } catch (NullPointerException ex) {
+            return null;
         }
         return flights;
     }

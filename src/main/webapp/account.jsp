@@ -63,8 +63,8 @@
                         <tr><td>First Name: </td><td> <%=customer.getFirstName() %> </td></tr>
                         <tr><td>Last Name: </td><td> <%=customer.getLastName()%> </td></tr>
                         <tr><td>Email: </td><td> <%=customer.getEmail()%> </td></tr>
-                        <tr><td>Passport Number: </td><td> <%=customer.getPassport()%></td></tr>                       
                         <tr><td>Password: </td><td> <%=customer.getPassword()%> </td></tr>
+                        <tr><td>Passport Number: </td><td> <%=customer.getPassport()%></td></tr>                       
                         <tr><td>Date of Birth: </td><td> <%=customer.getDOB()%> </td></tr>    
                 </table>
 

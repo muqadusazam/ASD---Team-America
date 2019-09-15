@@ -50,13 +50,6 @@
                     </div>
 
                     <div class="form-group">
-                        <label>Passport Number:</label>
-                        <input type="text" class="form-control" name="passport" id="Passport" value="${param.passport}" 
-                               placeholder="<%= customer.getPassport()%>" required>
-                        <span class="error text-danger"><em>${errors.passportErr}</em></span>
-                     </div>      
-
-                    <div class="form-group">
                         <label>Password:</label>
                         <input type="password" class="form-control" name="password" id="password" value="${param.password}"
                                placeholder="<%= customer.getPassword()%>" required>
@@ -67,6 +60,13 @@
                         <label>DOB:</label>
                         <input type="date" class="form-control" name="DOB" id="Dob" placeholder="<%=customer.getDOB()%>" required>
                     </div>
+                    
+                     <div class="form-group">
+                        <label>Passport Number:</label>
+                        <input type="text" class="form-control" name="passport" id="Passport" value="${param.passport}" 
+                               placeholder="<%= customer.getPassport()%>" required>
+                        <span class="error text-danger"><em>${errors.passportErr}</em></span>
+                     </div>   
 
                         
                     <table cellpadding="10" align="center">

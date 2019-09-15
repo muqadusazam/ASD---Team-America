@@ -75,6 +75,26 @@ public class MongoDBManager_Customers extends MongoDBConnector {
         return customers;
     }
     
+    public void editCustomer(String id, String firstName, String lastName, String email, String password, String passport, String DOB){
+        MongoClientURI uri = generateURI();
+        try (MongoClient client = new MongoClient(uri)){
+            MongoDatabase db = client.getDatabase(uri.getDatabase());
+            MongoCollection<Document> collection = db.getCollection(CUSTOMER_COLLECTION);
+            Document query =  new Document();
+            query.append("id", id);
+            Document setData = new Document();
+            setData.append("first_name", firstName)
+                    .append("last_name", lastName)
+                    .append("email", email)
+                    .append("passport", passport)
+                    .append("password", password)
+                    .append("dob", DOB);
+            Document update = new Document();
+            update.append("$set", setData);
+            collection.updateOne(query, update);
+        }
+    }
+    
     private Customer convertToCustomer(Document doc) {
         return new Customer((String) doc.get("id"),
                 (String) doc.get("first_name"),

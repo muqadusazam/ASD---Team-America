@@ -3,72 +3,6 @@
     "comments": [
       {
         "line": 1,
-        "value": "#MLab FlightList Feature"
-      }
-    ],
-    "line": 2,
-    "elements": [
-      {
-        "line": 7,
-        "name": "Customer clicked flight tab",
-        "description": "",
-        "type": "background",
-        "keyword": "Background",
-        "steps": [
-          {
-            "result": {
-              "status": "undefined"
-            },
-            "line": 8,
-            "name": "I am on flight list page",
-            "match": {},
-            "keyword": "Given "
-          }
-        ]
-      },
-      {
-        "line": 10,
-        "name": "Succesfully display the list of all the flights",
-        "description": "",
-        "id": "flightlist-feature;succesfully-display-the-list-of-all-the-flights",
-        "type": "scenario",
-        "keyword": "Scenario",
-        "steps": [
-          {
-            "result": {
-              "status": "skipped"
-            },
-            "line": 11,
-            "name": "I clicked flight tab",
-            "match": {
-              "location": "FlightListFeature.i_clicked_flight_tab()"
-            },
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "status": "skipped"
-            },
-            "line": 12,
-            "name": "I should see all the available flights in the form of table",
-            "match": {
-              "location": "FlightListFeature.i_should_see_all_available_flights()"
-            },
-            "keyword": "Then "
-          }
-        ]
-      }
-    ],
-    "name": "FlightList Feature",
-    "description": "As a Customer/Staff\nI want to view the list of all the available flights\nexcept for duplicated data",
-    "id": "flightlist-feature",
-    "keyword": "Feature",
-    "uri": "FlightListFeature.feature"
-  },
-  {
-    "comments": [
-      {
-        "line": 1,
         "value": "# Login Feature"
       },
       {
@@ -87,7 +21,7 @@
         "steps": [
           {
             "result": {
-              "duration": 7604402900,
+              "duration": 8098660100,
               "status": "passed"
             },
             "line": 11,
@@ -109,8 +43,8 @@
         "steps": [
           {
             "result": {
-              "duration": 1224719900,
-              "error_message": "org.openqa.selenium.NoSuchElementException: Unable to locate element: #Email\nFor documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html\nBuild info: version: \u00273.141.59\u0027, revision: \u0027e82be7d358\u0027, time: \u00272018-11-14T08:17:03\u0027\nSystem info: host: \u0027DESKTOP-GS5KILN\u0027, ip: \u0027192.168.1.2\u0027, os.name: \u0027Windows 10\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u00271.8.0_221\u0027\nDriver info: org.openqa.selenium.firefox.FirefoxDriver\nCapabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 69.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20190827005903, moz:geckodriverVersion: 0.25.0, moz:headless: false, moz:processID: 27176, moz:profile: C:\\Users\\muqad\\AppData\\Loca..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}\nSession ID: bcda06f9-3955-4377-9059-b0b356b3c0f3\n*** Element info: {Using\u003did, value\u003dEmail}\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\r\n\tat sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\r\n\tat java.lang.reflect.Constructor.newInstance(Constructor.java:423)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:372)\r\n\tat org.openqa.selenium.By$ById.findElement(By.java:188)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)\r\n\tat test.LoginFeature.i_fill_in_with(LoginFeature.java:38)\r\n\tat ✽.When I fill in with \"user@one.com\" and \"abcde1\"(LoginFeature.feature:14)\r\n",
+              "duration": 748627299,
+              "error_message": "org.openqa.selenium.NoSuchElementException: Unable to locate element: #Email\nFor documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html\nBuild info: version: \u00273.141.59\u0027, revision: \u0027e82be7d358\u0027, time: \u00272018-11-14T08:17:03\u0027\nSystem info: host: \u0027DESKTOP-GS5KILN\u0027, ip: \u0027192.168.1.2\u0027, os.name: \u0027Windows 10\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u00271.8.0_221\u0027\nDriver info: org.openqa.selenium.firefox.FirefoxDriver\nCapabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 69.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20190827005903, moz:geckodriverVersion: 0.25.0, moz:headless: false, moz:processID: 30280, moz:profile: C:\\Users\\muqad\\AppData\\Loca..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}\nSession ID: b660910e-e97b-4a22-85d5-903900454e4c\n*** Element info: {Using\u003did, value\u003dEmail}\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\r\n\tat sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\r\n\tat java.lang.reflect.Constructor.newInstance(Constructor.java:423)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:372)\r\n\tat org.openqa.selenium.By$ById.findElement(By.java:188)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)\r\n\tat test.LoginFeature.i_fill_in_with(LoginFeature.java:38)\r\n\tat ✽.When I fill in with \"user@one.com\" and \"abcde1\"(LoginFeature.feature:14)\r\n",
               "status": "failed"
             },
             "line": 14,
@@ -152,7 +86,7 @@
         "steps": [
           {
             "result": {
-              "duration": 5751532000,
+              "duration": 6206113900,
               "status": "passed"
             },
             "line": 11,
@@ -174,8 +108,8 @@
         "steps": [
           {
             "result": {
-              "duration": 1723134500,
-              "error_message": "org.openqa.selenium.NoSuchElementException: Unable to locate element: #Email\nFor documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html\nBuild info: version: \u00273.141.59\u0027, revision: \u0027e82be7d358\u0027, time: \u00272018-11-14T08:17:03\u0027\nSystem info: host: \u0027DESKTOP-GS5KILN\u0027, ip: \u0027192.168.1.2\u0027, os.name: \u0027Windows 10\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u00271.8.0_221\u0027\nDriver info: org.openqa.selenium.firefox.FirefoxDriver\nCapabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 69.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20190827005903, moz:geckodriverVersion: 0.25.0, moz:headless: false, moz:processID: 22932, moz:profile: C:\\Users\\muqad\\AppData\\Loca..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}\nSession ID: 026d4d52-4f95-4c65-9cad-14b988292562\n*** Element info: {Using\u003did, value\u003dEmail}\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\r\n\tat sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\r\n\tat java.lang.reflect.Constructor.newInstance(Constructor.java:423)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:372)\r\n\tat org.openqa.selenium.By$ById.findElement(By.java:188)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)\r\n\tat test.LoginFeature.i_fill_in_with(LoginFeature.java:38)\r\n\tat ✽.When I fill in with \"Test\" and \"!23\"(LoginFeature.feature:18)\r\n",
+              "duration": 1224825400,
+              "error_message": "org.openqa.selenium.NoSuchElementException: Unable to locate element: #Email\nFor documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html\nBuild info: version: \u00273.141.59\u0027, revision: \u0027e82be7d358\u0027, time: \u00272018-11-14T08:17:03\u0027\nSystem info: host: \u0027DESKTOP-GS5KILN\u0027, ip: \u0027192.168.1.2\u0027, os.name: \u0027Windows 10\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u00271.8.0_221\u0027\nDriver info: org.openqa.selenium.firefox.FirefoxDriver\nCapabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 69.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20190827005903, moz:geckodriverVersion: 0.25.0, moz:headless: false, moz:processID: 13100, moz:profile: C:\\Users\\muqad\\AppData\\Loca..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}\nSession ID: 888b58f1-16f4-46cd-9697-262046531bc8\n*** Element info: {Using\u003did, value\u003dEmail}\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\r\n\tat sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\r\n\tat java.lang.reflect.Constructor.newInstance(Constructor.java:423)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:372)\r\n\tat org.openqa.selenium.By$ById.findElement(By.java:188)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)\r\n\tat test.LoginFeature.i_fill_in_with(LoginFeature.java:38)\r\n\tat ✽.When I fill in with \"Test\" and \"!23\"(LoginFeature.feature:18)\r\n",
               "status": "failed"
             },
             "line": 18,
@@ -227,7 +161,7 @@
         "steps": [
           {
             "result": {
-              "duration": 5713438100,
+              "duration": 6998201900,
               "status": "passed"
             },
             "line": 11,
@@ -249,8 +183,8 @@
         "steps": [
           {
             "result": {
-              "duration": 1711867100,
-              "error_message": "org.openqa.selenium.NoSuchElementException: Unable to locate element: #Email\nFor documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html\nBuild info: version: \u00273.141.59\u0027, revision: \u0027e82be7d358\u0027, time: \u00272018-11-14T08:17:03\u0027\nSystem info: host: \u0027DESKTOP-GS5KILN\u0027, ip: \u0027192.168.1.2\u0027, os.name: \u0027Windows 10\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u00271.8.0_221\u0027\nDriver info: org.openqa.selenium.firefox.FirefoxDriver\nCapabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 69.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20190827005903, moz:geckodriverVersion: 0.25.0, moz:headless: false, moz:processID: 26284, moz:profile: C:\\Users\\muqad\\AppData\\Loca..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}\nSession ID: e3b661fa-5176-4470-ace0-ddbcffcd29d9\n*** Element info: {Using\u003did, value\u003dEmail}\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\r\n\tat sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\r\n\tat java.lang.reflect.Constructor.newInstance(Constructor.java:423)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:372)\r\n\tat org.openqa.selenium.By$ById.findElement(By.java:188)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)\r\n\tat test.LoginFeature.i_fill_in_with(LoginFeature.java:38)\r\n\tat ✽.When I fill in with \"Test\" and \"\"(LoginFeature.feature:18)\r\n",
+              "duration": 1780056599,
+              "error_message": "org.openqa.selenium.NoSuchElementException: Unable to locate element: #Email\nFor documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html\nBuild info: version: \u00273.141.59\u0027, revision: \u0027e82be7d358\u0027, time: \u00272018-11-14T08:17:03\u0027\nSystem info: host: \u0027DESKTOP-GS5KILN\u0027, ip: \u0027192.168.1.2\u0027, os.name: \u0027Windows 10\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u00271.8.0_221\u0027\nDriver info: org.openqa.selenium.firefox.FirefoxDriver\nCapabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 69.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20190827005903, moz:geckodriverVersion: 0.25.0, moz:headless: false, moz:processID: 32248, moz:profile: C:\\Users\\muqad\\AppData\\Loca..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}\nSession ID: 27d68785-752b-41b1-8e23-ec2bc70850f8\n*** Element info: {Using\u003did, value\u003dEmail}\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\r\n\tat sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\r\n\tat java.lang.reflect.Constructor.newInstance(Constructor.java:423)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:372)\r\n\tat org.openqa.selenium.By$ById.findElement(By.java:188)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)\r\n\tat test.LoginFeature.i_fill_in_with(LoginFeature.java:38)\r\n\tat ✽.When I fill in with \"Test\" and \"\"(LoginFeature.feature:18)\r\n",
               "status": "failed"
             },
             "line": 18,
@@ -302,7 +236,7 @@
         "steps": [
           {
             "result": {
-              "duration": 5232749300,
+              "duration": 6438086600,
               "status": "passed"
             },
             "line": 11,
@@ -324,8 +258,8 @@
         "steps": [
           {
             "result": {
-              "duration": 1215804300,
-              "error_message": "org.openqa.selenium.NoSuchElementException: Unable to locate element: #Email\nFor documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html\nBuild info: version: \u00273.141.59\u0027, revision: \u0027e82be7d358\u0027, time: \u00272018-11-14T08:17:03\u0027\nSystem info: host: \u0027DESKTOP-GS5KILN\u0027, ip: \u0027192.168.1.2\u0027, os.name: \u0027Windows 10\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u00271.8.0_221\u0027\nDriver info: org.openqa.selenium.firefox.FirefoxDriver\nCapabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 69.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20190827005903, moz:geckodriverVersion: 0.25.0, moz:headless: false, moz:processID: 22404, moz:profile: C:\\Users\\muqad\\AppData\\Loca..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}\nSession ID: 696d542f-853e-4277-bb29-23f7649c13ab\n*** Element info: {Using\u003did, value\u003dEmail}\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\r\n\tat sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\r\n\tat java.lang.reflect.Constructor.newInstance(Constructor.java:423)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:372)\r\n\tat org.openqa.selenium.By$ById.findElement(By.java:188)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)\r\n\tat test.LoginFeature.i_fill_in_with(LoginFeature.java:38)\r\n\tat ✽.When I fill in with \"\" and \"123\"(LoginFeature.feature:18)\r\n",
+              "duration": 1257658001,
+              "error_message": "org.openqa.selenium.NoSuchElementException: Unable to locate element: #Email\nFor documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html\nBuild info: version: \u00273.141.59\u0027, revision: \u0027e82be7d358\u0027, time: \u00272018-11-14T08:17:03\u0027\nSystem info: host: \u0027DESKTOP-GS5KILN\u0027, ip: \u0027192.168.1.2\u0027, os.name: \u0027Windows 10\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u00271.8.0_221\u0027\nDriver info: org.openqa.selenium.firefox.FirefoxDriver\nCapabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 69.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20190827005903, moz:geckodriverVersion: 0.25.0, moz:headless: false, moz:processID: 32864, moz:profile: C:\\Users\\muqad\\AppData\\Loca..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}\nSession ID: abae2579-5ea0-497b-9bbf-7323b8cc3661\n*** Element info: {Using\u003did, value\u003dEmail}\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\r\n\tat sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\r\n\tat java.lang.reflect.Constructor.newInstance(Constructor.java:423)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:372)\r\n\tat org.openqa.selenium.By$ById.findElement(By.java:188)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)\r\n\tat test.LoginFeature.i_fill_in_with(LoginFeature.java:38)\r\n\tat ✽.When I fill in with \"\" and \"123\"(LoginFeature.feature:18)\r\n",
               "status": "failed"
             },
             "line": 18,
@@ -377,7 +311,7 @@
         "steps": [
           {
             "result": {
-              "duration": 5775141500,
+              "duration": 6373537400,
               "status": "passed"
             },
             "line": 11,
@@ -399,8 +333,8 @@
         "steps": [
           {
             "result": {
-              "duration": 1855325800,
-              "error_message": "org.openqa.selenium.NoSuchElementException: Unable to locate element: #Email\nFor documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html\nBuild info: version: \u00273.141.59\u0027, revision: \u0027e82be7d358\u0027, time: \u00272018-11-14T08:17:03\u0027\nSystem info: host: \u0027DESKTOP-GS5KILN\u0027, ip: \u0027192.168.1.2\u0027, os.name: \u0027Windows 10\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u00271.8.0_221\u0027\nDriver info: org.openqa.selenium.firefox.FirefoxDriver\nCapabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 69.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20190827005903, moz:geckodriverVersion: 0.25.0, moz:headless: false, moz:processID: 24720, moz:profile: C:\\Users\\muqad\\AppData\\Loca..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}\nSession ID: fa490c24-197e-4875-afea-bd5e637e396a\n*** Element info: {Using\u003did, value\u003dEmail}\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\r\n\tat sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\r\n\tat java.lang.reflect.Constructor.newInstance(Constructor.java:423)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:372)\r\n\tat org.openqa.selenium.By$ById.findElement(By.java:188)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)\r\n\tat test.LoginFeature.i_fill_in_with(LoginFeature.java:38)\r\n\tat ✽.When I fill in with \"\" and \"\"(LoginFeature.feature:18)\r\n",
+              "duration": 1313315201,
+              "error_message": "org.openqa.selenium.NoSuchElementException: Unable to locate element: #Email\nFor documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html\nBuild info: version: \u00273.141.59\u0027, revision: \u0027e82be7d358\u0027, time: \u00272018-11-14T08:17:03\u0027\nSystem info: host: \u0027DESKTOP-GS5KILN\u0027, ip: \u0027192.168.1.2\u0027, os.name: \u0027Windows 10\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u00271.8.0_221\u0027\nDriver info: org.openqa.selenium.firefox.FirefoxDriver\nCapabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 69.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20190827005903, moz:geckodriverVersion: 0.25.0, moz:headless: false, moz:processID: 15160, moz:profile: C:\\Users\\muqad\\AppData\\Loca..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}\nSession ID: 11336219-a104-4caf-a3a8-6eafb5bd5a4c\n*** Element info: {Using\u003did, value\u003dEmail}\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\r\n\tat sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\r\n\tat java.lang.reflect.Constructor.newInstance(Constructor.java:423)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:372)\r\n\tat org.openqa.selenium.By$ById.findElement(By.java:188)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)\r\n\tat test.LoginFeature.i_fill_in_with(LoginFeature.java:38)\r\n\tat ✽.When I fill in with \"\" and \"\"(LoginFeature.feature:18)\r\n",
               "status": "failed"
             },
             "line": 18,
@@ -453,584 +387,6 @@
       {
         "line": 3,
         "name": "@Login"
-      }
-    ]
-  },
-  {
-    "comments": [
-      {
-        "line": 1,
-        "value": "#This feature contains sample data as input for RegisterFeature.java"
-      }
-    ],
-    "line": 4,
-    "elements": [
-      {
-        "line": 9,
-        "name": "User navigates to FlightCenter Register page",
-        "description": "",
-        "type": "background",
-        "keyword": "Background",
-        "steps": [
-          {
-            "result": {
-              "duration": 5770691500,
-              "status": "passed"
-            },
-            "line": 10,
-            "name": "I am on register page",
-            "match": {
-              "location": "RegisterFeature.i_am_on_register_page()"
-            },
-            "keyword": "Given "
-          }
-        ]
-      },
-      {
-        "line": 12,
-        "name": "Successful registration",
-        "description": "",
-        "id": "registerfeature;successful-registration",
-        "type": "scenario",
-        "keyword": "Scenario",
-        "steps": [
-          {
-            "result": {
-              "duration": 1442873000,
-              "status": "passed"
-            },
-            "line": 13,
-            "name": "I fill in with \"Test\" and \"Tester\" and \"test@tester.com\" and \"abcde1\" and \"TT999\" and \"1992-12-12\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "Test",
-                  "offset": 16
-                },
-                {
-                  "val": "Tester",
-                  "offset": 27
-                },
-                {
-                  "val": "test@tester.com",
-                  "offset": 40
-                },
-                {
-                  "val": "abcde1",
-                  "offset": 62
-                },
-                {
-                  "val": "TT999",
-                  "offset": 75
-                },
-                {
-                  "val": "1992-12-12",
-                  "offset": 87
-                }
-              ],
-              "location": "RegisterFeature.i_fill_in_with(String,String,String,String,String,String)"
-            },
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "duration": 1178291900,
-              "status": "passed"
-            },
-            "line": 14,
-            "name": "I should see registerSuccess page",
-            "match": {
-              "location": "RegisterFeature.i_should_see_registerSuccess_page()"
-            },
-            "keyword": "Then "
-          }
-        ]
-      },
-      {
-        "line": 9,
-        "name": "User navigates to FlightCenter Register page",
-        "description": "",
-        "type": "background",
-        "keyword": "Background",
-        "steps": [
-          {
-            "result": {
-              "duration": 6880618000,
-              "status": "passed"
-            },
-            "line": 10,
-            "name": "I am on register page",
-            "match": {
-              "location": "RegisterFeature.i_am_on_register_page()"
-            },
-            "keyword": "Given "
-          }
-        ]
-      },
-      {
-        "line": 21,
-        "name": "Unsuccessful registration",
-        "description": "",
-        "id": "registerfeature;unsuccessful-registration;;2",
-        "type": "scenario",
-        "keyword": "Scenario Outline",
-        "steps": [
-          {
-            "result": {
-              "duration": 427182000,
-              "status": "passed"
-            },
-            "line": 17,
-            "name": "I fill in with \"\" and \"One\" and \"user@one.co\" and \"abcde1\" and \"UO001\" and \"1994-04-15\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "",
-                  "offset": 16
-                },
-                {
-                  "val": "One",
-                  "offset": 23
-                },
-                {
-                  "val": "user@one.co",
-                  "offset": 33
-                },
-                {
-                  "val": "abcde1",
-                  "offset": 51
-                },
-                {
-                  "val": "UO001",
-                  "offset": 64
-                },
-                {
-                  "val": "1994-04-15",
-                  "offset": 76
-                }
-              ],
-              "location": "RegisterFeature.i_fill_in_with(String,String,String,String,String,String)"
-            },
-            "matchedColumns": [
-              0,
-              1,
-              2,
-              3,
-              4,
-              5
-            ],
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "duration": 36700,
-              "status": "passed"
-            },
-            "line": 18,
-            "name": "I should stay on register page",
-            "match": {
-              "location": "RegisterFeature.i_should_stay_on_register_page()"
-            },
-            "keyword": "Then "
-          }
-        ],
-        "tags": [
-          {
-            "line": 3,
-            "name": "@Register"
-          }
-        ]
-      },
-      {
-        "line": 9,
-        "name": "User navigates to FlightCenter Register page",
-        "description": "",
-        "type": "background",
-        "keyword": "Background",
-        "steps": [
-          {
-            "result": {
-              "duration": 6923974700,
-              "status": "passed"
-            },
-            "line": 10,
-            "name": "I am on register page",
-            "match": {
-              "location": "RegisterFeature.i_am_on_register_page()"
-            },
-            "keyword": "Given "
-          }
-        ]
-      },
-      {
-        "line": 22,
-        "name": "Unsuccessful registration",
-        "description": "",
-        "id": "registerfeature;unsuccessful-registration;;3",
-        "type": "scenario",
-        "keyword": "Scenario Outline",
-        "steps": [
-          {
-            "result": {
-              "duration": 429062300,
-              "status": "passed"
-            },
-            "line": 17,
-            "name": "I fill in with \"Ben\" and \"Ten\" and \"ben@ten.co\" and \"abcde1\" and \"\" and \"2000-01-01\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "Ben",
-                  "offset": 16
-                },
-                {
-                  "val": "Ten",
-                  "offset": 26
-                },
-                {
-                  "val": "ben@ten.co",
-                  "offset": 36
-                },
-                {
-                  "val": "abcde1",
-                  "offset": 53
-                },
-                {
-                  "val": "",
-                  "offset": 66
-                },
-                {
-                  "val": "2000-01-01",
-                  "offset": 73
-                }
-              ],
-              "location": "RegisterFeature.i_fill_in_with(String,String,String,String,String,String)"
-            },
-            "matchedColumns": [
-              0,
-              1,
-              2,
-              3,
-              4,
-              5
-            ],
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "duration": 98200,
-              "status": "passed"
-            },
-            "line": 18,
-            "name": "I should stay on register page",
-            "match": {
-              "location": "RegisterFeature.i_should_stay_on_register_page()"
-            },
-            "keyword": "Then "
-          }
-        ],
-        "tags": [
-          {
-            "line": 3,
-            "name": "@Register"
-          }
-        ]
-      },
-      {
-        "line": 9,
-        "name": "User navigates to FlightCenter Register page",
-        "description": "",
-        "type": "background",
-        "keyword": "Background",
-        "steps": [
-          {
-            "result": {
-              "duration": 5420784800,
-              "status": "passed"
-            },
-            "line": 10,
-            "name": "I am on register page",
-            "match": {
-              "location": "RegisterFeature.i_am_on_register_page()"
-            },
-            "keyword": "Given "
-          }
-        ]
-      },
-      {
-        "line": 23,
-        "name": "Unsuccessful registration",
-        "description": "",
-        "id": "registerfeature;unsuccessful-registration;;4",
-        "type": "scenario",
-        "keyword": "Scenario Outline",
-        "steps": [
-          {
-            "result": {
-              "duration": 447302600,
-              "status": "passed"
-            },
-            "line": 17,
-            "name": "I fill in with \"Donald\" and \"Trump\" and \"trump@gov.us\" and \"\" and \"DT001\" and \"1950-11-13\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "Donald",
-                  "offset": 16
-                },
-                {
-                  "val": "Trump",
-                  "offset": 29
-                },
-                {
-                  "val": "trump@gov.us",
-                  "offset": 41
-                },
-                {
-                  "val": "",
-                  "offset": 60
-                },
-                {
-                  "val": "DT001",
-                  "offset": 67
-                },
-                {
-                  "val": "1950-11-13",
-                  "offset": 79
-                }
-              ],
-              "location": "RegisterFeature.i_fill_in_with(String,String,String,String,String,String)"
-            },
-            "matchedColumns": [
-              0,
-              1,
-              2,
-              3,
-              4,
-              5
-            ],
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "duration": 55200,
-              "status": "passed"
-            },
-            "line": 18,
-            "name": "I should stay on register page",
-            "match": {
-              "location": "RegisterFeature.i_should_stay_on_register_page()"
-            },
-            "keyword": "Then "
-          }
-        ],
-        "tags": [
-          {
-            "line": 3,
-            "name": "@Register"
-          }
-        ]
-      },
-      {
-        "line": 9,
-        "name": "User navigates to FlightCenter Register page",
-        "description": "",
-        "type": "background",
-        "keyword": "Background",
-        "steps": [
-          {
-            "result": {
-              "duration": 5861683900,
-              "status": "passed"
-            },
-            "line": 10,
-            "name": "I am on register page",
-            "match": {
-              "location": "RegisterFeature.i_am_on_register_page()"
-            },
-            "keyword": "Given "
-          }
-        ]
-      },
-      {
-        "line": 24,
-        "name": "Unsuccessful registration",
-        "description": "",
-        "id": "registerfeature;unsuccessful-registration;;5",
-        "type": "scenario",
-        "keyword": "Scenario Outline",
-        "steps": [
-          {
-            "result": {
-              "duration": 424470300,
-              "status": "passed"
-            },
-            "line": 17,
-            "name": "I fill in with \"Dobby\" and \"\" and \"dobby@do.b\" and \"abcde1\" and \"DD001\" and \"1960-12-28\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "Dobby",
-                  "offset": 16
-                },
-                {
-                  "val": "",
-                  "offset": 28
-                },
-                {
-                  "val": "dobby@do.b",
-                  "offset": 35
-                },
-                {
-                  "val": "abcde1",
-                  "offset": 52
-                },
-                {
-                  "val": "DD001",
-                  "offset": 65
-                },
-                {
-                  "val": "1960-12-28",
-                  "offset": 77
-                }
-              ],
-              "location": "RegisterFeature.i_fill_in_with(String,String,String,String,String,String)"
-            },
-            "matchedColumns": [
-              0,
-              1,
-              2,
-              3,
-              4,
-              5
-            ],
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "duration": 50700,
-              "status": "passed"
-            },
-            "line": 18,
-            "name": "I should stay on register page",
-            "match": {
-              "location": "RegisterFeature.i_should_stay_on_register_page()"
-            },
-            "keyword": "Then "
-          }
-        ],
-        "tags": [
-          {
-            "line": 3,
-            "name": "@Register"
-          }
-        ]
-      },
-      {
-        "line": 9,
-        "name": "User navigates to FlightCenter Register page",
-        "description": "",
-        "type": "background",
-        "keyword": "Background",
-        "steps": [
-          {
-            "result": {
-              "duration": 5932883700,
-              "status": "passed"
-            },
-            "line": 10,
-            "name": "I am on register page",
-            "match": {
-              "location": "RegisterFeature.i_am_on_register_page()"
-            },
-            "keyword": "Given "
-          }
-        ]
-      },
-      {
-        "line": 25,
-        "name": "Unsuccessful registration",
-        "description": "",
-        "id": "registerfeature;unsuccessful-registration;;6",
-        "type": "scenario",
-        "keyword": "Scenario Outline",
-        "steps": [
-          {
-            "result": {
-              "duration": 432250400,
-              "status": "passed"
-            },
-            "line": 17,
-            "name": "I fill in with \"Poo\" and \"Head\" and \"poo@head.aus\" and \"abcde1\" and \"PH001\" and \"\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "Poo",
-                  "offset": 16
-                },
-                {
-                  "val": "Head",
-                  "offset": 26
-                },
-                {
-                  "val": "poo@head.aus",
-                  "offset": 37
-                },
-                {
-                  "val": "abcde1",
-                  "offset": 56
-                },
-                {
-                  "val": "PH001",
-                  "offset": 69
-                },
-                {
-                  "val": "",
-                  "offset": 81
-                }
-              ],
-              "location": "RegisterFeature.i_fill_in_with(String,String,String,String,String,String)"
-            },
-            "matchedColumns": [
-              0,
-              1,
-              2,
-              3,
-              4,
-              5
-            ],
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "duration": 53000,
-              "status": "passed"
-            },
-            "line": 18,
-            "name": "I should stay on register page",
-            "match": {
-              "location": "RegisterFeature.i_should_stay_on_register_page()"
-            },
-            "keyword": "Then "
-          }
-        ],
-        "tags": [
-          {
-            "line": 3,
-            "name": "@Register"
-          }
-        ]
-      }
-    ],
-    "name": "RegisterFeature",
-    "description": "  As a Customer\n  I want to register an account on the FlightCenter\n  So that I can book flights",
-    "id": "registerfeature",
-    "keyword": "Feature",
-    "uri": "RegisterFeature.feature",
-    "tags": [
-      {
-        "line": 3,
-        "name": "@Register"
       }
     ]
   }

@@ -12,10 +12,10 @@ import static com.mongodb.client.model.Filters.eq;
 
 /**
  *
- * @author Liam
+ * @author William
  */
 public class MongoDBManager_Customers extends MongoDBConnector {
-    
+
     public void add(Customer customer) {
         MongoClientURI uri = generateURI();
         try (MongoClient client = new MongoClient(uri)) {
@@ -24,7 +24,7 @@ public class MongoDBManager_Customers extends MongoDBConnector {
             customerDB.insertOne(convertToDoc(customer));
         }
     }
-    
+
     public void remove(Customer customer) {
         MongoClientURI uri = generateURI();
         try (MongoClient client = new MongoClient(uri)) {
@@ -33,7 +33,7 @@ public class MongoDBManager_Customers extends MongoDBConnector {
             customerDB.deleteOne(convertToDoc(customer));
         }
     }
-    
+
     public Customer getCustomer(String id) {
         MongoClientURI uri = generateURI();
         Customer customer;
@@ -45,7 +45,7 @@ public class MongoDBManager_Customers extends MongoDBConnector {
         }
         return customer;
     }
-    
+
     public Customer getCustomer(String email, String password) {
         MongoClientURI uri = generateURI();
         Customer customer;
@@ -57,7 +57,7 @@ public class MongoDBManager_Customers extends MongoDBConnector {
         }
         return customer;
     }
-    
+
     public ArrayList<Customer> getCustomers() {
         MongoClientURI uri = generateURI();
         ArrayList<Customer> customers;
@@ -72,7 +72,7 @@ public class MongoDBManager_Customers extends MongoDBConnector {
         }
         return customers;
     }
-    
+
     private Customer convertToCustomer(Document doc) {
         return new Customer((String) doc.get("id"),
                 (String) doc.get("first_name"),
@@ -82,7 +82,7 @@ public class MongoDBManager_Customers extends MongoDBConnector {
                 (String) doc.get("passport"),
                 (String) doc.get("dob"));
     }
-    
+
     private Document convertToDoc(Customer customer) {
         return new Document("id", customer.getID())
                 .append("first_name", customer.getFirstName())

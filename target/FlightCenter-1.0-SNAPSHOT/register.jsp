@@ -17,39 +17,40 @@
 
         <div class="form-group">
             <label>Last Name:</label>
-            <input type="text" class="form-control" name="lname" value="${param.lastName}"
+            <input type="text" class="form-control" name="lName" id="last_name" value="${param.lastName}"
                    placeholder="Enter your last name" required>
-            <span class="error">${errors.lNameErr}</span>
+            <span class="error text-danger"><em>${errors.lNameErr}</em></span>
         </div>
 
         <div class="form-group">
             <label>Email:</label>
-            <input type="email" class="form-control" name="email" value="${param.email}"
+            <input type="email" class="form-control" name="email" id="email" value="${param.email}"
                    placeholder="Enter your email address" required>
-            <span class="error">${errors.emailErr}</span>
+            <span class="error text-danger"><em>${errors.emailErr}</em></span>
         </div>
 
         <div class="form-group">
             <label>Password:</label>
-            <input type="password" class="form-control" name="password" value="${param.password}"
+            <input type="password" class="form-control" name="password" id="password" value="${param.password}"
                    placeholder="Enter a password" required>
-            <span class="error">${errors.passwordErr}</span>
+            <span class="error text-danger"><em>${errors.passwordErr}</em></span>
         </div>
 
         <div class="form-group">
             <label>Passport Number:</label>
-            <input type="text" class="form-control" name="passport" value="${param.passport}"
-                   placeholder="Initials (capital) followed by 3 integers" required>
-            <span class="error">${errors.passportErr}</span>
+            <input type="text" class="form-control" name="passport" id="passport" value="${param.passport}"
+                   placeholder="Capitalised initials followed by 3 numbers" required>
+            <span class="error text-danger"><em>${errors.passportErr}</em></span>
         </div>
 
         <div class="form-group">
             <label>DOB:</label>
-            <input type="date" class="form-control" name="DOB" required>
+            <input type="date" class="form-control" name="DOB" id="dob" value="${param.DOB}" required>
+            <span class="error text-danger"><em>${errors.DOBErr}</em></span>
         </div>
-
-        <button type="submit" class="btn btn-success">Register</button>
-        <button type="button" class="btn btn-danger" onclick="location.href = 'main.jsp'">Cancel</button>
+        <br>
+        <button type="submit" class="btn btn-success" id="registerBtn">Register</button> <!-- performs form input validation upon clicking-->
+        <button type="button" class="btn btn-warning" onclick="location.href = 'main.jsp'">Cancel</button>
     </form>
 
 </div>

@@ -86,8 +86,8 @@ public class MongoDBManager_Customers extends MongoDBConnector {
             setData.append("first_name", firstName)
                     .append("last_name", lastName)
                     .append("email", email)
-                    .append("passport", passport)
                     .append("password", password)
+                    .append("passport", passport)
                     .append("dob", DOB);
             Document update = new Document();
             update.append("$set", setData);

@@ -42,11 +42,13 @@ public class LoginFeature {
     
     @Then("^I should see \"([^\"]*)\" main page$")
     public void i_should_see_main_page(String arg1) throws Throwable {
-        System.out.println("mLab connection successful.");
+        System.out.println("Login successful.");
+        driver.get("https://arsproject.herokuapp.com/main.jsp");
+        driver.navigate().to(driver.getCurrentUrl());
     }
     
     @Then("^I should see \"([^\"]*)\" login page$")
     public void i_should_see_login_page(String arg1) throws Throwable {
-        System.out.println("mLab connection unsuccessful!");
+        System.out.println("Login unsuccessful!");
     } 
 }

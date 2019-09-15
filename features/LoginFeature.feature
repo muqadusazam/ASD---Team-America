@@ -11,8 +11,8 @@ Background: User nevigates to mLab login page
 Given I am on login page
 
 Scenario: Successful login to mLab
-When I fill in "Email" with "<mLab email>"
-And I fill in "Password" with "<mLab Password>"
+When I fill in "Email" with "user@one.com"
+And I fill in "Password" with "abcde1"
 Then I should see "main.jsp" main page
 
 Scenario Outline: Failed login to mLab using wrong credentials

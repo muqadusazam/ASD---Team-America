@@ -21,10 +21,10 @@ import org.junit.Test;
  *
  * @author muqad
  */
-public class UnitTest {
+public class LoginUnitTest {
     private static MongoDBConnector mb;
     private static MongoDBManager_Customers mc;
-    public UnitTest() {  }
+    public LoginUnitTest() {  }
     
     @BeforeClass //Create an instance of MongoDBConnector using admin credentials for mLab
     public static void setUpClass() throws UnknownHostException {

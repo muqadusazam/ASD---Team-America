@@ -65,7 +65,7 @@ public class ProfileEditServlet extends HttpServlet {
         if (errors.isEmpty()) { //redirect to next page if no error is detected in errors map
             MongoDBManager_Customers db = new MongoDBManager_Customers();
             Customer customer = (Customer)session.getAttribute("customer");
-            db.editCustomer(customer.getID(), firstName, lastName, email, password, passport, DOB);
+            db.editCustomer(customer.getID(), firstName, lastName, email, passport, password, DOB);
             response.sendRedirect("account.jsp");
         }
         else { //put errors in request scope and forward them back to edit_profile.jsp to display error messages

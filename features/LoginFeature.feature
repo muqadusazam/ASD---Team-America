@@ -3,23 +3,25 @@
 @Login
 
 Feature: LoginFeature
-    As a admin
-    I want to login into mLab account using my credentials
-    In order to connect to mLab cloud database
+As a admin
+I want to login into mLab account using my admin credentials
+In order to connect to mLab cloud database
 
-Background: User nevigates to login page
-    Given I am on login page
+Background: User nevigates to mLab login page
+Given I am on login page
 
-Scenario: Successful login
-    When I fill in with "user@one.com" and "abcde1"
-    Then I should see main page
+Scenario: Successful login to mLab
+When I fill in "Email" with "user@one.com"
+And I fill in "Password" with "abcde1"
+Then I should see "main.jsp" main page
 
-Scenario Outline: Unsuccessful login
-    When I fill in with "<Email>" and "<Password>"
-    Then I should stay on login page
-    Examples:
-    | Email           | Password     | Warning                           |
-    | Test            | !23          | Incorrect credentials. Try again. |
-    | Test            |              | Please enter password.            |
-    |                 | 123          | Please enter username.            |
-    |                 |              | Please enter your credentials.    |
+Scenario Outline: Failed login to mLab using wrong credentials
+When I fill in "Email" with "<Email>"
+And I fill in "Password" with "<Password>"
+Then I should see "login.jsp" login page
+Examples:
+| Email           | Password     | Warning                           |
+| Test            | !23          | Incorrect credentials. Try again. |
+| Test            |              | Please enter password.            |
+|                 | 123          | Please enter username.            |
+|                 |              | Please enter your credentials.    |

@@ -40,8 +40,8 @@
 //    @Test 
 //    public void fetchUsers(){
 //        //Customers customers = mc.getCustomers();
-//        //ArrayList<Customer> users = mc.getCustomers();
-//        //Assert.assertNotNull("Cannot fetch ASD users",users);
+//        ArrayList<Customer> users = mc.getCustomers();
+//        Assert.assertNotNull("Cannot fetch ASD users",users);
 //        System.out.println("\nFetching ASD users...");
 //        System.out.println("-------------------------------------");
 //        mc.getCustomers();

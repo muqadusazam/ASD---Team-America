@@ -16,7 +16,7 @@ And I fill in "Password" with "<mLab Password>"
 Then I should see "main.jsp" main page
 
 Scenario Outline: Failed login to mLab using wrong credentials
-When I fill in "Email" with "<email>"
+When I fill in "Email" with "<Email>"
 And I fill in "Password" with "<Password>"
 Then I should see "login.jsp" login page
 Examples:

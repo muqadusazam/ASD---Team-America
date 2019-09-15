@@ -15,7 +15,6 @@ import org.bson.Document;
  * @author Liam
  */
 public class MongoDBManager_Tickets extends MongoDBConnector {
-
     
      public void add(Ticket ticket) {
         MongoClientURI uri = generateURI();

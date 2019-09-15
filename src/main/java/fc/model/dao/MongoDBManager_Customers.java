@@ -12,10 +12,9 @@ import static com.mongodb.client.model.Filters.eq;
 
 /**
  *
- * @author Liam
+ * @author Kelvin
  */
 public class MongoDBManager_Customers extends MongoDBConnector {
-
     
     public void add(Customer customer) {
         MongoClientURI uri = generateURI();
@@ -55,6 +54,8 @@ public class MongoDBManager_Customers extends MongoDBConnector {
             MongoCollection<Document> customerDB = db.getCollection(CUSTOMER_COLLECTION);
             Document doc = customerDB.find(and(eq("email", email), eq("password", password))).first();
             customer = convertToCustomer(doc);
+        } catch(NullPointerException x){
+            return null;
         }
         return customer;
     }
@@ -80,6 +81,7 @@ public class MongoDBManager_Customers extends MongoDBConnector {
                 (String) doc.get("last_name"),
                 (String) doc.get("email"),
                 (String) doc.get("password"),
+                (String) doc.get("passport"),
                 (String) doc.get("dob"));
     }
     
@@ -89,6 +91,7 @@ public class MongoDBManager_Customers extends MongoDBConnector {
                 .append("last_name", customer.getLastName())
                 .append("email", customer.getEmail())
                 .append("password", customer.getPassword())
+                .append("passport", customer.getPassport())
                 .append("dob", customer.getDOB());
     }
 }

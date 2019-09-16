@@ -1,4 +1,3 @@
-
 <%@page import="fc.model.Customer"%>
 <%@page import="fc.model.dao.MongoDBManager_Customers"%>
 <jsp:include page="fc_header.jsp">

@@ -1,4 +1,3 @@
-
 <%@page import="fc.model.Customer"%>
 <%@page import="java.util.ArrayList"%>
 <%@page import="fc.model.dao.MongoDBManager_Customers"%>

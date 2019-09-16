@@ -17,7 +17,7 @@
 </div>
 
 <div class="mx-auto" style="width: 950px;">
-    <form action="RegisterAdminServlet" method="post" class="margin1">
+    <form action="CustomerAdminServlet" method="post" class="margin1">
         <div class="form-row">
             <div class="form-group col-md-6">
                 <label>First Name</label>
@@ -35,32 +35,32 @@
         <div class="form-row">
             <div class="form-group col-md-6">
                 <label>Email</label>
-                <input type="email" class="form-control" name="email" value="${param.email}"
+                <input type="email" class="form-control" name="email" id="inputEmail" value="${param.email}"
                        placeholder="Enter your email address" required>
                 <span class="error">${errors.emailErr}</span>
             </div>
             <div class="form-group col-md-6">
                 <label>Password</label>
-                <input type="password" class="form-control" name="password" value="${param.password}"
+                <input type="password" class="form-control" name="password" id="inputPassword"value="${param.password}"
                        placeholder="Enter a password" required>
                 <span class="error">${errors.passwordErr}</span>
             </div>
         </div>
-        <div class="form-group">
-            <label>Passport Number</label>
-            <input type="text" class="form-control" name="passport" value="${param.passport}"
-                   placeholder="Initials (capital) followed by 3 integers" required>
-            <span class="error">${errors.passportErr}</span>
-        </div>
         <div class="form-row">
             <div class="form-group col-md-6">
+                <label>Passport Number</label>
+                <input type="text" class="form-control" name="passport" id="inputPassport"value="${param.passport}"
+                       placeholder="Initials (capital) followed by 3 integers" required>
+                <span class="error">${errors.passportErr}</span>
+            </div>
+            <div class="form-group col-md-6">
                 <label>Date of Birth</label>
-                <input type="date" class="form-control" name="DOB" required>
+                <input type="date" class="form-control" name="DOB" id="inputDOB" required>
             </div>
 
         </div>
-        <button type="submit" class="btn btn-success">Create</button>
-        <button type="button" class="btn btn-secondary" onclick="location.href='user_management.jsp'">Cancel</button>
+        <button type="submit" class="btn btn-success" id="registerButton">Create</button>
+        <button type="button" class="btn btn-secondary" onclick="location.href = 'user_management.jsp'">Cancel</button>
 
     </form>
 </div>

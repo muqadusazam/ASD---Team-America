@@ -1,6 +1,4 @@
-<%@page import="fc.model.Customer"%>
-<%@page import="java.util.ArrayList"%>
-<%@page import="fc.model.dao.MongoDBManager_Customers"%>
+
 <jsp:include page="fc_header.jsp">
     <jsp:param name="title" value="Flight Center/account/user_management"/>
 </jsp:include>
@@ -28,11 +26,6 @@
     </div>
 </div>
 
-<% 
-    MongoDBManager_Customers customerDB = new MongoDBManager_Customers();
-    ArrayList<Customer> customers = customerDB.getCustomers();
-%>
-
 <div class="mx-auto" style="width: 950px; text-align: center;">
     <table class="table table-striped">
         <thead class="thead-dark">
@@ -45,29 +38,102 @@
                 <th>Action</th>              
             </tr>
         </thead>
-        <% for(Customer customer : customers) {  %>
         <tr>
-            <td><%= customer.getID() %></td>
-            <td><%= customer.getFirstName() %></td>
-            <td><%= customer.getLastName() %></td>
-            <td><%= customer.getEmail() %></td>
-            <td><%= customer.getDOB() %></td>
+            <td>100001</td>
+            <td>Carol</td>
+            <td>Lee</td>
+            <td>Cl1993@gmail.com</td>
+            <td>19/02/1993</td>
             <td>
-                <div style="width:150px;">
-                    <div style="float: left;"> 
-                        <form action="userDetail_management.jsp" method="POST">
-                            <button type="submit" name="ID" value="<%= customer.getID() %>" class="btn btn-primary">View</button> 
-                        </form>
-                    </div>
-                    <div style="float: right;"> 
-                        <form action="userTicket_management.jsp" method="POST">
-                            <button type="submit" class="btn btn-info">Tickets</button>
-                        </form>
-                    </div>
-                </div>
+                <form action="userDetail_management.jsp" method="POST">
+                    <button type="submit" name="ID" class="btn btn-primary">View</button> 
+                </form>
             </td>
-        </tr> 
-        <% } %>
+        </tr>
+        <tr>
+            <td>100002</td>
+            <td>James</td>
+            <td>Black</td>
+            <td>jamesftw@gmail.com</td>
+            <td>01/06/1978</td>
+            <td>
+                <form action="userDetail_management.jsp" method="POST">
+                    <button type="submit" name="ID" class="btn btn-primary">View</button> 
+                </form>
+            </td>
+        </tr>
+        <tr>
+            <td>100003</td>
+            <td>Boron</td>
+            <td>Chernobyl</td>
+            <td>radiation@gmail.com</td>
+            <td>26/04/1986</td>
+            <td>
+                <form action="userDetail_management.jsp" method="POST">
+                    <button type="submit" name="ID" class="btn btn-primary">View</button> 
+                </form>
+            </td>
+        </tr>
+        <tr>
+            <td>100004</td>
+            <td>Cowell</td>
+            <td>Simon</td>
+            <td>AGT@gmail.com</td>
+            <td>15/11/1968</td>
+            <td>
+                <form action="userDetail_management.jsp" method="POST">
+                    <button type="submit" name="ID" class="btn btn-primary">View</button> 
+                </form>
+            </td>
+        </tr>
+        <tr>
+            <td>100005</td>
+            <td>Carol</td>
+            <td>Lee</td>
+            <td>Cl1993@gmail.com</td>
+            <td>19/02/1993</td>
+            <td>
+                <form action="userDetail_management.jsp" method="POST">
+                    <button type="submit" name="ID" class="btn btn-primary">View</button> 
+                </form>
+            </td>
+        </tr>
+        <tr>
+            <td>100006</td>
+            <td>Kingdom</td>
+            <td>Zom</td>
+            <td>king@gmail.com</td>
+            <td>26/04/1976</td>
+            <td>
+                <form action="userDetail_management.jsp" method="POST">
+                    <button type="submit" name="ID" class="btn btn-primary">View</button> 
+                </form>
+            </td>
+        </tr>
+        <tr>
+            <td>100007</td>
+            <td>Test</td>
+            <td>Example</td>
+            <td>thisismyemail@gmail.com</td>
+            <td>16/08/2019</td>
+            <td>
+                <form action="userDetail_management.jsp" method="POST">
+                    <button type="submit" name="ID" class="btn btn-primary">View</button> 
+                </form>
+            </td>
+        </tr>
+        <tr>
+            <td>100008</td>
+            <td>Car</td>
+            <td>Drive</td>
+            <td>drivecar@gmail.com</td>
+            <td>12/01/1993</td>
+            <td>
+                <form action="userDetail_management.jsp" method="POST">
+                    <button type="submit" name="ID" class="btn btn-primary">View</button> 
+                </form>
+            </td>
+        </tr>
     </table>
 </div>
 

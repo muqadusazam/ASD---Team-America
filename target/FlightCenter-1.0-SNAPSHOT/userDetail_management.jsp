@@ -1,8 +1,6 @@
 
-<%@page import="fc.model.Customer"%>
-<%@page import="fc.model.dao.MongoDBManager_Customers"%>
 <jsp:include page="fc_header.jsp">
-    <jsp:param name="title" value="Flight Center/account/userDetail_management"/>
+    <jsp:param name="title" value="Flight Center/account/user_management"/>
 </jsp:include>
 <div class="col-12 col-md-3 col-xl-2 bd-sidebar" style = "margin-top: 100px; padding: 5px; float:left; background-color:#cecece">
     <ul class="navbar-nav mr-auto">
@@ -14,64 +12,58 @@
     </ul>
 </div>
 
-<%
-    String id = request.getParameter("ID");
-    MongoDBManager_Customers customerDB = new MongoDBManager_Customers();
-    Customer customer = customerDB.getCustomer(id);
-
-%>
 <div class="mx-auto" style="width: 800px; text-align: center;" >
-    <h1>User: <%= customer.getFirstName()%> <%=customer.getLastName()%></h1>
+    <h1>User: Carol Lee</h1>
 </div>
 
 <div class="mx-auto" style="width: 950px;">
-    <form action="CustomerEditAdminServlet" class="margin1" method="post">
+    <form action="user_management.jsp" class="margin1">
         <div class="form-row">
             <div class="form-group col-md-6">
-                <label for="inputID">ID</label>
-                <input type="text" class="form-control" name="ID" id="ID" value="<%=customer.getID()%>">
+                <label for="inputEmail4">Email</label>
+                <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
             </div>
+            <div class="form-group col-md-6">
+                <label for="inputPassword4">Password</label>
+                <input type="password" class="form-control" id="inputPassword4" placeholder="Password">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="inputAddress">Address</label>
+            <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+        </div>
+        <div class="form-group">
+            <label for="inputAddress2">Address 2</label>
+            <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
         </div>
         <div class="form-row">
             <div class="form-group col-md-6">
-                <label for="inputFName">First Name</label>
-                <input type="text" class="form-control" name="fname" id="firstName" value="<%=customer.getFirstName()%>">
-                <span class="error">${errors.fNameErr}</span>
+                <label for="inputCity">City</label>
+                <input type="text" class="form-control" id="inputCity">
             </div>
-            <div class="form-group col-md-6">
-                <label for="inputLName">Last Name</label>
-                <input type="text" class="form-control" name="lname" id="lastName" value="<%=customer.getLastName()%>">
-                <span class="error">${errors.lNameErr}</span>
+            <div class="form-group col-md-4">
+                <label for="inputState">State</label>
+                <select id="inputState" class="form-control">
+                    <option selected>Choose...</option>
+                    <option>NSW</option>
+                    <option>QLD</option>
+                    <option>NT</option>
+                    <option>WA</option>
+                    <option>SA</option>
+                    <option>TAS</option>
+                    <option>VIC</option>
+                </select>
             </div>
-        </div>
-        <div class="form-row">
-            <div class="form-group col-md-6">
-                <label for="inputEmail">Email</label>
-                <input type="text" class="form-control" name="email" id="email" value="<%=customer.getEmail()%>">
-                <span class="error">${errors.emailErr}</span>
-            </div>
-            <div class="form-group col-md-6">
-                <label>Password</label>
-                <input type="text" class="form-control" name="password" id="password" value="<%=customer.getPassword()%>">
-                <span class="error">${errors.passwordErr}</span>
-            </div>
-        </div>
-        <div class="form-row">
-            <div class="form-group col-md-6">
-                <label for="inputPasspoprt">Passport</label>
-                <input type="text" class="form-control" name="passport" id="passport" value="<%=customer.getPassport()%>">
-                <span class="error">${errors.passportErr}</span>
-            </div>
-            <div class="form-group col-md-6">
-                <label for="inputDob">DOB</label>
-                <input type="date" class="form-control" name="DOB" id="DOB" value="<%=customer.getDOB()%>">
+            <div class="form-group col-md-2">
+                <label for="inputZip">Post Code</label>
+                <input type="text" class="form-control" id="inputZip">
             </div>
         </div>
         <button type="submit" class="btn btn-primary">Edit</button>
+        <button type="submit" class="btn btn-danger">Delete</button>
     </form>
-    <form action="userDelete_management.jsp" method="POST">
-        <button type="submit" name="ID" value="<%= customer.getID()%>" class="btn btn-danger">Delete</button> 
-    </form> 
 </div>
+
+
 
 <jsp:include page = "fc_footer.jsp"/>

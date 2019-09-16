@@ -9,11 +9,11 @@ import com.mongodb.client.MongoDatabase;
  * @author Liam
  */
 public class MongoDBConnector extends MongoDB {
-
+    
     protected MongoClientURI generateURI() {
         return new MongoClientURI("mongodb://" + this.OWNER + ":" + this.PASSWORD + this.KEY);
     }
-
+    
     public MongoDatabase getMongoDB(){
        MongoClientURI uri = generateURI();
        MongoDatabase db;

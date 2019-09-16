@@ -1,506 +1,543 @@
 [
   {
-    "comments": [
-      {
-        "line": 1,
-        "value": "# Login Feature"
-      },
-      {
-        "line": 2,
-        "value": "# language: en"
-      }
-    ],
-    "line": 5,
+    "line": 2,
     "elements": [
       {
-        "line": 10,
-        "name": "User nevigates to mLab login page",
+        "line": 7,
+        "name": "Staff navigates to FlightCenter Add Customer page",
         "description": "",
         "type": "background",
         "keyword": "Background",
         "steps": [
           {
             "result": {
-              "duration": 1408341140,
-              "error_message": "org.openqa.selenium.WebDriverException: Cannot find firefox binary in PATH. Make sure firefox is installed. OS appears to be: MAC\nBuild info: version: \u00273.141.59\u0027, revision: \u0027e82be7d358\u0027, time: \u00272018-11-14T08:17:03\u0027\nSystem info: host: \u0027Williams-MacBook-Pro.local\u0027, ip: \u0027fe80:0:0:0:1041:dea5:c478:6dc5%en0\u0027, os.name: \u0027Mac OS X\u0027, os.arch: \u0027x86_64\u0027, os.version: \u002710.14.4\u0027, java.version: \u00271.8.0_181\u0027\nDriver info: driver.version: FirefoxDriver\n\tat org.openqa.selenium.firefox.FirefoxBinary.\u003cinit\u003e(FirefoxBinary.java:100)\n\tat java.util.Optional.orElseGet(Optional.java:267)\n\tat org.openqa.selenium.firefox.FirefoxOptions.getBinary(FirefoxOptions.java:216)\n\tat org.openqa.selenium.firefox.FirefoxDriver.toExecutor(FirefoxDriver.java:187)\n\tat org.openqa.selenium.firefox.FirefoxDriver.\u003cinit\u003e(FirefoxDriver.java:147)\n\tat org.openqa.selenium.firefox.FirefoxDriver.\u003cinit\u003e(FirefoxDriver.java:125)\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\n\tat sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\n\tat java.lang.reflect.Constructor.newInstance(Constructor.java:423)\n\tat java.lang.Class.newInstance(Class.java:442)\n\tat test.LoginFeature.i_am_on_login_page(LoginFeature.java:29)\n\tat ✽.Given I am on login page(LoginFeature.feature:11)\n",
-              "status": "failed"
+              "duration": 9876647415,
+              "status": "passed"
             },
-            "line": 11,
-            "name": "I am on login page",
+            "line": 8,
+            "name": "I am on Add Customer page",
             "match": {
-              "location": "LoginFeature.i_am_on_login_page()"
+              "location": "CustomerAdminFeature.i_am_on_Add_Customer_page()"
             },
             "keyword": "Given "
           }
         ]
       },
       {
-        "line": 13,
-        "name": "Successful login to mLab",
+        "line": 10,
+        "name": "Successful registration",
         "description": "",
-        "id": "loginfeature;successful-login-to-mlab",
+        "id": "customeradminfeature;successful-registration",
         "type": "scenario",
         "keyword": "Scenario",
         "steps": [
           {
             "result": {
-              "status": "skipped"
+              "status": "undefined"
             },
-            "line": 14,
-            "name": "I fill in \"Email\" with \"\u003cmLab email\u003e\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "Email",
-                  "offset": 11
-                },
-                {
-                  "val": "\u003cmLab email\u003e",
-                  "offset": 24
-                }
-              ],
-              "location": "LoginFeature.i_fill_in_with(String,String)"
-            },
+            "line": 11,
+            "name": "I fill in with \"Customer\" and \"Test\" and \"cust@tester.com\" and \"abcde1\" and \"TT999\" and \"1992-12-12\"",
+            "match": {},
             "keyword": "When "
           },
           {
             "result": {
               "status": "skipped"
+            },
+            "line": 12,
+            "name": "I should see user_management page",
+            "match": {
+              "location": "CustomerAdminFeature.i_should_see_user_management_page()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 7,
+        "name": "Staff navigates to FlightCenter Add Customer page",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 5379116168,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "I am on Add Customer page",
+            "match": {
+              "location": "CustomerAdminFeature.i_am_on_Add_Customer_page()"
+            },
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "line": 19,
+        "name": "Unsuccessful registration",
+        "description": "",
+        "id": "customeradminfeature;unsuccessful-registration;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 477358289,
+              "status": "passed"
             },
             "line": 15,
-            "name": "I fill in \"Password\" with \"\u003cmLab Password\u003e\"",
+            "name": "I fill in \"\" and \"One\" and \"user@one.co\" and \"qwert1\" and \"UO001\" and \"1994-04-15\"",
             "match": {
               "arguments": [
                 {
-                  "val": "Password",
+                  "val": "",
                   "offset": 11
                 },
                 {
-                  "val": "\u003cmLab Password\u003e",
-                  "offset": 27
+                  "val": "One",
+                  "offset": 18
+                },
+                {
+                  "val": "user@one.co",
+                  "offset": 28
+                },
+                {
+                  "val": "qwert1",
+                  "offset": 46
+                },
+                {
+                  "val": "UO001",
+                  "offset": 59
+                },
+                {
+                  "val": "1994-04-15",
+                  "offset": 71
                 }
               ],
-              "location": "LoginFeature.i_fill_in_with(String,String)"
+              "location": "CustomerAdminFeature.i_fill_in(String,String,String,String,String,String)"
             },
-            "keyword": "And "
+            "matchedColumns": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            "keyword": "When "
           },
           {
             "result": {
-              "status": "skipped"
+              "duration": 64405,
+              "status": "passed"
             },
             "line": 16,
-            "name": "I should see \"main.jsp\" main page",
+            "name": "I should stay on userAdd_management page",
             "match": {
-              "arguments": [
-                {
-                  "val": "main.jsp",
-                  "offset": 14
-                }
-              ],
-              "location": "LoginFeature.i_should_see_main_page(String)"
-            },
-            "keyword": "Then "
-          }
-        ]
-      },
-      {
-        "line": 10,
-        "name": "User nevigates to mLab login page",
-        "description": "",
-        "type": "background",
-        "keyword": "Background",
-        "steps": [
-          {
-            "result": {
-              "duration": 291166602,
-              "error_message": "org.openqa.selenium.WebDriverException: Cannot find firefox binary in PATH. Make sure firefox is installed. OS appears to be: MAC\nBuild info: version: \u00273.141.59\u0027, revision: \u0027e82be7d358\u0027, time: \u00272018-11-14T08:17:03\u0027\nSystem info: host: \u0027Williams-MacBook-Pro.local\u0027, ip: \u0027fe80:0:0:0:1041:dea5:c478:6dc5%en0\u0027, os.name: \u0027Mac OS X\u0027, os.arch: \u0027x86_64\u0027, os.version: \u002710.14.4\u0027, java.version: \u00271.8.0_181\u0027\nDriver info: driver.version: FirefoxDriver\n\tat org.openqa.selenium.firefox.FirefoxBinary.\u003cinit\u003e(FirefoxBinary.java:100)\n\tat java.util.Optional.orElseGet(Optional.java:267)\n\tat org.openqa.selenium.firefox.FirefoxOptions.getBinary(FirefoxOptions.java:216)\n\tat org.openqa.selenium.firefox.FirefoxDriver.toExecutor(FirefoxDriver.java:187)\n\tat org.openqa.selenium.firefox.FirefoxDriver.\u003cinit\u003e(FirefoxDriver.java:147)\n\tat org.openqa.selenium.firefox.FirefoxDriver.\u003cinit\u003e(FirefoxDriver.java:125)\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\n\tat sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\n\tat java.lang.reflect.Constructor.newInstance(Constructor.java:423)\n\tat java.lang.Class.newInstance(Class.java:442)\n\tat test.LoginFeature.i_am_on_login_page(LoginFeature.java:29)\n\tat ✽.Given I am on login page(LoginFeature.feature:11)\n",
-              "status": "failed"
-            },
-            "line": 11,
-            "name": "I am on login page",
-            "match": {
-              "location": "LoginFeature.i_am_on_login_page()"
-            },
-            "keyword": "Given "
-          }
-        ]
-      },
-      {
-        "line": 24,
-        "name": "Failed login to mLab using wrong credentials",
-        "description": "",
-        "id": "loginfeature;failed-login-to-mlab-using-wrong-credentials;;2",
-        "type": "scenario",
-        "keyword": "Scenario Outline",
-        "steps": [
-          {
-            "result": {
-              "status": "skipped"
-            },
-            "line": 19,
-            "name": "I fill in \"Email\" with \"\u003cemail\u003e\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "Email",
-                  "offset": 11
-                },
-                {
-                  "val": "\u003cemail\u003e",
-                  "offset": 24
-                }
-              ],
-              "location": "LoginFeature.i_fill_in_with(String,String)"
-            },
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "status": "skipped"
-            },
-            "line": 20,
-            "name": "I fill in \"Password\" with \"\u003cPassword\u003e\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "Password",
-                  "offset": 11
-                },
-                {
-                  "val": "\u003cPassword\u003e",
-                  "offset": 27
-                }
-              ],
-              "location": "LoginFeature.i_fill_in_with(String,String)"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "status": "skipped"
-            },
-            "line": 21,
-            "name": "I should see \"login.jsp\" login page",
-            "match": {
-              "arguments": [
-                {
-                  "val": "login.jsp",
-                  "offset": 14
-                }
-              ],
-              "location": "LoginFeature.i_should_see_login_page(String)"
+              "location": "CustomerAdminFeature.i_should_stay_on_userAdd_management_page()"
             },
             "keyword": "Then "
           }
         ],
         "tags": [
           {
-            "line": 3,
-            "name": "@Login"
+            "line": 1,
+            "name": "@Customer_admin"
           }
         ]
       },
       {
-        "line": 10,
-        "name": "User nevigates to mLab login page",
+        "line": 7,
+        "name": "Staff navigates to FlightCenter Add Customer page",
         "description": "",
         "type": "background",
         "keyword": "Background",
         "steps": [
           {
             "result": {
-              "duration": 297002265,
-              "error_message": "org.openqa.selenium.WebDriverException: Cannot find firefox binary in PATH. Make sure firefox is installed. OS appears to be: MAC\nBuild info: version: \u00273.141.59\u0027, revision: \u0027e82be7d358\u0027, time: \u00272018-11-14T08:17:03\u0027\nSystem info: host: \u0027Williams-MacBook-Pro.local\u0027, ip: \u0027fe80:0:0:0:1041:dea5:c478:6dc5%en0\u0027, os.name: \u0027Mac OS X\u0027, os.arch: \u0027x86_64\u0027, os.version: \u002710.14.4\u0027, java.version: \u00271.8.0_181\u0027\nDriver info: driver.version: FirefoxDriver\n\tat org.openqa.selenium.firefox.FirefoxBinary.\u003cinit\u003e(FirefoxBinary.java:100)\n\tat java.util.Optional.orElseGet(Optional.java:267)\n\tat org.openqa.selenium.firefox.FirefoxOptions.getBinary(FirefoxOptions.java:216)\n\tat org.openqa.selenium.firefox.FirefoxDriver.toExecutor(FirefoxDriver.java:187)\n\tat org.openqa.selenium.firefox.FirefoxDriver.\u003cinit\u003e(FirefoxDriver.java:147)\n\tat org.openqa.selenium.firefox.FirefoxDriver.\u003cinit\u003e(FirefoxDriver.java:125)\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\n\tat sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\n\tat java.lang.reflect.Constructor.newInstance(Constructor.java:423)\n\tat java.lang.Class.newInstance(Class.java:442)\n\tat test.LoginFeature.i_am_on_login_page(LoginFeature.java:29)\n\tat ✽.Given I am on login page(LoginFeature.feature:11)\n",
-              "status": "failed"
+              "duration": 5327669473,
+              "status": "passed"
             },
-            "line": 11,
-            "name": "I am on login page",
+            "line": 8,
+            "name": "I am on Add Customer page",
             "match": {
-              "location": "LoginFeature.i_am_on_login_page()"
+              "location": "CustomerAdminFeature.i_am_on_Add_Customer_page()"
             },
             "keyword": "Given "
           }
         ]
       },
       {
-        "line": 25,
-        "name": "Failed login to mLab using wrong credentials",
+        "line": 20,
+        "name": "Unsuccessful registration",
         "description": "",
-        "id": "loginfeature;failed-login-to-mlab-using-wrong-credentials;;3",
+        "id": "customeradminfeature;unsuccessful-registration;;3",
         "type": "scenario",
         "keyword": "Scenario Outline",
         "steps": [
           {
             "result": {
-              "status": "skipped"
+              "duration": 485710022,
+              "status": "passed"
             },
-            "line": 19,
-            "name": "I fill in \"Email\" with \"\u003cemail\u003e\"",
+            "line": 15,
+            "name": "I fill in \"James\" and \"Ten\" and \"ben@ten.co\" and \"qwert1\" and \"\" and \"2000-01-01\"",
             "match": {
               "arguments": [
                 {
-                  "val": "Email",
+                  "val": "James",
                   "offset": 11
                 },
                 {
-                  "val": "\u003cemail\u003e",
-                  "offset": 24
+                  "val": "Ten",
+                  "offset": 23
+                },
+                {
+                  "val": "ben@ten.co",
+                  "offset": 33
+                },
+                {
+                  "val": "qwert1",
+                  "offset": 50
+                },
+                {
+                  "val": "",
+                  "offset": 63
+                },
+                {
+                  "val": "2000-01-01",
+                  "offset": 70
                 }
               ],
-              "location": "LoginFeature.i_fill_in_with(String,String)"
+              "location": "CustomerAdminFeature.i_fill_in(String,String,String,String,String,String)"
             },
+            "matchedColumns": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
             "keyword": "When "
           },
           {
             "result": {
-              "status": "skipped"
+              "duration": 66170,
+              "status": "passed"
             },
-            "line": 20,
-            "name": "I fill in \"Password\" with \"\u003cPassword\u003e\"",
+            "line": 16,
+            "name": "I should stay on userAdd_management page",
             "match": {
-              "arguments": [
-                {
-                  "val": "Password",
-                  "offset": 11
-                },
-                {
-                  "val": "\u003cPassword\u003e",
-                  "offset": 27
-                }
-              ],
-              "location": "LoginFeature.i_fill_in_with(String,String)"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "status": "skipped"
-            },
-            "line": 21,
-            "name": "I should see \"login.jsp\" login page",
-            "match": {
-              "arguments": [
-                {
-                  "val": "login.jsp",
-                  "offset": 14
-                }
-              ],
-              "location": "LoginFeature.i_should_see_login_page(String)"
+              "location": "CustomerAdminFeature.i_should_stay_on_userAdd_management_page()"
             },
             "keyword": "Then "
           }
         ],
         "tags": [
           {
-            "line": 3,
-            "name": "@Login"
+            "line": 1,
+            "name": "@Customer_admin"
           }
         ]
       },
       {
-        "line": 10,
-        "name": "User nevigates to mLab login page",
+        "line": 7,
+        "name": "Staff navigates to FlightCenter Add Customer page",
         "description": "",
         "type": "background",
         "keyword": "Background",
         "steps": [
           {
             "result": {
-              "duration": 295480469,
-              "error_message": "org.openqa.selenium.WebDriverException: Cannot find firefox binary in PATH. Make sure firefox is installed. OS appears to be: MAC\nBuild info: version: \u00273.141.59\u0027, revision: \u0027e82be7d358\u0027, time: \u00272018-11-14T08:17:03\u0027\nSystem info: host: \u0027Williams-MacBook-Pro.local\u0027, ip: \u0027fe80:0:0:0:1041:dea5:c478:6dc5%en0\u0027, os.name: \u0027Mac OS X\u0027, os.arch: \u0027x86_64\u0027, os.version: \u002710.14.4\u0027, java.version: \u00271.8.0_181\u0027\nDriver info: driver.version: FirefoxDriver\n\tat org.openqa.selenium.firefox.FirefoxBinary.\u003cinit\u003e(FirefoxBinary.java:100)\n\tat java.util.Optional.orElseGet(Optional.java:267)\n\tat org.openqa.selenium.firefox.FirefoxOptions.getBinary(FirefoxOptions.java:216)\n\tat org.openqa.selenium.firefox.FirefoxDriver.toExecutor(FirefoxDriver.java:187)\n\tat org.openqa.selenium.firefox.FirefoxDriver.\u003cinit\u003e(FirefoxDriver.java:147)\n\tat org.openqa.selenium.firefox.FirefoxDriver.\u003cinit\u003e(FirefoxDriver.java:125)\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\n\tat sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\n\tat java.lang.reflect.Constructor.newInstance(Constructor.java:423)\n\tat java.lang.Class.newInstance(Class.java:442)\n\tat test.LoginFeature.i_am_on_login_page(LoginFeature.java:29)\n\tat ✽.Given I am on login page(LoginFeature.feature:11)\n",
-              "status": "failed"
+              "duration": 5784432925,
+              "status": "passed"
             },
-            "line": 11,
-            "name": "I am on login page",
+            "line": 8,
+            "name": "I am on Add Customer page",
             "match": {
-              "location": "LoginFeature.i_am_on_login_page()"
+              "location": "CustomerAdminFeature.i_am_on_Add_Customer_page()"
             },
             "keyword": "Given "
           }
         ]
       },
       {
-        "line": 26,
-        "name": "Failed login to mLab using wrong credentials",
+        "line": 21,
+        "name": "Unsuccessful registration",
         "description": "",
-        "id": "loginfeature;failed-login-to-mlab-using-wrong-credentials;;4",
+        "id": "customeradminfeature;unsuccessful-registration;;4",
         "type": "scenario",
         "keyword": "Scenario Outline",
         "steps": [
           {
             "result": {
-              "status": "skipped"
+              "duration": 462186072,
+              "status": "passed"
             },
-            "line": 19,
-            "name": "I fill in \"Email\" with \"\u003cemail\u003e\"",
+            "line": 15,
+            "name": "I fill in \"Donald\" and \"Kid\" and \"trump@gov.us\" and \"\" and \"DT001\" and \"1950-11-13\"",
             "match": {
               "arguments": [
                 {
-                  "val": "Email",
+                  "val": "Donald",
                   "offset": 11
                 },
                 {
-                  "val": "\u003cemail\u003e",
+                  "val": "Kid",
                   "offset": 24
+                },
+                {
+                  "val": "trump@gov.us",
+                  "offset": 34
+                },
+                {
+                  "val": "",
+                  "offset": 53
+                },
+                {
+                  "val": "DT001",
+                  "offset": 60
+                },
+                {
+                  "val": "1950-11-13",
+                  "offset": 72
                 }
               ],
-              "location": "LoginFeature.i_fill_in_with(String,String)"
+              "location": "CustomerAdminFeature.i_fill_in(String,String,String,String,String,String)"
             },
+            "matchedColumns": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
             "keyword": "When "
           },
           {
             "result": {
-              "status": "skipped"
+              "duration": 44906,
+              "status": "passed"
             },
-            "line": 20,
-            "name": "I fill in \"Password\" with \"\u003cPassword\u003e\"",
+            "line": 16,
+            "name": "I should stay on userAdd_management page",
             "match": {
-              "arguments": [
-                {
-                  "val": "Password",
-                  "offset": 11
-                },
-                {
-                  "val": "\u003cPassword\u003e",
-                  "offset": 27
-                }
-              ],
-              "location": "LoginFeature.i_fill_in_with(String,String)"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "status": "skipped"
-            },
-            "line": 21,
-            "name": "I should see \"login.jsp\" login page",
-            "match": {
-              "arguments": [
-                {
-                  "val": "login.jsp",
-                  "offset": 14
-                }
-              ],
-              "location": "LoginFeature.i_should_see_login_page(String)"
+              "location": "CustomerAdminFeature.i_should_stay_on_userAdd_management_page()"
             },
             "keyword": "Then "
           }
         ],
         "tags": [
           {
-            "line": 3,
-            "name": "@Login"
+            "line": 1,
+            "name": "@Customer_admin"
           }
         ]
       },
       {
-        "line": 10,
-        "name": "User nevigates to mLab login page",
+        "line": 7,
+        "name": "Staff navigates to FlightCenter Add Customer page",
         "description": "",
         "type": "background",
         "keyword": "Background",
         "steps": [
           {
             "result": {
-              "duration": 284653874,
-              "error_message": "org.openqa.selenium.WebDriverException: Cannot find firefox binary in PATH. Make sure firefox is installed. OS appears to be: MAC\nBuild info: version: \u00273.141.59\u0027, revision: \u0027e82be7d358\u0027, time: \u00272018-11-14T08:17:03\u0027\nSystem info: host: \u0027Williams-MacBook-Pro.local\u0027, ip: \u0027fe80:0:0:0:1041:dea5:c478:6dc5%en0\u0027, os.name: \u0027Mac OS X\u0027, os.arch: \u0027x86_64\u0027, os.version: \u002710.14.4\u0027, java.version: \u00271.8.0_181\u0027\nDriver info: driver.version: FirefoxDriver\n\tat org.openqa.selenium.firefox.FirefoxBinary.\u003cinit\u003e(FirefoxBinary.java:100)\n\tat java.util.Optional.orElseGet(Optional.java:267)\n\tat org.openqa.selenium.firefox.FirefoxOptions.getBinary(FirefoxOptions.java:216)\n\tat org.openqa.selenium.firefox.FirefoxDriver.toExecutor(FirefoxDriver.java:187)\n\tat org.openqa.selenium.firefox.FirefoxDriver.\u003cinit\u003e(FirefoxDriver.java:147)\n\tat org.openqa.selenium.firefox.FirefoxDriver.\u003cinit\u003e(FirefoxDriver.java:125)\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\n\tat sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\n\tat java.lang.reflect.Constructor.newInstance(Constructor.java:423)\n\tat java.lang.Class.newInstance(Class.java:442)\n\tat test.LoginFeature.i_am_on_login_page(LoginFeature.java:29)\n\tat ✽.Given I am on login page(LoginFeature.feature:11)\n",
-              "status": "failed"
+              "duration": 5346736440,
+              "status": "passed"
             },
-            "line": 11,
-            "name": "I am on login page",
+            "line": 8,
+            "name": "I am on Add Customer page",
             "match": {
-              "location": "LoginFeature.i_am_on_login_page()"
+              "location": "CustomerAdminFeature.i_am_on_Add_Customer_page()"
             },
             "keyword": "Given "
           }
         ]
       },
       {
-        "line": 27,
-        "name": "Failed login to mLab using wrong credentials",
+        "line": 22,
+        "name": "Unsuccessful registration",
         "description": "",
-        "id": "loginfeature;failed-login-to-mlab-using-wrong-credentials;;5",
+        "id": "customeradminfeature;unsuccessful-registration;;5",
         "type": "scenario",
         "keyword": "Scenario Outline",
         "steps": [
           {
             "result": {
-              "status": "skipped"
+              "duration": 492338627,
+              "status": "passed"
             },
-            "line": 19,
-            "name": "I fill in \"Email\" with \"\u003cemail\u003e\"",
+            "line": 15,
+            "name": "I fill in \"Why\" and \"\" and \"dobby@do.b\" and \"qwert1\" and \"DD001\" and \"1960-12-28\"",
             "match": {
               "arguments": [
                 {
-                  "val": "Email",
+                  "val": "Why",
                   "offset": 11
                 },
                 {
-                  "val": "\u003cemail\u003e",
-                  "offset": 24
+                  "val": "",
+                  "offset": 21
+                },
+                {
+                  "val": "dobby@do.b",
+                  "offset": 28
+                },
+                {
+                  "val": "qwert1",
+                  "offset": 45
+                },
+                {
+                  "val": "DD001",
+                  "offset": 58
+                },
+                {
+                  "val": "1960-12-28",
+                  "offset": 70
                 }
               ],
-              "location": "LoginFeature.i_fill_in_with(String,String)"
+              "location": "CustomerAdminFeature.i_fill_in(String,String,String,String,String,String)"
             },
+            "matchedColumns": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
             "keyword": "When "
           },
           {
             "result": {
-              "status": "skipped"
+              "duration": 49828,
+              "status": "passed"
             },
-            "line": 20,
-            "name": "I fill in \"Password\" with \"\u003cPassword\u003e\"",
+            "line": 16,
+            "name": "I should stay on userAdd_management page",
             "match": {
-              "arguments": [
-                {
-                  "val": "Password",
-                  "offset": 11
-                },
-                {
-                  "val": "\u003cPassword\u003e",
-                  "offset": 27
-                }
-              ],
-              "location": "LoginFeature.i_fill_in_with(String,String)"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "status": "skipped"
-            },
-            "line": 21,
-            "name": "I should see \"login.jsp\" login page",
-            "match": {
-              "arguments": [
-                {
-                  "val": "login.jsp",
-                  "offset": 14
-                }
-              ],
-              "location": "LoginFeature.i_should_see_login_page(String)"
+              "location": "CustomerAdminFeature.i_should_stay_on_userAdd_management_page()"
             },
             "keyword": "Then "
           }
         ],
         "tags": [
           {
-            "line": 3,
-            "name": "@Login"
+            "line": 1,
+            "name": "@Customer_admin"
+          }
+        ]
+      },
+      {
+        "line": 7,
+        "name": "Staff navigates to FlightCenter Add Customer page",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 5455983656,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "I am on Add Customer page",
+            "match": {
+              "location": "CustomerAdminFeature.i_am_on_Add_Customer_page()"
+            },
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "line": 23,
+        "name": "Unsuccessful registration",
+        "description": "",
+        "id": "customeradminfeature;unsuccessful-registration;;6",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 501294367,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "I fill in \"Test\" and \"Name\" and \"poo@head.aus\" and \"qwert1\" and \"PH001\" and \"\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Test",
+                  "offset": 11
+                },
+                {
+                  "val": "Name",
+                  "offset": 22
+                },
+                {
+                  "val": "poo@head.aus",
+                  "offset": 33
+                },
+                {
+                  "val": "qwert1",
+                  "offset": 52
+                },
+                {
+                  "val": "PH001",
+                  "offset": 65
+                },
+                {
+                  "val": "",
+                  "offset": 77
+                }
+              ],
+              "location": "CustomerAdminFeature.i_fill_in(String,String,String,String,String,String)"
+            },
+            "matchedColumns": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 42830,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "I should stay on userAdd_management page",
+            "match": {
+              "location": "CustomerAdminFeature.i_should_stay_on_userAdd_management_page()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 1,
+            "name": "@Customer_admin"
           }
         ]
       }
     ],
-    "name": "LoginFeature",
-    "description": "As a admin\nI want to login into mLab account using my admin credentials\nIn order to connect to mLab cloud database",
-    "id": "loginfeature",
+    "name": "CustomerAdminFeature",
+    "description": "  As a Staff\n  I want to create customer accounts\n  So that I can add new customer to the database",
+    "id": "customeradminfeature",
     "keyword": "Feature",
-    "uri": "LoginFeature.feature",
+    "uri": "CustomerAdminFeature.feature",
     "tags": [
       {
-        "line": 3,
-        "name": "@Login"
+        "line": 1,
+        "name": "@Customer_admin"
       }
     ]
   }

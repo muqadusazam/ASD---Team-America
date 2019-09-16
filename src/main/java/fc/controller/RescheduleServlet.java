@@ -37,17 +37,13 @@ public class RescheduleServlet extends HttpServlet {
         Flight flight = dbf.getFlight(oldTicket.getFlightID());
         
         String oldDepDate = flight.getDepartureDate();
-        String oldDepTime = flight.getDepartureTime();
         String oldDestDate = flight.getArrivalDate();
-        String oldDestTime = flight.getArrivalTime();
         
         String newFlightID = request.getParameter("newFlight");
         Flight newFlight = dbf.getFlight(newFlightID);
         
         String newDepDate = newFlight.getDepartureDate();
-        String newDepTime = newFlight.getDepartureTime();
         String newDestDate = newFlight.getArrivalDate();
-        String newDestTime = newFlight.getArrivalTime();
         
         if (oldDepDate.compareTo(newDepDate) >= 0) {
             errors.put("dateErr", "The departure date must be after the old departure date.");

@@ -1,0 +1,8 @@
+#surefire
+#Mon Sep 16 00:33:24 AEST 2019
+maven.ext.class.path=C\:\\Program Files\\NetBeans 8.2\\java\\maven-nblib\\netbeans-eventspy.jar
+user.dir=C\:\\Users\\Liam\\Documents\\GitHub\\ASD---Team-America
+file.encoding=UTF-8
+localRepository=C\:\\Users\\Liam\\.m2\\repository
+basedir=C\:\\Users\\Liam\\Documents\\GitHub\\ASD---Team-America
+test=fc.test.RunTest

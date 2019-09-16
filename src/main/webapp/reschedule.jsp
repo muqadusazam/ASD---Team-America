@@ -2,6 +2,7 @@
 <%@page import="fc.model.*"%>
 <%@page import="fc.controller.*" %>
 <%@page import="java.util.ArrayList"%>
+<%@page import="java.util.*"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 
 <jsp:include page="fc_header.jsp">
@@ -23,7 +24,6 @@
         MongoDBManager_Customers dbc = new MongoDBManager_Customers();
         Customer cust = dbc.getCustomer("2");
         session.setAttribute("loggedIn", cust);
-
         MongoDBManager_Tickets dbt = new MongoDBManager_Tickets();
         Ticket tick = dbt.getTicket(cust);
         session.setAttribute("oldTicket", tick);
@@ -148,7 +148,7 @@
             <td><b>Choose new ticket: &nbsp&nbsp</b></td>
             <td>
                 <form action="RescheduleServlet" method="POST">
-                    <select name="newFlight" value="<%= flight.getID() %>">
+                    <select id="newFlight" value="<%= flight.getID() %>">
                         <option selected="true" disabled="disabled">-- Select Ticket --</option>
                         <%
                             for (Flight f: flights) {
@@ -161,10 +161,9 @@
                             }
                         %>
                     </select>
-                    <button type="submit" class="btn btn-success" style="float: right">Submit</button>
+                    <button type="submit" class="btn btn-success" style="float: right" id="rescheduleBtn">Submit</button>
                     <button type="reset" class="btn btn-danger" style="float: right">Cancel</button>
                 </form>
-                <span class="error text-danger"><em>${errors.dateErr}</em></span>
             </td>
         </tr>
 

@@ -2,7 +2,6 @@
 <%@page import="fc.model.*"%>
 <%@page import="fc.controller.*" %>
 <%@page import="java.util.ArrayList"%>
-<%@page import="java.util.*"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 
 <jsp:include page="fc_header.jsp">
@@ -148,7 +147,7 @@
             <td><b>Choose new ticket: &nbsp&nbsp</b></td>
             <td>
                 <form action="RescheduleServlet" method="POST">
-                    <select id="newFlight" value="<%= flight.getID() %>">
+                    <select name="newFlight" value="<%= flight.getID() %>">
                         <option selected="true" disabled="disabled">-- Select Ticket --</option>
                         <%
                             for (Flight f: flights) {

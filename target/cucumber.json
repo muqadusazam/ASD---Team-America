@@ -1,0 +1,132 @@
+[
+  {
+    "comments": [
+      {
+        "line": 1,
+        "value": "#This feature contains sample data as input for RescheduleFeature.java"
+      }
+    ],
+    "line": 4,
+    "elements": [
+      {
+        "line": 9,
+        "name": "User navigates to FlightCenter Reschedule page",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 8610716200,
+              "error_message": "org.openqa.selenium.WebDriverException: Reached error page: about:neterror?e\u003dconnectionFailure\u0026u\u003dhttp%3A//localhost%3A8080/ASD---Team-America/reschedule.jsp\u0026c\u003dUTF-8\u0026f\u003dregular\u0026d\u003dFirefox%20can%E2%80%99t%20establish%20a%20connection%20to%20the%20server%20at%20localhost%3A8080.\nBuild info: version: \u00273.141.59\u0027, revision: \u0027e82be7d358\u0027, time: \u00272018-11-14T08:17:03\u0027\nSystem info: host: \u0027DESKTOP-CL0HPS2\u0027, ip: \u0027192.168.0.29\u0027, os.name: \u0027Windows 10\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u00271.8.0_211\u0027\nDriver info: org.openqa.selenium.firefox.FirefoxDriver\nCapabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 69.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20190827005903, moz:geckodriverVersion: 0.25.0, moz:headless: false, moz:processID: 19040, moz:profile: C:\\Users\\Liam\\AppData\\Local..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}\nSession ID: 3ffd8215-3ebb-4972-80c7-b994d8aef4fc\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\r\n\tat sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\r\n\tat java.lang.reflect.Constructor.newInstance(Constructor.java:423)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:277)\r\n\tat fc.test.RescheduleFeature.i_am_on_reschedule_page(RescheduleFeature.java:37)\r\n\tat ✽.Given I am on reschedule page(Reschedule.feature:10)\r\n",
+              "status": "failed"
+            },
+            "line": 10,
+            "name": "I am on reschedule page",
+            "match": {
+              "location": "RescheduleFeature.i_am_on_reschedule_page()"
+            },
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "line": 12,
+        "name": "Successful reschedule",
+        "description": "",
+        "id": "reschedulefeature;successful-reschedule",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 13,
+            "name": "I select a valid Flight",
+            "match": {
+              "location": "RescheduleFeature.select_new_flight()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 14,
+            "name": "I should stay on the reschedule page",
+            "match": {
+              "location": "RescheduleFeature.i_should_stay_on_reschedule_page()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 9,
+        "name": "User navigates to FlightCenter Reschedule page",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 5472488000,
+              "error_message": "org.openqa.selenium.WebDriverException: Reached error page: about:neterror?e\u003dconnectionFailure\u0026u\u003dhttp%3A//localhost%3A8080/ASD---Team-America/reschedule.jsp\u0026c\u003dUTF-8\u0026f\u003dregular\u0026d\u003dFirefox%20can%E2%80%99t%20establish%20a%20connection%20to%20the%20server%20at%20localhost%3A8080.\nBuild info: version: \u00273.141.59\u0027, revision: \u0027e82be7d358\u0027, time: \u00272018-11-14T08:17:03\u0027\nSystem info: host: \u0027DESKTOP-CL0HPS2\u0027, ip: \u0027192.168.0.29\u0027, os.name: \u0027Windows 10\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u00271.8.0_211\u0027\nDriver info: org.openqa.selenium.firefox.FirefoxDriver\nCapabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 69.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20190827005903, moz:geckodriverVersion: 0.25.0, moz:headless: false, moz:processID: 18240, moz:profile: C:\\Users\\Liam\\AppData\\Local..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}\nSession ID: 0acb6dc6-4229-4db8-b94b-9e884c7a5aae\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\r\n\tat sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\r\n\tat java.lang.reflect.Constructor.newInstance(Constructor.java:423)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:277)\r\n\tat fc.test.RescheduleFeature.i_am_on_reschedule_page(RescheduleFeature.java:37)\r\n\tat ✽.Given I am on reschedule page(Reschedule.feature:10)\r\n",
+              "status": "failed"
+            },
+            "line": 10,
+            "name": "I am on reschedule page",
+            "match": {
+              "location": "RescheduleFeature.i_am_on_reschedule_page()"
+            },
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "line": 16,
+        "name": "Unsuccessful reschedule",
+        "description": "",
+        "id": "reschedulefeature;unsuccessful-reschedule",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 17,
+            "name": "I select a invalid Flight",
+            "match": {
+              "location": "RescheduleFeature.select_invalid_flight()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 18,
+            "name": "I should stay on the reschedule page",
+            "match": {
+              "location": "RescheduleFeature.i_should_stay_on_reschedule_page()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "RescheduleFeature",
+    "description": "  As a Customer\r\n  I want to reschedule a ticket on the FlightCenter\r\n  So that I can book a flight with a different time",
+    "id": "reschedulefeature",
+    "keyword": "Feature",
+    "uri": "Reschedule.feature",
+    "tags": [
+      {
+        "line": 3,
+        "name": "@Reschedule"
+      }
+    ]
+  }
+]

@@ -36,8 +36,6 @@ public class CustomerAdminFeature {
             + "and \"([^\"]*)\" and \"([^\"]*)\" and \"([^\"]*)\"$")
     public void i_fill_in(String arg1, String arg2, String arg3, 
             String arg4, String arg5, String arg6) throws Throwable{
-        //driver.get("https://arsproject.herokuapp.com/register.jsp");
-        //driver.navigate().to(driver.getCurrentUrl());
         driver.findElement(By.id("inputFirstName")).sendKeys(arg1);
         driver.findElement(By.id("inputLastName")).sendKeys(arg2);
         driver.findElement(By.id("inputEmail")).sendKeys(arg3);
@@ -48,7 +46,7 @@ public class CustomerAdminFeature {
     }
     
     //Successful registration
-    @Then("^I should see user_management page$")
+    @Then("^I should see user management page$")
     public void i_should_see_user_management_page() throws Throwable {
         System.out.println("Registration successful!");
         driver.get("https://arsproject.herokuapp.com/user_management.jsp");
@@ -56,7 +54,7 @@ public class CustomerAdminFeature {
     }
     
     //Unsuccessful registration
-    @Then("^I should stay on userAdd_management page$")
+    @Then("^I should stay on userAdd management page$")
     public void i_should_stay_on_userAdd_management_page() throws Throwable {
         System.out.println("Registration unsuccessful! See error messages in test log.");
     }

@@ -8,12 +8,12 @@ Background: Staff navigates to FlightCenter Add Customer page
     Given I am on Add Customer page
 
 Scenario: Successful registration
-    When I fill in with "Customer" and "Test" and "cust@tester.com" and "abcde1" and "TT999" and "1992-12-12"
-    Then I should see user_management page
+    When I fill in "Customer" and "Test" and "cust@tester.com" and "abcde1" and "TT999" and "1992-12-12"
+    Then I should see user management page
 
 Scenario Outline: Unsuccessful registration
     When I fill in "<firstname>" and "<lastname>" and "<email>" and "<password>" and "<passport>" and "<dob>"
-    Then I should stay on userAdd_management page
+    Then I should stay on userAdd management page
     Examples:
         | firstname | lastname | email        | password | passport | dob        | warning                  |
         |           | One      | user@one.co  | qwert1   | UO001    | 1994-04-15 | Missing first name.      |

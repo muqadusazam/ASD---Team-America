@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite tests="25" failures="0" name="fc.test.RunTest" time="40.045" errors="0" skipped="3">
+  <properties>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/jre/lib"/>
+    <property name="java.vm.version" value="25.181-b13"/>
+    <property name="gopherProxySet" value="false"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="java.vendor.url" value="http://java.oracle.com/"/>
+    <property name="path.separator" value=":"/>
+    <property name="guice.disable.misplaced.annotation.check" value="true"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="file.encoding.pkg" value="sun.io"/>
+    <property name="user.country" value="AU"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.os.patch.level" value="unknown"/>
+    <property name="test" value="fc.test.RunTest"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="user.dir" value="/Users/william/Documents/Uni/2019 Sem 2/Advanced Software Development/ASD---Team-America-Kelvin"/>
+    <property name="java.runtime.version" value="1.8.0_181-b13"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.CGraphicsEnvironment"/>
+    <property name="java.endorsed.dirs" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/jre/lib/endorsed"/>
+    <property name="os.arch" value="x86_64"/>
+    <property name="java.io.tmpdir" value="/var/folders/vp/x3kzn9lx2px4827rgdl23cz00000gn/T/"/>
+    <property name="line.separator" value="
+"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="os.name" value="Mac OS X"/>
+    <property name="maven.ext.class.path" value="/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/java/maven-nblib/netbeans-eventspy.jar"/>
+    <property name="classworlds.conf" value="/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/java/maven/bin/m2.conf"/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="java.library.path" value="/Users/william/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:."/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.class.version" value="52.0"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="os.version" value="10.14.4"/>
+    <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="user.home" value="/Users/william"/>
+    <property name="user.timezone" value="Australia/Sydney"/>
+    <property name="java.awt.printerjob" value="sun.lwawt.macosx.CPrinterJob"/>
+    <property name="java.specification.version" value="1.8"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="user.name" value="william"/>
+    <property name="java.class.path" value="/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/java/maven/boot/plexus-classworlds-2.4.jar"/>
+    <property name="java.vm.specification.version" value="1.8"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.home" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/jre"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher -Dtest=fc.test.RunTest -Dmaven.ext.class.path=/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/java/maven-nblib/netbeans-eventspy.jar surefire:test"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.language" value="en"/>
+    <property name="awt.toolkit" value="sun.lwawt.macosx.LWCToolkit"/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.version" value="1.8.0_181"/>
+    <property name="java.ext.dirs" value="/Users/william/Library/Java/Extensions:/Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/jre/lib/ext:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java"/>
+    <property name="sun.boot.class.path" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/jre/lib/resources.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/jre/lib/rt.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/jre/lib/sunrsasign.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/jre/lib/jsse.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/jre/lib/jce.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/jre/lib/charsets.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/jre/lib/jfr.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/jre/classes"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="maven.home" value="/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/java/maven"/>
+    <property name="file.separator" value="/"/>
+    <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeBig"/>
+    <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="sun.cpu.isalist" value=""/>
+  </properties>
+  <testcase classname="Scenario: Successful registration" name="Given I am on Add Customer page" time="0"/>
+  <testcase classname="Scenario: Successful registration" name="When I fill in with \&quot;Customer\&quot; and \&quot;Test\&quot; and \&quot;cust@tester.com\&quot; and \&quot;abcde1\&quot; and \&quot;TT999\&quot; and \&quot;1992-12-12\&quot;" time="0.005">
+    <skipped/>
+  </testcase>
+  <testcase classname="Scenario: Successful registration" name="Then I should see user_management page" time="0.005">
+    <skipped/>
+  </testcase>
+  <testcase classname="Scenario: Successful registration" name="Scenario: Successful registration" time="0.005">
+    <skipped/>
+  </testcase>
+  <testcase classname="Scenario: Successful registration" name="Scenario: Successful registration" time="0.005"/>
+  <testcase classname="|  | One | user@one.co | qwert1 | UO001 | 1994-04-15 | Missing first name. |" name="Given I am on Add Customer page" time="0"/>
+  <testcase classname="|  | One | user@one.co | qwert1 | UO001 | 1994-04-15 | Missing first name. |" name="When I fill in \&quot;\&quot; and \&quot;One\&quot; and \&quot;user@one.co\&quot; and \&quot;qwert1\&quot; and \&quot;UO001\&quot; and \&quot;1994-04-15\&quot;" time="0"/>
+  <testcase classname="|  | One | user@one.co | qwert1 | UO001 | 1994-04-15 | Missing first name. |" name="Then I should stay on userAdd_management page" time="0"/>
+  <testcase classname="|  | One | user@one.co | qwert1 | UO001 | 1994-04-15 | Missing first name. |" name="|  | One | user@one.co | qwert1 | UO001 | 1994-04-15 | Missing first name. |" time="0"/>
+  <testcase classname="| James | Ten | ben@ten.co | qwert1 |  | 2000-01-01 | Missing password. |" name="Given I am on Add Customer page" time="0"/>
+  <testcase classname="| James | Ten | ben@ten.co | qwert1 |  | 2000-01-01 | Missing password. |" name="When I fill in \&quot;James\&quot; and \&quot;Ten\&quot; and \&quot;ben@ten.co\&quot; and \&quot;qwert1\&quot; and \&quot;\&quot; and \&quot;2000-01-01\&quot;" time="0"/>
+  <testcase classname="| James | Ten | ben@ten.co | qwert1 |  | 2000-01-01 | Missing password. |" name="Then I should stay on userAdd_management page" time="0"/>
+  <testcase classname="| James | Ten | ben@ten.co | qwert1 |  | 2000-01-01 | Missing password. |" name="| James | Ten | ben@ten.co | qwert1 |  | 2000-01-01 | Missing password. |" time="0.001"/>
+  <testcase classname="| Donald | Kid | trump@gov.us |  | DT001 | 1950-11-13 | Missing passport number. |" name="Given I am on Add Customer page" time="0"/>
+  <testcase classname="| Donald | Kid | trump@gov.us |  | DT001 | 1950-11-13 | Missing passport number. |" name="When I fill in \&quot;Donald\&quot; and \&quot;Kid\&quot; and \&quot;trump@gov.us\&quot; and \&quot;\&quot; and \&quot;DT001\&quot; and \&quot;1950-11-13\&quot;" time="0"/>
+  <testcase classname="| Donald | Kid | trump@gov.us |  | DT001 | 1950-11-13 | Missing passport number. |" name="Then I should stay on userAdd_management page" time="0"/>
+  <testcase classname="| Donald | Kid | trump@gov.us |  | DT001 | 1950-11-13 | Missing passport number. |" name="| Donald | Kid | trump@gov.us |  | DT001 | 1950-11-13 | Missing passport number. |" time="0"/>
+  <testcase classname="| Why |  | dobby@do.b | qwert1 | DD001 | 1960-12-28 | Missing last name. |" name="Given I am on Add Customer page" time="0"/>
+  <testcase classname="| Why |  | dobby@do.b | qwert1 | DD001 | 1960-12-28 | Missing last name. |" name="When I fill in \&quot;Why\&quot; and \&quot;\&quot; and \&quot;dobby@do.b\&quot; and \&quot;qwert1\&quot; and \&quot;DD001\&quot; and \&quot;1960-12-28\&quot;" time="0"/>
+  <testcase classname="| Why |  | dobby@do.b | qwert1 | DD001 | 1960-12-28 | Missing last name. |" name="Then I should stay on userAdd_management page" time="0"/>
+  <testcase classname="| Why |  | dobby@do.b | qwert1 | DD001 | 1960-12-28 | Missing last name. |" name="| Why |  | dobby@do.b | qwert1 | DD001 | 1960-12-28 | Missing last name. |" time="0"/>
+  <testcase classname="| Test | Name | poo@head.aus | qwert1 | PH001 |  | Missing DOB. |" name="Given I am on Add Customer page" time="0.001"/>
+  <testcase classname="| Test | Name | poo@head.aus | qwert1 | PH001 |  | Missing DOB. |" name="When I fill in \&quot;Test\&quot; and \&quot;Name\&quot; and \&quot;poo@head.aus\&quot; and \&quot;qwert1\&quot; and \&quot;PH001\&quot; and \&quot;\&quot;" time="0"/>
+  <testcase classname="| Test | Name | poo@head.aus | qwert1 | PH001 |  | Missing DOB. |" name="Then I should stay on userAdd_management page" time="0"/>
+  <testcase classname="| Test | Name | poo@head.aus | qwert1 | PH001 |  | Missing DOB. |" name="| Test | Name | poo@head.aus | qwert1 | PH001 |  | Missing DOB. |" time="0"/>
+</testsuite>

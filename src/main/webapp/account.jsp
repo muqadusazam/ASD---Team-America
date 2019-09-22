@@ -1,15 +1,3 @@
-<%-- 
-    TODO:
-        - Follow MVC structure for code
-        - Assign logged in customer as an Object [Customer] which stores attributes
-        - Align tables + side bar correctly
-        - Profile: get attributes from database
-        - Edit: 1) Submit button sends changed details to validator
-                  2) Validator checks inputs
-                  3) If successful, change database entry with new details
-        - Delete: Delete OWN profile from database
---%>
-
 <%@page import="java.util.ArrayList"%>
 <%@ page import="fc.model.Customer"%>
 <%@ page import="fc.model.dao.*" %>
@@ -46,34 +34,33 @@
 //    
 //    db.add(createcus);
     
-    String customer_id = (String)session.getAttribute("customer_ID");
-//    String customer_id = "1";
+    String customer_id = (String)session.getAttribute("customer_ID");       //Get logged in customer's ID, passed from login feature
 
-    //Try to get customer profile from mLab using customer ID
-    try { Customer customer = db.getCustomer(customer_id);
-             session.setAttribute("customer", customer);
+    try { Customer customer = db.getCustomer(customer_id);        //Try to get customer profile from mLab using customer ID
+             session.setAttribute("cutomer", customer);
 %>
 
         <div align="center" class="container w-50">
             
-                <h1><%=customer.getFullName() %>'s Profile</h1>
+                <h1><%=customer.getFullName() %>'s Profile</h1>     <!-- Displays the name of the currently logged in customer -->
                      
                 <table class="table" align="center">
-                        <tr><td>Customer ID: </td><td> <%=customer.getID()%> </td></tr>
-                        <tr><td>First Name: </td><td> <%=customer.getFirstName() %> </td></tr>
-                        <tr><td>Last Name: </td><td> <%=customer.getLastName()%> </td></tr>
-                        <tr><td>Email: </td><td> <%=customer.getEmail()%> </td></tr>
-                        <tr><td>Password: </td><td> <%=customer.getPassword()%> </td></tr>
-                        <tr><td>Passport Number: </td><td> <%=customer.getPassport()%></td></tr>                       
-                        <tr><td>Date of Birth: </td><td> <%=customer.getDOB()%> </td></tr>    
+                        <tr><td>Customer ID: </td><td> <%=customer.getID()%> </td></tr>     <!-- Display customer's ID -->
+                        <tr><td>First Name: </td><td> <%=customer.getFirstName() %> </td></tr>      <!-- Display customer's first name -->
+                        <tr><td>Last Name: </td><td> <%=customer.getLastName()%> </td></tr>     <!-- Display customer's last name -->
+                        <tr><td>Email: </td><td> <%=customer.getEmail()%> </td></tr>        <!-- Display customer's email -->
+                        <tr><td>Password: </td><td> <%=customer.getPassword()%> </td></tr>      <!-- Display customer's password -->
+                        <tr><td>Passport Number: </td><td> <%=customer.getPassport()%></td></tr>        <!-- Display customer's passport number -->                
+                        <tr><td>Date of Birth: </td><td> <%=customer.getDOB()%> </td></tr>      <!-- Display customer's date of birth --> 
                 </table>
 
                 <table align="center" cellpadding="50">
                         <tr>
-                                <td><a href="edit_profile.jsp" class="btn btn-primary"> Edit Profile </a></td>
-                                <td><a href="logoutAction.jsp" class="btn btn-secondary"> Log Out </a></td>                                
-                                <td><a href="account_deleteAction.jsp" class="btn btn-danger" onclick="return confirm('Are you sure?')">Delete Profile </a></td>
- 
+                                <td><a href="edit_profile.jsp" class="btn btn-primary"> Edit Profile </a></td>      <!-- Button that redirects to 'edit_profile' page -->
+                                <td><a href="logoutAction.jsp" class="btn btn-secondary"> Log Out </a></td>     <!-- Button that logs out the current customer -->                    
+                                <td><a href="account_deleteAction.jsp" class="btn btn-danger" 
+                                       onclick="return confirm('Are you sure?')">Delete Profile </a></td>       <!-- Button that deletes the current customer, displays confirmation message beforehand -->
+                                        
                         </tr>
                 </table>
             

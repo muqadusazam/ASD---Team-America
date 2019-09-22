@@ -10,11 +10,11 @@
 <!DOCTYPE html>
 
 <%
-    MongoDBManager_Customers db = new MongoDBManager_Customers();
+    MongoDBManager_Customers db = new MongoDBManager_Customers();       //Create conneciton to mLab DB
     try{
-        db.remove((Customer)session.getAttribute("customer"));
-        response.sendRedirect("logoutAction.jsp");
+        db.remove((Customer)session.getAttribute("customer"));      //Get 'customer' attribute from session, call remove() method and pass down
+        response.sendRedirect("logoutAction.jsp");      //Redirect to logoutAction page after deleting customer
     } catch (Exception e) {
-        response.sendRedirect("main.jsp");
+        response.sendRedirect("main.jsp");      //if no customer logged in, redirect back to main page
     }
     %>

@@ -21,46 +21,55 @@
 
 <div class="mx-auto" style="float: left">
     <%
+        //Set temporary customer as logged in in session
         MongoDBManager_Customers dbc = new MongoDBManager_Customers();
         Customer cust = dbc.getCustomer("2");
         session.setAttribute("loggedIn", cust);
+        
+        //Set temporary ticket in session
         MongoDBManager_Tickets dbt = new MongoDBManager_Tickets();
         Ticket tick = dbt.getTicket(cust);
         session.setAttribute("oldTicket", tick);
         
+        //Get the customer & ticket from session
         Customer customer = (Customer)session.getAttribute("loggedIn");
         Ticket ticket = (Ticket)session.getAttribute("oldTicket");
         
-        if (customer == null) {
+        if (customer == null) { //Check if customer is logged in
     %>
     <h2 class="text-danger"> You must be logged in to Reschedule Ticket. </h2>
     <%
-        } else if (ticket == null) {
+        } else if (ticket == null) { //Check if ticket is in session
     %>
     <h2 class="text-warning"> Could not find ticket in the database. </h2>
     <%
         } else {
+            //Get flight from database based on ticket in session
             MongoDBManager_Flights dbf = new MongoDBManager_Flights();
             Flight flight = dbf.getFlight(ticket.getFlightID());
+
+            //Set flight in session
             session.setAttribute("oldFlight", flight);
     %>
     <h1><p>Reschedule ticket</p></h1>
     <%
-        if (session.getAttribute("errors") != null) {
+        if (session.getAttribute("errors") != null) { //Check if errors passed from servlet
     %>
         <div class="alert alert-danger" role="alert">
         <strong>Error!</strong> ${errors.dateErr}
         </div>
     <%
-        session.setAttribute("errors", null);
-        } else if (session.getAttribute("success") != null) {
+        session.setAttribute("errors", null); //Reset after message displayed
+        } else if (session.getAttribute("success") != null) { //Check for successfull reschedule from servlet
     %>
     <div class="alert alert-success" role="alert">
         <strong>Success!</strong> <%= session.getAttribute("success") %>
     </div>
     <%
-        session.setAttribute("success", null);
+        session.setAttribute("success", null); //Reset after message displayed
         }
+
+        //Display ticket + flight info
     %>
     <table class="table table-hover">
         <tbody>
@@ -137,12 +146,15 @@
         <tr><td><br></td></tr>
         
         <%
+            //Get all flights in database with same destination on ticket
             ArrayList<Flight> flights = dbf.getFlights(flight);
+            
+            //Check if flights is empty
             if (flights == null) {
         %>
                 <h2 class="text-warning"> There are no available tickets. </h2>
         <%
-            } else {
+            } else { //Display all flights in array when not empty/null
         %>
         <tr>
             <td><b>Choose new ticket: &nbsp&nbsp</b></td>
@@ -151,6 +163,7 @@
                     <select name="newFlight" value="<%= flight.getID() %>">
                         <option selected="true" disabled="disabled">-- Select Ticket --</option>
                         <%
+                            //Loop through all flights in array and display in drop down menu
                             for (Flight f: flights) {
                         %>
                                 <option name="<%= f.getID() %>" value="<%= f.getID() %>"> 

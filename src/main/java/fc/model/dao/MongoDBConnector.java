@@ -4,16 +4,15 @@ import com.mongodb.MongoClient;
 import com.mongodb.MongoClientURI;
 import com.mongodb.client.MongoDatabase;
 
-/**
- *
- * @author Liam
- */
+//Sets up connection to mLab and gets our MongoDB
 public class MongoDBConnector extends MongoDB {
     
+    //Generates the uniform resource identifier for accessing our MongoDB
     protected MongoClientURI generateURI() {
         return new MongoClientURI("mongodb://" + this.OWNER + ":" + this.PASSWORD + this.KEY);
     }
     
+    //Fetches our team's MongoDB via the generated URI
     public MongoDatabase getMongoDB(){
        MongoClientURI uri = generateURI();
        MongoDatabase db;

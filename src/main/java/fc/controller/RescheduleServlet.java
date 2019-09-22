@@ -25,38 +25,50 @@ import java.util.Map;
 @WebServlet(name = "RescheduleServlet", urlPatterns = {"/RescheduleServlet"})
 public class RescheduleServlet extends HttpServlet {
     
+    //POST method
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
     throws ServletException, IOException {
+        //Set errors attribute for storing error messages
         Map<String,String> errors = new HashMap<String,String>();
+        //Get session from request object
         HttpSession session = request.getSession();
         
+        //Get ticket from session
         Ticket oldTicket = (Ticket)session.getAttribute("oldTicket");
         
-        MongoDBManager_Flights dbf = new MongoDBManager_Flights();
-        Flight flight = dbf.getFlight(oldTicket.getFlightID());
+        //Get flight from session
+        Flight oldFlight = (Flight)session.getAttribute("flight");
         
-        String oldDepDate = flight.getDepartureDate();
-        String oldDepTime = flight.getDepartureTime();
-        String oldDestDate = flight.getArrivalDate();
-        String oldDestTime = flight.getArrivalTime();
+        //Check if Flight ID match
+        if (oldFlight.getID().compareTo(oldTicket.getFlightID()) >= 0) {
+            errors.put("dateErr", "Flight ID does not match Flight ID on Ticket.");
+        }
         
+        //Get departure and arrival date from old flight
+        String oldDepDate = oldFlight.getDepartureDate();
+        String oldDestDate = oldFlight.getArrivalDate();
+        
+        //Get new flight from form passed in view
         String newFlightID = request.getParameter("newFlight");
+        MongoDBManager_Flights dbf = new MongoDBManager_Flights();
         Flight newFlight = dbf.getFlight(newFlightID);
         
+        //Get departure and arrival date of new flight
         String newDepDate = newFlight.getDepartureDate();
-        String newDepTime = newFlight.getDepartureTime();
         String newDestDate = newFlight.getArrivalDate();
-        String newDestTime = newFlight.getArrivalTime();
         
+        //Check if departure date is after the old departure date
         if (oldDepDate.compareTo(newDepDate) >= 0) {
             errors.put("dateErr", "The departure date must be after the old departure date.");
         }
         
+        //Check if arrival date is after the old departure date
         if (oldDestDate.compareTo(newDestDate) >= 0) {
             errors.put("dateErr", "The destination date must be after the old departure date.");
         }
         
+        //Check errors empty and proceed to reschedule ticket else display error message
         if (errors.isEmpty()) {
             MongoDBManager_Tickets dbt = new MongoDBManager_Tickets();
             

@@ -10,39 +10,30 @@ import fc.model.*;
 import java.util.ArrayList;
 import org.bson.Document;
 
-/**
- *
- * @author Liam
- */
+//Sets up the structure of Ticket collection and manages it
 public class MongoDBManager_Tickets extends MongoDBConnector {
-    
+     
+    //Adds a new ticket to the Ticket collection
      public void add(Ticket ticket) {
         MongoClientURI uri = generateURI();
         try (MongoClient client = new MongoClient(uri)) {
             MongoDatabase db = client.getDatabase(uri.getDatabase());
             MongoCollection<Document> ticketDB = db.getCollection(TICKET_COLLECTION);
-            ticketDB.insertOne(convertToDoc(ticket));
+            ticketDB.insertOne(convertToDoc(ticket)); //Convert ticket's details to MongoDB's format
         }
     }
     
+    //Removes an existing ticket from the Ticket collection
     public void remove(Ticket ticket) {
         MongoClientURI uri = generateURI();
         try (MongoClient client = new MongoClient(uri)) {
             MongoDatabase db = client.getDatabase(uri.getDatabase());
             MongoCollection<Document> ticketDB = db.getCollection(TICKET_COLLECTION);
-            ticketDB.deleteOne(convertToDoc(ticket));
+            ticketDB.deleteOne(convertToDoc(ticket)); //Convert ticket's details to MongoDB's format
         }
     }
     
-    public void update(Ticket ticket) {
-        MongoClientURI uri = generateURI();
-        try (MongoClient client = new MongoClient(uri)) {
-            MongoDatabase db = client.getDatabase(uri.getDatabase());
-            MongoCollection<Document> ticketDB = db.getCollection(TICKET_COLLECTION);
-            ticketDB.deleteOne(convertToDoc(ticket));
-        }
-    }
-    
+    //Fetches a single existing ticket from Ticket collection by matching ID
     public Ticket getTicket(String id) {
         MongoClientURI uri = generateURI();
         Ticket ticket;
@@ -50,27 +41,14 @@ public class MongoDBManager_Tickets extends MongoDBConnector {
             MongoDatabase db = client.getDatabase(uri.getDatabase());
             MongoCollection<Document> ticketDB = db.getCollection(TICKET_COLLECTION);
             Document doc = ticketDB.find(and(eq("id", id))).first();
-            ticket = convertToTicket(doc);
-        } catch (NullPointerException ex) {
+            ticket = convertToTicket(doc); //Convert ticket's details to String format
+        } catch(NullPointerException x){ //Catch exception and return null if no matching ticket is found
             return null;
         }
         return ticket;
     }
     
-    public Ticket getTicket(Customer customer) {
-        MongoClientURI uri = generateURI();
-        Ticket ticket;
-        try (MongoClient client = new MongoClient(uri)) {
-            MongoDatabase db = client.getDatabase(uri.getDatabase());
-            MongoCollection<Document> ticketDB = db.getCollection(TICKET_COLLECTION);
-            Document doc = ticketDB.find(and(eq("customer_id", customer.getID()))).first();
-            ticket = convertToTicket(doc);
-        } catch (NullPointerException ex) {
-            return null;
-        }
-        return ticket;
-    }
-    
+    //Fetches all existing tickets in the Ticket collection
     public ArrayList<Ticket> getTickets() {
         MongoClientURI uri = generateURI();
         ArrayList<Ticket> tickets;
@@ -79,15 +57,16 @@ public class MongoDBManager_Tickets extends MongoDBConnector {
             tickets = new ArrayList<>();
             MongoCollection<Document> ticketlist = db.getCollection(TICKET_COLLECTION);
             for (Document doc : ticketlist.find()) {
-                Ticket ticket = convertToTicket(doc);
+                Ticket ticket = convertToTicket(doc); //Convert ticket's details to String format
                 tickets.add(ticket);
             }
-        } catch (NullPointerException ex) {
+        } catch(NullPointerException x){ //Catch exception and return null if Ticket collection is empty
             return null;
         }
-        return tickets;
+        return tickets; //ArrayList of all tickets in the Ticket collection
     }
     
+    //Fetches all tickets for the customer specified
     public ArrayList<Ticket> getTickets(Customer customer) {
         MongoClientURI uri = generateURI();
         ArrayList<Ticket> tickets;
@@ -96,17 +75,18 @@ public class MongoDBManager_Tickets extends MongoDBConnector {
             tickets = new ArrayList<>();
             MongoCollection<Document> ticketlist = db.getCollection(TICKET_COLLECTION);
             for (Document doc : ticketlist.find()) {
-                Ticket ticket = convertToTicket(doc);
+                Ticket ticket = convertToTicket(doc); //Convert ticket's details to String format
                 if (ticket.getCustomerID().equals(customer.getID())) {
                     tickets.add(ticket);
                 }
             }
-        } catch (NullPointerException ex) {
+        } catch(NullPointerException x){ //Catch exception and return null if no matching tickets are found
             return null;
         }
-        return tickets;
+        return tickets; //ArrayList of all relevant tickets in the Ticket collection
     }
     
+    //Fetches all tickets booked for the flight specified
     public ArrayList<Ticket> getTickets(Flight flight) {
         MongoClientURI uri = generateURI();
         ArrayList<Ticket> tickets;
@@ -120,12 +100,13 @@ public class MongoDBManager_Tickets extends MongoDBConnector {
                     tickets.add(ticket);
                 }
             }
-        } catch (NullPointerException ex) {
+        } catch(NullPointerException x){ //Catch exception and return null if no matching tickets are found
             return null;
         }
-        return tickets;
+        return tickets; //ArrayList of all relevant tickets in the Ticket collection
     }
     
+    //Converts ticket's details to String format for procressing by Java code
     private Ticket convertToTicket(Document doc) {
         return new Ticket((String) doc.get("id"),
                 (String) doc.get("customer_id"),
@@ -133,6 +114,7 @@ public class MongoDBManager_Tickets extends MongoDBConnector {
                 (String) doc.get("passenger_seat_num"));
     }
     
+    //Converts flight's details to document format for storing in MongoDB
     private Document convertToDoc(Ticket ticket) {
         return new Document("id", ticket.getID())
                 .append("customer_id", ticket.getCustomerID())

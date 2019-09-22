@@ -35,37 +35,37 @@ public class ProfileEditServlet extends HttpServlet {
         Map<String,String> errors = new HashMap<String,String>(); //Map for storing error messages
         HttpSession session = request.getSession();
         
-        String firstName = request.getParameter("fname"); //gets relevant input from register.jsp
-        if (!validate(namePattern, firstName)){ //validates input, if invalid input then store a relevant error message
+        String firstName = request.getParameter("fname");       //Gets 'fname' parameter from edit_profile form
+        if (!validate(namePattern, firstName)){     //validates input, if invalid input then store a relevant error message
             errors.put("fNameErr", "First name must contain at least 1 capital letter");
         }
         
-        String lastName = request.getParameter("lname");
-        if (!validate(namePattern, lastName)){
+        String lastName = request.getParameter("lname");        //Gets 'lname' parameter from edit_profile form
+        if (!validate(namePattern, lastName)){      //validates input, if invalid input then store a relevant error message
             errors.put("lNameErr", "Last name must contain at least 1 capital letter");
         }
         
-        String email = request.getParameter("email");
-        if (!validate(emailPattern, email)){
+        String email = request.getParameter("email");       //Gets 'email' parameter from edit_profile form
+        if (!validate(emailPattern, email)){        //validates input, if invalid input then store a relevant error message
             errors.put("emailErr", "Incorrect email format");
         }
         
-        String password = request.getParameter("password");
-        if (!validate(passwordPattern, password)){
-            errors.put("passwordErr", "Password must contain at least 5 letters and 1 number");
+        String password = request.getParameter("password");     //Gets 'password' parameter from edit_profile form
+        if (!validate(passwordPattern, password)){      //validates input, if invalid input then store a relevant error message
+            errors.put("passwordErr", "Password must contain at least 5 letters and 1 number");     
         }
         
-        String passport = request.getParameter("passport");
-        if (!validate(passportPattern, passport)){
+        String passport = request.getParameter("passport");     //Gets 'passport' parameter from edit_profile form
+        if (!validate(passportPattern, passport)){      //validates input, if invalid input then store a relevant error message
             errors.put("passportErr", "Passport number must be capitalised initials followed by 3 numbers");
         }
         
-        String DOB = request.getParameter("DOB");        
+        String DOB = request.getParameter("DOB");       //Gets 'DOB' parameter from edit_profile form 
         
         if (errors.isEmpty()) { //redirect to next page if no error is detected in errors map
             MongoDBManager_Customers db = new MongoDBManager_Customers();
             Customer customer = (Customer)session.getAttribute("customer");
-            db.editCustomer(customer.getID(), firstName, lastName, email, passport, password, DOB);
+            db.editCustomer(customer.getID(), firstName, lastName, email, password, passport, DOB);
             response.sendRedirect("account.jsp");
         }
         else { //put errors in request scope and forward them back to edit_profile.jsp to display error messages

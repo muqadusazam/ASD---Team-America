@@ -15,51 +15,48 @@ import java.text.*;
 import fc.model.*;
 import fc.model.dao.*;
 
-/**
- *
- * @author kelvin
- */
+//Creates a link to this servlet for register.jsp page to use
 @WebServlet(name = "RegisterServlet", urlPatterns = {"/RegisterServlet"})
+
 public class RegisterServlet extends HttpServlet {
-    /**
-     * Handles the HTTP <code>POST</code> method.
-     *
-     * @param request servlet request
-     * @param response servlet response
-     * @throws ServletException if a servlet-specific error occurs
-     * @throws IOException if an I/O error occurs
-     */
+
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
     throws ServletException, IOException {
         Map<String,String> errors = new HashMap<String,String>(); //Map for storing error messages
         HttpSession session = request.getSession(); //Gets the current http session
         
-        String firstName = request.getParameter("fName"); //gets relevant input from register.jsp
-        if (!validate(namePattern, firstName)){ //validates input, if invalid input then store a relevant error message
+        //Gets first name input from register.jsp, validates it, if invalid input then store a relevant error message
+        String firstName = request.getParameter("fName");
+        if (!validate(namePattern, firstName)){ 
             errors.put("fNameErr", "First name must contain at least 1 capital letter");
         }
         
+        //Gets last name input from register.jsp, validates it, if invalid input then store a relevant error message
         String lastName = request.getParameter("lName");
         if (!validate(namePattern, lastName)){
             errors.put("lNameErr", "Last name must contain at least 1 capital letter");
         }
         
+        //Gets email input from register.jsp, validates it, if invalid input then store a relevant error message
         String email = request.getParameter("email");
         if (!validate(emailPattern, email)){
             errors.put("emailErr", "Incorrect email format");
         }
         
+        //Gets password input from register.jsp, validates it, if invalid input then store a relevant error message
         String password = request.getParameter("password");
         if (!validate(passwordPattern, password)){
             errors.put("passwordErr", "Password must contain at least 5 letters and 1 number");
         }
         
+        //Gets passport input from register.jsp, validates it, if invalid input then store a relevant error message
         String passport = request.getParameter("passport");
         if (!validate(passportPattern, passport)){
             errors.put("passportErr", "Passport number must be capitalised initials followed by 3 numbers");
         }
         
+        //Gets DOB input from register.jsp, validates it, if invalid date then store a relevant error message
         String DOB = request.getParameter("DOB");
         SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
         String dateToday = formatter.format(new Date()); //Formats today's date to the date format specified above

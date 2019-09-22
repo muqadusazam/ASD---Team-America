@@ -81,6 +81,27 @@ public class MongoDBManager_Customers extends MongoDBConnector {
         return customers; //ArrayList of all customers in Customer collection
     }
     
+    //Changes a customer's current profile details in the Customer collection
+    public void editCustomer(String id, String firstName, String lastName, String email, String password, String passport, String DOB){
+        MongoClientURI uri = generateURI();
+        try (MongoClient client = new MongoClient(uri)){
+            MongoDatabase db = client.getDatabase(uri.getDatabase());
+            MongoCollection<Document> collection = db.getCollection(CUSTOMER_COLLECTION);
+            Document query =  new Document();
+            query.append("id", id); //The customer to be updated
+            Document setData = new Document(); //The new details
+            setData.append("first_name", firstName)
+                    .append("last_name", lastName)
+                    .append("email", email)
+                    .append("password", password)
+                    .append("passport", passport)
+                    .append("dob", DOB);
+            Document update = new Document();
+            update.append("$set", setData); //Add new details to an updated document
+            collection.updateOne(query, update); //Merge updated details with customer ID and update in collection
+        }
+    }
+    
     //Converts customer's details to String format for procressing by Java code
     private Customer convertToCustomer(Document doc) {
         return new Customer((String) doc.get("id"),

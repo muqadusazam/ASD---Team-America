@@ -66,6 +66,26 @@ public class MongoDBManager_Flights extends MongoDBConnector {
         return flights; //ArrayList of all flights in the Flight collection
     }
     
+    //Fetches all flights matching destination and flight ID
+    public ArrayList<Flight> getFlights(Flight flight) {
+        MongoClientURI uri = generateURI();
+        ArrayList<Flight> flights;
+        try (MongoClient client = new MongoClient(uri)) {
+            MongoDatabase db = client.getDatabase(uri.getDatabase());
+            flights = new ArrayList<>();
+            MongoCollection<Document> flightlist = db.getCollection(FLIGHT_COLLECTION);
+            for (Document doc : flightlist.find()) {
+                Flight f = convertToFlight(doc); //Convert flight's details to String format
+                if (f.getDestination().equals(flight.getDestination()) && f.getID() != flight.getID()) {
+                    flights.add(f);
+                }
+            }
+        } catch (NullPointerException x) { //Catch exception and return null if Flight collection is empty
+            return null;
+        }
+        return flights; //ArrayList of all relevant flights in the Flight collection
+    }
+    
     //Fetches all flights matching the specified destination
     public ArrayList<Flight> getFlightsByDestination(String destination) {
         MongoClientURI uri = generateURI();

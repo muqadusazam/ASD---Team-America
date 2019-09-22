@@ -33,6 +33,12 @@ public class MongoDBManager_Tickets extends MongoDBConnector {
         }
     }
     
+    //Updates the current ticket to the new ticket
+    public void update(Ticket oldTicket, Ticket newTicket){
+        remove(oldTicket);
+        add(newTicket);
+    }
+    
     //Fetches a single existing ticket from Ticket collection by matching ID
     public Ticket getTicket(String id) {
         MongoClientURI uri = generateURI();
@@ -43,6 +49,21 @@ public class MongoDBManager_Tickets extends MongoDBConnector {
             Document doc = ticketDB.find(and(eq("id", id))).first();
             ticket = convertToTicket(doc); //Convert ticket's details to String format
         } catch(NullPointerException x){ //Catch exception and return null if no matching ticket is found
+            return null;
+        }
+        return ticket;
+    }
+    
+    //Fetches a single existing ticket for the customer specified
+    public Ticket getTicket(Customer customer) {
+        MongoClientURI uri = generateURI();
+        Ticket ticket;
+        try (MongoClient client = new MongoClient(uri)) {
+            MongoDatabase db = client.getDatabase(uri.getDatabase());
+            MongoCollection<Document> ticketDB = db.getCollection(TICKET_COLLECTION);
+            Document doc = ticketDB.find(and(eq("customer_id", customer.getID()))).first();
+            ticket = convertToTicket(doc); //Convert ticket's details to String format
+        } catch(NullPointerException x) { //Catch exception and return null if no matching ticket is found
             return null;
         }
         return ticket;

@@ -94,8 +94,8 @@ public class MongoDBManager_Flights extends MongoDBConnector {
             MongoCollection<Document> flightlist = db.getCollection(FLIGHT_COLLECTION);
             for (Document doc : flightlist.find()) {
                 Flight flight = convertToFlight(doc);
-                if (!origins.contains(flight.getOrigin())) {
-                    origins.add(flight.getOrigin());
+                if (!origins.contains(flight.getOrigin())) {        //Checks if flight's origin is already included within arrayList
+                    origins.add(flight.getOrigin());                   //If not then add to list
                 }
             }
         } catch (NullPointerException ex) {
@@ -113,8 +113,8 @@ public class MongoDBManager_Flights extends MongoDBConnector {
             MongoCollection<Document> flightlist = db.getCollection(FLIGHT_COLLECTION);
             for (Document doc : flightlist.find()) {
                 Flight flight = convertToFlight(doc);
-                if (!destinations.contains(flight.getDestination())) {
-                    destinations.add(flight.getDestination());
+                if (!destinations.contains(flight.getDestination())) {      //Checks if flight's origin is already included within arrayList
+                    destinations.add(flight.getDestination());                 //If not then add to list
                 }
             }
         } catch (NullPointerException ex) {

@@ -27,30 +27,30 @@ import fc.model.*;
 public class LoginServlet extends HttpServlet {
     
     
-    
+    // overriding the doPost method to get the parameters of email and password
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         Map<String,String> errors = new HashMap<String,String>();
-        HttpSession session = request.getSession();
+        HttpSession session = request.getSession(); // getting the session from teh request
         
-        
+        // getting the email from the parameter
         String email = request.getParameter("email");
-        if (!validate(emailPattern, email)){
-            errors.put("emailErr", "Incorrect email format");
+        if (!validate(emailPattern, email)){ // validating the email input
+            errors.put("emailErr", "Incorrect email format"); // then show an error message
         }
         
+        // getting the password from the parameter
         String password = request.getParameter("password");
-        if (!validate(passwordPattern, password)){
-            errors.put("passwordErr", "Password must contain at least 5 letters and 1 number");
+        if (!validate(passwordPattern, password)){ // validating the password input
+            errors.put("passwordErr", "Password must contain at least 5 letters and 1 number"); // then show an error message
         }
 
-       
+        // creating customer DB manager class object
         MongoDBManager_Customers db = new MongoDBManager_Customers(); 
-        Customer customer = db.getCustomer(email, password);
-        if (customer == null){
-           errors.put("noCustomer", "Customer does not exist");
-
+        Customer customer = db.getCustomer(email, password); // getting the exact customer by email and passeord
+        if (customer == null){ // checking if cutsomer is null
+           errors.put("noCustomer", "Customer does not exist"); // then show an error
         }
 
         if (errors.isEmpty()) { //redirect to next page if no error is detected in errors map
@@ -58,14 +58,14 @@ public class LoginServlet extends HttpServlet {
         }
         else { //put errors in request scope and forward them back to register.jsp to display error messages
             request.setAttribute("errors", errors);
-            request.getRequestDispatcher("login.jsp").forward(request, response);
+            request.getRequestDispatcher("login.jsp").forward(request, response); // staying back on login jsp page
         }
         
         session.setAttribute("customer_ID", customer.getID());
     }
     
         //regex for validating input from register.jsp form
-    private String emailPattern = "(([a-zA-Z0-9]+)(@)([a-zA-Z0-9]+)[.]([a-zA-Z0-9]+))";
+    private String emailPattern = "(([a-zA-Z0-9]+)(@)([a-zA-Z0-9]+)[.]([a-zA-Z0-9]+))"; // alphabet with any number followed by "." a dot and again at least one character
     private String passwordPattern = "[a-z]{5,}[0-9]+"; //5 or more chars, 1 or more ints
     
     public boolean validate(String pattern, String input){ //return false if input does not match pattern

@@ -6,7 +6,7 @@ import java.io.Serializable;
  *
  * @author Liam
  */
-public class Ticket implements Serializable{
+public class Ticket implements Serializable, Comparable<Ticket>{
     
     // declaring private fields for Ticket class
     private String id; // PRIMARY KEY
@@ -46,5 +46,10 @@ public class Ticket implements Serializable{
     // returning the Passenger seat number
     public String getPassengerSeatNum() {
         return passenger_seat_num;
+    }
+    
+    @Override
+    public int compareTo(Ticket other) {
+        return Integer.compare(Integer.parseInt(getID()), Integer.parseInt(other.getID()));
     }
 }

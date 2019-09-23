@@ -3,7 +3,7 @@ package fc.model;
 import java.io.Serializable;
 
 
-public class Flight implements Serializable{
+public class Flight implements Serializable, Comparable<Flight>{
     
     // declaring private fields for Flight class
     private String id; //Update google doc to reflect attr name change
@@ -150,5 +150,10 @@ public class Flight implements Serializable{
     // setting Available seats by the given input
     public void setAvailableSeats(String available_seats) {
         this.available_seats = available_seats;
+    }
+    
+    @Override
+    public int compareTo(Flight other) {
+        return Integer.compare(Integer.parseInt(getID()), Integer.parseInt(other.getID()));
     }
 }

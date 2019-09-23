@@ -27,12 +27,12 @@
         </div>
     </div>
 </div>
-
+<%--Retrieves all customer from database into arraylist--%>
 <% 
     MongoDBManager_Customers customerDB = new MongoDBManager_Customers();
     ArrayList<Customer> customers = customerDB.getCustomers();
 %>
-
+<%--Displaying arraylist in for loop--%>
 <div class="mx-auto" style="width: 950px; text-align: center;">
     <table class="table table-striped">
         <thead class="thead-dark">

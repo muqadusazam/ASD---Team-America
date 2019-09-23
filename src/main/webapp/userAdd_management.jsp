@@ -15,6 +15,7 @@
 <div class="mx-auto" style="width: 800px; text-align: center;" >
     <h1>Create new user</h1>
 </div>
+<!--Table to create new user accounts-->
 
 <div class="mx-auto" style="width: 950px;">
     <form action="CustomerAdminServlet" method="post" class="margin1">

@@ -12,7 +12,7 @@
         <li class="toc-entry toc-h2 active anthy3"><a href="user_management.jsp" class ="anthy2">User Management (staff only)</a></li>
     </ul>
 </div>
-
+<%--Retrieves customer from database using "ID"--%>
 <%
     String id = request.getParameter("ID");
     MongoDBManager_Customers customerDB = new MongoDBManager_Customers();

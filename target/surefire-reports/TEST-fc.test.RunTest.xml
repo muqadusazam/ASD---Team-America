@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="25" failures="0" name="fc.test.RunTest" time="40.045" errors="0" skipped="3">
+<testsuite tests="24" failures="0" name="fc.test.RunTest" time="39.408" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/jre/lib"/>
@@ -16,7 +16,7 @@
     <property name="sun.os.patch.level" value="unknown"/>
     <property name="test" value="fc.test.RunTest"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
-    <property name="user.dir" value="/Users/william/Documents/Uni/2019 Sem 2/Advanced Software Development/ASD---Team-America-Kelvin"/>
+    <property name="user.dir" value="/Users/william/Documents/Uni/2019 Sem 2/Advanced Software Development/ASD---Team-America"/>
     <property name="java.runtime.version" value="1.8.0_181-b13"/>
     <property name="java.awt.graphicsenv" value="sun.awt.CGraphicsEnvironment"/>
     <property name="java.endorsed.dirs" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/jre/lib/endorsed"/>
@@ -64,34 +64,27 @@
     <property name="sun.cpu.isalist" value=""/>
   </properties>
   <testcase classname="Scenario: Successful registration" name="Given I am on Add Customer page" time="0"/>
-  <testcase classname="Scenario: Successful registration" name="When I fill in with \&quot;Customer\&quot; and \&quot;Test\&quot; and \&quot;cust@tester.com\&quot; and \&quot;abcde1\&quot; and \&quot;TT999\&quot; and \&quot;1992-12-12\&quot;" time="0.005">
-    <skipped/>
-  </testcase>
-  <testcase classname="Scenario: Successful registration" name="Then I should see user_management page" time="0.005">
-    <skipped/>
-  </testcase>
-  <testcase classname="Scenario: Successful registration" name="Scenario: Successful registration" time="0.005">
-    <skipped/>
-  </testcase>
-  <testcase classname="Scenario: Successful registration" name="Scenario: Successful registration" time="0.005"/>
+  <testcase classname="Scenario: Successful registration" name="When I fill in \&quot;Customer\&quot; and \&quot;Test\&quot; and \&quot;cust@tester.com\&quot; and \&quot;abcde1\&quot; and \&quot;TT999\&quot; and \&quot;1992-12-12\&quot;" time="0"/>
+  <testcase classname="Scenario: Successful registration" name="Then I should see user management page" time="0"/>
+  <testcase classname="Scenario: Successful registration" name="Scenario: Successful registration" time="0"/>
   <testcase classname="|  | One | user@one.co | qwert1 | UO001 | 1994-04-15 | Missing first name. |" name="Given I am on Add Customer page" time="0"/>
   <testcase classname="|  | One | user@one.co | qwert1 | UO001 | 1994-04-15 | Missing first name. |" name="When I fill in \&quot;\&quot; and \&quot;One\&quot; and \&quot;user@one.co\&quot; and \&quot;qwert1\&quot; and \&quot;UO001\&quot; and \&quot;1994-04-15\&quot;" time="0"/>
-  <testcase classname="|  | One | user@one.co | qwert1 | UO001 | 1994-04-15 | Missing first name. |" name="Then I should stay on userAdd_management page" time="0"/>
+  <testcase classname="|  | One | user@one.co | qwert1 | UO001 | 1994-04-15 | Missing first name. |" name="Then I should stay on userAdd management page" time="0"/>
   <testcase classname="|  | One | user@one.co | qwert1 | UO001 | 1994-04-15 | Missing first name. |" name="|  | One | user@one.co | qwert1 | UO001 | 1994-04-15 | Missing first name. |" time="0"/>
-  <testcase classname="| James | Ten | ben@ten.co | qwert1 |  | 2000-01-01 | Missing password. |" name="Given I am on Add Customer page" time="0"/>
+  <testcase classname="| James | Ten | ben@ten.co | qwert1 |  | 2000-01-01 | Missing password. |" name="Given I am on Add Customer page" time="0.001"/>
   <testcase classname="| James | Ten | ben@ten.co | qwert1 |  | 2000-01-01 | Missing password. |" name="When I fill in \&quot;James\&quot; and \&quot;Ten\&quot; and \&quot;ben@ten.co\&quot; and \&quot;qwert1\&quot; and \&quot;\&quot; and \&quot;2000-01-01\&quot;" time="0"/>
-  <testcase classname="| James | Ten | ben@ten.co | qwert1 |  | 2000-01-01 | Missing password. |" name="Then I should stay on userAdd_management page" time="0"/>
-  <testcase classname="| James | Ten | ben@ten.co | qwert1 |  | 2000-01-01 | Missing password. |" name="| James | Ten | ben@ten.co | qwert1 |  | 2000-01-01 | Missing password. |" time="0.001"/>
+  <testcase classname="| James | Ten | ben@ten.co | qwert1 |  | 2000-01-01 | Missing password. |" name="Then I should stay on userAdd management page" time="0"/>
+  <testcase classname="| James | Ten | ben@ten.co | qwert1 |  | 2000-01-01 | Missing password. |" name="| James | Ten | ben@ten.co | qwert1 |  | 2000-01-01 | Missing password. |" time="0"/>
   <testcase classname="| Donald | Kid | trump@gov.us |  | DT001 | 1950-11-13 | Missing passport number. |" name="Given I am on Add Customer page" time="0"/>
   <testcase classname="| Donald | Kid | trump@gov.us |  | DT001 | 1950-11-13 | Missing passport number. |" name="When I fill in \&quot;Donald\&quot; and \&quot;Kid\&quot; and \&quot;trump@gov.us\&quot; and \&quot;\&quot; and \&quot;DT001\&quot; and \&quot;1950-11-13\&quot;" time="0"/>
-  <testcase classname="| Donald | Kid | trump@gov.us |  | DT001 | 1950-11-13 | Missing passport number. |" name="Then I should stay on userAdd_management page" time="0"/>
+  <testcase classname="| Donald | Kid | trump@gov.us |  | DT001 | 1950-11-13 | Missing passport number. |" name="Then I should stay on userAdd management page" time="0"/>
   <testcase classname="| Donald | Kid | trump@gov.us |  | DT001 | 1950-11-13 | Missing passport number. |" name="| Donald | Kid | trump@gov.us |  | DT001 | 1950-11-13 | Missing passport number. |" time="0"/>
   <testcase classname="| Why |  | dobby@do.b | qwert1 | DD001 | 1960-12-28 | Missing last name. |" name="Given I am on Add Customer page" time="0"/>
   <testcase classname="| Why |  | dobby@do.b | qwert1 | DD001 | 1960-12-28 | Missing last name. |" name="When I fill in \&quot;Why\&quot; and \&quot;\&quot; and \&quot;dobby@do.b\&quot; and \&quot;qwert1\&quot; and \&quot;DD001\&quot; and \&quot;1960-12-28\&quot;" time="0"/>
-  <testcase classname="| Why |  | dobby@do.b | qwert1 | DD001 | 1960-12-28 | Missing last name. |" name="Then I should stay on userAdd_management page" time="0"/>
+  <testcase classname="| Why |  | dobby@do.b | qwert1 | DD001 | 1960-12-28 | Missing last name. |" name="Then I should stay on userAdd management page" time="0"/>
   <testcase classname="| Why |  | dobby@do.b | qwert1 | DD001 | 1960-12-28 | Missing last name. |" name="| Why |  | dobby@do.b | qwert1 | DD001 | 1960-12-28 | Missing last name. |" time="0"/>
-  <testcase classname="| Test | Name | poo@head.aus | qwert1 | PH001 |  | Missing DOB. |" name="Given I am on Add Customer page" time="0.001"/>
+  <testcase classname="| Test | Name | poo@head.aus | qwert1 | PH001 |  | Missing DOB. |" name="Given I am on Add Customer page" time="0"/>
   <testcase classname="| Test | Name | poo@head.aus | qwert1 | PH001 |  | Missing DOB. |" name="When I fill in \&quot;Test\&quot; and \&quot;Name\&quot; and \&quot;poo@head.aus\&quot; and \&quot;qwert1\&quot; and \&quot;PH001\&quot; and \&quot;\&quot;" time="0"/>
-  <testcase classname="| Test | Name | poo@head.aus | qwert1 | PH001 |  | Missing DOB. |" name="Then I should stay on userAdd_management page" time="0"/>
-  <testcase classname="| Test | Name | poo@head.aus | qwert1 | PH001 |  | Missing DOB. |" name="| Test | Name | poo@head.aus | qwert1 | PH001 |  | Missing DOB. |" time="0"/>
+  <testcase classname="| Test | Name | poo@head.aus | qwert1 | PH001 |  | Missing DOB. |" name="Then I should stay on userAdd management page" time="0"/>
+  <testcase classname="| Test | Name | poo@head.aus | qwert1 | PH001 |  | Missing DOB. |" name="| Test | Name | poo@head.aus | qwert1 | PH001 |  | Missing DOB. |" time="0.001"/>
 </testsuite>

@@ -37,7 +37,9 @@ public class CustomerAdminServlet extends HttpServlet {
             out.println("</html>");
         }
     }
-
+    /*
+        requests data from userAdd_management.jsp and validates input against regex
+    */
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -73,6 +75,7 @@ public class CustomerAdminServlet extends HttpServlet {
         
         String DOB = request.getParameter("DOB");
         
+        //if form does not have any errors, adds customer to database
         if (errors.isEmpty()) {
             //redirect to next page if no error
             int key = 100000 + (new Random().nextInt(99999));

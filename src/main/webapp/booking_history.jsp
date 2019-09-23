@@ -1,4 +1,11 @@
 
+<%@page import="fc.model.Flight"%>
+<%@page import="fc.model.dao.MongoDBManager_Flights"%>
+<%@page import="java.util.ArrayList"%>
+<%@page import="fc.model.Ticket"%>
+<%@page import="fc.model.dao.MongoDBManager_Tickets"%>
+<%@page import="fc.model.dao.MongoDBManager_Customers"%>
+<%@page import="fc.model.Customer"%>
 <jsp:include page="fc_header.jsp">
     <jsp:param name="title" value="Flight Center/account/booking_history"/>
 </jsp:include>
@@ -35,60 +42,51 @@
             <!-- Dummy data entry 1 -->
             <tr>
                 <!-- Entry 1 headings given -->
-                <th>ID</th>
-                <th>First Name</th>
-                <th>Last Name</th>
-                <th>Email</th>
+                <th>Ticket ID</th>
+                <th>Customer ID</th>
+                <th>Flight ID</th>
+                <th>Full Name</th>
+                <th>Origin</th>
                 <th>purchased date</th>           
             </tr>
         </thead>
+        <%
+             MongoDBManager_Customers db = new MongoDBManager_Customers();
+             MongoDBManager_Tickets Tdb = new MongoDBManager_Tickets();
+             MongoDBManager_Flights Fdb = new MongoDBManager_Flights();
+            String customer_id = (String)session.getAttribute("customer_ID");       //Get logged in customer's ID, passed from login feature
+
+    try { Customer customer = db.getCustomer(customer_id);        //Try to get customer profile from mLab using customer ID
+             session.setAttribute("cutomer", customer);
+             
+             String fullName = customer.getFirstName() + " " + customer.getLastName();
+              
+             ArrayList<Ticket> ArrayTicket = Tdb.getTickets(customer);   
+             for (Ticket currentTicket : ArrayTicket){
+                 Flight flights = Fdb.getFlight(currentTicket.getFlightID());
+             String origin = flights.getOrigin();
+
+        %>
         <tr>
-            <!-- Entry 1 values given -->
-            <td>100001</td>
-            <td>John</td>
-            <td>Smith</td>
-            <td>JohnSmt@gmail.com</td>
-            <td>09/12/2007</td>
+            <td><%= currentTicket.getID() %> </td>
+            <td><%= currentTicket.getCustomerID() %> </td>
+            <td><%= currentTicket.getFlightID() %> </td>
+            <td><%= fullName %> </td>
+            <td><%= origin %> </td>
         </tr>
-        <!-- Dummy data entry 2 -->
-        <tr>
-            <!-- Entry 2 values given -->
-            <td>100002</td>
-            <td>Calvin</td>
-            <td>White</td>
-            <td>Cwhite@gmail.com</td>
-            <td>03/07/2002</td>
-        </tr>
-        <!-- Dummy data entry 3 -->
-        <tr>
-            <!-- Entry 3 values given -->
-            <td>100003</td>
-            <td>Carol</td>
-            <td>Mike</td>
-            <td>Cmike@gmail.com</td>
-            <td>30/03/1796</td>
-        </tr>
-        <!-- Dummy data entry 4 -->
-        <tr>
-            <!-- Entry 4 values given -->
-            <td>100004</td>
-            <td>Bale</td>
-            <td>Don</td>
-            <td>Bdon@gmail.com</td>
-            <td>25/12/1999</td>
-        </tr>
-        <!-- Dummy data entry 5 -->
-        <tr>
-            <!-- Entry 5 values given -->
-            <td>100005</td>
-            <td>Tom</td>
-            <td>Cat</td>
-            <td>Tcat@gmail.com</td>
-            <td>23/08/2000</td>
-        </tr>
+        <%
+          }                      
+        %>
     </table>
 </div>
 
 
 
 <jsp:include page = "fc_footer.jsp"/>
+<%
+        }
+    //If customer ID not found, redirect back to main page
+    catch (Exception e){
+        response.sendRedirect("login.jsp");
+    }
+    %>

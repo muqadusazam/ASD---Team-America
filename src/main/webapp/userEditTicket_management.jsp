@@ -1,3 +1,4 @@
+<%@page import="fc.model.Flight"%>
 <%@page import="fc.model.dao.MongoDBManager_Flights"%>
 <%@page import="fc.model.Ticket"%>
 <%@page import="java.util.ArrayList"%>
@@ -17,21 +18,23 @@
     </ul>
 </div>
 
-<%--Retrieves customer from database using "ID"--%>
+<%--Retrieves customer from database using "ticketID"--%>
 <%
-    String id = request.getParameter("ticketID");
-    MongoDBManager_Customers customerDB = new MongoDBManager_Customers();
-    Customer customer = customerDB.getCustomer(id);
-
-    MongoDBManager_Tickets ticketDB = new MongoDBManager_Tickets();
-    ArrayList<Ticket> tickets = ticketDB.getTickets(customer);
+    String ticketID = request.getParameter("ticketID");
     
-    MongoDBManager_Flights flightDB = new MongoDBManager_Flights();
+    MongoDBManager_Tickets ticketDB = new MongoDBManager_Tickets();
+    Ticket ticket = ticketDB.getTicket(ticketID);
+    
+    MongoDBManager_Customers customerDB = new MongoDBManager_Customers();
+    Customer customer = customerDB.getCustomer(ticket.getCustomerID());
+    
+    //MongoDBManager_Flights flightDB = new MongoDBManager_Flights();
+    //Flight flight = flightDB.getFlight(ticket.getFlightID());
     
 %>
 
 <div class="mx-auto" style="width: 800px; text-align: center;" >
-    <h1>User: <%= customer.getFirstName()%> <%=customer.getLastName()%></h1>
+  <%-- <h1>User: <%=customer.getFirstName()%> <%=customer.getLastName()%></h1> --%>
 </div>
 
 <div class="mx-auto" style="width: 950px; text-align: center;">

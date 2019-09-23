@@ -3,7 +3,7 @@
 	<jsp:param name="title" value="login"/>
 </jsp:include>
 
-<!-- The action is being sent to login servlet where the processing is done. -->
+<!-- The action is being sent to login servlet where the processing is done -->
 <form action = "LoginServlet" method = "post">
         <div style = "margin-top: 100px"> <h1><b><center>Login</center></b></h1></div>
         <div class="container w-25" style = "margin-top:100px">

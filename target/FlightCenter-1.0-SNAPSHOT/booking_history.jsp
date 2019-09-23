@@ -39,8 +39,7 @@
                 <th>First Name</th>
                 <th>Last Name</th>
                 <th>Email</th>
-                <th>purchased date</th>
-                <th>Action</th>              
+                <th>purchased date</th>           
             </tr>
         </thead>
         <tr>
@@ -50,12 +49,6 @@
             <td>Smith</td>
             <td>JohnSmt@gmail.com</td>
             <td>09/12/2007</td>
-            <td>
-                <!-- View button to show the detailed info about this booking -->
-                <form action="view_booking.jsp" method="POST">
-                    <button type="submit" name="ID" class="btn btn-primary">View</button> 
-                </form>
-            </td>
         </tr>
         <!-- Dummy data entry 2 -->
         <tr>
@@ -65,12 +58,6 @@
             <td>White</td>
             <td>Cwhite@gmail.com</td>
             <td>03/07/2002</td>
-            <td>
-                <!-- View button to show the detailed info about this booking -->
-                <form action="view_booking.jsp" method="POST">
-                    <button type="submit" name="ID" class="btn btn-primary">View</button> 
-                </form>
-            </td>
         </tr>
         <!-- Dummy data entry 3 -->
         <tr>
@@ -80,12 +67,6 @@
             <td>Mike</td>
             <td>Cmike@gmail.com</td>
             <td>30/03/1796</td>
-            <td>
-                <!-- View button to show the detailed info about this booking -->
-                <form action="view_booking.jsp" method="POST">
-                    <button type="submit" name="ID" class="btn btn-primary">View</button> 
-                </form>
-            </td>
         </tr>
         <!-- Dummy data entry 4 -->
         <tr>
@@ -95,12 +76,6 @@
             <td>Don</td>
             <td>Bdon@gmail.com</td>
             <td>25/12/1999</td>
-            <td>
-                <!-- View button to show the detailed info about this booking -->
-                <form action="view_booking.jsp" method="POST">
-                    <button type="submit" name="ID" class="btn btn-primary">View</button> 
-                </form>
-            </td>
         </tr>
         <!-- Dummy data entry 5 -->
         <tr>
@@ -110,12 +85,6 @@
             <td>Cat</td>
             <td>Tcat@gmail.com</td>
             <td>23/08/2000</td>
-            <td>
-                <!-- View button to show the detailed info about this booking -->
-                <form action="view_booking.jsp" method="POST">
-                    <button type="submit" name="ID" class="btn btn-primary">View</button> 
-                </form>
-            </td>
         </tr>
     </table>
 </div>

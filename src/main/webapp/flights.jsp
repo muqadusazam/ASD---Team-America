@@ -5,21 +5,7 @@
 	<jsp:param name="title" value="Flight Center/flights"/>
 </jsp:include>
 <%
-    /*Flight testflight = new Flight("4",  //id
-                "TigerAir", //airline
-                "London", //origin
-                "Osaka", //destination
-                "11-09-2019", //departure_date
-                "17:50PM", //departure_time
-                "12-09-2019", //arrival_date
-                "05:00AM", //arrival_time
-                "Scheduled", //status
-                "600", //price
-                "170" //available_seats
-        );*/
-    
     MongoDBManager_Flights db = new MongoDBManager_Flights();   
-    //db.add(testflight);
     ArrayList<Flight> flights = db.getFlights();
 %>
     <div class="container" style="margin-top: 50px">
@@ -35,6 +21,13 @@
               <th scope="col">Arrival</th>
               <th scope ="col">Status</th>
               <th scope="col">Price</th>
+              <%
+                if (session.getAttribute("customer_ID") != null) {
+              %>
+              <th scope="col">Action</th>
+              <%
+                  }
+               %>
             </tr>
           </thead>
           <tbody>
@@ -52,6 +45,17 @@
                                 <td ><%=currentFlight.getArrivalDate()%></td>
                                 <td ><%=currentFlight.getStatus()%></td>
                                 <td ><%=currentFlight.getPrice()%></td>
+                                <%
+                                    if (session.getAttribute("customer_ID") != null) {
+                                %>
+                                <td>
+                                    <form action="booking.jsp" method="POST">
+                                        <button type="submit" class="btn btn-success" name="flightId" value="<%=currentFlight.getID()%>">Book</button>
+                                    </form>
+                                </td>
+                                <%
+                                    }
+                                %>
                             </tr>
                         <%
                             }

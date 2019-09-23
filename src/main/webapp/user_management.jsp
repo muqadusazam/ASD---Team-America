@@ -61,7 +61,7 @@
                     </div>
                     <div style="float: right;"> 
                         <form action="userTicket_management.jsp" method="POST">
-                            <button type="submit" class="btn btn-info">Tickets</button>
+                            <button type="submit" name="ID" value="<%= customer.getID() %>" class="btn btn-info">Tickets</button>
                         </form>
                     </div>
                 </div>

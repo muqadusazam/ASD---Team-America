@@ -40,7 +40,7 @@
             <tr>
                 <th>Ticket ID</th>
                 <th>Flight No.</th>
-                <th>Country</th>
+                <th>Destination</th>
                 <th>Flight date</th>
                 <th>Seat Number</th>   
                 <th>Action</th>

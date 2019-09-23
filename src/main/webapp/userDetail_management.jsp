@@ -70,7 +70,7 @@
         <button type="submit" class="btn btn-primary">Edit</button>
     </form>
     <form action="userDelete_management.jsp" method="POST">
-        <button type="submit" name="ID" value="<%= customer.getID()%>" class="btn btn-danger">Delete</button> 
+        <button style="margin-top: 10px" type="submit" name="ID" value="<%= customer.getID()%>" class="btn btn-danger">Delete</button> 
     </form> 
 </div>
 

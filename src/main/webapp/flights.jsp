@@ -4,26 +4,26 @@
 <jsp:include page="fc_header.jsp">
 	<jsp:param name="title" value="Flight Center/flights"/>
 </jsp:include>
-<%
-    /*Flight testflight = new Flight("4",  //id
-                "TigerAir", //airline
-                "London", //origin
-                "Osaka", //destination
-                "11-09-2019", //departure_date
-                "17:50PM", //departure_time
-                "12-09-2019", //arrival_date
-                "05:00AM", //arrival_time
-                "Scheduled", //status
-                "600", //price
-                "170" //available_seats
-        );*/
-    
+<%  
+    //Call the database manager for "Flight" table
     MongoDBManager_Flights db = new MongoDBManager_Flights();   
-    //db.add(testflight);
+    
+    //Declare ArrayList for Flight object and initialize with flight data from database 
+    //getFlight returns ArrayList of Flight object in the database table 
     ArrayList<Flight> flights = db.getFlights();
+    
+    String ID = "111";//****get ID of current user here*****
+    //String ID = (String)session.getAttribute("current_user");
+    boolean staff = true;
+    //staff = manager.isStaff(ID); // check if the user is staff (authorised user for create/update/delete)
 %>
     <div class="container" style="margin-top: 50px">
         <h1 class ="bd-content-title">&nbsp;List of Flights</h1>
+        
+        <%if(staff){%> <!-- check if user is Staff and only show button for staff -->
+        <a href = "add_movie.jsp" class = "btn btn-lg btn-primary button1"> Add Movie </a> <!--go to add movie page -->
+        <%}%>
+        <!--Table for the list of flights-->
         <table class="table"style="margin-top: 20px">
           <thead class="thead-dark">
             <tr>
@@ -39,8 +39,8 @@
           </thead>
           <tbody>
                                                  <%
-                        for (Flight currentFlight : flights) //for loop for flights 
-                                                          //to show all data in flights in the form of table
+                        for (Flight currentFlight : flights)  //for loop for flights data in the "Flight" table
+                                                               //to show all data in flights in the form of table
                             {
                         %>
                             <tr>

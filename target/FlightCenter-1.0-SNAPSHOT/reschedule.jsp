@@ -12,7 +12,6 @@
     <ul class="navbar-nav mr-auto">
     <li class="toc-entry toc-h2 anthy3"><a href="account.jsp" class ="anthy2">Profile</a></li>
     <li class="toc-entry toc-h2 anthy3"><a href="booking_history.jsp" class ="anthy2">Booking History</a></li>
-    <li class="toc-entry toc-h2 active anthy3"><a href="reschedule.jsp" class ="anthy2">Reschedule Ticket</a></li>
     <li class="toc-entry toc-h2 anthy3"><a href="cancelTicket.jsp" class ="anthy2">Cancel Ticket</a></li>
     <li class="toc-entry toc-h2 anthy3"><a href="user_management.jsp" class ="anthy2">User Management (staff only)</a></li>
     </ul>
@@ -25,15 +24,16 @@
     %>
     <h2 class="text-danger"> You must be logged in to Reschedule Ticket. Click <a href="login.jsp">here</a> to login. </h2>
     <%
-        } else if (session.getAttribute("ticket") == null) { //Check if ticket is in session
+        } else if (request.getParameter("ticketID") == null) { //Check if ticket is in session
     %>
     <h2 class="text-danger"> Could not load ticket from database. </h2>
     <%
         } else { //Customer & Ticket are contained in session
             Customer customer = (Customer)session.getAttribute("customer");
 
+            //Get Ticket object from database
             MongoDBManager_Tickets dbt = new MongoDBManager_Tickets();
-            Ticket ticket = dbt.getTicket((String)session.getAttribute("ticket"));
+            Ticket ticket = dbt.getTicket((String)request.getParameter("ticket"));
 
             //Get flight from database based on ticket in session
             MongoDBManager_Flights dbf = new MongoDBManager_Flights();

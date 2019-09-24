@@ -9,8 +9,6 @@
     <ul class="navbar-nav mr-auto">
         <li class="toc-entry toc-h2 anthy3"><a href="account.jsp" class ="anthy2">Profile</a></li>
         <li class="toc-entry toc-h2 active anthy3"><a href="booking_history.jsp" class ="anthy2">Booking History</a></li>
-        <li class="toc-entry toc-h2 anthy3"><a href="reschedule.jsp" class ="anthy2">Reschedule Ticket</a></li>
-        <li class="toc-entry toc-h2 anthy3"><a href="cancelTicket.jsp" class ="anthy2">Cancel Ticket</a></li>
         <li class="toc-entry toc-h2 anthy3"><a href="user_management.jsp" class ="anthy2">User Management (staff only)</a></li>
     </ul>
 </div>
@@ -26,7 +24,7 @@
 </div>
 <%
     //Get logged in Customer object from session
-    Customer customer = (Customer) session.getAttribute("customer");
+    Customer customer = (Customer)session.getAttribute("customer");
 
     //Fetch all tickets the customer currently owns from DB
     MongoDBManager_Tickets dbt = new MongoDBManager_Tickets();
@@ -42,7 +40,7 @@
 } else {
 %>
 <!-- Again specifying the layout settings for the sorting function -->
-<div class="mx-auto" style="width: 800px; text-align: center;" >
+<div class="mx-auto" style="width: 900px; text-align: center;" >
     <label><b>Sort: </b></label>
     <!-- 3 type of values added for the drop-down menu -->
     <select>
@@ -52,7 +50,7 @@
     </select>
 </div>
 
-<div class="mx-auto" style="width: 950px; text-align: center;">
+<div class="mx-auto" style="width: 900px; text-align: center;">
     <table class="table table-striped">
         <thead class="thead-dark">
         <th>Ticket ID</th>
@@ -81,8 +79,11 @@
             <td><%=flight.getDestination()%></td>
             <td><%=flight.getDepartureDate()%></td>
             <td>
+                <form action="cancelTicket.jsp" method="POST">
+                    <button type="submit" class="btn btn-danger" name="ticketID" value="<%=ticket.getID()%>">Cancel</button>
+                </form>
                 <form action="reschedule.jsp" method="POST">
-                    <button type="submit" class="btn btn-primary" name="flightID" value="<%=flight.getID()%>">Reschedule</button>
+                    <button type="submit" class="btn btn-primary" name="ticketID" value="<%=ticket.getID()%>">Reschedule</button>
                 </form>
             </td>
         </tr>

@@ -4,6 +4,11 @@
 </jsp:include>
 <!-- Sends 'value' as parameter to update this page's title-->
 
+<%@page import="java.util.ArrayList"%>
+<%@page import="java.util.Collections"%>
+<%@page import="fc.model.*"%>
+<%@page import="fc.model.dao.*"%>
+
 <div class="col-12 col-md-3 col-xl-2 bd-sidebar" style = "margin-top: 100px; padding: 5px; float:left; background-color:#cecece">
     <ul class="navbar-nav mr-auto">
         <li class="toc-entry toc-h2 anthy3"><a href="account.jsp" class ="anthy2">Profile</a></li>
@@ -20,6 +25,14 @@
      <h1>Cancel Ticket</h1>
      <br>
      <p>Choose from the list of your booked tickets to cancel:</p>
+     
+<%
+    MongoDBManager_Tickets db = new MongoDBManager_Tickets();
+    ArrayList<Ticket> tickets = db.getTickets();
+    Customer customer = (Customer)session.getAttribute("customer");
+    
+    
+%>
      
      <select>
         <option value="volvo">Volvo</option>

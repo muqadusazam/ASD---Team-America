@@ -19,6 +19,17 @@
     </ul>
 </div>
 
+<%
+    if (session.getAttribute("customer") == null) {
+        response.sendRedirect("login.jsp");
+    } else {
+        Customer customer = (Customer)session.getAttribute("customer");
+        MongoDBManager_Tickets db = new MongoDBManager_Tickets();
+        ArrayList<Ticket> tickets = db.getTickets(customer);
+%>
+
+<!-- onclick="return confirm('Are you sure?')">Delete Profile </a></td>  NEED THIS FOR CONFIRMATION-->
+
 <!-- width 50 to not take up entire screen, margin to sit nicely in middle of screen -->
 <div class="container w-50" style="margin-top: 50px; margin-bottom: 50px">
     <center>
@@ -26,23 +37,48 @@
      <br>
      <p>Choose from the list of your booked tickets to cancel:</p>
      
-<%
-    MongoDBManager_Tickets db = new MongoDBManager_Tickets();
-    ArrayList<Ticket> tickets = db.getTickets();
-    Customer customer = (Customer)session.getAttribute("customer");
-    
-    
-%>
+     <table class="table table-striped">
+        <thead class="thead-dark">
+            <tr>
+              <th scope="col">Ticket ID</th>
+              <th scope="col">Airline</th>
+              <th scope="col">Origin</th>
+              <th scope="col">Destination</th>
+              <th scope="col">Departure</th>
+              <th scope="col">Arrival</th>
+              <th scope ="col">Seat Number</th>
+            </tr>
+        </thead>
+         
+         <!-- IF TICKETS = NULL, PRINT 'NO TICKETS BOOKED' ELSE DO BELOW CODE -->
      
-     <select>
-        <option value="volvo">Volvo</option>
-        <option value="saab">Saab</option>
-        <option value="mercedes">Mercedes</option>
-        <option value="audi">Audi</option>
-     </select>
+     <% 
+        for (Ticket ticket : tickets){
+     %>
+        <tr>
+            <td><%=ticket.getID()%></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+     <% 
+        }
+     %>
+     
+     </table>
+
+
      <br>
      <br>
      <!-- COMMENT -->
      <button type="submit" class="btn btn-success" id="cancelTicketBtn">Cancel Ticket</button>
      </center>
 </div>
+
+<jsp:include page = "fc_footer.jsp"/>
+<%
+    }
+%>

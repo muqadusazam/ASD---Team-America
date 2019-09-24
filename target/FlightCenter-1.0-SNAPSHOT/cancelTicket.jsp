@@ -19,73 +19,69 @@
     </ul>
 </div>
 
+
+    <!-- COMMENT ON CODE ***************** -->
+
 <%
-  if (session.getAttribute("customer") == null) {
-      response.sendRedirect("login.jsp");
-  } else {
-      Customer customer = (Customer)session.getAttribute("customer");
-      MongoDBManager_Tickets dbT = new MongoDBManager_Tickets();
-      ArrayList<Ticket> tickets = dbT.getTickets(customer);
-      MongoDBManager_Flights dbF = new MongoDBManager_Flights();
+    if (session.getAttribute("customer") == null) {
+        response.sendRedirect("login.jsp");
+    } else {
+        Customer customer = (Customer)session.getAttribute("customer");
+        MongoDBManager_Tickets dbT = new MongoDBManager_Tickets();
+        ArrayList<Ticket> tickets = dbT.getTickets(customer);
+        MongoDBManager_Flights dbF = new MongoDBManager_Flights();
 %>
-      <div class="container w-50" style="margin-top: 50px; margin-bottom: 50px">
-          <center>
-           <h1>Cancel Ticket</h1>
-           <br>
-           <p>Choose from the list of your booked tickets to cancel:</p>
-           <% 
-             if(tickets == null){
-           %>
+        <div class="container w-50" style="margin-top: 50px; margin-bottom: 50px">
+            <center>
+            <h1>Cancel Ticket</h1>
+            <br>
+            <p>Choose from the list of your booked tickets to cancel:</p>
+            <% 
+                if(tickets.isEmpty()){
+            %>
                 <p>You do not have any booked flights to cancel!</p>
-           <%
-             } else {
-           %>
-
-      <!-- onclick="return confirm('Are you sure?')">Delete Profile </a></td>  NEED THIS FOR CONFIRMATION-->
-
+            <%
+                } else {
+            %>
                 <table class="table table-striped">
                     <thead class="thead-dark">
                         <tr>
-                          <th scope="col">Ticket ID</th>
-                          <th scope="col">Airline</th>
-                          <th scope="col">From</th>
-                          <th scope="col">To</th>
-                          <th scope="col">Departure Date</th>
-                          <th scope="col">Departure Time</th>
-                          <th scope="col">Arrival Date</th>
-                          <th scope="col">Arrival Time</th>
-                          <th scope ="col">Seat Number</th>
+                            <th scope="col">Ticket ID</th>
+                            <th scope="col">Airline</th>
+                            <th scope="col">From</th>
+                            <th scope="col">To</th>
+                            <th scope="col">Departure Date</th>
+                            <th scope="col">Departure Time</th>
+                            <th scope="col">Arrival Date</th>
+                            <th scope="col">Arrival Time</th>
+                            <th scope="col">Seat Number</th>
+                            <th scope="col">Action</th>
                         </tr>
                     </thead>
-            <% 
-                    for (Ticket ticket : tickets){
-                        Flight flight = dbF.getFlight(ticket.getFlightID());
-            %>
-                    <tr>
-                        <td><%=ticket.getID()%></td>
-                        <td><%=flight.getAirline()%></td>
-                        <td><%=flight.getOrigin()%></td>
-                        <td><%=flight.getDestination()%></td>
-                        <td><%=flight.getDepartureDate()%></td>
-                        <td><%=flight.getDepartureTime()%></td>
-                        <td><%=flight.getArrivalDate()%></td>
-                        <td><%=flight.getArrivalTime()%></td>
-                        <td><%=ticket.getPassengerSeatNum()%></td>
-                     </tr>
                     <% 
-                      }
+                        for (Ticket ticket : tickets){
+                            Flight flight = dbF.getFlight(ticket.getFlightID());
+                    %>
+                            <tr>
+                                <td><%=ticket.getID()%></td>
+                                <td><%=flight.getAirline()%></td>
+                                <td><%=flight.getOrigin()%></td>
+                                <td><%=flight.getDestination()%></td>
+                                <td><%=flight.getDepartureDate()%></td>
+                                <td><%=flight.getDepartureTime()%></td>
+                                <td><%=flight.getArrivalDate()%></td>
+                                <td><%=flight.getArrivalTime()%></td>
+                                <td><%=ticket.getPassengerSeatNum()%></td>
+                                <td><button type="submit" class="btn btn-primary" id="cancelBtn">Cancel</button></td>
+                            </tr>
+                    <% 
+                        }
                     %>
                 </table>
-                <% 
-                  }
-                %>
-
-
-    <br>
-    <br>
-    <!-- COMMENT -->
-    <button type="submit" class="btn btn-success" id="cancelTicketBtn">Cancel Ticket</button>
-    </center>
+            <% 
+                }
+            %>    
+            </center>
 </div>
 
 <jsp:include page = "fc_footer.jsp"/>

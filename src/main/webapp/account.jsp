@@ -18,7 +18,6 @@
 
 </div>
 
-
 <%
     if (session.getAttribute("customer") == null) {
         response.sendRedirect("login.jsp");

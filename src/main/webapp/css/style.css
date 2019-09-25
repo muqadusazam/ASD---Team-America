@@ -35,6 +35,9 @@ li:hover {
     font-weight: bold;
 }
 
+.active {
+    font-weight: bold;
+}
 
 form.margin1 {
     margin-right: 20%;

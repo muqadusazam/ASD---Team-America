@@ -34,9 +34,22 @@ public class MongoDBManager_Tickets extends MongoDBConnector {
     }
     
     //Updates the current ticket to the new ticket
-    public void update(Ticket oldTicket, Ticket newTicket){
-        remove(oldTicket);
-        add(newTicket);
+    public void update(String id, String customerID, String flightID, String passengerSeatNum){
+        MongoClientURI uri = generateURI();
+        try (MongoClient client = new MongoClient(uri)){
+            MongoDatabase db = client.getDatabase(uri.getDatabase());
+            MongoCollection<Document> collection = db.getCollection(TICKET_COLLECTION);
+            Document query =  new Document();
+            query.append("id", id); //The ticket to be updated
+            Document setData = new Document(); //The new details
+            setData.append("id", id)
+                    .append("customer_id", customerID)
+                    .append("flight_id", flightID)
+                    .append("passenger_seat_num", passengerSeatNum);
+            Document update = new Document();
+            update.append("$set", setData); //Add new details to an updated document
+            collection.updateOne(query, update); //Merge updated details with ticket ID and update in collection
+        }
     }
     
     //Fetches a single existing ticket from Ticket collection by matching ID

@@ -11,11 +11,10 @@
     <ul class="navbar-nav mr-auto">
         <li class="toc-entry toc-h2 active anthy3"><a href="account.jsp" class ="anthy2">Profile</a></li>
         <li class="toc-entry toc-h2 anthy3"><a href="booking_history.jsp" class ="anthy2">Booking History</a></li>
-        <li class="toc-entry toc-h2 anthy3"><a href="reschedule.jsp" class ="anthy2">Reschedule Ticket</a></li>
         <li class="toc-entry toc-h2 anthy3"><a href="cancelTicket.jsp" class ="anthy2">Cancel Ticket</a></li>
         <li class="toc-entry toc-h2 anthy3"><a href="user_management.jsp" class ="anthy2">User Management (staff only)</a></li>
+        <li class="toc-entry toc-h2 anthy3"><a href="flight_management.jsp" class ="anthy2">Flight Management (staff only)</a></li>
     </ul>
-
 </div>
 
 <%
@@ -35,15 +34,15 @@
         <tr><td>Last Name: </td><td> <%=customer.getLastName()%> </td></tr>     <!-- Display customer's last name -->
         <tr><td>Email: </td><td> <%=customer.getEmail()%> </td></tr>        <!-- Display customer's email -->
         <tr><td>Password: </td><td> <%=customer.getPassword()%> </td></tr>      <!-- Display customer's password -->
-        <tr><td>Passport Number: </td><td> <%=customer.getPassport()%></td></tr>        <!-- Display customer's passport number -->                
-        <tr><td>Date of Birth: </td><td> <%=customer.getDOB()%> </td></tr>      <!-- Display customer's date of birth --> 
+        <tr><td>Passport Number: </td><td> <%=customer.getPassport()%></td></tr>        <!-- Display customer's passport number -->
+        <tr><td>Date of Birth: </td><td> <%=customer.getDOB()%> </td></tr>      <!-- Display customer's date of birth -->
     </table>
 
     <table align="center" cellpadding="50">
         <tr>
             <td><a href="edit_profile.jsp" class="btn btn-primary"> Edit Profile </a></td>      <!-- Button that redirects to 'edit_profile' page -->
-            <td><a href="logoutAction.jsp" class="btn btn-secondary"> Log Out </a></td>     <!-- Button that logs out the current customer -->                    
-            <td><a href="account_deleteAction.jsp" class="btn btn-danger" 
+            <td><a href="logoutAction.jsp" class="btn btn-secondary"> Log Out </a></td>     <!-- Button that logs out the current customer -->
+            <td><a href="account_deleteAction.jsp" class="btn btn-danger"
                    onclick="return confirm('Are you sure?')">Delete Profile </a></td>       <!-- Button that deletes the current customer, displays confirmation message beforehand -->
 
         </tr>

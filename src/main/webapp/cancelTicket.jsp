@@ -15,6 +15,7 @@
         <li class="toc-entry toc-h2 anthy3"><a href="booking_history.jsp" class ="anthy2">Booking History</a></li>
         <li class="toc-entry toc-h2 active anthy3"><a href="cancelTicket.jsp" class ="anthy2">Cancel Ticket</a></li>
         <li class="toc-entry toc-h2 anthy3"><a href="user_management.jsp" class ="anthy2">User Management (staff only)</a></li>
+        <li class="toc-entry toc-h2 anthy3"><a href="flight_management.jsp" class ="anthy2">Flight Management (staff only)</a></li>
     </ul>
 </div>
 
@@ -35,7 +36,7 @@
             <h1>Cancel Ticket</h1>
             <br>
             <p>Choose from the list of your booked tickets to cancel:</p>
-            <% 
+            <%
                 if(tickets.isEmpty()){
             %>
                 <p>You do not have any booked flights to cancel!</p>
@@ -57,7 +58,7 @@
                             <th scope="col">Action</th>
                         </tr>
                     </thead>
-                    <% 
+                    <%
                         for (Ticket ticket : tickets){
                             Flight flight = dbF.getFlight(ticket.getFlightID());
                     %>
@@ -73,13 +74,13 @@
                                 <td><%=ticket.getPassengerSeatNum()%></td>
                                 <td><button type="submit" class="btn btn-primary" id="cancelBtn">Cancel</button></td>
                             </tr>
-                    <% 
+                    <%
                         }
                     %>
                 </table>
-            <% 
+            <%
                 }
-            %>    
+            %>
             </center>
 </div>
 

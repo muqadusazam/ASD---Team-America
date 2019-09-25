@@ -2,7 +2,7 @@ package fc.model;
 
 import java.io.Serializable;
 
-public class Customer implements Serializable{
+public class Customer implements Serializable, Comparable<Customer>{
     
     // declaring private fields for customer class
     private String id;
@@ -104,5 +104,10 @@ public class Customer implements Serializable{
     // setting customer's DOB by the given input
     public void setDOB(String dob){
         this.dob = dob;
+    }
+    
+    @Override
+    public int compareTo(Customer other) {
+        return Integer.compare(Integer.parseInt(getID()), Integer.parseInt(other.getID()));
     }
 }

@@ -1,3 +1,5 @@
+<%@page import="java.text.SimpleDateFormat"%>
+<%@page import="java.util.Date"%>
 <!-- Header file contains Boostrap CSS and page formatting for all pages -->
 <jsp:include page="fc_header.jsp">
 	<jsp:param name="title" value="Cancel Ticket"/>
@@ -18,7 +20,6 @@
         <li class="toc-entry toc-h2 anthy3"><a href="flight_management.jsp" class ="anthy2">Flight Management (staff only)</a></li>
     </ul>
 </div>
-
 
     <!-- COMMENT ON CODE ***************** -->
 
@@ -72,7 +73,12 @@
                                 <td><%=flight.getArrivalDate()%></td>
                                 <td><%=flight.getArrivalTime()%></td>
                                 <td><%=ticket.getPassengerSeatNum()%></td>
-                                <td><button type="submit" class="btn btn-primary" id="cancelBtn">Cancel</button></td>
+                                
+                                <td><form action="cancelTicketConfirm.jsp" method="POST">
+                                    <button type="submit" class="btn btn-primary" name="ticketIDBtn" id="ticketIDBtn"
+                                            value="<%=ticket.getID()%>" 
+                                            onclick="return confirm('Are you sure you want to cancel this ticket?')">Cancel</button>
+                                </form></td>
                             </tr>
                     <%
                         }
@@ -82,7 +88,7 @@
                 }
             %>
             </center>
-</div>
+        </div>
 
 <jsp:include page = "fc_footer.jsp"/>
 <%

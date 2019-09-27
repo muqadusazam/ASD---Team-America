@@ -1,6 +1,8 @@
 package fc.model;
 
 import java.io.Serializable;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 /**
  *
@@ -13,6 +15,7 @@ public class Ticket implements Serializable, Comparable<Ticket>{
     private String customer_id; // FOREIGN KEY
     private String flight_id; // FOREIGN KEY + Update google doc to reflect attr name change
     private String passenger_seat_num;
+    private String purchaseDateTime;
     
     public Ticket() {} // default constructor
     
@@ -26,6 +29,8 @@ public class Ticket implements Serializable, Comparable<Ticket>{
         this.customer_id = customer_id;
         this.flight_id = flight_id;
         this.passenger_seat_num = passenger_seat_num;
+        SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd h:mm aa");
+        this.purchaseDateTime = formatter.format(new Date());
     }
     
     // returning the Ticket ID
@@ -46,6 +51,10 @@ public class Ticket implements Serializable, Comparable<Ticket>{
     // returning the Passenger seat number
     public String getPassengerSeatNum() {
         return passenger_seat_num;
+    }
+    
+    public String getPurchaseDateTime(){
+        return purchaseDateTime;
     }
     
     @Override

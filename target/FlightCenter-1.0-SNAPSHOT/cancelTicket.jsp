@@ -21,15 +21,13 @@
     </ul>
 </div>
 
-    <!-- COMMENT ON CODE ***************** -->
-
 <%
     if (session.getAttribute("customer") == null) {
-        response.sendRedirect("login.jsp");
+        response.sendRedirect("login.jsp"); //If user is not logged in, redirect to login.jsp
     } else {
-        Customer customer = (Customer)session.getAttribute("customer");
+        Customer customer = (Customer)session.getAttribute("customer"); //Get customer object from session
         MongoDBManager_Tickets dbT = new MongoDBManager_Tickets();
-        ArrayList<Ticket> tickets = dbT.getTickets(customer);
+        ArrayList<Ticket> tickets = dbT.getTickets(customer); //Get all tickets booked by this customer
         MongoDBManager_Flights dbF = new MongoDBManager_Flights();
 %>
         <div class="container w-50" style="margin-top: 50px; margin-bottom: 50px">
@@ -38,11 +36,11 @@
             <br>
             <p>Choose from the list of your booked tickets to cancel:</p>
             <%
-                if(tickets.isEmpty()){
+                if(tickets.isEmpty()){ //If no tickets, print error message instead of empty ticket table
             %>
                 <p>You do not have any booked flights to cancel!</p>
             <%
-                } else {
+                } else { //Prints our ticket details in a table
             %>
                 <table class="table table-striped">
                     <thead class="thead-dark">
@@ -60,7 +58,7 @@
                         </tr>
                     </thead>
                     <%
-                        for (Ticket ticket : tickets){
+                        for (Ticket ticket : tickets){ //Get flight details for all of the customer's tickets
                             Flight flight = dbF.getFlight(ticket.getFlightID());
                     %>
                             <tr>
@@ -73,12 +71,12 @@
                                 <td><%=flight.getArrivalDate()%></td>
                                 <td><%=flight.getArrivalTime()%></td>
                                 <td><%=ticket.getPassengerSeatNum()%></td>
-                                
+                                <!-- Generate Cancel button for each ticket in table -->
                                 <td><form action="cancelTicketConfirm.jsp" method="POST">
                                     <button type="submit" class="btn btn-primary" name="ticketIDBtn" id="ticketIDBtn"
                                             value="<%=ticket.getID()%>" 
                                             onclick="return confirm('Are you sure you want to cancel this ticket?')">Cancel</button>
-                                </form></td>
+                                </form></td> <!-- Confirm cancellation before redirect to cancelTicketConfirm.jsp -->
                             </tr>
                     <%
                         }

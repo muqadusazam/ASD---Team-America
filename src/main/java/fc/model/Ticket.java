@@ -29,8 +29,8 @@ public class Ticket implements Serializable, Comparable<Ticket>{
         this.customer_id = customer_id;
         this.flight_id = flight_id;
         this.passenger_seat_num = passenger_seat_num;
-        SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd h:mm aa");
-        this.purchaseDateTime = formatter.format(new Date());
+//        SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd h:mm aa");
+//        this.purchaseDateTime = formatter.format(new Date());
     }
     
     // returning the Ticket ID

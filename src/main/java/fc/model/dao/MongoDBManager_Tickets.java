@@ -154,6 +154,6 @@ public class MongoDBManager_Tickets extends MongoDBConnector {
                 .append("customer_id", ticket.getCustomerID())
                 .append("flight_id", ticket.getFlightID())
                 .append("passenger_seat_num", ticket.getPassengerSeatNum())
-                .append("purchaseDateTime", ticket.getPurchaseDateTime());
+                /*.append("purchaseDateTime", ticket.getPurchaseDateTime())*/;
     }
 }

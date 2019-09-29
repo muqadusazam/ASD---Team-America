@@ -55,13 +55,12 @@ public class LoginServlet extends HttpServlet {
 
         if (errors.isEmpty()) { //redirect to next page if no error is detected in errors map
             response.sendRedirect("main.jsp");
+            session.setAttribute("customer", customer);
         }
         else { //put errors in request scope and forward them back to register.jsp to display error messages
             request.setAttribute("errors", errors);
             request.getRequestDispatcher("login.jsp").forward(request, response); // staying back on login jsp page
         }
-        
-        session.setAttribute("customer_ID", customer.getID());
     }
     
         //regex for validating input from register.jsp form

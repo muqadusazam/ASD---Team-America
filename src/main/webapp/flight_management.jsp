@@ -2,8 +2,19 @@
 <%@page import="fc.model.Flight"%>
 <%@page import="fc.model.dao.*"%>
 <jsp:include page="fc_header.jsp">
-	<jsp:param name="title" value="Flight Center/flights"/>
+	<jsp:param name="title" value="Flight Center/Flight Management"/>
 </jsp:include>
+<div class="col-12 col-md-3 col-xl-2 bd-sidebar" style = "margin-top: 100px; padding: 5px; float:left; background-color:#cecece">
+    <ul class="navbar-nav mr-auto">
+        <li class="toc-entry toc-h2 anthy3"><a href="account.jsp" class ="anthy2">Profile</a></li>
+        <li class="toc-entry toc-h2 anthy3"><a href="booking_history.jsp" class ="anthy2">Booking History</a></li>
+        <li class="toc-entry toc-h2 anthy3"><a href="reschedule.jsp" class ="anthy2">Reschedule Ticket</a></li>
+        <li class="toc-entry toc-h2 anthy3"><a href="cancelTicket.jsp" class ="anthy2">Cancel Ticket</a></li>
+        <li class="toc-entry toc-h2 anthy3"><a href="user_management.jsp" class ="anthy2">User Management (staff only)</a></li>
+        <li class="toc-entry toc-h2 active anthy3"><a href="flight_management.jsp" class ="anthy2">Flight Management (staff only)</a></li>
+    </ul>
+</div>
+
 <%  
     //Call the database manager for "Flight" table
     MongoDBManager_Flights db = new MongoDBManager_Flights();   
@@ -12,9 +23,9 @@
     //getFlight returns ArrayList of Flight object in the database table 
     ArrayList<Flight> flights = db.getFlights();
 %>
-    <div class="container" style="margin-top: 50px">
+    <div class="container" style="margin-top: 50px; float: right">
         <h1 class ="bd-content-title">&nbsp;List of Flights</h1>
-        
+        <a href = "flightAdd_management.jsp" class = "btn btn-lg btn-primary" style="margin:20px; float: right"> Add Flight </a> 
         <!--Table for the list of flights-->
         <table class="table"style="margin-top: 20px">
           <thead class="thead-dark">
@@ -27,10 +38,11 @@
               <th scope="col">Arrival</th>
               <th scope ="col">Status</th>
               <th scope="col">Price</th>
+              <th scope="col">Option</th>
             </tr>
           </thead>
           <tbody>
-                                                 <%
+                        <%
                         for (Flight currentFlight : flights)  //for loop for flights data in the "Flight" table
                                                                //to show all data in flights in the form of table
                             {
@@ -44,6 +56,13 @@
                                 <td ><%=currentFlight.getArrivalDate()%></td>
                                 <td ><%=currentFlight.getStatus()%></td>
                                 <td ><%=currentFlight.getPrice()%></td>
+                                <td>
+                                        <div style="float: left;"> 
+                                            <form action="flightDelete_management.jsp" method="POST">
+                                                <button type="submit" name="ID" value="<%= currentFlight.getID() %>" class="btn btn-primary">Delete</button> 
+                                            </form>
+                                        </div>
+                                </td>
                             </tr>
                         <%
                             }

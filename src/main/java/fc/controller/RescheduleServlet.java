@@ -42,7 +42,14 @@ public class RescheduleServlet extends HttpServlet {
         
         //Check if Flight ID match
         if (oldFlight.getID().compareTo(oldTicket.getFlightID()) >= 0) {
-            errors.put("dateErr", "Flight ID does not match Flight ID on Ticket.");
+            request.setAttribute("error", "Flight ID does not match Flight ID on Ticket.");
+            request.getRequestDispatcher("reschedule.jsp").forward(request, response);
+        }
+        
+        //Check if Flight ID match
+        if (oldFlight.getID().compareTo(oldTicket.getFlightID()) == 0) {
+            request.setAttribute("error", "You selected the same Flight on ticket.");
+            request.getRequestDispatcher("reschedule.jsp").forward(request, response);
         }
         
         //Get departure and arrival date from old flight
@@ -60,15 +67,17 @@ public class RescheduleServlet extends HttpServlet {
         
         //Check if departure date is after the old departure date
         if (oldDepDate.compareTo(newDepDate) >= 0) {
-            errors.put("dateErr", "The departure date must be after the old departure date.");
+            request.setAttribute("error", "The departure date must be after the old departure date.");
+            request.getRequestDispatcher("reschedule.jsp").forward(request, response);
         }
         
         //Check if arrival date is after the old departure date
         if (oldDestDate.compareTo(newDestDate) >= 0) {
-            errors.put("dateErr", "The destination date must be after the old departure date.");
+            request.setAttribute("error", "The destination date must be after the old departure date.");
+            request.getRequestDispatcher("reschedule.jsp").forward(request, response);
         }
         
-        //Check errors empty and proceed to reschedule ticket else display error message
+        //Check errors empty and proceed to reschedule ticket 
         if (errors.isEmpty()) {
             MongoDBManager_Tickets dbt = new MongoDBManager_Tickets();
             
@@ -76,14 +85,10 @@ public class RescheduleServlet extends HttpServlet {
                     oldTicket.getCustomerID(),
                     newFlightID,
                     oldTicket.getPassengerSeatNum());
-            
             dbt.remove(oldTicket);
             dbt.add(newTicket);
             
             session.setAttribute("success", "The ticket has been successfully rescheduled!");
-            response.sendRedirect("reschedule.jsp");
-        } else {
-            session.setAttribute("errors", errors);
             response.sendRedirect("reschedule.jsp");
         }
     }

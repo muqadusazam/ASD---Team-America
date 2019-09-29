@@ -39,7 +39,7 @@
     You do not currently have any tickets booked. Click <a href="flights_search.jsp">here</a> to book a new flight.
 </div>
 <%
-} else {
+    } else {
 %>
 <!-- Again specifying the layout settings for the sorting function -->
 <div class="mx-auto" style="width: 900px; text-align: center;" >
@@ -82,7 +82,7 @@
             <td><%=flight.getDepartureDate()%></td>
             <td>
                 <form action="reschedule.jsp" method="POST">
-                    <button type="submit" class="btn btn-primary" name="ticketID" value="<%=ticket.getID()%>">Reschedule</button>
+                    <button type="submit" class="btn btn-primary" name="ticketID" id="ticketID" value="<%=ticket.getID()%>">Reschedule</button>
                 </form>
             </td>
         </tr>

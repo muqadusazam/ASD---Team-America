@@ -45,22 +45,22 @@
 <div class="mx-auto" style="width: 900px; text-align: center;" >
     <label><b>Sort: </b></label>
     <!-- 3 type of values added for the drop-down menu -->
-    <select>
-        <option value="DateAdded">Date Added</option>
-        <option value="Alphabetically">Alphabetically</option>
-        <option value="IDOrdered">ID ordered</option>
+    <select id = "sortMenu" onchange="changeFunc();">
+        <option value="TicketID">Ticket ID</option>
+        <option value="Departure">Departure</option>
+        <option value="Destination">Destination</option>
     </select>
 </div>
 
 <div class="mx-auto" style="width: 900px; text-align: center;">
     <table class="table table-striped">
         <thead class="thead-dark">
-        <th>Ticket ID</th>
+        <th id = "ticketID">Ticket ID</th>
         <th>First Name</th>
         <th>Last Name</th>
-        <th>Departure</th>
+        <th id = "departure">Departure</th>
         <th>Departure Date</th>
-        <th>Destination</th>
+        <th id = "destination">Destination</th>
         <th>Destination Date</th>
         <th>Action</th>
         </thead>
@@ -85,6 +85,22 @@
                     <button type="submit" class="btn btn-primary" name="ticketID" value="<%=ticket.getID()%>">Reschedule</button>
                 </form>
             </td>
+            
+            <script type="text/javascript">
+
+   function changeFunc() {
+    var selectBox = document.getElementById("sortMenu");
+    var selectedValue = selectBox.options[selectBox.selectedIndex].value;
+    if (selectedValue == "TicketID"){
+        alert("You have selected ticket: " + selectedValue);
+    }else if (selectedValue == "Departure"){
+        alert("You have selected departure: " + selectedValue);
+    }else if (selectedValue == "Destination"){
+        alert("You have selected destination: " + selectedValue);
+    }
+   }
+
+  </script>
         </tr>
         <%
                 }

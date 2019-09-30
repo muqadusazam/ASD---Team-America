@@ -10,13 +10,22 @@
         <servlet-class>fc.controller.CustomerEditAdminServlet</servlet-class>
         <load-on-startup>0</load-on-startup>
     </servlet>
+    <servlet>
+        <servlet-name>AdminRescheduleServlet</servlet-name>
+        <servlet-class>fc.controller.AdminRescheduleServlet</servlet-class>
+        <load-on-startup>0</load-on-startup>
+    </servlet>
     <servlet-mapping>
         <servlet-name>CustomerAdminServlet</servlet-name>
         <url-pattern>/CustomerAdminServlet</url-pattern>
     </servlet-mapping>
-     <servlet-mapping>
+    <servlet-mapping>
         <servlet-name>CustomerEditAdminServlet</servlet-name>
         <url-pattern>/CustomerEditAdminServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AdminRescheduleServlet</servlet-name>
+        <url-pattern>/AdminRescheduleServlet</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

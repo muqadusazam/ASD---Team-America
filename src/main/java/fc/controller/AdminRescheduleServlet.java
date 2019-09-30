@@ -15,7 +15,7 @@ import java.util.Map;
 
 /**
  *
- * @author Liam
+ * @author William
  */
 @WebServlet(name = "AdminRescheduleServlet", urlPatterns = {"/AdminRescheduleServlet"})
 public class AdminRescheduleServlet extends HttpServlet {

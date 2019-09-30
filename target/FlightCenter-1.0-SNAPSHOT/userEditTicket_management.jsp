@@ -25,7 +25,7 @@
         //Get Ticket object from database
         MongoDBManager_Tickets dbt = new MongoDBManager_Tickets();
         Ticket ticket = dbt.getTicket((String) request.getParameter("ticketID"));
-
+        session.setAttribute("oldTicket", ticket);
         Customer customer = dbc.getCustomer(ticket.getCustomerID());
         //Get flight from database based on ticket in session
         MongoDBManager_Flights dbf = new MongoDBManager_Flights();

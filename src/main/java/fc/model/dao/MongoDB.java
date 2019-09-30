@@ -15,6 +15,6 @@ public abstract class MongoDB {
     protected final String KEY = "@ds263927.mlab.com:63927/heroku_dlsrflnl"; 
     
     protected final String CUSTOMER_COLLECTION = "ASD.Customers(WILLIAM)";
-    protected final String TICKET_COLLECTION   = "ASD.Tickets(LIAM)";
+    protected final String TICKET_COLLECTION   = "ASD.Tickets";
     protected final String FLIGHT_COLLECTION  = "ASD.Flights(LIAM)";
 }

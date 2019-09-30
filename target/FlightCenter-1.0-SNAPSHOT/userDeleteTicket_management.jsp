@@ -26,9 +26,9 @@
     <h1>Ticket Deleted Successfully!</h1>
 </div>
 
-<div class="mx-auto" style="width: 950px;">
+<div class="mx-auto" style="width: 950px; text-align: center;">
     <form action="userTicket_management.jsp" method="POST">
-        <button type="submit" name="ID" value=<%=customerID%> class="btn btn-danger">Delete</button> 
+        <button type="submit" name="ID" value=<%=customerID%> class="btn btn-primary">Go Back</button> 
     </form>
 </div>
 

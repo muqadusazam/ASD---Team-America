@@ -11,7 +11,7 @@
         "steps": [
           {
             "result": {
-              "duration": 7654592080,
+              "duration": 9622361584,
               "status": "passed"
             },
             "line": 8,
@@ -33,7 +33,7 @@
         "steps": [
           {
             "result": {
-              "duration": 1181945238,
+              "duration": 1668013467,
               "status": "passed"
             },
             "line": 11,
@@ -71,7 +71,7 @@
           },
           {
             "result": {
-              "duration": 913943108,
+              "duration": 1023039476,
               "status": "passed"
             },
             "line": 12,
@@ -92,7 +92,7 @@
         "steps": [
           {
             "result": {
-              "duration": 5477403973,
+              "duration": 6544422223,
               "status": "passed"
             },
             "line": 8,
@@ -114,7 +114,7 @@
         "steps": [
           {
             "result": {
-              "duration": 459754133,
+              "duration": 471000268,
               "status": "passed"
             },
             "line": 15,
@@ -160,7 +160,7 @@
           },
           {
             "result": {
-              "duration": 40069,
+              "duration": 104467,
               "status": "passed"
             },
             "line": 16,
@@ -187,7 +187,7 @@
         "steps": [
           {
             "result": {
-              "duration": 5165526613,
+              "duration": 5882801193,
               "status": "passed"
             },
             "line": 8,
@@ -209,7 +209,7 @@
         "steps": [
           {
             "result": {
-              "duration": 496375512,
+              "duration": 551379716,
               "status": "passed"
             },
             "line": 15,
@@ -255,7 +255,7 @@
           },
           {
             "result": {
-              "duration": 26952,
+              "duration": 40763,
               "status": "passed"
             },
             "line": 16,
@@ -282,7 +282,7 @@
         "steps": [
           {
             "result": {
-              "duration": 5134905607,
+              "duration": 6114290683,
               "status": "passed"
             },
             "line": 8,
@@ -304,7 +304,7 @@
         "steps": [
           {
             "result": {
-              "duration": 479370407,
+              "duration": 546208760,
               "status": "passed"
             },
             "line": 15,
@@ -350,7 +350,7 @@
           },
           {
             "result": {
-              "duration": 38369,
+              "duration": 40844,
               "status": "passed"
             },
             "line": 16,
@@ -377,8 +377,9 @@
         "steps": [
           {
             "result": {
-              "duration": 5514579740,
-              "status": "passed"
+              "duration": 6749787499,
+              "error_message": "org.openqa.selenium.WebDriverException: Failed to decode response from marionette\nBuild info: version: \u00273.141.59\u0027, revision: \u0027e82be7d358\u0027, time: \u00272018-11-14T08:17:03\u0027\nSystem info: host: \u0027Williams-MacBook-Pro.local\u0027, ip: \u0027fe80:0:0:0:10a6:f70f:ba8e:98ca%en0\u0027, os.name: \u0027Mac OS X\u0027, os.arch: \u0027x86_64\u0027, os.version: \u002710.14.4\u0027, java.version: \u00271.8.0_181\u0027\nDriver info: org.openqa.selenium.firefox.FirefoxDriver\nCapabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 69.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20190827005903, moz:geckodriverVersion: 0.25.0, moz:headless: false, moz:processID: 3309, moz:profile: /var/folders/vp/x3kzn9lx2px..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: MAC, platformName: MAC, platformVersion: 18.5.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}\nSession ID: 6bba7771-05f7-9140-9379-b97596b35804\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\n\tat sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\n\tat java.lang.reflect.Constructor.newInstance(Constructor.java:423)\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:609)\n\tat org.openqa.selenium.remote.RemoteWebDriver.getCurrentUrl(RemoteWebDriver.java:287)\n\tat fc.test.CustomerAdminFeature.i_am_on_Add_Customer_page(CustomerAdminFeature.java:30)\n\tat ✽.Given I am on Add Customer page(CustomerAdminFeature.feature:8)\n",
+              "status": "failed"
             },
             "line": 8,
             "name": "I am on Add Customer page",
@@ -399,8 +400,7 @@
         "steps": [
           {
             "result": {
-              "duration": 507839128,
-              "status": "passed"
+              "status": "skipped"
             },
             "line": 15,
             "name": "I fill in \"Why\" and \"\" and \"dobby@do.b\" and \"qwert1\" and \"DD001\" and \"1960-12-28\"",
@@ -445,8 +445,7 @@
           },
           {
             "result": {
-              "duration": 46703,
-              "status": "passed"
+              "status": "skipped"
             },
             "line": 16,
             "name": "I should stay on userAdd management page",
@@ -472,8 +471,9 @@
         "steps": [
           {
             "result": {
-              "duration": 5392815514,
-              "status": "passed"
+              "duration": 48169965510,
+              "error_message": "org.openqa.selenium.WebDriverException: invalid argument: can\u0027t kill an exited process\nBuild info: version: \u00273.141.59\u0027, revision: \u0027e82be7d358\u0027, time: \u00272018-11-14T08:17:03\u0027\nSystem info: host: \u0027Williams-MacBook-Pro.local\u0027, ip: \u0027fe80:0:0:0:10a6:f70f:ba8e:98ca%en0\u0027, os.name: \u0027Mac OS X\u0027, os.arch: \u0027x86_64\u0027, os.version: \u002710.14.4\u0027, java.version: \u00271.8.0_181\u0027\nDriver info: driver.version: FirefoxDriver\nremote stacktrace: \n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\n\tat sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\n\tat java.lang.reflect.Constructor.newInstance(Constructor.java:423)\n\tat org.openqa.selenium.remote.W3CHandshakeResponse.lambda$errorHandler$0(W3CHandshakeResponse.java:62)\n\tat org.openqa.selenium.remote.HandshakeResponse.lambda$getResponseFunction$0(HandshakeResponse.java:30)\n\tat org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$0(ProtocolHandshake.java:126)\n\tat java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)\n\tat java.util.Spliterators$ArraySpliterator.tryAdvance(Spliterators.java:958)\n\tat java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:126)\n\tat java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:498)\n\tat java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:485)\n\tat java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:471)\n\tat java.util.stream.FindOps$FindOp.evaluateSequential(FindOps.java:152)\n\tat java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)\n\tat java.util.stream.ReferencePipeline.findFirst(ReferencePipeline.java:464)\n\tat org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:128)\n\tat org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:74)\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)\n\tat org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)\n\tat org.openqa.selenium.remote.RemoteWebDriver.\u003cinit\u003e(RemoteWebDriver.java:131)\n\tat org.openqa.selenium.firefox.FirefoxDriver.\u003cinit\u003e(FirefoxDriver.java:147)\n\tat org.openqa.selenium.firefox.FirefoxDriver.\u003cinit\u003e(FirefoxDriver.java:125)\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\n\tat sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\n\tat java.lang.reflect.Constructor.newInstance(Constructor.java:423)\n\tat java.lang.Class.newInstance(Class.java:442)\n\tat fc.test.CustomerAdminFeature.i_am_on_Add_Customer_page(CustomerAdminFeature.java:28)\n\tat ✽.Given I am on Add Customer page(CustomerAdminFeature.feature:8)\n",
+              "status": "failed"
             },
             "line": 8,
             "name": "I am on Add Customer page",
@@ -494,8 +494,7 @@
         "steps": [
           {
             "result": {
-              "duration": 494749122,
-              "status": "passed"
+              "status": "skipped"
             },
             "line": 15,
             "name": "I fill in \"Test\" and \"Name\" and \"poo@head.aus\" and \"qwert1\" and \"PH001\" and \"\"",
@@ -540,8 +539,7 @@
           },
           {
             "result": {
-              "duration": 69582,
-              "status": "passed"
+              "status": "skipped"
             },
             "line": 16,
             "name": "I should stay on userAdd management page",
@@ -571,4 +569,4 @@
       }
     ]
   }
-]
+]]

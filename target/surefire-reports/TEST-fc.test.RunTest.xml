@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="24" failures="0" name="fc.test.RunTest" time="39.408" errors="0" skipped="0">
+<testsuite tests="24" failures="0" name="fc.test.RunTest" time="87.937" errors="4" skipped="4">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/jre/lib"/>
@@ -14,10 +14,10 @@
     <property name="user.country" value="AU"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="sun.os.patch.level" value="unknown"/>
-    <property name="test" value="fc.test.RunTest"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
     <property name="user.dir" value="/Users/william/Documents/Uni/2019 Sem 2/Advanced Software Development/ASD---Team-America"/>
     <property name="java.runtime.version" value="1.8.0_181-b13"/>
+    <property name="netbeans.deploy" value="true"/>
     <property name="java.awt.graphicsenv" value="sun.awt.CGraphicsEnvironment"/>
     <property name="java.endorsed.dirs" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/jre/lib/endorsed"/>
     <property name="os.arch" value="x86_64"/>
@@ -45,7 +45,7 @@
     <property name="java.vm.specification.version" value="1.8"/>
     <property name="sun.arch.data.model" value="64"/>
     <property name="java.home" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/jre"/>
-    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher -Dtest=fc.test.RunTest -Dmaven.ext.class.path=/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/java/maven-nblib/netbeans-eventspy.jar surefire:test"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher -Dnetbeans.deploy=true -Dnetbeans.deploy.clientUrlPart=/main.jsp -Dmaven.ext.class.path=/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/java/maven-nblib/netbeans-eventspy.jar package"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
     <property name="user.language" value="en"/>
     <property name="awt.toolkit" value="sun.lwawt.macosx.LWCToolkit"/>
@@ -60,18 +60,19 @@
     <property name="sun.cpu.endian" value="little"/>
     <property name="sun.io.unicode.encoding" value="UnicodeBig"/>
     <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="netbeans.deploy.clientUrlPart" value="/main.jsp"/>
     <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase classname="Scenario: Successful registration" name="Given I am on Add Customer page" time="0"/>
+  <testcase classname="Scenario: Successful registration" name="Given I am on Add Customer page" time="0.002"/>
   <testcase classname="Scenario: Successful registration" name="When I fill in \&quot;Customer\&quot; and \&quot;Test\&quot; and \&quot;cust@tester.com\&quot; and \&quot;abcde1\&quot; and \&quot;TT999\&quot; and \&quot;1992-12-12\&quot;" time="0"/>
   <testcase classname="Scenario: Successful registration" name="Then I should see user management page" time="0"/>
   <testcase classname="Scenario: Successful registration" name="Scenario: Successful registration" time="0"/>
   <testcase classname="|  | One | user@one.co | qwert1 | UO001 | 1994-04-15 | Missing first name. |" name="Given I am on Add Customer page" time="0"/>
   <testcase classname="|  | One | user@one.co | qwert1 | UO001 | 1994-04-15 | Missing first name. |" name="When I fill in \&quot;\&quot; and \&quot;One\&quot; and \&quot;user@one.co\&quot; and \&quot;qwert1\&quot; and \&quot;UO001\&quot; and \&quot;1994-04-15\&quot;" time="0"/>
   <testcase classname="|  | One | user@one.co | qwert1 | UO001 | 1994-04-15 | Missing first name. |" name="Then I should stay on userAdd management page" time="0"/>
-  <testcase classname="|  | One | user@one.co | qwert1 | UO001 | 1994-04-15 | Missing first name. |" name="|  | One | user@one.co | qwert1 | UO001 | 1994-04-15 | Missing first name. |" time="0"/>
-  <testcase classname="| James | Ten | ben@ten.co | qwert1 |  | 2000-01-01 | Missing password. |" name="Given I am on Add Customer page" time="0.001"/>
+  <testcase classname="|  | One | user@one.co | qwert1 | UO001 | 1994-04-15 | Missing first name. |" name="|  | One | user@one.co | qwert1 | UO001 | 1994-04-15 | Missing first name. |" time="0.001"/>
+  <testcase classname="| James | Ten | ben@ten.co | qwert1 |  | 2000-01-01 | Missing password. |" name="Given I am on Add Customer page" time="0"/>
   <testcase classname="| James | Ten | ben@ten.co | qwert1 |  | 2000-01-01 | Missing password. |" name="When I fill in \&quot;James\&quot; and \&quot;Ten\&quot; and \&quot;ben@ten.co\&quot; and \&quot;qwert1\&quot; and \&quot;\&quot; and \&quot;2000-01-01\&quot;" time="0"/>
   <testcase classname="| James | Ten | ben@ten.co | qwert1 |  | 2000-01-01 | Missing password. |" name="Then I should stay on userAdd management page" time="0"/>
   <testcase classname="| James | Ten | ben@ten.co | qwert1 |  | 2000-01-01 | Missing password. |" name="| James | Ten | ben@ten.co | qwert1 |  | 2000-01-01 | Missing password. |" time="0"/>
@@ -79,12 +80,216 @@
   <testcase classname="| Donald | Kid | trump@gov.us |  | DT001 | 1950-11-13 | Missing passport number. |" name="When I fill in \&quot;Donald\&quot; and \&quot;Kid\&quot; and \&quot;trump@gov.us\&quot; and \&quot;\&quot; and \&quot;DT001\&quot; and \&quot;1950-11-13\&quot;" time="0"/>
   <testcase classname="| Donald | Kid | trump@gov.us |  | DT001 | 1950-11-13 | Missing passport number. |" name="Then I should stay on userAdd management page" time="0"/>
   <testcase classname="| Donald | Kid | trump@gov.us |  | DT001 | 1950-11-13 | Missing passport number. |" name="| Donald | Kid | trump@gov.us |  | DT001 | 1950-11-13 | Missing passport number. |" time="0"/>
-  <testcase classname="| Why |  | dobby@do.b | qwert1 | DD001 | 1960-12-28 | Missing last name. |" name="Given I am on Add Customer page" time="0"/>
-  <testcase classname="| Why |  | dobby@do.b | qwert1 | DD001 | 1960-12-28 | Missing last name. |" name="When I fill in \&quot;Why\&quot; and \&quot;\&quot; and \&quot;dobby@do.b\&quot; and \&quot;qwert1\&quot; and \&quot;DD001\&quot; and \&quot;1960-12-28\&quot;" time="0"/>
-  <testcase classname="| Why |  | dobby@do.b | qwert1 | DD001 | 1960-12-28 | Missing last name. |" name="Then I should stay on userAdd management page" time="0"/>
-  <testcase classname="| Why |  | dobby@do.b | qwert1 | DD001 | 1960-12-28 | Missing last name. |" name="| Why |  | dobby@do.b | qwert1 | DD001 | 1960-12-28 | Missing last name. |" time="0"/>
-  <testcase classname="| Test | Name | poo@head.aus | qwert1 | PH001 |  | Missing DOB. |" name="Given I am on Add Customer page" time="0"/>
-  <testcase classname="| Test | Name | poo@head.aus | qwert1 | PH001 |  | Missing DOB. |" name="When I fill in \&quot;Test\&quot; and \&quot;Name\&quot; and \&quot;poo@head.aus\&quot; and \&quot;qwert1\&quot; and \&quot;PH001\&quot; and \&quot;\&quot;" time="0"/>
-  <testcase classname="| Test | Name | poo@head.aus | qwert1 | PH001 |  | Missing DOB. |" name="Then I should stay on userAdd management page" time="0"/>
-  <testcase classname="| Test | Name | poo@head.aus | qwert1 | PH001 |  | Missing DOB. |" name="| Test | Name | poo@head.aus | qwert1 | PH001 |  | Missing DOB. |" time="0.001"/>
+  <testcase classname="| Why |  | dobby@do.b | qwert1 | DD001 | 1960-12-28 | Missing last name. |" name="Given I am on Add Customer page" time="0.006">
+    <error message="Failed to decode response from marionette
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;Williams-MacBook-Pro.local&apos;, ip: &apos;fe80:0:0:0:10a6:f70f:ba8e:98ca%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.14.4&apos;, java.version: &apos;1.8.0_181&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 69.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20190827005903, moz:geckodriverVersion: 0.25.0, moz:headless: false, moz:processID: 3309, moz:profile: /var/folders/vp/x3kzn9lx2px..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: MAC, platformName: MAC, platformVersion: 18.5.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 6bba7771-05f7-9140-9379-b97596b35804" type="org.openqa.selenium.WebDriverException">org.openqa.selenium.WebDriverException: Failed to decode response from marionette
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;Williams-MacBook-Pro.local&apos;, ip: &apos;fe80:0:0:0:10a6:f70f:ba8e:98ca%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.14.4&apos;, java.version: &apos;1.8.0_181&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 69.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20190827005903, moz:geckodriverVersion: 0.25.0, moz:headless: false, moz:processID: 3309, moz:profile: /var/folders/vp/x3kzn9lx2px..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: MAC, platformName: MAC, platformVersion: 18.5.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 6bba7771-05f7-9140-9379-b97596b35804
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:609)
+	at org.openqa.selenium.remote.RemoteWebDriver.getCurrentUrl(RemoteWebDriver.java:287)
+	at fc.test.CustomerAdminFeature.i_am_on_Add_Customer_page(CustomerAdminFeature.java:30)
+	at ✽.Given I am on Add Customer page(CustomerAdminFeature.feature:8)
+</error>
+    <system-out>
+  @Customer_admin
+  Scenario Outline: Unsuccessful registration                                                &amp;#27;[90m# CustomerAdminFeature.feature:21&amp;#27;[0m
+    &amp;#27;[32mWhen &amp;#27;[0m&amp;#27;[32mI fill in &quot;&amp;#27;[0m&amp;#27;[32m&amp;#27;[1mDonald&amp;#27;[0m&amp;#27;[32m&quot; and &quot;&amp;#27;[0m&amp;#27;[32m&amp;#27;[1mKid&amp;#27;[0m&amp;#27;[32m&quot; and &quot;&amp;#27;[0m&amp;#27;[32m&amp;#27;[1mtrump@gov.us&amp;#27;[0m&amp;#27;[32m&quot; and &quot;&amp;#27;[0m&amp;#27;[32m&amp;#27;[1m&amp;#27;[0m&amp;#27;[32m&quot; and &quot;&amp;#27;[0m&amp;#27;[32m&amp;#27;[1mDT001&amp;#27;[0m&amp;#27;[32m&quot; and &quot;&amp;#27;[0m&amp;#27;[32m&amp;#27;[1m1950-11-13&amp;#27;[0m&amp;#27;[32m&quot;&amp;#27;[0m &amp;#27;[90m# CustomerAdminFeature.i_fill_in(String,String,String,String,String,String)&amp;#27;[0m
+    &amp;#27;[32mThen &amp;#27;[0m&amp;#27;[32mI should stay on userAdd management page&amp;#27;[0m                                            &amp;#27;[90m# CustomerAdminFeature.i_should_stay_on_userAdd_management_page()&amp;#27;[0m
+16:40:14.781 [main] DEBUG io.github.bonigarcia.wdm.WebDriverManager - Latest version of wires, geckodriver is 0.25.0 (recently resolved)
+16:40:14.782 [main] INFO io.github.bonigarcia.wdm.WebDriverManager - Found geckodriver in cache: /Users/william/.m2/repository/webdriver/geckodriver/macos/0.25.0/geckodriver 
+16:40:14.783 [main] DEBUG io.github.bonigarcia.wdm.WebDriverManager - Driver for wires, geckodriver (latest version) found in cache /Users/william/.m2/repository/webdriver/geckodriver/macos/0.25.0/geckodriver
+16:40:14.783 [main] INFO io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.gecko.driver as /Users/william/.m2/repository/webdriver/geckodriver/macos/0.25.0/geckodriver
+</system-out>
+    <system-err>1569393614928	mozrunner::runner	INFO	Running command: &quot;/Applications/Firefox.app/Contents/MacOS/firefox-bin&quot; &quot;-marionette&quot; &quot;-foreground&quot; &quot;-no-remote&quot; &quot;-profile&quot; &quot;/var/folders/vp/x3kzn9lx2px4827rgdl23cz00000gn/T/rust_mozprofileefAZL4&quot;
+1569393615667	addons.webextension.screenshots@mozilla.org	WARN	Loading extension &apos;screenshots@mozilla.org&apos;: Reading manifest: Invalid extension permission: mozillaAddons
+1569393615668	addons.webextension.screenshots@mozilla.org	WARN	Loading extension &apos;screenshots@mozilla.org&apos;: Reading manifest: Invalid extension permission: telemetry
+1569393615668	addons.webextension.screenshots@mozilla.org	WARN	Loading extension &apos;screenshots@mozilla.org&apos;: Reading manifest: Invalid extension permission: resource://pdf.js/
+1569393615668	addons.webextension.screenshots@mozilla.org	WARN	Loading extension &apos;screenshots@mozilla.org&apos;: Reading manifest: Invalid extension permission: about:reader*
+1569393618725	Marionette	INFO	Listening on port 55171
+1569393618793	Marionette	WARN	TLS certificate errors will be ignored for this session
+Sep 25, 2019 4:40:18 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+1569393620628	Marionette	INFO	Stopped listening on port 55171
+</system-err>
+  </testcase>
+  <testcase classname="| Why |  | dobby@do.b | qwert1 | DD001 | 1960-12-28 | Missing last name. |" name="| Why |  | dobby@do.b | qwert1 | DD001 | 1960-12-28 | Missing last name. |" time="0.007">
+    <error message="Failed to decode response from marionette
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;Williams-MacBook-Pro.local&apos;, ip: &apos;fe80:0:0:0:10a6:f70f:ba8e:98ca%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.14.4&apos;, java.version: &apos;1.8.0_181&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 69.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20190827005903, moz:geckodriverVersion: 0.25.0, moz:headless: false, moz:processID: 3309, moz:profile: /var/folders/vp/x3kzn9lx2px..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: MAC, platformName: MAC, platformVersion: 18.5.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 6bba7771-05f7-9140-9379-b97596b35804" type="org.openqa.selenium.WebDriverException">org.openqa.selenium.WebDriverException: Failed to decode response from marionette
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;Williams-MacBook-Pro.local&apos;, ip: &apos;fe80:0:0:0:10a6:f70f:ba8e:98ca%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.14.4&apos;, java.version: &apos;1.8.0_181&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 69.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20190827005903, moz:geckodriverVersion: 0.25.0, moz:headless: false, moz:processID: 3309, moz:profile: /var/folders/vp/x3kzn9lx2px..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: MAC, platformName: MAC, platformVersion: 18.5.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 6bba7771-05f7-9140-9379-b97596b35804
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:609)
+	at org.openqa.selenium.remote.RemoteWebDriver.getCurrentUrl(RemoteWebDriver.java:287)
+	at fc.test.CustomerAdminFeature.i_am_on_Add_Customer_page(CustomerAdminFeature.java:30)
+	at ✽.Given I am on Add Customer page(CustomerAdminFeature.feature:8)
+</error>
+  </testcase>
+  <testcase classname="| Why |  | dobby@do.b | qwert1 | DD001 | 1960-12-28 | Missing last name. |" name="When I fill in \&quot;Why\&quot; and \&quot;\&quot; and \&quot;dobby@do.b\&quot; and \&quot;qwert1\&quot; and \&quot;DD001\&quot; and \&quot;1960-12-28\&quot;" time="0.007">
+    <skipped/>
+  </testcase>
+  <testcase classname="| Why |  | dobby@do.b | qwert1 | DD001 | 1960-12-28 | Missing last name. |" name="Then I should stay on userAdd management page" time="0.007">
+    <skipped/>
+  </testcase>
+  <testcase classname="| Test | Name | poo@head.aus | qwert1 | PH001 |  | Missing DOB. |" name="Given I am on Add Customer page" time="0.001">
+    <error message="invalid argument: can&apos;t kill an exited process
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;Williams-MacBook-Pro.local&apos;, ip: &apos;fe80:0:0:0:10a6:f70f:ba8e:98ca%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.14.4&apos;, java.version: &apos;1.8.0_181&apos;
+Driver info: driver.version: FirefoxDriver
+remote stacktrace: " type="org.openqa.selenium.WebDriverException">org.openqa.selenium.WebDriverException: invalid argument: can&apos;t kill an exited process
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;Williams-MacBook-Pro.local&apos;, ip: &apos;fe80:0:0:0:10a6:f70f:ba8e:98ca%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.14.4&apos;, java.version: &apos;1.8.0_181&apos;
+Driver info: driver.version: FirefoxDriver
+remote stacktrace: 
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$errorHandler$0(W3CHandshakeResponse.java:62)
+	at org.openqa.selenium.remote.HandshakeResponse.lambda$getResponseFunction$0(HandshakeResponse.java:30)
+	at org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$0(ProtocolHandshake.java:126)
+	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
+	at java.util.Spliterators$ArraySpliterator.tryAdvance(Spliterators.java:958)
+	at java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:126)
+	at java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:498)
+	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:485)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:471)
+	at java.util.stream.FindOps$FindOp.evaluateSequential(FindOps.java:152)
+	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.util.stream.ReferencePipeline.findFirst(ReferencePipeline.java:464)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:128)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:74)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:131)
+	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:147)
+	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:125)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at java.lang.Class.newInstance(Class.java:442)
+	at fc.test.CustomerAdminFeature.i_am_on_Add_Customer_page(CustomerAdminFeature.java:28)
+	at ✽.Given I am on Add Customer page(CustomerAdminFeature.feature:8)
+</error>
+    <system-out>
+  @Customer_admin
+  Scenario Outline: Unsuccessful registration                                              &amp;#27;[90m# CustomerAdminFeature.feature:22&amp;#27;[0m
+    &amp;#27;[36mWhen &amp;#27;[0m&amp;#27;[36mI fill in &quot;&amp;#27;[0m&amp;#27;[36m&amp;#27;[1mWhy&amp;#27;[0m&amp;#27;[36m&quot; and &quot;&amp;#27;[0m&amp;#27;[36m&amp;#27;[1m&amp;#27;[0m&amp;#27;[36m&quot; and &quot;&amp;#27;[0m&amp;#27;[36m&amp;#27;[1mdobby@do.b&amp;#27;[0m&amp;#27;[36m&quot; and &quot;&amp;#27;[0m&amp;#27;[36m&amp;#27;[1mqwert1&amp;#27;[0m&amp;#27;[36m&quot; and &quot;&amp;#27;[0m&amp;#27;[36m&amp;#27;[1mDD001&amp;#27;[0m&amp;#27;[36m&quot; and &quot;&amp;#27;[0m&amp;#27;[36m&amp;#27;[1m1960-12-28&amp;#27;[0m&amp;#27;[36m&quot;&amp;#27;[0m &amp;#27;[90m# CustomerAdminFeature.i_fill_in(String,String,String,String,String,String)&amp;#27;[0m
+    &amp;#27;[36mThen &amp;#27;[0m&amp;#27;[36mI should stay on userAdd management page&amp;#27;[0m                                          &amp;#27;[90m# CustomerAdminFeature.i_should_stay_on_userAdd_management_page()&amp;#27;[0m
+16:40:21.546 [main] DEBUG io.github.bonigarcia.wdm.WebDriverManager - Latest version of wires, geckodriver is 0.25.0 (recently resolved)
+16:40:21.548 [main] INFO io.github.bonigarcia.wdm.WebDriverManager - Found geckodriver in cache: /Users/william/.m2/repository/webdriver/geckodriver/macos/0.25.0/geckodriver 
+16:40:21.548 [main] DEBUG io.github.bonigarcia.wdm.WebDriverManager - Driver for wires, geckodriver (latest version) found in cache /Users/william/.m2/repository/webdriver/geckodriver/macos/0.25.0/geckodriver
+16:40:21.549 [main] INFO io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.gecko.driver as /Users/william/.m2/repository/webdriver/geckodriver/macos/0.25.0/geckodriver
+</system-out>
+    <system-err>1569393621613	mozrunner::runner	INFO	Running command: &quot;/Applications/Firefox.app/Contents/MacOS/firefox-bin&quot; &quot;-marionette&quot; &quot;-foreground&quot; &quot;-no-remote&quot; &quot;-profile&quot; &quot;/var/folders/vp/x3kzn9lx2px4827rgdl23cz00000gn/T/rust_mozprofile2mTUW5&quot;
+1569393622647	addons.webextension.screenshots@mozilla.org	WARN	Loading extension &apos;screenshots@mozilla.org&apos;: Reading manifest: Invalid extension permission: mozillaAddons
+1569393622647	addons.webextension.screenshots@mozilla.org	WARN	Loading extension &apos;screenshots@mozilla.org&apos;: Reading manifest: Invalid extension permission: telemetry
+1569393622648	addons.webextension.screenshots@mozilla.org	WARN	Loading extension &apos;screenshots@mozilla.org&apos;: Reading manifest: Invalid extension permission: resource://pdf.js/
+1569393622649	addons.webextension.screenshots@mozilla.org	WARN	Loading extension &apos;screenshots@mozilla.org&apos;: Reading manifest: Invalid extension permission: about:reader*
+1569393646251	Marionette	INFO	Stopped listening on port 54170
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+[ExitiGFX1-]: Receive IPC close with reason=AbnormalShutdown
+ng due to channel error.
+Exiting due to channel error.
+[GFX1Ex-]: Receiting dive Iue tPC cloo cse with reason=Abnormahannel error.
+lShutdown
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+[GFX1-]: Receive IPC close Exwith reason=AbnormalShutdown
+iting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+[GFX1-]: Receive IPC cExiting due to channel error.
+lose with reason=AbnormalShutdown
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+[GFX1-]: ReceiExitingve due to channel error.
+ IExPC close with reasoniting=Abnorm dalShutdown
+ue to channel error.
+</system-err>
+  </testcase>
+  <testcase classname="| Test | Name | poo@head.aus | qwert1 | PH001 |  | Missing DOB. |" name="| Test | Name | poo@head.aus | qwert1 | PH001 |  | Missing DOB. |" time="0.001">
+    <error message="invalid argument: can&apos;t kill an exited process
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;Williams-MacBook-Pro.local&apos;, ip: &apos;fe80:0:0:0:10a6:f70f:ba8e:98ca%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.14.4&apos;, java.version: &apos;1.8.0_181&apos;
+Driver info: driver.version: FirefoxDriver
+remote stacktrace: " type="org.openqa.selenium.WebDriverException">org.openqa.selenium.WebDriverException: invalid argument: can&apos;t kill an exited process
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;Williams-MacBook-Pro.local&apos;, ip: &apos;fe80:0:0:0:10a6:f70f:ba8e:98ca%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.14.4&apos;, java.version: &apos;1.8.0_181&apos;
+Driver info: driver.version: FirefoxDriver
+remote stacktrace: 
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$errorHandler$0(W3CHandshakeResponse.java:62)
+	at org.openqa.selenium.remote.HandshakeResponse.lambda$getResponseFunction$0(HandshakeResponse.java:30)
+	at org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$0(ProtocolHandshake.java:126)
+	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
+	at java.util.Spliterators$ArraySpliterator.tryAdvance(Spliterators.java:958)
+	at java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:126)
+	at java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:498)
+	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:485)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:471)
+	at java.util.stream.FindOps$FindOp.evaluateSequential(FindOps.java:152)
+	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.util.stream.ReferencePipeline.findFirst(ReferencePipeline.java:464)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:128)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:74)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:131)
+	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:147)
+	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:125)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at java.lang.Class.newInstance(Class.java:442)
+	at fc.test.CustomerAdminFeature.i_am_on_Add_Customer_page(CustomerAdminFeature.java:28)
+	at ✽.Given I am on Add Customer page(CustomerAdminFeature.feature:8)
+</error>
+  </testcase>
+  <testcase classname="| Test | Name | poo@head.aus | qwert1 | PH001 |  | Missing DOB. |" name="When I fill in \&quot;Test\&quot; and \&quot;Name\&quot; and \&quot;poo@head.aus\&quot; and \&quot;qwert1\&quot; and \&quot;PH001\&quot; and \&quot;\&quot;" time="0.002">
+    <skipped/>
+  </testcase>
+  <testcase classname="| Test | Name | poo@head.aus | qwert1 | PH001 |  | Missing DOB. |" name="Then I should stay on userAdd management page" time="0.002">
+    <skipped/>
+  </testcase>
 </testsuite>

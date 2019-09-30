@@ -28,6 +28,7 @@
     MongoDBManager_Customers customerDB = new MongoDBManager_Customers();
     Customer customer = customerDB.getCustomer(ticket.getCustomerID());
     
+    
     //MongoDBManager_Flights flightDB = new MongoDBManager_Flights();
     //Flight flight = flightDB.getFlight(ticket.getFlightID());
     

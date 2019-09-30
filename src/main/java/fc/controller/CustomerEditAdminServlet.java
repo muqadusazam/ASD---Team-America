@@ -42,10 +42,10 @@ public class CustomerEditAdminServlet extends HttpServlet {
             out.println("</html>");
         }
     }
-    
+
     /*
         requests data from userAdd_management.jsp and validates input against regex
-    */
+     */
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)

@@ -141,7 +141,7 @@
         <tr>
             <td><b>Choose new ticket: &nbsp&nbsp</b></td>
             <td>
-                <form action="AdminRescheduleServlet" method="POST">
+                <form action="userTicket_management.jsp" method="POST">
                     <select name="newFlight" value="<%= flight.getID()%>">
                         <option selected="true" disabled="disabled">-- Select Ticket --</option>
                         <%
@@ -156,7 +156,7 @@
                             }
                         %>
                     </select>
-                    <button type="submit" class="btn btn-success" style="float: right" id="rescheduleBtn">Submit</button>
+                    <button type="submit" name="ID" value=<%=ticket.getCustomerID()%> class="btn btn-success" style="float: right" id="rescheduleBtn">Submit</button>
                     <button type="reset" class="btn btn-danger" style="float: right">Cancel</button>
                 </form>
             </td>

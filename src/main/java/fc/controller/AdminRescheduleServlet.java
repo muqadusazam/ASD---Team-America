@@ -33,7 +33,7 @@ public class AdminRescheduleServlet extends HttpServlet {
         Ticket oldTicket = (Ticket)session.getAttribute("oldTicket");
         
         //Get flight from session
-        Flight oldFlight = (Flight)session.getAttribute("flight");
+        Flight oldFlight = (Flight)session.getAttribute("oldFlight");
         
         //Check if Flight ID match
         if (oldFlight.getID().compareTo(oldTicket.getFlightID()) >= 0) {

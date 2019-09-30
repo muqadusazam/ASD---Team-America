@@ -25,9 +25,9 @@
 
     MongoDBManager_Tickets ticketDB = new MongoDBManager_Tickets();
     ArrayList<Ticket> tickets = ticketDB.getTickets(customer);
-    
+
     MongoDBManager_Flights flightDB = new MongoDBManager_Flights();
-    
+
 %>
 
 <div class="mx-auto" style="width: 800px; text-align: center;" >
@@ -50,14 +50,25 @@
         <tr>
             <td><%= ticket.getID()%></td>
             <td><%= ticket.getFlightID()%></td>
-            <td><%-- flightDB.getFlight(ticket.getFlightID()).getDestination()--%> </td>
-            <td><%-- flightDB.getFlight(ticket.getFlightID()).getDepartureDate() --%></td>
+            <td><%= flightDB.getFlight(ticket.getFlightID()).getDestination()%></td>
+            <td><%= flightDB.getFlight(ticket.getFlightID()).getDepartureDate()%></td>
             <td><%= ticket.getPassengerSeatNum()%></td>
-            <td><form action="userEditTicket_management.jsp" method="POST">
-                    <button type="submit" name="ticketID" value=<%=ticket.getID()%> class="btn btn-primary">Reschedule</button> 
-                </form></td>
+            <td>
+                <div style="width:200px;">
+                    <div style="float: left;"> 
+                        <form action="userEditTicket_management.jsp" method="POST">
+                            <button type="submit" name="ticketID" value=<%=ticket.getID()%> class="btn btn-primary">Reschedule</button> 
+                        </form>
+                    </div>
+                    <div style="float: right;"> 
+                        <form action="userDeleteTicket_management.jsp" method="POST">
+                            <button type="submit" name="deleteTicketID" value=<%=ticket.getID()%> class="btn btn-danger">Delete</button> 
+                        </form>
+                    </div>
+                </div>
+            </td>
         </tr>
-        <% } %>
+        <% }%>
     </table>
 </div>
 

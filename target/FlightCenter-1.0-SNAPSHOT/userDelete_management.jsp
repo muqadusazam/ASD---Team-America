@@ -1,7 +1,7 @@
 <%@page import="fc.model.Customer"%>
 <%@page import="fc.model.dao.MongoDBManager_Customers"%>
 <jsp:include page="fc_header.jsp">
-    <jsp:param name="title" value="Flight Center/account/userDetail_management"/>
+    <jsp:param name="title" value="Flight Center/account/userDelete_management"/>
 </jsp:include>
 <div class="col-12 col-md-3 col-xl-2 bd-sidebar" style = "margin-top: 100px; padding: 5px; float:left; background-color:#cecece">
     <ul class="navbar-nav mr-auto">

@@ -10,7 +10,8 @@
 <% 
     MongoDBManager_Flights db = new MongoDBManager_Flights();       //Create connection to mLab
 
-    ArrayList<Flight> flights = db.getFlights();    
+    ArrayList<Flight> flights = db.getFlights();
+  
     //Get list of flights
     //For each flight, make a list of unique origin
     //For each flight, make a list of unique destination
@@ -22,22 +23,22 @@
 <div class="container" style="margin-top: 50px">
         <h1 class ="bd-content-title">&nbsp;Find a flight</h1>
         
-        <form action="">        <!-- Form for search query-->
-                From&nbsp;<select id ="searchOrigin" placeholder="Select Airport" required>     <!-- Dropdown box for Origin-->
+        <form action="flights_searchResults.jsp" method="get">        <!-- Form for search query-->
+                From&nbsp;<select name ="searchOrigin" placeholder="Select Airport" >     <!-- Dropdown box for Origin-->
                     <option value="" selected disabled hidden>Select Origin</option>        <!-- Default, hidden option - used for placeholder--> 
                     <% for (String origin: db.getAllOrigins()) { %>    <!-- for loop that creates an <option> for each unique Origin -->              
                     <option><%=origin %></option>
                     <% } %>
                 </select>
             
-                &nbsp;To&nbsp;<select id ="searchDestination" placeholder="Select Destination" required>        <!-- Dropdown box for Destination-->
+                &nbsp;To&nbsp;<select name ="searchDestination" placeholder="Select Destination" >        <!-- Dropdown box for Destination-->
                     <option value="" selected disabled hidden>Select Destination</option>       <!-- Default, hidden option - used for placeholder-->
                     <% for (String destination: db.getAllDestinations()) { %>    <!-- for loop that creates an <option> for each unique Destination -->             
                     <option><%=destination %></option>
                     <% } %>
                 </select>
             
-                &nbsp;by&nbsp;<input type="date" id ="searchArrivalDate">       <!-- Date box for Arrival Date-->
+                &nbsp;by&nbsp;<input type="date" name ="searchArrivalDate">       <!-- Date box for Arrival Date-->
                 
                 <input type="submit" value ="Search">       <!-- Submit button, send form entries to ****-->
             

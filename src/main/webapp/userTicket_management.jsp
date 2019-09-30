@@ -50,8 +50,8 @@
         <tr>
             <td><%= ticket.getID()%></td>
             <td><%= ticket.getFlightID()%></td>
-            <td><%= flightDB.getFlight(ticket.getFlightID()).getDestination()%> </td>
-            <td><%= flightDB.getFlight(ticket.getFlightID()).getDepartureDate() %></td>
+            <td><%-- flightDB.getFlight(ticket.getFlightID()).getDestination()--%> </td>
+            <td><%-- flightDB.getFlight(ticket.getFlightID()).getDepartureDate() --%></td>
             <td><%= ticket.getPassengerSeatNum()%></td>
             <td><form action="userEditTicket_management.jsp" method="POST">
                     <button type="submit" name="ticketID" value=<%=ticket.getID()%> class="btn btn-primary">Reschedule</button> 

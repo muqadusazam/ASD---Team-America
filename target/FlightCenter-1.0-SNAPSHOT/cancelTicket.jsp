@@ -30,7 +30,7 @@
         ArrayList<Ticket> tickets = dbT.getTickets(customer); //Get all tickets booked by this customer
         MongoDBManager_Flights dbF = new MongoDBManager_Flights();
 %>
-        <div class="container w-50" style="margin-top: 50px; margin-bottom: 50px">
+        <div class="container w-40" style="margin-top: 50px; margin-bottom: 50px">
             <center>
             <h1>Cancel Ticket</h1>
             <br>

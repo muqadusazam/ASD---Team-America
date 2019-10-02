@@ -13,7 +13,7 @@
     String ticketID = request.getParameter("ticketIDBtn"); //Gets ticket ID passed from button in cancelTicket.jsp
     MongoDBManager_Tickets db = new MongoDBManager_Tickets(); 
     Ticket ticket = db.getTicket(ticketID); //Gets ticket object based on ticket ID
-    db.remove(ticket); //Remove the ticket from Ticket collection
+    //db.remove(ticket); //Remove the ticket from Ticket collection
     
     MongoDBManager_Flights dbF = new MongoDBManager_Flights();
     Flight flight = dbF.getFlight(ticket.getFlightID()); //Gets flight details of deleted ticket for printing
@@ -25,20 +25,18 @@
         
         <h1>Ticket Cancelled!</h1>
         <br>
-        <p>You have cancelled the following ticket:</p>
+        <p>You have successfully cancelled:</p>
         <br>
-        <!-- Prints our the deleted ticket's information-->
-        <div class="container w-35" align="left">
-        <p><b>Ticket ID:</b> <%=ticketID%></p>
-        <p><b>Airline:</b> <%=flight.getAirline()%></p>
-        <p><b>From:</b> <%=flight.getOrigin()%></p>
-        <p><b>To:</b> <%=flight.getDestination()%></p>
-        <p><b>Depature date:</b> <%=flight.getDepartureDate()%></p>
-        <p><b>Departure Time:</b> <%=flight.getDepartureTime()%></p>
-        <p><b>Arrival Date:</b> <%=flight.getArrivalDate()%></p>
-        <p><b>Arrival Time:</b> <%=flight.getArrivalTime()%></p>
-        </div>
-        
+        <!-- Deleted ticket details is styled like an actual plane ticket with a logo -->
+        <p style="border:3px; border-style:solid; border-color:#174D9A; padding: 1em;">
+            <img src="./resources/logo.png" width="30" height="30">
+            <b>Ticket <%=ticketID%></b><br>
+            <%=flight.getAirline()%> - <small>Seat <%=ticket.getPassengerSeatNum()%></small><br>
+            <%=flight.getOrigin()%> (<%=flight.getDepartureDate()%> <%=flight.getDepartureTime()%>) <i><small>to</small></i> 
+            <%=flight.getDestination()%> (<%=flight.getArrivalDate()%> <%=flight.getArrivalTime()%>)<br>
+        </p>
+        <br>
+        <p>You will not be able to undo this action.</p>        
         <br>
         <!-- Redirect to booking history or cancelTicket upon clicking buttons-->
         <button type="button" class="btn btn-primary" onclick="location.href = 'booking_history.jsp'">Booking History</button>
@@ -46,16 +44,15 @@
         
     </div>
 </body>
-    
+
     
 <% 
 //SCRIPT CODE TO MAKE TICKET ENTRIES
-//    for (int i = 0; i < 3; i++){
-//        Ticket test = new Ticket("001", "179577", "3", "TEST1" );
+//    for (int i = 0; i < 5; i++){
+//        Ticket test = new Ticket("001", "179577", "1001", "TEST1" );
 //        MongoDBManager_Tickets dbt = new MongoDBManager_Tickets();
 //        dbt.add(test);
 //    }
-
 %>
 
 <jsp:include page = "fc_footer.jsp"/> <!-- Footer file for all pages-->

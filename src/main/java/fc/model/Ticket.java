@@ -53,9 +53,9 @@ public class Ticket implements Serializable, Comparable<Ticket>{
         return passenger_seat_num;
     }
     
-    public String getPurchaseDateTime(){
-        return purchaseDateTime;
-    }
+//    public String getPurchaseDateTime(){
+//        return purchaseDateTime;
+//    }
     
     @Override
     public int compareTo(Ticket other) {

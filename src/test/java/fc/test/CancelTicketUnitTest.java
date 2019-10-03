@@ -37,7 +37,7 @@ public class CancelTicketUnitTest {
     public void fetchTickets(){
         MongoDBManager_Tickets db = new MongoDBManager_Tickets();
         ArrayList<Ticket> tickets = db.getTickets();
-        assertNotNull("Cannot fetch tickets",tickets);
+        assertNotNull("Cannot fetch tickets",tickets); //Assert that 'tickets' ArrayList is not null
         System.out.println("\nFetching All Tickets...");
         System.out.println("-------------------------------------");
         for (Ticket ticket : tickets){
@@ -51,11 +51,11 @@ public class CancelTicketUnitTest {
     @Test //Remove a specific ticket based on ticket ID
     public void removeTicket(){
         MongoDBManager_Tickets db = new MongoDBManager_Tickets();
-        String ticketID = "999";
+        String ticketID = "998";
         Ticket ticket = db.getTicket(ticketID); //Existing ticket with this ID in collection
         db.remove(ticket);
         System.out.println("-------------------------------------");
-        System.out.println("You have removed Ticket " + ticketID);
+        System.out.println("You have removed Ticket: " + ticketID);
         System.out.println("-------------------------------------");
     }
 

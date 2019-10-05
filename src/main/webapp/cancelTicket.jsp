@@ -72,6 +72,8 @@
                                 <td><%=flight.getArrivalTime()%></td>
                                 <td><%=ticket.getPassengerSeatNum()%></td>
                                 <!-- Generate Cancel button for each ticket in table -->
+                                    <!-- Pass ticketID as the value of the button for getParameter() in cancelTicketConfirm-->
+                                    <!-- id=ticketID is for identifying the button in acceptance test cancelTicketATdd.java-->
                                 <td><form action="cancelTicketConfirm.jsp" method="POST">
                                     <button type="submit" class="btn btn-primary" name="ticketIDBtn" id="ticketIDBtn"
                                             value="<%=ticket.getID()%>" 

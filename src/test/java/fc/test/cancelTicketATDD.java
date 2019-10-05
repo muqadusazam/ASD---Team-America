@@ -37,34 +37,24 @@ public class cancelTicketATDD {
         driver.navigate().to(driver.getCurrentUrl());
     }
     
-    //Fill in register.jsp form using input from RegisterFeature.feature
-    @When("^I click cancel button$")
-    public void i_click_cancel_button(String arg1, String arg2, String arg3, 
-            String arg4, String arg5, String arg6) throws Throwable{
-        //driver.get("https://arsproject.herokuapp.com/register.jsp");
-        //driver.navigate().to(driver.getCurrentUrl());
-        
-        driver.findElement(By.id("first_name")).sendKeys(arg1);
-        driver.findElement(By.id("last_name")).sendKeys(arg2);
-        driver.findElement(By.id("email")).sendKeys(arg3);
-        driver.findElement(By.id("password")).sendKeys(arg4);
-        driver.findElement(By.id("passport")).sendKeys(arg5);
-        driver.findElement(By.id("dob")).sendKeys(arg6);
-        driver.findElement(By.id("registerBtn")).click(); //PUT TICKET ID IN THE CANCEL BUTTON ID
+    //Click the cancel button for a ticket
+    @When("^I click cancel button of ticket$")
+    public void i_click_cancel_button_of_ticket() throws Throwable{
+        driver.findElement(By.id("ticketIDBtn")).click();
     }
     
-    //Successful registration
-    @Then("^I should see registerSuccess page$")
-    public void i_should_see_registerSuccess_page() throws Throwable {
-        System.out.println("Registration successful!");
-        driver.get("https://arsproject.herokuapp.com/registerSuccess.jsp");
-        driver.navigate().to(driver.getCurrentUrl());
+    //Successful cancellation
+    @Then("^I should see cancelTicketConfirm page when I accept confirmation$")
+    public void i_should_see_cancelTicketConfirm_page_when_i_accept_confirmation() throws Throwable {
+        driver.switchTo().alert().accept();
+        System.out.println("Cancellation successful!");
     }
     
-    //Unsuccessful registration
-    @Then("^I should stay on register page$")
-    public void i_should_stay_on_register_page() throws Throwable {
-        System.out.println("Registration unsuccessful! See error messages in test log.");
+    //Unsuccessful cancellation
+    @Then("^I should stay on cancel ticket page when I dismiss confirmation$")
+    public void i_should_stay_on_cancel_ticket_page_when_i_dismiss_confirmation() throws Throwable {
+        driver.switchTo().alert().dismiss();
+        System.out.println("Cancellation unsuccessful.");
     }
     
 }

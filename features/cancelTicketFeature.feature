@@ -11,12 +11,18 @@ Background: User is logged in and navigates to FlightCenter Cancel Ticket page
     Given I go to cancel ticket page
 
 Scenario: Successful cancellation
-    When I click cancel button
-    And I click ok button
-    Then I should see cancelTicketConfirm page
+    When I click cancel button of ticket
+    Then I should see cancelTicketConfirm page when I accept confirmation
 
 Scenario: Unsuccessful cancellation
-#    When I fill in with "<firstname>" and "<lastname>" and "<email>" and "<password>" and "<passport>" and "<dob>"
-    When I click cancel button 
-    And I click cancel button
-    Then I should stay on cancel ticket page
+    When I click cancel button of ticket
+    Then I should stay on cancel ticket page when I dismiss confirmation
+
+#Scenario Outline: Unsuccessful cancellation
+#    When I click cancel button of ticket "<ticketID>"
+#    And I dismiss confirmation
+#    Then I should stay on cancel ticket page
+#    Examples:
+#        | ticketID |
+#        | 010      |
+#        | 009      |

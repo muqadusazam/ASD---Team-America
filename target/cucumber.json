@@ -3,31 +3,49 @@
     "comments": [
       {
         "line": 1,
-        "value": "# Login Feature"
-      },
-      {
-        "line": 2,
-        "value": "# language: en"
+        "value": "#This feature contains sample data as input for RegisterFeature.java"
       }
     ],
-    "line": 5,
+    "line": 4,
     "elements": [
       {
-        "line": 10,
-        "name": "User nevigates to mLab login page",
+        "line": 9,
+        "name": "User is logged in and navigates to FlightCenter Cancel Ticket page",
         "description": "",
         "type": "background",
         "keyword": "Background",
         "steps": [
           {
             "result": {
-              "duration": 6240645700,
+              "duration": 18621950213,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "I log in as \"user@two.com\" and \"abcde1\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "user@two.com",
+                  "offset": 13
+                },
+                {
+                  "val": "abcde1",
+                  "offset": 32
+                }
+              ],
+              "location": "cancelTicketATDD.i_log_in_as(String,String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 2271181761,
               "status": "passed"
             },
             "line": 11,
-            "name": "I am on login page",
+            "name": "I go to cancel ticket page",
             "match": {
-              "location": "LoginFeature.i_am_on_login_page()"
+              "location": "cancelTicketATDD.i_go_to_cancel_ticket_page()"
             },
             "keyword": "Given "
           }
@@ -35,482 +53,125 @@
       },
       {
         "line": 13,
-        "name": "Successful login to mLab",
+        "name": "Successful cancellation",
         "description": "",
-        "id": "loginfeature;successful-login-to-mlab",
+        "id": "cancelticketfeature;successful-cancellation",
         "type": "scenario",
         "keyword": "Scenario",
         "steps": [
           {
             "result": {
-              "duration": 1471516700,
+              "duration": 55615829,
               "status": "passed"
             },
             "line": 14,
-            "name": "I fill in \"Email\" with \"user@one.com\"",
+            "name": "I click cancel button of ticket",
             "match": {
-              "arguments": [
-                {
-                  "val": "Email",
-                  "offset": 11
-                },
-                {
-                  "val": "user@one.com",
-                  "offset": 24
-                }
-              ],
-              "location": "LoginFeature.i_fill_in_with(String,String)"
+              "location": "cancelTicketATDD.i_click_cancel_button_of_ticket()"
             },
             "keyword": "When "
           },
           {
             "result": {
-              "duration": 979808200,
+              "duration": 16268132,
               "status": "passed"
             },
             "line": 15,
-            "name": "I fill in \"Password\" with \"abcde1\"",
+            "name": "I should see cancelTicketConfirm page when I accept confirmation",
+            "match": {
+              "location": "cancelTicketATDD.i_should_see_cancelTicketConfirm_page_when_i_accept_confirmation()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 9,
+        "name": "User is logged in and navigates to FlightCenter Cancel Ticket page",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 16830507394,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "I log in as \"user@two.com\" and \"abcde1\"",
             "match": {
               "arguments": [
                 {
-                  "val": "Password",
-                  "offset": 11
+                  "val": "user@two.com",
+                  "offset": 13
                 },
                 {
                   "val": "abcde1",
-                  "offset": 27
+                  "offset": 32
                 }
               ],
-              "location": "LoginFeature.i_fill_in_with(String,String)"
+              "location": "cancelTicketATDD.i_log_in_as(String,String)"
             },
-            "keyword": "And "
+            "keyword": "Given "
           },
           {
             "result": {
-              "duration": 10227033700,
-              "status": "passed"
-            },
-            "line": 16,
-            "name": "I should see \"main.jsp\" main page",
-            "match": {
-              "arguments": [
-                {
-                  "val": "main.jsp",
-                  "offset": 14
-                }
-              ],
-              "location": "LoginFeature.i_should_see_main_page(String)"
-            },
-            "keyword": "Then "
-          }
-        ]
-      },
-      {
-        "line": 10,
-        "name": "User nevigates to mLab login page",
-        "description": "",
-        "type": "background",
-        "keyword": "Background",
-        "steps": [
-          {
-            "result": {
-              "duration": 4461056400,
+              "duration": 2442539817,
               "status": "passed"
             },
             "line": 11,
-            "name": "I am on login page",
+            "name": "I go to cancel ticket page",
             "match": {
-              "location": "LoginFeature.i_am_on_login_page()"
+              "location": "cancelTicketATDD.i_go_to_cancel_ticket_page()"
             },
             "keyword": "Given "
           }
         ]
       },
       {
-        "line": 24,
-        "name": "Failed login to mLab using wrong credentials",
+        "line": 17,
+        "name": "Unsuccessful cancellation",
         "description": "",
-        "id": "loginfeature;failed-login-to-mlab-using-wrong-credentials;;2",
+        "id": "cancelticketfeature;unsuccessful-cancellation",
         "type": "scenario",
-        "keyword": "Scenario Outline",
+        "keyword": "Scenario",
         "steps": [
           {
             "result": {
-              "duration": 1422225500,
+              "duration": 56407859,
               "status": "passed"
             },
-            "line": 19,
-            "name": "I fill in \"Email\" with \"\u003cEmail\u003e\"",
+            "line": 18,
+            "name": "I click cancel button of ticket",
             "match": {
-              "arguments": [
-                {
-                  "val": "Email",
-                  "offset": 11
-                },
-                {
-                  "val": "\u003cEmail\u003e",
-                  "offset": 24
-                }
-              ],
-              "location": "LoginFeature.i_fill_in_with(String,String)"
+              "location": "cancelTicketATDD.i_click_cancel_button_of_ticket()"
             },
             "keyword": "When "
           },
           {
             "result": {
-              "duration": 1014591400,
-              "status": "passed"
-            },
-            "line": 20,
-            "name": "I fill in \"Password\" with \"\u003cPassword\u003e\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "Password",
-                  "offset": 11
-                },
-                {
-                  "val": "\u003cPassword\u003e",
-                  "offset": 27
-                }
-              ],
-              "location": "LoginFeature.i_fill_in_with(String,String)"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 48500,
-              "status": "passed"
-            },
-            "line": 21,
-            "name": "I should see \"login.jsp\" login page",
-            "match": {
-              "arguments": [
-                {
-                  "val": "login.jsp",
-                  "offset": 14
-                }
-              ],
-              "location": "LoginFeature.i_should_see_login_page(String)"
-            },
-            "keyword": "Then "
-          }
-        ],
-        "tags": [
-          {
-            "line": 3,
-            "name": "@Login"
-          }
-        ]
-      },
-      {
-        "line": 10,
-        "name": "User nevigates to mLab login page",
-        "description": "",
-        "type": "background",
-        "keyword": "Background",
-        "steps": [
-          {
-            "result": {
-              "duration": 4541479000,
-              "status": "passed"
-            },
-            "line": 11,
-            "name": "I am on login page",
-            "match": {
-              "location": "LoginFeature.i_am_on_login_page()"
-            },
-            "keyword": "Given "
-          }
-        ]
-      },
-      {
-        "line": 25,
-        "name": "Failed login to mLab using wrong credentials",
-        "description": "",
-        "id": "loginfeature;failed-login-to-mlab-using-wrong-credentials;;3",
-        "type": "scenario",
-        "keyword": "Scenario Outline",
-        "steps": [
-          {
-            "result": {
-              "duration": 1405235000,
+              "duration": 17676002,
               "status": "passed"
             },
             "line": 19,
-            "name": "I fill in \"Email\" with \"\u003cEmail\u003e\"",
+            "name": "I should stay on cancel ticket page when I dismiss confirmation",
             "match": {
-              "arguments": [
-                {
-                  "val": "Email",
-                  "offset": 11
-                },
-                {
-                  "val": "\u003cEmail\u003e",
-                  "offset": 24
-                }
-              ],
-              "location": "LoginFeature.i_fill_in_with(String,String)"
-            },
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "duration": 967810300,
-              "status": "passed"
-            },
-            "line": 20,
-            "name": "I fill in \"Password\" with \"\u003cPassword\u003e\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "Password",
-                  "offset": 11
-                },
-                {
-                  "val": "\u003cPassword\u003e",
-                  "offset": 27
-                }
-              ],
-              "location": "LoginFeature.i_fill_in_with(String,String)"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 132600,
-              "status": "passed"
-            },
-            "line": 21,
-            "name": "I should see \"login.jsp\" login page",
-            "match": {
-              "arguments": [
-                {
-                  "val": "login.jsp",
-                  "offset": 14
-                }
-              ],
-              "location": "LoginFeature.i_should_see_login_page(String)"
+              "location": "cancelTicketATDD.i_should_stay_on_cancel_ticket_page_when_i_dismiss_confirmation()"
             },
             "keyword": "Then "
-          }
-        ],
-        "tags": [
-          {
-            "line": 3,
-            "name": "@Login"
-          }
-        ]
-      },
-      {
-        "line": 10,
-        "name": "User nevigates to mLab login page",
-        "description": "",
-        "type": "background",
-        "keyword": "Background",
-        "steps": [
-          {
-            "result": {
-              "duration": 4441831200,
-              "status": "passed"
-            },
-            "line": 11,
-            "name": "I am on login page",
-            "match": {
-              "location": "LoginFeature.i_am_on_login_page()"
-            },
-            "keyword": "Given "
-          }
-        ]
-      },
-      {
-        "line": 26,
-        "name": "Failed login to mLab using wrong credentials",
-        "description": "",
-        "id": "loginfeature;failed-login-to-mlab-using-wrong-credentials;;4",
-        "type": "scenario",
-        "keyword": "Scenario Outline",
-        "steps": [
-          {
-            "result": {
-              "duration": 1444020600,
-              "status": "passed"
-            },
-            "line": 19,
-            "name": "I fill in \"Email\" with \"\u003cEmail\u003e\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "Email",
-                  "offset": 11
-                },
-                {
-                  "val": "\u003cEmail\u003e",
-                  "offset": 24
-                }
-              ],
-              "location": "LoginFeature.i_fill_in_with(String,String)"
-            },
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "duration": 983536000,
-              "status": "passed"
-            },
-            "line": 20,
-            "name": "I fill in \"Password\" with \"\u003cPassword\u003e\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "Password",
-                  "offset": 11
-                },
-                {
-                  "val": "\u003cPassword\u003e",
-                  "offset": 27
-                }
-              ],
-              "location": "LoginFeature.i_fill_in_with(String,String)"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 129100,
-              "status": "passed"
-            },
-            "line": 21,
-            "name": "I should see \"login.jsp\" login page",
-            "match": {
-              "arguments": [
-                {
-                  "val": "login.jsp",
-                  "offset": 14
-                }
-              ],
-              "location": "LoginFeature.i_should_see_login_page(String)"
-            },
-            "keyword": "Then "
-          }
-        ],
-        "tags": [
-          {
-            "line": 3,
-            "name": "@Login"
-          }
-        ]
-      },
-      {
-        "line": 10,
-        "name": "User nevigates to mLab login page",
-        "description": "",
-        "type": "background",
-        "keyword": "Background",
-        "steps": [
-          {
-            "result": {
-              "duration": 4458070700,
-              "status": "passed"
-            },
-            "line": 11,
-            "name": "I am on login page",
-            "match": {
-              "location": "LoginFeature.i_am_on_login_page()"
-            },
-            "keyword": "Given "
-          }
-        ]
-      },
-      {
-        "line": 27,
-        "name": "Failed login to mLab using wrong credentials",
-        "description": "",
-        "id": "loginfeature;failed-login-to-mlab-using-wrong-credentials;;5",
-        "type": "scenario",
-        "keyword": "Scenario Outline",
-        "steps": [
-          {
-            "result": {
-              "duration": 1544266800,
-              "status": "passed"
-            },
-            "line": 19,
-            "name": "I fill in \"Email\" with \"\u003cEmail\u003e\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "Email",
-                  "offset": 11
-                },
-                {
-                  "val": "\u003cEmail\u003e",
-                  "offset": 24
-                }
-              ],
-              "location": "LoginFeature.i_fill_in_with(String,String)"
-            },
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "duration": 967918100,
-              "status": "passed"
-            },
-            "line": 20,
-            "name": "I fill in \"Password\" with \"\u003cPassword\u003e\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "Password",
-                  "offset": 11
-                },
-                {
-                  "val": "\u003cPassword\u003e",
-                  "offset": 27
-                }
-              ],
-              "location": "LoginFeature.i_fill_in_with(String,String)"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 98400,
-              "status": "passed"
-            },
-            "line": 21,
-            "name": "I should see \"login.jsp\" login page",
-            "match": {
-              "arguments": [
-                {
-                  "val": "login.jsp",
-                  "offset": 14
-                }
-              ],
-              "location": "LoginFeature.i_should_see_login_page(String)"
-            },
-            "keyword": "Then "
-          }
-        ],
-        "tags": [
-          {
-            "line": 3,
-            "name": "@Login"
           }
         ]
       }
     ],
-    "name": "LoginFeature",
-    "description": "As a admin\r\nI want to login into mLab account using my admin credentials\r\nIn order to connect to mLab cloud database",
-    "id": "loginfeature",
+    "name": "cancelTicketFeature",
+    "description": "  As a Customer\n  I want to cancel a ticket on FlightCentre\n  So that I can cancel a booked flight",
+    "id": "cancelticketfeature",
     "keyword": "Feature",
-    "uri": "LoginFeature.feature",
+    "uri": "cancelTicketFeature.feature",
     "tags": [
       {
         "line": 3,
-        "name": "@Login"
+        "name": "@cancelTicket"
       }
     ]
   }

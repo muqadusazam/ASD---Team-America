@@ -22,11 +22,11 @@
     //getFlight returns ArrayList of Flight object in the database table 
     ArrayList<Flight> flights = db.getFlights();
 %>
-    <div class="container" style="margin-top: 50px; float: right">
+    <div class="container" style="margin-top: 40px; float: right">
         <h1 class ="bd-content-title">&nbsp;List of Flights</h1>
-        <a href = "flightAdd_management.jsp" class = "btn btn-lg btn-primary" style="margin:20px; float: right"> Add Flight </a> 
+        <a href = "flightAdd_management.jsp" class = "btn btn-lg btn-primary" style="margin:5px; float: right"> Add Flight </a> 
         <!--Table for the list of flights-->
-        <table class="table"style="margin-top: 20px">
+        <table class="table"style="margin-top: 20px; margin-right: 30px">
           <thead class="thead-dark">
             <tr>
               <th scope="col">#</th>
@@ -38,6 +38,7 @@
               <th scope ="col">Status</th>
               <th scope="col">Price</th>
               <th scope="col">Option</th>
+              <th scope ="col"> </th>
             </tr>
           </thead>
           <tbody>
@@ -57,6 +58,11 @@
                                 <td ><%=currentFlight.getPrice()%></td>
                                 <td>
                                         <div style="float: left;"> 
+                                            <form action="flightUpdate_management.jsp" method="POST">
+                                                <button type="submit" name="ID" value="<%= currentFlight.getID() %>" class="btn btn-primary">Update</button> 
+                                            </form>
+                                        </td>
+                                        <td>
                                             <form action="flightDelete_management.jsp" method="POST">
                                                 <button type="submit" name="ID" value="<%= currentFlight.getID() %>" class="btn btn-primary">Delete</button> 
                                             </form>

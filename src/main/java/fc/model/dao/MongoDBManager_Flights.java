@@ -32,6 +32,15 @@ public class MongoDBManager_Flights extends MongoDBConnector {
             flightDB.deleteOne(convertToDoc(flight)); //Convert flight's details to MongoDB's format
         }
     }
+    public void update(Flight flight){
+        MongoClientURI uri = generateURI();
+        try(MongoClient client = new MongoClient(uri)){
+            MongoDatabase db = client.getDatabase(uri.getDatabase());
+            MongoCollection<Document> flightDB = db.getCollection(FLIGHT_COLLECTION);
+            //var query = {id:flight.getID()};
+             //flightDB.updateOne({id :  new Document("id", flight.getID())},{$set:convertToDoc(flight)});
+        }
+    }
     
     //Fetches a single existing flight from the Flight collection by matching ID
     public Flight getFlight(String id) {

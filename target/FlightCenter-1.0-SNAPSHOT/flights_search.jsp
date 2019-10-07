@@ -38,7 +38,7 @@
                     <% } %>
                 </select>
             
-                &nbsp;by&nbsp;<input type="date" name ="searchArrivalDate">       <!-- Date box for Arrival Date-->
+                &nbsp;Arriving before&nbsp;<input type="date" name ="searchArrivalDate">       <!-- Date box for Arrival Date-->
                 
                 <input type="submit" value ="Search">       <!-- Submit button, send form entries to ****-->
             

@@ -181,6 +181,8 @@ public class MongoDBManager_Flights extends MongoDBConnector {
         return flights;
     }
     
+    //public ArrayList<Flight> getFlightsBeforeDate
+    
     private Flight convertToFlight(Document doc) {
         return new Flight((String) doc.get("id"),
                 (String) doc.get("airline"),

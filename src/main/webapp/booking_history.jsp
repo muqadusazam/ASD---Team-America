@@ -41,6 +41,7 @@
 <%
 } else {
 %>
+
 <!-- Again specifying the layout settings for the sorting function -->
 <div class="mx-auto" style="width: 900px; text-align: center;" >
     <label><b>Sort: </b></label>
@@ -50,6 +51,19 @@
         <option value="Departure">Departure</option>
         <option value="Destination">Destination</option>
     </select>
+</div>
+
+<div class="mx-auto" style="width: 900px; text-align: center;" >
+    <form action = "booking_History_Results.jsp" method = "post">
+        
+    <label for="departure">Departure: </label> 
+      <input id="departure" name="departure" type="text" />
+      
+      <label for="destination">Destination: </label> 
+      <input id="destination" name="destination" type="text" />
+      
+      <button type="submit" class="btn btn-primary">Search</button>
+</form>
 </div>
 
 <div class="mx-auto" style="width: 900px; text-align: center;">
@@ -101,11 +115,12 @@
    }
 
   </script>
-        </tr>
+    </tr>
         <%
                 }
             }
         %>
+
 </div>
 <%
     }

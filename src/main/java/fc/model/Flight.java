@@ -1,6 +1,7 @@
 package fc.model;
 
 import java.io.Serializable;
+import java.util.Comparator;
 
 
 public class Flight implements Serializable, Comparable<Flight>{
@@ -156,4 +157,32 @@ public class Flight implements Serializable, Comparable<Flight>{
     public int compareTo(Flight other) {
         return Integer.compare(Integer.parseInt(getID()), Integer.parseInt(other.getID()));
     }
+    
+    public static Comparator<Flight> DepartureComparator = new Comparator<Flight>() {
+
+	public int compare(Flight s1, Flight s2) {
+	   String de1 = s1.getOrigin().toUpperCase();
+	   String de2 = s2.getOrigin().toUpperCase();
+
+	   //ascending order
+	   return de1.compareTo(de2);
+
+	   //descending order
+	   //return StudentName2.compareTo(StudentName1);
+    }
+    };
+    
+        public static Comparator<Flight> DestinationComparator = new Comparator<Flight>() {
+
+	public int compare(Flight s1, Flight s2) {
+	   String des1 = s1.getDestination().toUpperCase();
+	   String des2 = s2.getDestination().toUpperCase();
+
+	   //ascending order
+	   return des1.compareTo(des2);
+
+	   //descending order
+	   //return StudentName2.compareTo(StudentName1);
+    }
+    };
 }

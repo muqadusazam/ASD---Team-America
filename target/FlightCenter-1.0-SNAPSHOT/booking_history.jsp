@@ -44,13 +44,15 @@
 
 <!-- Again specifying the layout settings for the sorting function -->
 <div class="mx-auto" style="width: 900px; text-align: center;" >
-    <label><b>Sort: </b></label>
+<form action = "booking_History_Sort.jsp" method = "post">
     <!-- 3 type of values added for the drop-down menu -->
-    <select id = "sortMenu" onchange="changeFunc();">
-        <option value="TicketID">Ticket ID</option>
+    Sort:
+    <select name = "sortOptions" id = "sortOptions">
         <option value="Departure">Departure</option>
         <option value="Destination">Destination</option>
     </select>
+    <input type="submit">
+</form>
 </div>
 
 <div class="mx-auto" style="width: 900px; text-align: center;" >
@@ -99,22 +101,6 @@
                     <button type="submit" class="btn btn-primary" name="ticketID" value="<%=ticket.getID()%>">Reschedule</button>
                 </form>
             </td>
-            
-            <script type="text/javascript">
-
-   function changeFunc() {
-    var selectBox = document.getElementById("sortMenu");
-    var selectedValue = selectBox.options[selectBox.selectedIndex].value;
-    if (selectedValue == "TicketID"){
-        alert("You have selected ticket: " + selectedValue);
-    }else if (selectedValue == "Departure"){
-        alert("You have selected departure: " + selectedValue);
-    }else if (selectedValue == "Destination"){
-        alert("You have selected destination: " + selectedValue);
-    }
-   }
-
-  </script>
     </tr>
         <%
                 }

@@ -51,7 +51,7 @@ public class CancelTicketUnitTest {
     @Test //Remove a specific ticket based on ticket ID
     public void removeTicket(){
         MongoDBManager_Tickets db = new MongoDBManager_Tickets();
-        String ticketID = "998";
+        String ticketID = "999";
         Ticket ticket = db.getTicket(ticketID); //Existing ticket with this ID in collection
         db.remove(ticket);
         System.out.println("-------------------------------------");

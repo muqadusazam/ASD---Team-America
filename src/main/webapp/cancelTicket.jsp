@@ -11,14 +11,19 @@
 <%@page import="fc.model.*"%>
 <%@page import="fc.model.dao.*"%>
 
-<div class="col-12 col-md-3 col-xl-2 bd-sidebar" style = "margin-top: 100px; padding: 5px; float:left; background-color:#cecece">
-    <ul class="navbar-nav mr-auto">
-        <li class="toc-entry toc-h2 anthy3"><a href="account.jsp" class ="anthy2">Profile</a></li>
-        <li class="toc-entry toc-h2 anthy3"><a href="booking_history.jsp" class ="anthy2">Booking History</a></li>
-        <li class="toc-entry toc-h2 active anthy3"><a href="cancelTicket.jsp" class ="anthy2">Cancel Ticket</a></li>
-        <li class="toc-entry toc-h2 anthy3"><a href="user_management.jsp" class ="anthy2">User Management (staff only)</a></li>
-        <li class="toc-entry toc-h2 anthy3"><a href="flight_management.jsp" class ="anthy2">Flight Management (staff only)</a></li>
-    </ul>
+<!-- Dropdown button on left side for Manage Account options -->
+<div class="dropdown show">
+  <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Options
+  </a>
+
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+    <a class="dropdown-item" href="account.jsp">Profile</a>
+    <a class="dropdown-item" href="booking_history.">Booking History</a>
+    <a class="dropdown-item active" href="cancelTicket.jsp">Cancel Ticket</a>
+    <a class="dropdown-item" href="user_management.jsp">User Management (Staff only)</a>
+    <a class="dropdown-item" href="flight_management.jsp">Flight Management (Staff only)</a>
+  </div>
 </div>
 
 <%

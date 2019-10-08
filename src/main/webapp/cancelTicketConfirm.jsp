@@ -13,7 +13,7 @@
     String ticketID = request.getParameter("ticketIDBtn"); //Gets ticket ID passed from button in cancelTicket.jsp
     MongoDBManager_Tickets db = new MongoDBManager_Tickets(); 
     Ticket ticket = db.getTicket(ticketID); //Gets ticket object based on ticket ID
-    //db.remove(ticket); //Remove the ticket from Ticket collection
+    db.remove(ticket); //Remove the ticket from Ticket collection
     
     MongoDBManager_Flights dbF = new MongoDBManager_Flights();
     Flight flight = dbF.getFlight(ticket.getFlightID()); //Gets flight details of deleted ticket for printing

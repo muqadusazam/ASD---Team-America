@@ -43,14 +43,14 @@ public class cancelTicketATDD {
         driver.findElement(By.id("ticketIDBtn")).click();
     }
     
-    //Successful cancellation
+    //Successful cancellation after accepting confirmation
     @Then("^I should see cancelTicketConfirm page when I accept confirmation$")
     public void i_should_see_cancelTicketConfirm_page_when_i_accept_confirmation() throws Throwable {
         driver.switchTo().alert().accept();
         System.out.println("Cancellation successful!");
     }
     
-    //Unsuccessful cancellation
+    //Unsuccessful cancellation after dismissing confirmation
     @Then("^I should stay on cancel ticket page when I dismiss confirmation$")
     public void i_should_stay_on_cancel_ticket_page_when_i_dismiss_confirmation() throws Throwable {
         driver.switchTo().alert().dismiss();

@@ -17,12 +17,3 @@ Scenario: Successful cancellation
 Scenario: Unsuccessful cancellation
     When I click cancel button of ticket
     Then I should stay on cancel ticket page when I dismiss confirmation
-
-#Scenario Outline: Unsuccessful cancellation
-#    When I click cancel button of ticket "<ticketID>"
-#    And I dismiss confirmation
-#    Then I should stay on cancel ticket page
-#    Examples:
-#        | ticketID |
-#        | 010      |
-#        | 009      |

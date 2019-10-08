@@ -11,21 +11,6 @@
 <%@page import="fc.model.*"%>
 <%@page import="fc.model.dao.*"%>
 
-<!-- Dropdown button on left side for Manage Account options -->
-<!--<div class="dropdown show">
-  <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    Options
-  </a>
-
-  <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-    <a class="dropdown-item" href="account.jsp">Profile</a>
-    <a class="dropdown-item" href="booking_history.">Booking History</a>
-    <a class="dropdown-item active" href="cancelTicket.jsp">Cancel Ticket</a>
-    <a class="dropdown-item" href="user_management.jsp">User Management (Staff only)</a>
-    <a class="dropdown-item" href="flight_management.jsp">Flight Management (Staff only)</a>
-  </div>
-</div>-->
-
 <%
     if (session.getAttribute("customer") == null) {
         response.sendRedirect("login.jsp"); //If user is not logged in, redirect to login.jsp
@@ -45,7 +30,7 @@
             %>
                 <p>You do not have any booked flights to cancel!</p>
             <%
-                } else { //Prints our ticket details in a table
+                } else { //Prints out ticket details in a table
             %>
                 <table class="table table-striped">
                     <thead class="thead-dark">

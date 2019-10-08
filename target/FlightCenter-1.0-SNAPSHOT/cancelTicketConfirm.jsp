@@ -45,14 +45,4 @@
     </div>
 </body>
 
-    
-<% 
-//SCRIPT CODE TO MAKE TICKET ENTRIES
-//    for (int i = 0; i < 5; i++){
-//        Ticket test = new Ticket("001", "179577", "1001", "TEST1" );
-//        MongoDBManager_Tickets dbt = new MongoDBManager_Tickets();
-//        dbt.add(test);
-//    }
-%>
-
 <jsp:include page = "fc_footer.jsp"/> <!-- Footer file for all pages-->

@@ -11,17 +11,22 @@
     MongoDBManager_Flights db = new MongoDBManager_Flights();       //Create connection to mLab
     
     String searchOrigin = request.getParameter("searchOrigin");
-    String searchDestination = request.getParameter("searchDestination");    
+    String searchDestination = request.getParameter("searchDestination");
+    String searchQuery = request.getParameter("searchBox");
     ArrayList<Flight> flights = new ArrayList();
+    String title = "Find a flight";
     //flights = db.getFlightsByOrigin(searchOrigin); 
     if (searchOrigin != null && searchDestination == null) {
-         flights = db.getFlightsByOrigin(searchOrigin); 
+         flights = db.getFlightsByOrigin(searchOrigin);
+         title = "Searching for flights from " + searchOrigin;
     }
     if (searchOrigin == null && searchDestination != null){
-         flights = db.getFlightsByDestination(searchDestination); 
+         flights = db.getFlightsByDestination(searchDestination);
+         title = "Searching for flights to " + searchDestination;
     }
     if (searchOrigin != null && searchDestination != null){
         flights = db.getFlightsByOriginAndDestination(searchOrigin, searchDestination);
+        title = "Searching for flights from " + searchOrigin + " to " + searchDestination;
     }
  
     //Get list of flights
@@ -33,7 +38,7 @@
 %>
 
 <div class="container" style="margin-top: 50px">
-        <h1 class ="bd-content-title">&nbsp;Find a flight</h1>
+        <h1 class ="bd-content-title">&nbsp;<%=title %></h1>
         
         <form action="flights_searchResults.jsp" method="get">        <!-- Form for search query-->
                 From&nbsp;<select name ="searchOrigin" placeholder="Select Airport" >     <!-- Dropdown box for Origin-->
@@ -54,6 +59,10 @@
                 
                 <input type="submit" value ="Search">       <!-- Submit button, send form entries to ****-->
             
+        </form>
+                
+        <form>
+            <input type="text" name="searchBox">
         </form>
         
         <table class="table"style="margin-top: 20px">

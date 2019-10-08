@@ -43,6 +43,9 @@
                 <input type="submit" value ="Search">       <!-- Submit button, send form entries to ****-->
             
         </form>
+        <form>
+            <input type="text" name="searchBox">
+        </form>
         
         <table class="table"style="margin-top: 20px">
           <thead class="thead-dark">

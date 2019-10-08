@@ -12,7 +12,7 @@
 <%@page import="fc.model.dao.*"%>
 
 <!-- Dropdown button on left side for Manage Account options -->
-<div class="dropdown show">
+<!--<div class="dropdown show">
   <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
     Options
   </a>
@@ -24,7 +24,7 @@
     <a class="dropdown-item" href="user_management.jsp">User Management (Staff only)</a>
     <a class="dropdown-item" href="flight_management.jsp">Flight Management (Staff only)</a>
   </div>
-</div>
+</div>-->
 
 <%
     if (session.getAttribute("customer") == null) {

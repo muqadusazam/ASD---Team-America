@@ -152,7 +152,7 @@ public class MongoDBManager_Flights extends MongoDBConnector {
             MongoCollection<Document> flightlist = db.getCollection(FLIGHT_COLLECTION);
             for (Document doc : flightlist.find()) {
                 Flight flight = convertToFlight(doc);
-                if (flight.getDestination().equals(destination)) {
+                if (flight.getDestination().equalsIgnoreCase(destination)) {
                     flights.add(flight);
                 }
             }

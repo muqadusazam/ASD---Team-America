@@ -27,18 +27,18 @@ public class FlightsSearchServlet extends HttpServlet{
         String title = "Find a flight";
 
 
-        if (searchOrigin != null && searchDestination == null) {
+        if (searchOrigin != null && searchDestination.isEmpty()) {
              flights = db.getFlightsByOrigin(searchOrigin);
              title = "Results from " + searchOrigin;
         }
-        if (searchOrigin == null && searchDestination != null){
+        if (searchOrigin == null && !searchDestination.isEmpty()){
              flights = db.getFlightsByDestination(searchDestination);
              //
              //needs to interpret search results + guess incomplete results
              //
              title = "Results to " + searchDestination;
         }
-        if (searchOrigin != null && searchDestination != null){
+        if (searchOrigin != null && !searchDestination.isEmpty()){
             flights = db.getFlightsByOriginAndDestination(searchOrigin, searchDestination);
             title = "Results from " + searchOrigin + " to " + searchDestination;
         }     

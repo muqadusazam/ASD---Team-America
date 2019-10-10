@@ -37,7 +37,7 @@
           <a class="nav-link" href="main.jsp" >Home <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item h">
-          <a class="nav-link" href="flights_search.jsp">Flights</a>
+          <a class="nav-link" href="flights.jsp">Flights</a>
         
       </ul>
         <ul class="navbar-nav mr-sm-2">

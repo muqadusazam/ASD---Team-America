@@ -133,6 +133,7 @@ public class MongoDBManager_Flights extends MongoDBConnector {
             MongoCollection<Document> flightlist = db.getCollection(FLIGHT_COLLECTION);
             for (Document doc : flightlist.find()) {
                 Flight flight = convertToFlight(doc);
+                //check if flight's origin matches target's
                 if (flight.getOrigin().equals(origin)) {
                     flights.add(flight);
                 }
@@ -143,6 +144,7 @@ public class MongoDBManager_Flights extends MongoDBConnector {
         return flights;
     } 
     
+    //Loop through flight list, return flights whose destination starts with argument
     public ArrayList<Flight> getFlightsByDestination(String destination) {
         MongoClientURI uri = generateURI();
         ArrayList<Flight> flights;
@@ -152,7 +154,9 @@ public class MongoDBManager_Flights extends MongoDBConnector {
             MongoCollection<Document> flightlist = db.getCollection(FLIGHT_COLLECTION);
             for (Document doc : flightlist.find()) {
                 Flight flight = convertToFlight(doc);
-                if (flight.getDestination().equalsIgnoreCase(destination)) {
+                //standardise flight's destination & target destination to lowercase
+                //then, check if flight's destination starts with target string
+                if (flight.getDestination().toLowerCase().startsWith(destination.toLowerCase())) {
                     flights.add(flight);
                 }
             }
@@ -162,6 +166,7 @@ public class MongoDBManager_Flights extends MongoDBConnector {
         return flights;
     }
     
+    //Loop through flight list, return flights whose origin and destination matches arguments
     public ArrayList<Flight> getFlightsByOriginAndDestination(String origin, String destination) {
         MongoClientURI uri = generateURI();
         ArrayList<Flight> flights;
@@ -171,7 +176,10 @@ public class MongoDBManager_Flights extends MongoDBConnector {
             MongoCollection<Document> flightlist = db.getCollection(FLIGHT_COLLECTION);
             for (Document doc : flightlist.find()) {
                 Flight flight = convertToFlight(doc);
-                if (flight.getOrigin().equals(origin) && flight.getDestination().equals(destination)) {
+                //check if flight's origin matches target's
+                //then, standardise flight's destination & target destination to lowercase
+                //then, check if flight's destination starts with target string
+                if (flight.getOrigin().equals(origin) && flight.getDestination().toLowerCase().startsWith(destination.toLowerCase())) {
                     flights.add(flight);
                 }
             }

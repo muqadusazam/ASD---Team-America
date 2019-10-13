@@ -25,44 +25,39 @@
     %>
     <h2 class="text-danger"> You must be logged in to Reschedule Ticket. Click <a href="login.jsp">here</a> to login. </h2>
     <%
-        } else if (request.getParameter("ticketID") == null) { //Check if ticket is in session
-    %>
-    <h2 class="text-danger"> Could not load ticket from database. </h2>
-    <%
         } else { //Customer & Ticket are contained in session
             Customer customer = (Customer)session.getAttribute("customer");
 
             //Get Ticket object from database
             MongoDBManager_Tickets dbt = new MongoDBManager_Tickets();
-            Ticket ticket = dbt.getTicket((String)request.getParameter("ticket"));
+            Ticket ticket = dbt.getTicket(request.getParameter("ticketID"));
+            session.setAttribute("oldTicket", ticket);
 
             //Get flight from database based on ticket in session
             MongoDBManager_Flights dbf = new MongoDBManager_Flights();
             Flight flight = dbf.getFlight(ticket.getFlightID());
 
             //Set flight in session
-            session.setAttribute("oldFlight", flight);
+            session.setAttribute("flight", flight);
+
+            //Display ticket + flight info
     %>
     <h1><p>Reschedule ticket</p></h1>
     <%
-        //Check for errors passed from servlet
-        if (session.getAttribute("errors") != null) {
-    %>
-        <div class="alert alert-danger" role="alert">
-        <strong>Error!</strong> ${errors.dateErr}
-        </div>
-    <%
-        session.setAttribute("errors", null); //Reset after message displayed
-        } else if (session.getAttribute("success") != null) { //Check for successfull reschedule from servlet
+        if (session.getAttribute("success") != null) {
     %>
     <div class="alert alert-success" role="alert">
         <strong>Success!</strong> <%= session.getAttribute("success") %>
     </div>
     <%
-        session.setAttribute("success", null); //Reset after message displayed
+            session.setAttribute("success", null);
+        } else if (session.getAttribute("error") != null) { //Check for errors passed from servlet 
+    %>
+        <div class="alert alert-danger" role="alert">
+        <strong>Error!</strong> <%= session.getAttribute("success") %>
+        </div>
+    <%
         }
-
-        //Display ticket + flight info
     %>
     <table class="table table-hover">
         <tbody>
@@ -147,6 +142,18 @@
         %>
                 <h2 class="text-warning"> There are no available tickets. </h2>
         <%
+            } else if (flights.size() == 1) {
+        %>
+        <tr>
+            <td><b>Choose new ticket: &nbsp&nbsp</b></td>
+            <td>
+                There are no flights to reschedule to. 
+                <form action="booking_history.jsp">
+                <button type="submit" class="btn btn-danger" style="float: right">Go back</button>
+                </form>
+            </td>
+        </tr>
+        <%
             } else { //Display all flights in array when not empty/null
         %>
         <tr>
@@ -158,17 +165,19 @@
                         <%
                             //Loop through all flights in array and display in drop down menu
                             for (Flight f: flights) {
+                                if (!f.getID().equalsIgnoreCase(flight.getID())) {
                         %>
                                 <option name="<%= f.getID() %>" value="<%= f.getID() %>"> 
                                     Departure: <%= f.getOrigin() %> @ <%= f.getDepartureTime() %> <%= f.getDepartureDate() %>; 
                                     Destination: <%= f.getDestination()%> @ <%= f.getArrivalTime() %> <%= f.getArrivalDate() %>; 
                                 </option>
                         <%
-                            }
+                            }}
                         %>
                     </select>
                     <button type="submit" class="btn btn-success" style="float: right" id="rescheduleBtn">Submit</button>
                     <button type="reset" class="btn btn-danger" style="float: right">Cancel</button>
+                    <input id="ticketID" name="ticketID" value="<%= request.getParameter("ticketID") %>" type="hidden">
                 </form>
             </td>
         </tr>

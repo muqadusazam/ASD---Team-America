@@ -25,10 +25,6 @@
     %>
     <h2 class="text-danger"> You must be logged in to Reschedule Ticket. Click <a href="login.jsp">here</a> to login. </h2>
     <%
-        } else if (request.getParameter("ticketID") == null) { //Check if ticket is in session
-    %>
-    <h2 class="text-danger"> Could not load ticket from database. </h2>
-    <%
         } else { //Customer & Ticket are contained in session
             Customer customer = (Customer)session.getAttribute("customer");
 
@@ -58,7 +54,7 @@
         } else if (session.getAttribute("error") != null) { //Check for errors passed from servlet 
     %>
         <div class="alert alert-danger" role="alert">
-        <strong>Error!</strong> ${errors.error}
+        <strong>Error!</strong> <%= session.getAttribute("success") %>
         </div>
     <%
         }
@@ -146,6 +142,18 @@
         %>
                 <h2 class="text-warning"> There are no available tickets. </h2>
         <%
+            } else if (flights.size() == 1) {
+        %>
+        <tr>
+            <td><b>Choose new ticket: &nbsp&nbsp</b></td>
+            <td>
+                There are no flights to reschedule to. 
+                <form action="booking_history.jsp">
+                <button type="submit" class="btn btn-danger" style="float: right">Go back</button>
+                </form>
+            </td>
+        </tr>
+        <%
             } else { //Display all flights in array when not empty/null
         %>
         <tr>
@@ -157,13 +165,14 @@
                         <%
                             //Loop through all flights in array and display in drop down menu
                             for (Flight f: flights) {
+                                if (!f.getID().equalsIgnoreCase(flight.getID())) {
                         %>
                                 <option name="<%= f.getID() %>" value="<%= f.getID() %>"> 
                                     Departure: <%= f.getOrigin() %> @ <%= f.getDepartureTime() %> <%= f.getDepartureDate() %>; 
                                     Destination: <%= f.getDestination()%> @ <%= f.getArrivalTime() %> <%= f.getArrivalDate() %>; 
                                 </option>
                         <%
-                            }
+                            }}
                         %>
                     </select>
                     <button type="submit" class="btn btn-success" style="float: right" id="rescheduleBtn">Submit</button>

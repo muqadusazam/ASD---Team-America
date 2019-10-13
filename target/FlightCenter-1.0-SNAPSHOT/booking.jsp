@@ -1,6 +1,8 @@
+<%@page import="java.util.ArrayList"%>
 <<%@page import="fc.model.Flight"%>
 <%@page import="fc.model.Customer"%>
 <%@page import="fc.model.dao.*"%>
+<%@page import="fc.model.*"%>
 <jsp:include page="fc_header.jsp">
 	<jsp:param name="title" value="Flight Center/flights"/>
 </jsp:include>
@@ -10,7 +12,6 @@
     <h2 class="text-warning"> You must login to book flights. </h2>
 <%
     } else if (session.getAttribute("success") != null) {
-        session.setAttribute("success", null);
 %>
     <div class="container" style="margin-top: 50px">
         <h1 class ="bd-content-title">Book flight</h1>
@@ -21,6 +22,19 @@
         </table>
     </div>
 <%
+        session.setAttribute("success", null);
+    } else if (session.getAttribute("error") != null) {
+%>
+    <div class="container" style="margin-top: 50px">
+        <h1 class ="bd-content-title">Book flight</h1>
+        <table class="table"style="margin-top: 20px">
+            <h2 class="text-success"> 
+                <%= session.getAttribute("error") %> Click <a href="booking_history.jsp">here</a> to see your booking history.
+            </h2>
+        </table>
+    </div>
+<%
+        session.setAttribute("error", null);
     } else if (request.getParameter("cancel") != null) {
         session.setAttribute("flightID", null);
 %>
@@ -33,22 +47,33 @@
         </table>
     </div>
 <%
-    } else if (request.getParameter("flightID") == null) {
+    } else {
+        Customer user = (Customer)session.getAttribute("customer");
+
+        MongoDBManager_Flights dbf = new MongoDBManager_Flights();   
+        Flight flight = dbf.getFlight(request.getParameter("flightID"));
+
+        MongoDBManager_Tickets dbt = new MongoDBManager_Tickets();
+        ArrayList<Ticket> tickets = dbt.getTickets(user);
+        boolean hasDuplicate = false;
+        
+        for (Ticket t: tickets) {
+            if (t.getFlightID().equals(flight.getID())) {
+                hasDuplicate = true;
 %>
     <div class="container" style="margin-top: 50px">
         <h1 class ="bd-content-title">Book flight</h1>
         <table class="table"style="margin-top: 20px">
             <h2 class="text-danger"> 
-                You need to select a flight from <a href="flights_search.jsp">here</a> to continue.
+                You already have this flight booked. Click <a href="flights_search.jsp">here</a> to go back to flights.
             </h2>
         </table>
     </div>
 <%
-    } else {
-        Customer user = (Customer)session.getAttribute("customer");
+            }
+        }
 
-        MongoDBManager_Flights db = new MongoDBManager_Flights();   
-        Flight flight = db.getFlight(request.getParameter("flightID"));
+        if (hasDuplicate == false) {
 %>
     <div class="container" style="margin-top: 50px">
         <h1 class ="bd-content-title">Book flight</h1>
@@ -126,6 +151,6 @@
         </table>
     </div>
 <%
-    }
+    }}
 %>
 <jsp:include page = "fc_footer.jsp"/>

@@ -29,8 +29,6 @@ public class RescheduleServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
     throws ServletException, IOException {
-        //Set errors attribute for storing error messages
-        Map<String,String> errors = new HashMap<String,String>();
         //Get session from request object
         HttpSession session = request.getSession();
         
@@ -42,13 +40,13 @@ public class RescheduleServlet extends HttpServlet {
         
         //Check if Flight ID match
         if (oldFlight.getID().compareTo(oldTicket.getFlightID()) >= 0) {
-            request.setAttribute("error", "Flight ID does not match Flight ID on Ticket.");
+            session.setAttribute("error", "Flight ID does not match Flight ID on Ticket.");
             request.getRequestDispatcher("reschedule.jsp").forward(request, response);
         }
         
         //Check if Flight ID match
         if (oldFlight.getID().compareTo(oldTicket.getFlightID()) == 0) {
-            request.setAttribute("error", "You selected the same Flight on ticket.");
+            session.setAttribute("error", "You selected the same Flight on ticket.");
             request.getRequestDispatcher("reschedule.jsp").forward(request, response);
         }
         
@@ -67,18 +65,18 @@ public class RescheduleServlet extends HttpServlet {
         
         //Check if departure date is after the old departure date
         if (oldDepDate.compareTo(newDepDate) >= 0) {
-            request.setAttribute("error", "The departure date must be after the old departure date.");
+            session.setAttribute("error", "The departure date must be after the old departure date.");
             request.getRequestDispatcher("reschedule.jsp").forward(request, response);
         }
         
         //Check if arrival date is after the old departure date
         if (oldDestDate.compareTo(newDestDate) >= 0) {
-            request.setAttribute("error", "The destination date must be after the old departure date.");
+            session.setAttribute("error", "The destination date must be after the old departure date.");
             request.getRequestDispatcher("reschedule.jsp").forward(request, response);
         }
         
         //Check errors empty and proceed to reschedule ticket 
-        if (errors.isEmpty()) {
+        if (session.getAttribute("error") != null) {
             MongoDBManager_Tickets dbt = new MongoDBManager_Tickets();
             
             Ticket newTicket = new Ticket(oldTicket.getID(),
@@ -89,7 +87,7 @@ public class RescheduleServlet extends HttpServlet {
             dbt.add(newTicket);
             
             session.setAttribute("success", "The ticket has been successfully rescheduled!");
-            response.sendRedirect("reschedule.jsp");
+            request.getRequestDispatcher("reschedule.jsp").forward(request, response);
         }
     }
     

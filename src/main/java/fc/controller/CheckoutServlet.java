@@ -15,6 +15,7 @@ import javax.servlet.http.HttpSession;
 import java.util.*;
 import fc.model.*;
 import fc.model.dao.*;
+import java.text.SimpleDateFormat;
 
 /**
  *
@@ -38,6 +39,33 @@ public class CheckoutServlet extends HttpServlet {
         for (Ticket ticket: tickets) 
             if (ticket.getFlightID().equals(flightID)) 
                 errors.put("error", "Error! You already have a ticket with the same flight.");
+        
+        MongoDBManager_Flights dbf = new MongoDBManager_Flights();
+        Flight flight = dbf.getFlight(flightID);
+        
+        SimpleDateFormat formatter = new SimpleDateFormat("dd-MM-yyyy");
+        
+        try {
+            Date dep = formatter.parse(flight.getDepartureDate());
+            Date arr = formatter.parse(flight.getArrivalDate());
+            
+            for (Ticket t: tickets) {
+                if(!t.getFlightID().equals(flightID)) {
+                    Flight f = dbf.getFlight(t.getFlightID());
+                    
+                    Date t_dep = formatter.parse(f.getDepartureDate());
+                    Date t_arr = formatter.parse(f.getArrivalDate());
+                    
+                    if (!(t_dep.before(dep) || t_dep.after(arr) && t_arr.before(dep) || t_arr.after(arr))) {
+                        errors.put("errors", "Error! You already have a ticket with a flight within the same date.");
+                        response.sendRedirect("booking.jsp");
+                    }
+                }
+            }
+        } catch(Exception ex) {
+            errors.put("error", "Error! Couldnt convert flight date");
+            response.sendRedirect("booking.jsp");
+        }
         
         if (errors.isEmpty()) { 
             response.sendRedirect("booking.jsp");

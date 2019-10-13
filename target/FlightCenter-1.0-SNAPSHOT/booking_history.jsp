@@ -79,7 +79,7 @@
             <td><%=flight.getOrigin()%></td>
             <td><%=flight.getDepartureDate()%></td>
             <td><%=flight.getDestination()%></td>
-            <td><%=flight.getDepartureDate()%></td>
+            <td><%=flight.getArrivalDate()%></td>
             <td>
                 <form action="reschedule.jsp" method="POST">
                     <button type="submit" class="btn btn-primary" name="ticketID" id="ticketID" value="<%=ticket.getID()%>">Reschedule</button>

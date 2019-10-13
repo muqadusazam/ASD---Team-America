@@ -15,11 +15,9 @@
         <!-- Form for search query-->
         <form action="FlightsSearchServlet" method="GET">
              <!-- Dropdown box for Origins-->
-                Find a flight from&nbsp;<select name ="searchOrigin" >
-                    
+                Find a flight from&nbsp;<select name ="searchOrigin" >                    
                     <!-- Default, hidden option - used for placeholder--> 
-                    <option value="" selected disabled hidden>Anywhere</option>
-                    
+                    <option value="" selected disabled hidden>Anywhere</option>                    
                     <!-- for loop that creates an <option> for each unique Origin -->
                     <% for (String origin: db.getAllOrigins()) { %>                  
                     <option><%=origin %></option>
@@ -27,16 +25,15 @@
                 </select>
                 
                 <!--Text box to search destinations-->
-<div class ="form-group">
                 &nbsp;to&nbsp;<input type="text" name="searchDestination" placeholder="Anywhere">
-                <span class="error text-danger"><em>${errors.searchDestErr}</em></span>
-                </div>
                          
                 <!-- Date box for Arrival Date-->
                 &nbsp;by&nbsp;<input type="date" name ="searchArrivalDate">       
                 
                 <!-- Submit button, send form entries to FlightSearchServlet-->
-                <input type="submit" value ="Search">       
+                <input type="submit" value ="Search">
+                
+                <br><span class="error text-danger"><em>${errors.searchDestErr}</em></span>
             
         </form>
         </div>

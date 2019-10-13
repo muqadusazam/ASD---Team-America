@@ -17,7 +17,7 @@
 <div class="container" style="margin-top: 50px">
     <div class="mx-auto" style="width: 800px; text-align: center;" >
         <h1 class ="bd-content-title">&nbsp;<%=title %></h1>
-        
+
         <!-- Form for search query-->
         <form action="FlightsSearchServlet" method="GET">
              <!-- Dropdown box for Origins-->
@@ -31,17 +31,15 @@
                 </select>
                 
                 <!--Text box to search destinations-->
-                <div class ="form-group">
                 &nbsp;to&nbsp;<input type="text" name="searchDestination" placeholder="Anywhere">
-                <span class="error text-danger"><em>${errors.searchDestErr}</em></span>
-                </div>
                          
                 <!-- Date box for Arrival Date-->
                 &nbsp;by&nbsp;<input type="date" name ="searchArrivalDate">       
                 
                 <!-- Submit button, send form entries to FlightSearchServlet-->
-                <input type="submit" value ="Search">       
-            
+                <input type="submit" value ="Search">
+                
+                <br><span class="error text-danger"><em>${errors.searchDestErr}</em></span>            
         </form>
         </div>             
         

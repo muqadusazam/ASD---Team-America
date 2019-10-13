@@ -98,11 +98,12 @@ public class FlightsSearchServlet extends HttpServlet{
             request.setAttribute("errors", errors);
             request.getRequestDispatcher("flights.jsp").forward(request, response);            
         }                 
-
     }  
     
+    //regex for validating input from flights.jsp and flights_searchResults.jsp
     private String destinationPattern = "[a-zA-Z]*"; //Only allow characters a-z, A-Z and one use of a dash '-'
     
+
     public boolean validate(String patternString, String input){ //return false if input does not match pattern
         Pattern pattern = Pattern.compile(patternString); //Interprets regex pattern
         Matcher match = pattern.matcher(input); //Sets up a matcher for comparing regex pattern to input

@@ -32,13 +32,28 @@ public class MongoDBManager_Flights extends MongoDBConnector {
             flightDB.deleteOne(convertToDoc(flight)); //Convert flight's details to MongoDB's format
         }
     }
-    public void update(Flight flight){
+    public void update(Flight flight) {
         MongoClientURI uri = generateURI();
-        try(MongoClient client = new MongoClient(uri)){
+        try (MongoClient client = new MongoClient(uri)){
             MongoDatabase db = client.getDatabase(uri.getDatabase());
-            MongoCollection<Document> flightDB = db.getCollection(FLIGHT_COLLECTION);
-            //var query = {id:flight.getID()};
-             //flightDB.updateOne({id :  new Document("id", flight.getID())},{$set:convertToDoc(flight)});
+            MongoCollection<Document> collection = db.getCollection(FLIGHT_COLLECTION);
+            Document query =  new Document();
+            query.append("id", flight.getID()); //The ticket to be updated
+            Document setData = new Document(); //The new details
+            setData.append("id", flight.getID());
+            setData.append("airline", flight.getAirline());
+            setData.append("origin", flight.getOrigin());
+            setData.append("destination", flight.getDestination());
+            setData.append("departure_time", flight.getDepartureTime());
+            setData.append("departure_date", flight.getDepartureDate());
+            setData.append("arrival_time", flight.getArrivalTime());
+            setData.append("arrival_date", flight.getArrivalDate());
+            setData.append("status", flight.getStatus());
+            setData.append("price", flight.getPrice());
+            setData.append("available_seats", flight.getAvailableSeats());
+            Document update = new Document();
+            update.append("$set", setData); //Add new details to an updated document
+            collection.updateOne(query, update); //Merge updated details with ticket ID and update in collection
         }
     }
     

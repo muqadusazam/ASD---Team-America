@@ -22,7 +22,7 @@
     //getFlight returns ArrayList of Flight object in the database table 
     ArrayList<Flight> flights = db.getFlights();
 %>
-    <div class="container" style="margin-top: 40px; float: right">
+    <div class="container" style="margin-top: 40px; float:middle">
         <h1 class ="bd-content-title">&nbsp;List of Flights</h1>
         <a href = "flightAdd_management.jsp" class = "btn btn-lg btn-primary" style="margin:5px; float: right"> Add Flight </a> 
         <!--Table for the list of flights-->

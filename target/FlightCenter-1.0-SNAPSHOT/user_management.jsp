@@ -6,7 +6,7 @@
 <jsp:include page="fc_header.jsp">
     <jsp:param name="title" value="Flight Center/account/user_management"/>
 </jsp:include>
-<div class="col-12 col-md-3 col-xl-2 bd-sidebar" style = "margin-top: 100px; padding: 5px; float:left; background-color:#cecece">
+<!--<div class="col-12 col-md-3 col-xl-2 bd-sidebar" style = "margin-top: 100px; padding: 5px; float:left; background-color:#cecece">
     <ul class="navbar-nav mr-auto">
         <li class="toc-entry toc-h2 anthy3"><a href="account.jsp" class ="anthy2">Profile</a></li>
         <li class="toc-entry toc-h2 anthy3"><a href="booking_history.jsp" class ="anthy2">Booking History</a></li>
@@ -14,7 +14,7 @@
         <li class="toc-entry toc-h2 anthy3"><a href="#" class ="anthy2">Cancel Ticket</a></li>
         <li class="toc-entry toc-h2 active anthy3"><a href="user_management.jsp" class ="anthy2">User Management (staff only)</a></li>
     </ul>
-</div>
+</div>-->
 
 <div class="mx-auto" style="width: 800px; text-align: center;" >
     <h1>Administration Page</h1>
@@ -27,20 +27,21 @@
             </div>
         </div>
     </form>
-
-    <div class="input-group mb-3" style="text-align: center;">
-        <div>
-            Sort By:
-                <select name="sortBy" form="searchForm">
-                    <option value="1">ID</option>
-                    <option value="2">Name</option>
-                    <option value="3">Email</option>
-                </select>
-        </div>
-        <form action="userAdd_management.jsp" method="POST">
-            <button class="btn btn-success" type="submit">Add New User</button>
-        </form>
+</div>
+<div style="text-align: center;">
+    <div>
+        Sort By:
+        <select name="sortBy" form="searchForm">
+            <option value="1">ID</option>
+            <option value="2">Name</option>
+            <option value="3">Email</option>
+        </select>
     </div>
+    <br>
+    <form action="userAdd_management.jsp" method="POST">
+        <button class="btn btn-success" type="submit">Add New User</button>
+    </form>
+    <br>
 </div>
 
 <%--Retrieves all customer from database into arraylist--%>

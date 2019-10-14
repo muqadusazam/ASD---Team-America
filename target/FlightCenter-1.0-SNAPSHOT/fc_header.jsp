@@ -49,7 +49,7 @@
           <a class="nav-link" href="register.jsp">Register</a>
         </li>
          <li class="nav-item h">
-          <a class="nav-link" href="account.jsp">Account</a>
+          <a class="nav-link" href="user_management.jsp">Account</a>
         </li>
         </ul>
       

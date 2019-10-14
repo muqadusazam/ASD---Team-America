@@ -1,4 +1,4 @@
-<jsp:include page="fc_header.jsp">
+    <jsp:include page="fc_header.jsp">
     <jsp:param name="title" value="Flight Center/account/userAdd_management"/>
 </jsp:include>
 

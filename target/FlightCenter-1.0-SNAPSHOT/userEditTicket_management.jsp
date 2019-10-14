@@ -156,7 +156,7 @@
                             }
                         %>
                     </select>
-                    <button type="submit" name="ID" value=<%=ticket.getCustomerID()%> class="btn btn-success" style="float: right" id="rescheduleBtn">Submit</button>
+                    <button type="submit" name="ID" value="<%=ticket.getCustomerID()%>" class="btn btn-success" style="float: right" id="rescheduleBtn">Submit</button>
                     <button type="reset" class="btn btn-danger" style="float: right">Cancel</button>
                 </form>
             </td>

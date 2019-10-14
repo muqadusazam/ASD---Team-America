@@ -1,3 +1,5 @@
+<%@page import="java.util.Collections"%>
+<%@page import="java.util.Comparator"%>
 <%@page import="fc.model.Customer"%>
 <%@page import="java.util.ArrayList"%>
 <%@page import="fc.model.dao.MongoDBManager_Customers"%>
@@ -17,20 +19,66 @@
 <div class="mx-auto" style="width: 800px; text-align: center;" >
     <h1>Administration Page</h1>
 
-    <div class="input-group mb-3">
-        <input type="text" class="form-control" aria-label="Recipient's username" aria-describedby="button-addon2">
-        <div class="input-group-append">
-            <button class="btn btn-outline-secondary" type="button" id="button-addon2">Search</button>
-            <form action="userAdd_management.jsp" method="POST">
-                <button class="btn btn-success" type="submit">Add New User</button>
-            </form>
+    <form action="user_management.jsp" method="POST" id="searchForm">
+        <div class="input-group mb-3">
+            <input type="text" class="form-control" aria-label="Recipient's username" aria-describedby="button-addon2" type="text" name="search" placeholder="Search by Name or ID">
+            <div class="input-group-append">
+                <button class="btn btn-outline-secondary" type="button" id="button-addon2">Search</button>
+            </div>
         </div>
+    </form>
+
+    <div class="input-group mb-3" style="text-align: center;">
+        <div>
+            Sort By:
+                <select name="sortBy" form="searchForm">
+                    <option value="1">ID</option>
+                    <option value="2">Name</option>
+                    <option value="3">Email</option>
+                </select>
+        </div>
+        <form action="userAdd_management.jsp" method="POST">
+            <button class="btn btn-success" type="submit">Add New User</button>
+        </form>
     </div>
 </div>
+
 <%--Retrieves all customer from database into arraylist--%>
-<% 
+<%
+    String search = request.getParameter("search");
+    ArrayList<Customer> customers;
     MongoDBManager_Customers customerDB = new MongoDBManager_Customers();
-    ArrayList<Customer> customers = customerDB.getCustomers();
+
+    if (search != null && !search.isEmpty() && customerDB.customerExist(search)) {
+        customers = customerDB.getCustomerByNameOrID(search);
+    } else {
+        customers = customerDB.getCustomers();
+    }
+
+    String sortBy = request.getParameter("sortBy");
+
+    if (sortBy != null && sortBy.contains("2")) {
+        Collections.sort(customers, new Comparator<Customer>() {
+            @Override
+            public int compare(final Customer a, final Customer b) {
+                return a.getFirstName().compareTo(b.getFirstName());
+            }
+        });
+    } else if (sortBy != null && sortBy.contains("3")) {
+        Collections.sort(customers, new Comparator<Customer>() {
+            @Override
+            public int compare(final Customer a, final Customer b) {
+                return a.getEmail().compareTo(b.getEmail());
+            }
+        });
+    } else {
+        Collections.sort(customers, new Comparator<Customer>() {
+            @Override
+            public int compare(final Customer a, final Customer b) {
+                return Integer.parseInt(a.getID()) - Integer.parseInt(b.getID());
+            }
+        });
+    }
 %>
 <%--Displaying arraylist in for loop--%>
 <div class="mx-auto" style="width: 950px; text-align: center;">
@@ -45,29 +93,29 @@
                 <th>Action</th>              
             </tr>
         </thead>
-        <% for(Customer customer : customers) {  %>
+        <% for (Customer customer : customers) {%>
         <tr>
-            <td><%= customer.getID() %></td>
-            <td><%= customer.getFirstName() %></td>
-            <td><%= customer.getLastName() %></td>
-            <td><%= customer.getEmail() %></td>
-            <td><%= customer.getDOB() %></td>
+            <td><%= customer.getID()%></td>
+            <td><%= customer.getFirstName()%></td>
+            <td><%= customer.getLastName()%></td>
+            <td><%= customer.getEmail()%></td>
+            <td><%= customer.getDOB()%></td>
             <td>
                 <div style="width:150px;">
                     <div style="float: left;"> 
                         <form action="userDetail_management.jsp" method="POST">
-                            <button type="submit" name="ID" value="<%= customer.getID() %>" class="btn btn-primary">View</button> 
+                            <button type="submit" name="ID" value="<%= customer.getID()%>" class="btn btn-primary">View</button> 
                         </form>
                     </div>
                     <div style="float: right;"> 
                         <form action="userTicket_management.jsp" method="POST">
-                            <button type="submit" name="ID" value="<%= customer.getID() %>" class="btn btn-info">Tickets</button>
+                            <button type="submit" name="ID" value="<%= customer.getID()%>" class="btn btn-info">Tickets</button>
                         </form>
                     </div>
                 </div>
             </td>
         </tr> 
-        <% } %>
+        <% }%>
     </table>
 </div>
 

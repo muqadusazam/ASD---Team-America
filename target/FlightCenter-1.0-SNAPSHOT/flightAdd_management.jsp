@@ -3,16 +3,7 @@
 <jsp:include page="fc_header.jsp">
     <jsp:param name="title" value="Flight Management/Delete"/>
 </jsp:include>
-<div class="col-12 col-md-3 col-xl-2 bd-sidebar" style = "margin-top: 100px; padding: 5px; float:left; background-color:#cecece">
-    <ul class="navbar-nav mr-auto">
-        <li class="toc-entry toc-h2 anthy3"><a href="account.jsp" class ="anthy2">Profile</a></li>
-        <li class="toc-entry toc-h2 anthy3"><a href="booking_history.jsp" class ="anthy2">Booking History</a></li>
-        <li class="toc-entry toc-h2 anthy3"><a href="reschedule.jsp" class ="anthy2">Reschedule Ticket</a></li>
-        <li class="toc-entry toc-h2 anthy3"><a href="cancelTicket.jsp" class ="anthy2">Cancel Ticket</a></li>
-        <li class="toc-entry toc-h2 anthy3"><a href="user_management.jsp" class ="anthy2">User Management (staff only)</a></li>
-        <li class="toc-entry toc-h2 active anthy3"><a href="flight_management.jsp" class ="anthy2">Flight Management (staff only)</a></li>
-    </ul>
-</div>
+
 
 <script>
     //client side validation for preventing empty values input
@@ -71,7 +62,7 @@
     }
 </script>
 
-<div class="container pt-5" style = "margin: 40px; float:right">
+<div class="container pt-5" style = "margin: 30px; float:right">
     <h1 style = "margin-bottom:30px">Add Flight</h1>
     <form action="flightAddSuccess.jsp" method ="post" name="flight_add" onsubmit="return validate()">
         <div class="form-group col-md-6">

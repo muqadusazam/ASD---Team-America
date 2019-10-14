@@ -4,44 +4,44 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 
 <jsp:include page="fc_header.jsp">
-	<jsp:param name="title" value="Flight Center/flights"/>
+	<jsp:param name="title" value="Flight Center/flightSearch"/>
 </jsp:include>
 
 <% 
     MongoDBManager_Flights db = new MongoDBManager_Flights();       //Create connection to mLab
-
-    ArrayList<Flight> flights = db.getFlights();    
-    //Get list of flights
-    //For each flight, make a list of unique origin
-    //For each flight, make a list of unique destination
-
-    //For loop on selects; for each origin -> display option
-    //For loop on selects; for each destination -> display option
+    ArrayList<Flight> flights = (ArrayList<Flight>)request.getAttribute("flights");
+    String title = (String)request.getAttribute("title");
+   
 %>
 
 <div class="container" style="margin-top: 50px">
-        <h1 class ="bd-content-title">&nbsp;Find a flight</h1>
-        
-        <form action="">        <!-- Form for search query-->
-                From&nbsp;<select id ="searchOrigin" placeholder="Select Airport" required>     <!-- Dropdown box for Origin-->
-                    <option value="" selected disabled hidden>Select Origin</option>        <!-- Default, hidden option - used for placeholder--> 
-                    <% for (String origin: db.getAllOrigins()) { %>    <!-- for loop that creates an <option> for each unique Origin -->              
+    <div class="mx-auto" style="width: 800px; text-align: center;" >
+        <h1 class ="bd-content-title">&nbsp;<%=title %></h1>
+
+        <!-- Form for search query-->
+        <form action="FlightsSearchServlet" method="GET">
+             <!-- Dropdown box for Origins-->
+                Find a flight from&nbsp;<select name ="searchOrigin" >                    
+                    <!-- Default, hidden option - used for placeholder--> 
+                    <option value="" selected disabled hidden>Anywhere</option>                    
+                    <!-- for loop that creates an <option> for each unique Origin -->
+                    <% for (String origin: db.getAllOrigins()) { %>                  
                     <option><%=origin %></option>
                     <% } %>
                 </select>
-            
-                &nbsp;To&nbsp;<select id ="searchDestination" placeholder="Select Destination" required>        <!-- Dropdown box for Destination-->
-                    <option value="" selected disabled hidden>Select Destination</option>       <!-- Default, hidden option - used for placeholder-->
-                    <% for (String destination: db.getAllDestinations()) { %>    <!-- for loop that creates an <option> for each unique Destination -->             
-                    <option><%=destination %></option>
-                    <% } %>
-                </select>
-            
-                &nbsp;by&nbsp;<input type="date" id ="searchArrivalDate">       <!-- Date box for Arrival Date-->
                 
-                <input type="submit" value ="Search">       <!-- Submit button, send form entries to ****-->
-            
+                <!--Text box to search destinations-->
+                &nbsp;to&nbsp;<input type="text" name="searchDestination" placeholder="Anywhere">
+                         
+                <!-- Date box for Arrival Date-->
+                &nbsp;by&nbsp;<input type="date" name ="searchArrivalDate">       
+                
+                <!-- Submit button, send form entries to FlightSearchServlet-->
+                <input type="submit" value ="Search">
+                
+                <br><span class="error text-danger"><em>${errors.searchDestErr}</em></span>            
         </form>
+        </div>             
         
         <table class="table"style="margin-top: 20px">
           <thead class="thead-dark">

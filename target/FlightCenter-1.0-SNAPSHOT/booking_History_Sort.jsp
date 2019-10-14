@@ -15,7 +15,6 @@
     String selectedOption = request.getParameter("sortOptions");
 %>
 
-<h1>  <%= selectedOption %> </h1>
 
 <%
     //Get logged in Customer object from session

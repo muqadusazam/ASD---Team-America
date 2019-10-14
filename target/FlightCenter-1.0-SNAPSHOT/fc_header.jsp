@@ -34,7 +34,7 @@
                         <a class="nav-link" href="main.jsp" >Home <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item h">
-                        <a class="nav-link" href="flights_search.jsp">Flights</a>
+                        <a class="nav-link" href="flights.jsp">Flights</a>
 
                 </ul>
                 <ul class="navbar-nav mr-sm-2">
@@ -51,8 +51,18 @@
                     <%
                     } else {
                     %>
-                    <li class="nav-item h">
-                        <a class="nav-link" href="account.jsp">Manage Account</a>
+                    <li class="nav-item dropdown h">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Manage Account
+                        </a>
+
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="account.jsp">Profile</a>
+                            <a class="dropdown-item" href="booking_history.jsp">Booking History</a>
+                            <a class="dropdown-item" href="cancelTicket.jsp">Cancel Ticket</a>
+                            <a class="dropdown-item" href="user_management.jsp">User Management (Staff only)</a>
+                            <a class="dropdown-item" href="flight_management.jsp">Flight Management (Staff only)</a>
+                        </div>
                     </li>
                     <li class="nav-item h">
                         <a class="nav-link" href="logoutAction.jsp">Logout</a>

@@ -85,7 +85,6 @@ public class MongoDBManager_Flights extends MongoDBConnector {
         }
         return flights; //ArrayList of all relevant flights in the Flight collection
     }
-    
     //Return a list of origins from all of the available flights
      public ArrayList<String> getAllOrigins() {
         MongoClientURI uri = generateURI();
@@ -104,8 +103,8 @@ public class MongoDBManager_Flights extends MongoDBConnector {
         }
         return origins;
     } 
-     
-     //Return a list of destinations from all the available flights
+    
+    //Return a list of destinations from all the available flights
      public ArrayList<String> getAllDestinations() {
         MongoClientURI uri = generateURI();
         ArrayList<String> destinations = new ArrayList<String>();
@@ -123,8 +122,8 @@ public class MongoDBManager_Flights extends MongoDBConnector {
         }
         return destinations;
     } 
-     
-     //Returns a list of flights whose origin matches the 'origin' parameter
+    
+    //Returns a list of flights whose origin matches the 'origin' parameter
     public ArrayList<Flight> getFlightsByOrigin(String origin) {
         MongoClientURI uri = generateURI();
         ArrayList<Flight> flights;
@@ -134,6 +133,7 @@ public class MongoDBManager_Flights extends MongoDBConnector {
             MongoCollection<Document> flightlist = db.getCollection(FLIGHT_COLLECTION);
             for (Document doc : flightlist.find()) {
                 Flight flight = convertToFlight(doc);
+                //check if flight's origin matches target's
                 if (flight.getOrigin().equals(origin)) {
                     flights.add(flight);
                 }
@@ -144,7 +144,7 @@ public class MongoDBManager_Flights extends MongoDBConnector {
         return flights;
     } 
     
-    //Fetches all flights matching the specified destination
+    //Loop through flight list, return flights whose destination starts with argument
     public ArrayList<Flight> getFlightsByDestination(String destination) {
         MongoClientURI uri = generateURI();
         ArrayList<Flight> flights;
@@ -153,18 +153,20 @@ public class MongoDBManager_Flights extends MongoDBConnector {
             flights = new ArrayList<>();
             MongoCollection<Document> flightlist = db.getCollection(FLIGHT_COLLECTION);
             for (Document doc : flightlist.find()) {
-                Flight flight = convertToFlight(doc); //Convert flight's details to String format
-                if (flight.getDestination().equals(destination)) {
+                Flight flight = convertToFlight(doc);
+                //standardise flight's destination & target destination to lowercase
+                //then, check if flight's destination starts with target string
+                if (flight.getDestination().toLowerCase().startsWith(destination.toLowerCase())) {
                     flights.add(flight);
                 }
             }
-        } catch(NullPointerException x){ //Catch exception and return null if no matching flights are found
+        } catch (NullPointerException ex) {
             return null;
         }
-        return flights; //ArrayList of all relevant flights in the Flight collection
+        return flights;
     }
     
-    
+    //Loop through flight list, return flights whose origin and destination matches arguments
     public ArrayList<Flight> getFlightsByOriginAndDestination(String origin, String destination) {
         MongoClientURI uri = generateURI();
         ArrayList<Flight> flights;
@@ -174,7 +176,10 @@ public class MongoDBManager_Flights extends MongoDBConnector {
             MongoCollection<Document> flightlist = db.getCollection(FLIGHT_COLLECTION);
             for (Document doc : flightlist.find()) {
                 Flight flight = convertToFlight(doc);
-                if (flight.getOrigin().equals(origin) && flight.getDestination().equals(destination)) {
+                //check if flight's origin matches target's
+                //then, standardise flight's destination & target destination to lowercase
+                //then, check if flight's destination starts with target string
+                if (flight.getOrigin().equals(origin) && flight.getDestination().toLowerCase().startsWith(destination.toLowerCase())) {
                     flights.add(flight);
                 }
             }

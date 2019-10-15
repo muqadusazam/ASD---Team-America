@@ -45,7 +45,7 @@
         flights.add(flight);
     }
     String searchOrigin = request.getParameter("departure");
-    String searchDestination = request.getParameter("destination");    
+    String searchDestination = request.getParameter("destination");
    
 
     //flights = db.getFlightsByOrigin(searchOrigin);
@@ -53,21 +53,21 @@
     
     if (!searchOrigin.isEmpty() && searchDestination.isEmpty()) {
         for (Flight currentFlight1 : flights){
-        if (currentFlight1.getOrigin().equals(searchOrigin)){
+        if (currentFlight1.getOrigin().toLowerCase().contains(searchOrigin.toLowerCase())){
              sortedFlights.add(currentFlight1);
          }
         }   
     }
     if (searchOrigin.isEmpty() && !searchDestination.isEmpty()){
          for (Flight currentFlight1 : flights){
-        if (currentFlight1.getDestination().equals(searchDestination)){
+        if (currentFlight1.getDestination().toLowerCase().contains(searchDestination.toLowerCase())){
              sortedFlights.add(currentFlight1);
          }
         }
     }
     if (!searchOrigin.isEmpty() && !searchDestination.isEmpty()){
         for (Flight currentFlight1 : flights){
-        if (currentFlight1.getOrigin().equals(searchOrigin) && currentFlight1.getDestination().equals(searchDestination)){
+        if (currentFlight1.getOrigin().toLowerCase().contains(searchOrigin.toLowerCase()) && currentFlight1.getDestination().equals(searchDestination.toLowerCase())){
              sortedFlights.add(currentFlight1);
          }
         }

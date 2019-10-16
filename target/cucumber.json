@@ -3,51 +3,47 @@
     "comments": [
       {
         "line": 1,
-        "value": "# Login Feature"
-      },
-      {
-        "line": 2,
-        "value": "# language: en"
+        "value": "#This feature contains sample data as input for RescheduleFeature.java"
       }
     ],
-    "line": 5,
+    "line": 4,
     "elements": [
       {
-        "line": 10,
-        "name": "User nevigates to mLab login page",
+        "line": 9,
+        "name": "User logs in and navigates to the flights page",
         "description": "",
         "type": "background",
         "keyword": "Background",
         "steps": [
           {
             "result": {
-              "duration": 6240645700,
+              "duration": 7551064100,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "I am on the \"FC Home\" page on URL \"https://arsproject.herokuapp.com/login.jsp\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "FC Home",
+                  "offset": 13
+                },
+                {
+                  "val": "https://arsproject.herokuapp.com/login.jsp",
+                  "offset": 35
+                }
+              ],
+              "location": "BookingFeature.i_am_on_the_page_on_URL(String,String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 287776000,
               "status": "passed"
             },
             "line": 11,
-            "name": "I am on login page",
-            "match": {
-              "location": "LoginFeature.i_am_on_login_page()"
-            },
-            "keyword": "Given "
-          }
-        ]
-      },
-      {
-        "line": 13,
-        "name": "Successful login to mLab",
-        "description": "",
-        "id": "loginfeature;successful-login-to-mlab",
-        "type": "scenario",
-        "keyword": "Scenario",
-        "steps": [
-          {
-            "result": {
-              "duration": 1471516700,
-              "status": "passed"
-            },
-            "line": 14,
-            "name": "I fill in \"Email\" with \"user@one.com\"",
+            "name": "I fill in \"Email\" with \"user@two.com\"",
             "match": {
               "arguments": [
                 {
@@ -55,20 +51,20 @@
                   "offset": 11
                 },
                 {
-                  "val": "user@one.com",
+                  "val": "user@two.com",
                   "offset": 24
                 }
               ],
-              "location": "LoginFeature.i_fill_in_with(String,String)"
+              "location": "BookingFeature.i_fill_in_with(String,String)"
             },
             "keyword": "When "
           },
           {
             "result": {
-              "duration": 979808200,
+              "duration": 262840800,
               "status": "passed"
             },
-            "line": 15,
+            "line": 12,
             "name": "I fill in \"Password\" with \"abcde1\"",
             "match": {
               "arguments": [
@@ -81,436 +77,94 @@
                   "offset": 27
                 }
               ],
-              "location": "LoginFeature.i_fill_in_with(String,String)"
+              "location": "BookingFeature.i_fill_in_with(String,String)"
             },
             "keyword": "And "
           },
           {
             "result": {
-              "duration": 10227033700,
+              "duration": 1101437700,
               "status": "passed"
+            },
+            "line": 13,
+            "name": "I go on the \"FC Flights\" page on URL \"https://arsproject.herokuapp.com/flights.jsp\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "FC Flights",
+                  "offset": 13
+                },
+                {
+                  "val": "https://arsproject.herokuapp.com/flights.jsp",
+                  "offset": 38
+                }
+              ],
+              "location": "BookingFeature.i_go_to_flights_page(String,String)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 15,
+        "name": "Successful booking",
+        "description": "",
+        "id": "bookingfeature;successful-booking",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 17129200,
+              "error_message": "org.openqa.selenium.NoSuchElementException: Unable to locate element: #flightID1013\nFor documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html\nBuild info: version: \u00273.141.59\u0027, revision: \u0027e82be7d358\u0027, time: \u00272018-11-14T08:17:03\u0027\nSystem info: host: \u0027DESKTOP-CL0HPS2\u0027, ip: \u0027192.168.0.29\u0027, os.name: \u0027Windows 10\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u00271.8.0_211\u0027\nDriver info: org.openqa.selenium.firefox.FirefoxDriver\nCapabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 69.0.3, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20191009172106, moz:geckodriverVersion: 0.26.0, moz:headless: false, moz:processID: 19888, moz:profile: C:\\Users\\Liam\\AppData\\Local..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}\nSession ID: 818ae272-1074-4ca6-966b-5174a2e2b4b0\n*** Element info: {Using\u003did, value\u003dflightID1013}\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\r\n\tat sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\r\n\tat java.lang.reflect.Constructor.newInstance(Constructor.java:423)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:372)\r\n\tat org.openqa.selenium.By$ById.findElement(By.java:188)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)\r\n\tat fc.test.BookingFeature.i_click_cancel_button_of_ticket(BookingFeature.java:48)\r\n\tat ✽.When I select a valid Flight(BookingFeature.feature:16)\r\n",
+              "status": "failed"
             },
             "line": 16,
-            "name": "I should see \"main.jsp\" main page",
+            "name": "I select a valid Flight",
             "match": {
-              "arguments": [
-                {
-                  "val": "main.jsp",
-                  "offset": 14
-                }
-              ],
-              "location": "LoginFeature.i_should_see_main_page(String)"
-            },
-            "keyword": "Then "
-          }
-        ]
-      },
-      {
-        "line": 10,
-        "name": "User nevigates to mLab login page",
-        "description": "",
-        "type": "background",
-        "keyword": "Background",
-        "steps": [
-          {
-            "result": {
-              "duration": 4461056400,
-              "status": "passed"
-            },
-            "line": 11,
-            "name": "I am on login page",
-            "match": {
-              "location": "LoginFeature.i_am_on_login_page()"
-            },
-            "keyword": "Given "
-          }
-        ]
-      },
-      {
-        "line": 24,
-        "name": "Failed login to mLab using wrong credentials",
-        "description": "",
-        "id": "loginfeature;failed-login-to-mlab-using-wrong-credentials;;2",
-        "type": "scenario",
-        "keyword": "Scenario Outline",
-        "steps": [
-          {
-            "result": {
-              "duration": 1422225500,
-              "status": "passed"
-            },
-            "line": 19,
-            "name": "I fill in \"Email\" with \"\u003cEmail\u003e\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "Email",
-                  "offset": 11
-                },
-                {
-                  "val": "\u003cEmail\u003e",
-                  "offset": 24
-                }
-              ],
-              "location": "LoginFeature.i_fill_in_with(String,String)"
+              "location": "BookingFeature.i_click_cancel_button_of_ticket()"
             },
             "keyword": "When "
           },
           {
             "result": {
-              "duration": 1014591400,
-              "status": "passed"
+              "status": "undefined"
             },
-            "line": 20,
-            "name": "I fill in \"Password\" with \"\u003cPassword\u003e\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "Password",
-                  "offset": 11
-                },
-                {
-                  "val": "\u003cPassword\u003e",
-                  "offset": 27
-                }
-              ],
-              "location": "LoginFeature.i_fill_in_with(String,String)"
-            },
+            "line": 17,
+            "name": "I see my booking details",
+            "match": {},
             "keyword": "And "
           },
           {
             "result": {
-              "duration": 48500,
-              "status": "passed"
+              "status": "undefined"
             },
-            "line": 21,
-            "name": "I should see \"login.jsp\" login page",
-            "match": {
-              "arguments": [
-                {
-                  "val": "login.jsp",
-                  "offset": 14
-                }
-              ],
-              "location": "LoginFeature.i_should_see_login_page(String)"
-            },
-            "keyword": "Then "
-          }
-        ],
-        "tags": [
-          {
-            "line": 3,
-            "name": "@Login"
-          }
-        ]
-      },
-      {
-        "line": 10,
-        "name": "User nevigates to mLab login page",
-        "description": "",
-        "type": "background",
-        "keyword": "Background",
-        "steps": [
+            "line": 18,
+            "name": "I click the submit button",
+            "match": {},
+            "keyword": "And "
+          },
           {
             "result": {
-              "duration": 4541479000,
-              "status": "passed"
-            },
-            "line": 11,
-            "name": "I am on login page",
-            "match": {
-              "location": "LoginFeature.i_am_on_login_page()"
-            },
-            "keyword": "Given "
-          }
-        ]
-      },
-      {
-        "line": 25,
-        "name": "Failed login to mLab using wrong credentials",
-        "description": "",
-        "id": "loginfeature;failed-login-to-mlab-using-wrong-credentials;;3",
-        "type": "scenario",
-        "keyword": "Scenario Outline",
-        "steps": [
-          {
-            "result": {
-              "duration": 1405235000,
-              "status": "passed"
+              "status": "undefined"
             },
             "line": 19,
-            "name": "I fill in \"Email\" with \"\u003cEmail\u003e\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "Email",
-                  "offset": 11
-                },
-                {
-                  "val": "\u003cEmail\u003e",
-                  "offset": 24
-                }
-              ],
-              "location": "LoginFeature.i_fill_in_with(String,String)"
-            },
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "duration": 967810300,
-              "status": "passed"
-            },
-            "line": 20,
-            "name": "I fill in \"Password\" with \"\u003cPassword\u003e\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "Password",
-                  "offset": 11
-                },
-                {
-                  "val": "\u003cPassword\u003e",
-                  "offset": 27
-                }
-              ],
-              "location": "LoginFeature.i_fill_in_with(String,String)"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 132600,
-              "status": "passed"
-            },
-            "line": 21,
-            "name": "I should see \"login.jsp\" login page",
-            "match": {
-              "arguments": [
-                {
-                  "val": "login.jsp",
-                  "offset": 14
-                }
-              ],
-              "location": "LoginFeature.i_should_see_login_page(String)"
-            },
+            "name": "I should see a message confirming successfull booking",
+            "match": {},
             "keyword": "Then "
-          }
-        ],
-        "tags": [
-          {
-            "line": 3,
-            "name": "@Login"
-          }
-        ]
-      },
-      {
-        "line": 10,
-        "name": "User nevigates to mLab login page",
-        "description": "",
-        "type": "background",
-        "keyword": "Background",
-        "steps": [
-          {
-            "result": {
-              "duration": 4441831200,
-              "status": "passed"
-            },
-            "line": 11,
-            "name": "I am on login page",
-            "match": {
-              "location": "LoginFeature.i_am_on_login_page()"
-            },
-            "keyword": "Given "
-          }
-        ]
-      },
-      {
-        "line": 26,
-        "name": "Failed login to mLab using wrong credentials",
-        "description": "",
-        "id": "loginfeature;failed-login-to-mlab-using-wrong-credentials;;4",
-        "type": "scenario",
-        "keyword": "Scenario Outline",
-        "steps": [
-          {
-            "result": {
-              "duration": 1444020600,
-              "status": "passed"
-            },
-            "line": 19,
-            "name": "I fill in \"Email\" with \"\u003cEmail\u003e\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "Email",
-                  "offset": 11
-                },
-                {
-                  "val": "\u003cEmail\u003e",
-                  "offset": 24
-                }
-              ],
-              "location": "LoginFeature.i_fill_in_with(String,String)"
-            },
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "duration": 983536000,
-              "status": "passed"
-            },
-            "line": 20,
-            "name": "I fill in \"Password\" with \"\u003cPassword\u003e\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "Password",
-                  "offset": 11
-                },
-                {
-                  "val": "\u003cPassword\u003e",
-                  "offset": 27
-                }
-              ],
-              "location": "LoginFeature.i_fill_in_with(String,String)"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 129100,
-              "status": "passed"
-            },
-            "line": 21,
-            "name": "I should see \"login.jsp\" login page",
-            "match": {
-              "arguments": [
-                {
-                  "val": "login.jsp",
-                  "offset": 14
-                }
-              ],
-              "location": "LoginFeature.i_should_see_login_page(String)"
-            },
-            "keyword": "Then "
-          }
-        ],
-        "tags": [
-          {
-            "line": 3,
-            "name": "@Login"
-          }
-        ]
-      },
-      {
-        "line": 10,
-        "name": "User nevigates to mLab login page",
-        "description": "",
-        "type": "background",
-        "keyword": "Background",
-        "steps": [
-          {
-            "result": {
-              "duration": 4458070700,
-              "status": "passed"
-            },
-            "line": 11,
-            "name": "I am on login page",
-            "match": {
-              "location": "LoginFeature.i_am_on_login_page()"
-            },
-            "keyword": "Given "
-          }
-        ]
-      },
-      {
-        "line": 27,
-        "name": "Failed login to mLab using wrong credentials",
-        "description": "",
-        "id": "loginfeature;failed-login-to-mlab-using-wrong-credentials;;5",
-        "type": "scenario",
-        "keyword": "Scenario Outline",
-        "steps": [
-          {
-            "result": {
-              "duration": 1544266800,
-              "status": "passed"
-            },
-            "line": 19,
-            "name": "I fill in \"Email\" with \"\u003cEmail\u003e\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "Email",
-                  "offset": 11
-                },
-                {
-                  "val": "\u003cEmail\u003e",
-                  "offset": 24
-                }
-              ],
-              "location": "LoginFeature.i_fill_in_with(String,String)"
-            },
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "duration": 967918100,
-              "status": "passed"
-            },
-            "line": 20,
-            "name": "I fill in \"Password\" with \"\u003cPassword\u003e\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "Password",
-                  "offset": 11
-                },
-                {
-                  "val": "\u003cPassword\u003e",
-                  "offset": 27
-                }
-              ],
-              "location": "LoginFeature.i_fill_in_with(String,String)"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 98400,
-              "status": "passed"
-            },
-            "line": 21,
-            "name": "I should see \"login.jsp\" login page",
-            "match": {
-              "arguments": [
-                {
-                  "val": "login.jsp",
-                  "offset": 14
-                }
-              ],
-              "location": "LoginFeature.i_should_see_login_page(String)"
-            },
-            "keyword": "Then "
-          }
-        ],
-        "tags": [
-          {
-            "line": 3,
-            "name": "@Login"
           }
         ]
       }
     ],
-    "name": "LoginFeature",
-    "description": "As a admin\r\nI want to login into mLab account using my admin credentials\r\nIn order to connect to mLab cloud database",
-    "id": "loginfeature",
+    "name": "BookingFeature",
+    "description": "  As a Customer\r\n  I want to purchase a ticket on the FlightCenter\r\n  So that I can book a flight",
+    "id": "bookingfeature",
     "keyword": "Feature",
-    "uri": "LoginFeature.feature",
+    "uri": "BookingFeature.feature",
     "tags": [
       {
         "line": 3,
-        "name": "@Login"
+        "name": "@Booking"
       }
     ]
   }

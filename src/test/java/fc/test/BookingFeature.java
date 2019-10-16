@@ -17,24 +17,20 @@ public class BookingFeature{
     
     WebDriver driver;
     
-    //Go to login page
-    @Given("^I am on the \"([^\"]*)\" page on URL \"([^\"]*)\"$")
-    public void i_am_on_the_page_on_URL(String arg1, String arg2) throws Throwable {
+    //Login to Flight Centre
+    @Given("^I log in as \"([^\"]*)\" and \"([^\"]*)\"$")
+    public void i_log_in_as(String arg1, String arg2) throws Throwable{
         Class<? extends WebDriver> driverClass = FirefoxDriver.class;
         WebDriverManager.getInstance(driverClass).setup();
         driver = driverClass.newInstance();
         driver.get("https://arsproject.herokuapp.com/login.jsp");
         driver.navigate().to(driver.getCurrentUrl());
-    }
-    
-    //Login with email and password
-    @When("^I fill in \"([^\"]*)\" with \"([^\"]*)\"$")
-    public void i_fill_in_with(String arg1, String arg2) throws Throwable {
         driver.findElement(By.id("Email")).sendKeys(arg1);
         driver.findElement(By.id("Password")).sendKeys(arg2);
         driver.findElement(By.id("BtnLogin")).click();
         System.out.println("Given statement (login as \"user@two.com\") successful!");
     }
+    
     //Navigate to flights ticket page
     @Then("^I go on the \"([^\"]*)\" page on URL \"([^\"]*)\"$")
     public void i_go_to_flights_page(String arg1, String arg2) throws Throwable{

@@ -140,7 +140,7 @@
                     <button type="submit" class="btn btn-success" style="float: right" id="submitBtn">
                         Submit
                     </button>
-                    <input type="hidden" name="flightID" id="flightID<%= flight.getID() %>" value="<%= flight.getID() %>">
+                    <input type="hidden" name="flightID" id="<%= flight.getID() %>" value="<%= flight.getID() %>">
                 </form>
                 <form method="POST" action="booking.jsp">
                     <button type="submit" class="btn btn-danger" id="cancel" name="cancel">

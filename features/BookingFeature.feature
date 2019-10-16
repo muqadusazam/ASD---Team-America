@@ -12,6 +12,10 @@ Background: User logs in and navigates to the flights page
 
 Scenario: Successful booking
     When I select a valid Flight
-    And I see my booking details
-    And I click the submit button
-    Then I should see a message confirming successfull booking
+    Then I see my booking details
+    Then I click the submit button
+    Then I should see a message confirming successful booking
+
+Scenario: Unsuccessful booking
+    When I select a valid Flight
+    Then I should see a message confirming unsuccessful booking

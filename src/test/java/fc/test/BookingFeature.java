@@ -31,27 +31,42 @@ public class BookingFeature{
         System.out.println("Given statement (login as \"user@two.com\") successful!");
     }
     
-    //Navigate to flights ticket page
+    //Navigate to flights page
     @Then("^I go on the \"([^\"]*)\" page on URL \"([^\"]*)\"$")
     public void i_go_to_flights_page(String arg1, String arg2) throws Throwable{
         driver.get("https://arsproject.herokuapp.com/flights.jsp");
         driver.navigate().to(driver.getCurrentUrl());
     }
     
-    //Click the cancel button for a ticket
+    //Click button to book specific flight 
     @When("^I select a valid Flight$")
     public void i_click_cancel_button_of_ticket() throws Throwable{
         driver.findElement(By.id("flightID1013")).click();
     }
     
-    //Successful cancellation after accepting confirmation
-    @Then("^I should see cancelTicketConfirm page when I accept confirmation$")
-    public void i_should_see_cancelTicketConfirm_page_when_i_accept_confirmation() throws Throwable {
-       
-        String expectedMessage = "Your ticket has been successfully booked.";
-        String message = driver.findElement(By.xpath("//div[contains(@class,'text text-success')]")).getText();
-        Assert.assertTrue("Your ticket has been successfully booked.", message.contains(expectedMessage));
+    //Check if booking details is shown
+    @Then("^I see my booking details$")
+    public void i_see_booking_details() throws Throwable{
+        Assert.assertTrue(driver.getPageSource().contains("1013"));
+    }
+    
+    //Click submit button to add ticket
+    @Then("^I click the submit button$")
+    public void click_submit() throws Throwable{
+        driver.findElement(By.id("submitBtn")).click();
+    }
+    
+    //Successful confirmation of ticket booking
+    @Then("^I should see a message confirming successful booking$")
+    public void i_should_see_booking_confirmation() throws Throwable {
+        Assert.assertTrue("Text not found!", driver.getPageSource().contains("Your ticket has been successfully booked."));
         System.out.println("Rebooking successful!");
     }
-
+    
+    //Unsuccessful confirmation of ticket booking
+    @Then("^I should see a message confirming unsuccessful booking$")
+    public void i_should_see_error_confirmation() throws Throwable {
+        Assert.assertTrue("Text not found!", driver.getPageSource().contains("You already have this flight booked"));
+        System.out.println("Rebooking successful!");
+    }
 }

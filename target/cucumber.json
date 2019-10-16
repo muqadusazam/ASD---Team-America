@@ -17,7 +17,7 @@
         "steps": [
           {
             "result": {
-              "duration": 16631152700,
+              "duration": 12328042100,
               "status": "passed"
             },
             "line": 10,
@@ -39,7 +39,7 @@
           },
           {
             "result": {
-              "duration": 874571900,
+              "duration": 743689700,
               "status": "passed"
             },
             "line": 11,
@@ -71,9 +71,8 @@
         "steps": [
           {
             "result": {
-              "duration": 15959300,
-              "error_message": "org.openqa.selenium.NoSuchElementException: Unable to locate element: #flightID1013\nFor documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html\nBuild info: version: \u00273.141.59\u0027, revision: \u0027e82be7d358\u0027, time: \u00272018-11-14T08:17:03\u0027\nSystem info: host: \u0027DESKTOP-CL0HPS2\u0027, ip: \u0027192.168.0.29\u0027, os.name: \u0027Windows 10\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u00271.8.0_211\u0027\nDriver info: org.openqa.selenium.firefox.FirefoxDriver\nCapabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 69.0.3, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20191009172106, moz:geckodriverVersion: 0.26.0, moz:headless: false, moz:processID: 21020, moz:profile: C:\\Users\\Liam\\AppData\\Local..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}\nSession ID: 39080c77-1190-4de2-bdaa-2474b9c21286\n*** Element info: {Using\u003did, value\u003dflightID1013}\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\r\n\tat sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\r\n\tat java.lang.reflect.Constructor.newInstance(Constructor.java:423)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:372)\r\n\tat org.openqa.selenium.By$ById.findElement(By.java:188)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)\r\n\tat fc.test.BookingFeature.i_click_cancel_button_of_ticket(BookingFeature.java:44)\r\n\tat ✽.When I select a valid Flight(BookingFeature.feature:14)\r\n",
-              "status": "failed"
+              "duration": 451617200,
+              "status": "passed"
             },
             "line": 14,
             "name": "I select a valid Flight",
@@ -84,29 +83,125 @@
           },
           {
             "result": {
-              "status": "undefined"
+              "duration": 10364700,
+              "status": "passed"
             },
             "line": 15,
             "name": "I see my booking details",
-            "match": {},
-            "keyword": "And "
+            "match": {
+              "location": "BookingFeature.i_see_booking_details()"
+            },
+            "keyword": "Then "
           },
           {
             "result": {
-              "status": "undefined"
+              "duration": 1241794100,
+              "status": "passed"
             },
             "line": 16,
             "name": "I click the submit button",
-            "match": {},
-            "keyword": "And "
+            "match": {
+              "location": "BookingFeature.click_submit()"
+            },
+            "keyword": "Then "
           },
           {
             "result": {
-              "status": "undefined"
+              "duration": 6532600,
+              "status": "passed"
             },
             "line": 17,
-            "name": "I should see a message confirming successfull booking",
-            "match": {},
+            "name": "I should see a message confirming successful booking",
+            "match": {
+              "location": "BookingFeature.i_should_see_booking_confirmation()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 9,
+        "name": "User logs in and navigates to the flights page",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 11578145600,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "I log in as \"user@two.com\" and \"abcde1\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "user@two.com",
+                  "offset": 13
+                },
+                {
+                  "val": "abcde1",
+                  "offset": 32
+                }
+              ],
+              "location": "BookingFeature.i_log_in_as(String,String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 829671400,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "I go on the \"FC Flights\" page on URL \"https://arsproject.herokuapp.com/flights.jsp\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "FC Flights",
+                  "offset": 13
+                },
+                {
+                  "val": "https://arsproject.herokuapp.com/flights.jsp",
+                  "offset": 38
+                }
+              ],
+              "location": "BookingFeature.i_go_to_flights_page(String,String)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 19,
+        "name": "Unsuccessful booking",
+        "description": "",
+        "id": "bookingfeature;unsuccessful-booking",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 493658600,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "I select a valid Flight",
+            "match": {
+              "location": "BookingFeature.i_click_cancel_button_of_ticket()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 10922900,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "I should see a message confirming unsuccessful booking",
+            "match": {
+              "location": "BookingFeature.i_should_see_error_confirmation()"
+            },
             "keyword": "Then "
           }
         ]

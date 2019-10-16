@@ -68,9 +68,9 @@ public class MongoDBManager_Customers extends MongoDBConnector {
         ArrayList<Customer> customers = new ArrayList<>();
         try (MongoClient client = new MongoClient(url)) {
             MongoDatabase db = client.getDatabase(url.getDatabase());
-            
+
             MongoCollection<Document> customerDB = db.getCollection(CUSTOMER_COLLECTION);
-            for (Document doc : customerDB.find(or(eq("first_name", search), eq("last_name", search), eq("id", search), eq("email", search)))){
+            for (Document doc : customerDB.find(or(eq("first_name", search), eq("last_name", search), eq("id", search), eq("email", search)))) {
                 Customer customer = convertToCustomer(doc);
                 customers.add(customer);
             }
@@ -78,7 +78,7 @@ public class MongoDBManager_Customers extends MongoDBConnector {
         return customers;
 
     }
-    
+
     public Boolean customerExist(String search) {
         MongoClientURI url = generateURI();
         Customer customer;
@@ -86,13 +86,12 @@ public class MongoDBManager_Customers extends MongoDBConnector {
             MongoDatabase db = client.getDatabase(url.getDatabase());
             MongoCollection<Document> customerDB = db.getCollection(CUSTOMER_COLLECTION);
             Document doc = customerDB.find(or(eq("first_name", search), eq("last_name", search), eq("id", search), eq("email", search))).first();
-            customer = convertToCustomer(doc);
-            return customer != null;
+            return doc != null;
         } catch (NullPointerException x) {
             return null;
         }
-        
     }
+
     public ArrayList<Customer> getCustomers() {
         MongoClientURI uri = generateURI();
         ArrayList<Customer> customers;

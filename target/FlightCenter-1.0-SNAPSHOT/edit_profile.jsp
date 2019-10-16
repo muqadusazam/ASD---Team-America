@@ -5,53 +5,90 @@
             - Save changes to database
 --%>
 
+<%@page import="fc.model.Customer"%>
+<%@page import="fc.model.dao.*"%>
+
 <jsp:include page="fc_header.jsp">
 	<jsp:param name="title" value="Flight Center/register"/>
 </jsp:include>
 
-        <%
-                //Customer customer_profile = session.getAttribute("customer_profile");
-                
-                 session.setAttribute("customer_id", "12345");
-                session.setAttribute("customer_first_name", "John");
-                session.setAttribute("customer_last_name", "Smith");
-                session.setAttribute("customer_email", "johnsmith@email.com");
-                session.setAttribute("customer_password", "hunter12");
-                session.setAttribute("customer_dob", "10/05/1995");   
-   
-                String id = (String)session.getAttribute("customer_id");
-                String first_name = (String)session.getAttribute("customer_first_name");
-                String last_name = (String)session.getAttribute("customer_last_name");
-                String email = (String)session.getAttribute("customer_email");
-                String password = (String)session.getAttribute("customer_password");
-                String dob = (String)session.getAttribute("customer_dob");
-            %>
+<%    
+     //Create connection to mLab DB [Customer]
+    MongoDBManager_Customers db = new MongoDBManager_Customers();
+    String customer_id = (String)session.getAttribute("customer_ID");       //get 'customer_id' from session
 
-        <div align="center" class="container w-50">
+    //Try to get customer profile from mLab using customer ID
+    try { Customer customer = db.getCustomer(customer_id);
+             session.setAttribute("customer", customer);
+%>
+
+        <div class="container w-50" style="margin-top: 50px; margin-bottom: 50px" >          
             
                 <h1>Change your details:</h1>
 
-                <form action="account.jsp" method="POST">
-                        <table cellpadding="10" align="center">
-                            <tr><td>ID: </td><td><input type="text" name="id" value="<%=id %>" </td></tr>
-                            <tr><td>First Name: </td><td><input type="text" name="first_name" value="<%=first_name %>" </td></tr>
-                            <tr><td>Last Name: </td><td><input type="text" name="last_name" value="<%=last_name %>" </td></tr>
-                            <tr><td>Email: </td><td><input type="text" name="email" value="<%=email %>" </td></tr>
-                            <tr><td>Password: </td><td><input type="text" name="password" value="<%=password %>" </td></tr>
-                            <tr><td>Date of Birth: </td><td><input type="text" name="dob" value="<%=dob %>" </td></tr>
-                        </table>
-                        
-                        <table cellpadding="10" align="center">
-                                <tr>
-                                        <td><button type="SUBMIT" class="btn btn-success"> Submit </button></td>
-                                        <td><a href="account.jsp" class="btn btn-secondary"> Cancel </a></td>
-                                </tr>
-                        </table>                                               
+                <form action="ProfileEditServlet" method="POST">
+  
+                    <div class="form-group">
+                        <label>First Name:</label>
+                        <input type="text" class="form-control" name="fname" id="Fname" value="${param.firstName}"      <!-- text box for 'fname'-->
+                               accesskey=""  accept=""placeholder=" <%=customer.getFirstName() %>" required>        <!-- placeholder text displays current 'fname' -->
+                        <span class="error text-danger"><em>${errors.fNameErr}</em></span>
+                    </div>
 
-                </form>
-                            
+                    <div class="form-group">
+                        <label>Last Name:</label>
+                        <input type="text" class="form-control" name="lname" id="Lname" value="${param.lastName}"       <!-- text box for 'lname'-->
+                               placeholder="<%=customer.getLastName()%> " required>     <!-- placeholder text displays current 'lname' -->
+                        <span class="error text-danger"><em>${errors.lNameErr}</em></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Email:</label>
+                        <input type="email" class="form-control" name="email" id="Email" value="${param.email}"     <!-- text box for 'email'-->
+                               placeholder="<%=customer.getEmail()%>" required>     <!-- placeholder text displays current 'email' -->
+                        <span class="error text-danger"><em>${errors.emailErr}</em></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Password:</label>
+                        <input type="password" class="form-control" name="password" id="password" value="${param.password}"     <!-- text box for 'password'-->
+                               placeholder="<%= customer.getPassword()%>" required>     <!-- placeholder text displays current 'password' -->
+                        <span class="error text-danger"><em>${errors.passwordErr}</em></span>
+                    </div>
+                    
+                     <div class="form-group">
+                        <label>Passport Number:</label>
+                        <input type="text" class="form-control" name="passport" id="Passport" value="${param.passport}"         <!-- text box for 'passport'-->
+                               placeholder="<%= customer.getPassport()%>" required>     <!-- placeholder text displays current 'passport' -->
+                        <span class="error text-danger"><em>${errors.passportErr}</em></span>
+                     </div>
+
+                    <div class="form-group">
+                        <label>DOB:</label>
+                        <input type="date" class="form-control" name="DOB" id="Dob" placeholder="<%=customer.getDOB()%>" required>      <!-- text box for 'DOB'-->
+                    </div>
+                    
+                       
+
+                        
+                    <table cellpadding="10" align="center">
+                        <tr>
+                            <td><button type="submit" class="btn btn-success" id ="Submit"> Submit </button></td>       <!-- Submit button sends data to ProfileEditServlet -->
+                            <td><button type="button" class="btn btn-secondary" id="Cancel" onclick="location.href = 'account.jsp'">Cancel</button></td>        <!-- Cancel redirects back to account page-->
+                        </tr>
+                    </table>                                               
+
+                </form>                          
         </div>
         
         
         
 <jsp:include page = "fc_footer.jsp"/>
+<%
+        }
+    //If customer ID not found, redirect back to main page
+    catch (Exception e){
+        response.sendRedirect("login.jsp");
+    }
+    %>
+

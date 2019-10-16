@@ -1,16 +1,13 @@
-    <jsp:include page="fc_header.jsp">
+<jsp:include page="fc_header.jsp">
     <jsp:param name="title" value="Flight Center/account/userAdd_management"/>
 </jsp:include>
 
-<div class="col-12 col-md-3 col-xl-2 bd-sidebar" style = "margin-top: 100px; padding: 5px; float:left; background-color:#cecece">
-    <ul class="navbar-nav mr-auto">
-        <li class="toc-entry toc-h2 anthy3"><a href="account.jsp" class ="anthy2">Profile</a></li>
-        <li class="toc-entry toc-h2 anthy3"><a href="#" class ="anthy2">Booking History</a></li>
-        <li class="toc-entry toc-h2 anthy3"><a href="reschedule.jsp" class ="anthy2">Reschedule Ticket</a></li>
-        <li class="toc-entry toc-h2 anthy3"><a href="#" class ="anthy2">Cancel Ticket</a></li>
-        <li class="toc-entry toc-h2 active anthy3"><a href="user_management.jsp" class ="anthy2">User Management (staff only)</a></li>
-    </ul>
-</div>
+<!--checks if user is logged in, if no user is logged in will redirect to login.jsp page--!>
+<% 
+    if (session.getAttribute("customer") == null) {
+        response.sendRedirect("login.jsp");
+    } 
+%>
 
 <div class="mx-auto" style="width: 800px; text-align: center;" >
     <h1>Create new user</h1>

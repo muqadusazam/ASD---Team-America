@@ -6,7 +6,7 @@ import java.io.Serializable;
  *
  * @author Kelvin
  */
-public class Customer implements Serializable{
+public class Customer implements Serializable, Comparable<Customer>{
     
     private String id;
     private String first_name;
@@ -88,5 +88,10 @@ public class Customer implements Serializable{
     
     public void setDOB(String dob){
         this.dob = dob;
+    }
+    
+    @Override
+    public int compareTo(Customer other) {
+        return Integer.compare(Integer.parseInt(getID()), Integer.parseInt(other.getID()));
     }
 }

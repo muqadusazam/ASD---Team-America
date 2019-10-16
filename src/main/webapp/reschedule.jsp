@@ -1,73 +1,60 @@
-<%@page import="fc.model.dao.MongoDBConnector"%>
-<%@page contentType="text/html" pageEncoding="UTF-8" import="fc.model.*"%>
+<%@page import="java.util.*"%>
+<%@page import="fc.model.dao.*"%>
+<%@page import="fc.model.*"%>
+<%@page import="fc.controller.*" %>
+<%@page import="java.util.ArrayList"%>
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 
 <jsp:include page="fc_header.jsp">
 	<jsp:param name="title" value="Flight Center/account/reschedule"/>
 </jsp:include>
-<div class="col-12 col-md-3 col-xl-2 bd-sidebar" style = "margin-top: 100px; padding: 5px; float:left; background-color:#cecece">
-    <ul class="navbar-nav mr-auto">
-    <li class="toc-entry toc-h2 anthy3"><a href="account.jsp" class ="anthy2">Profile</a></li>
-    <li class="toc-entry toc-h2 anthy3"><a href="booking_history.jsp" class ="anthy2">Booking History</a></li>
-    <li class="toc-entry toc-h2 active anthy3"><a href="reschedule.jsp" class ="anthy2">Reschedule Ticket</a></li>
-    <li class="toc-entry toc-h2 anthy3"><a href="#" class ="anthy2">Cancel Ticket</a></li>
-    <li class="toc-entry toc-h2 anthy3"><a href="user_management.jsp" class ="anthy2">User Management (staff only)</a></li>
-    </ul>
 
-</div>
 
 <div class="mx-auto" style="float: left">
     <%
-        
-        Customer testcust = new Customer("2", 
-                "John", 
-                "Smith", 
-                "johnsmith@gmail.com", 
-                "password",
-                "JA123",
-                "01/01/2000");
-        
-        session.setAttribute("loggedIn", testcust);
-        
-        
-        Flight testflight = new Flight("3",  //id
-                "Qantas", //airline
-                "Sydney", //origin
-                "Seoul-Incheon International Airport", //destination
-                "15-08-2019", //departure_date
-                "10:00PM", //departure_time
-                "16-08-2019", //arrival_date
-                "09:00AM", //arrival_time
-                "Scheduled", //status
-                "2000", //price
-                "20" //available_seats
-        );
-        
-        Ticket testticket= new Ticket("12345898",
-                "2",
-                testflight.getID(),
-                "23A"
-        );
-        session.setAttribute("ticket", testticket);
-        
-        MongoDBConnector manager = (MongoDBConnector)session.getAttribute("manager");
-        Customer customer = (Customer)session.getAttribute("loggedIn");
-        Ticket ticket = (Ticket)session.getAttribute("ticket");
-        
-        if (customer == null) {
+        if (session.getAttribute("customer") == null) { //Check if customer is logged in
     %>
-    <h2 class="text-danger"> You must be logged in to Reschedule Ticket. </h2>
+    <h2 class="text-danger"> You must be logged in to Reschedule Ticket. Click <a href="login.jsp">here</a> to login. </h2>
     <%
-        } else if (ticket == null) {
+        } else if (request.getParameter("ticketID") == null) { //Check if ticket is in session
     %>
-    <h2 class="text-warning"> Could not find ticket in the database. </h2>
+    <h2 class="text-danger"> Could not load ticket from database. </h2>
     <%
-        } else {
-            //Flight flight = (Flight)manager.flight(ticket.getFlightID());
-            Flight flight = testflight;
+        } else { //Customer & Ticket are contained in session
+            Customer customer = (Customer)session.getAttribute("customer");
+
+            //Get Ticket object from database
+            MongoDBManager_Tickets dbt = new MongoDBManager_Tickets();
+            Ticket ticket = dbt.getTicket((String)request.getParameter("ticket"));
+
+            //Get flight from database based on ticket in session
+            MongoDBManager_Flights dbf = new MongoDBManager_Flights();
+            Flight flight = dbf.getFlight(ticket.getFlightID());
+
+            //Set flight in session
+            session.setAttribute("oldFlight", flight);
     %>
-    <form>
     <h1><p>Reschedule ticket</p></h1>
-    
+    <%
+        //Check for errors passed from servlet
+        if (session.getAttribute("errors") != null) {
+    %>
+        <div class="alert alert-danger" role="alert">
+        <strong>Error!</strong> ${errors.dateErr}
+        </div>
+    <%
+        session.setAttribute("errors", null); //Reset after message displayed
+        } else if (session.getAttribute("success") != null) { //Check for successfull reschedule from servlet
+    %>
+    <div class="alert alert-success" role="alert">
+        <strong>Success!</strong> <%= session.getAttribute("success") %>
+    </div>
+    <%
+        session.setAttribute("success", null); //Reset after message displayed
+        }
+
+        //Display ticket + flight info
+    %>
     <table class="table table-hover">
         <tbody>
         <tr>
@@ -95,7 +82,7 @@
         </tr>
         <tr>
             <td><b>Price:</b></td>
-            <td>$0</td>
+            <td>$<%= flight.getPrice() %></td>
         </tr>
         <tr>
             <td><b>Airline:</b></td>
@@ -115,20 +102,10 @@
         <tr>
             <td><b>Departure date:</b></td>
             <td><%= flight.getDepartureDate() %></td>
-            <td><input type="date" class="form-control" name="new_dep_date"></td>
         </tr>
         <tr>
             <td><b>Departure time (AEST):</b></td>
             <td><%= flight.getDepartureTime() %></td>
-            <td><input type="time" class="form-control" name="new_dep_time"></td>
-        </tr>
-        <tr>
-            <td><b>Terminal:</b></td>
-            <td>T1</td>
-        </tr>
-        <tr>
-            <td><b>Gate:</b></td>
-            <td>1</td>
         </tr>
         <tr>
             <td><b>Seat number:</b></td>
@@ -144,35 +121,56 @@
         <tr>
             <td><b>Destination arrival date:</b></td>
             <td><%= flight.getArrivalDate() %></td>
-            <td><input type="date" class="form-control" name="new_arr_date"></td>
         </tr>
         <tr>
             <td><b>Destination arrival time (AEST):&nbsp&nbsp</b></td>
             <td><%= flight.getArrivalTime() %></td>
-            <td><input type="time" class="form-control" name="new_arr_time"></td>
         </tr>
+        
+        <tr><td><br></td></tr>
+        
+        <%
+            //Get all flights in database with same destination on ticket
+            ArrayList<Flight> flights = dbf.getFlights(flight);
+            
+            //Check if flights is empty
+            if (flights == null) {
+        %>
+                <h2 class="text-warning"> There are no available tickets. </h2>
+        <%
+            } else { //Display all flights in array when not empty/null
+        %>
         <tr>
-            <td><b>Terminal:</b></td>
-            <td>T2</td>
-        </tr>
-        <tr>
-            <td><b>Gate:</b></td>
-            <td>5</td>
-        </tr>
-        <tr>
-            <td></td>
-            <td></td>
+            <td><b>Choose new ticket: &nbsp&nbsp</b></td>
             <td>
-                <button type="submit" class="btn btn-success" style="float: right">Submit</button>
-                <button type="reset" class="btn btn-danger" style="float: right">Cancel</button>
+                <form action="RescheduleServlet" method="POST">
+                    <select name="newFlight" value="<%= flight.getID() %>">
+                        <option selected="true" disabled="disabled">-- Select Ticket --</option>
+                        <%
+                            //Loop through all flights in array and display in drop down menu
+                            for (Flight f: flights) {
+                        %>
+                                <option name="<%= f.getID() %>" value="<%= f.getID() %>"> 
+                                    Departure: <%= f.getOrigin() %> @ <%= f.getDepartureTime() %> <%= f.getDepartureDate() %>; 
+                                    Destination: <%= f.getDestination()%> @ <%= f.getArrivalTime() %> <%= f.getArrivalDate() %>; 
+                                </option>
+                        <%
+                            }
+                        %>
+                    </select>
+                    <button type="submit" class="btn btn-success" style="float: right" id="rescheduleBtn">Submit</button>
+                    <button type="reset" class="btn btn-danger" style="float: right">Cancel</button>
+                </form>
             </td>
         </tr>
+
+        <%
+            }
+        %>
         </tbody>
     </table>
-    </form>
 </div>
 <%  }
-    session.invalidate();
 %>
 
 <jsp:include page = "fc_footer.jsp"/>

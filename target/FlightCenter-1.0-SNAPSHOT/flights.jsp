@@ -50,7 +50,7 @@
                 %>
                 <td>
                     <form action="booking.jsp" method="POST">
-                        <button type="submit" class="btn btn-primary" name="flightID" value="<%=currentFlight.getID()%>">Book</button>
+                        <button type="submit" class="btn btn-primary" name="flightID" id="flightID<%=currentFlight.getID()%>" value="<%=currentFlight.getID()%>">Book</button>
                     </form>
                 </td>
                 <%

@@ -86,13 +86,13 @@ public class UpdateFlightServlet extends HttpServlet{
         }
         else { //put errors in request scope and forward them back to register.jsp to display error messages
             request.setAttribute("errors", errors);
-            request.getRequestDispatcher("flightUpdate_management.jsp").forward(request, response);
+            request.getRequestDispatcher("flightUpdateProcess.jsp").forward(request, response);
         }
     }
     
     //regex for validating input from register.jsp form
-    private final String timePattern = "[0-2][0-3][:][0-5][0-9] [ap]m";
-    private final String datePattern = "((19|2[0-9])[0-9]{2})-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])";
+    private final String timePattern = "[0-2][0-3][:][0-5][0-9][apAP][mM]";
+    private final String datePattern = "([0-9]{2})-([0-9]{2})-([0-9]{4})";
     private final String numPattern = "[0-9]*";
  
     public boolean validate(String patternString, String input){ //return false if input does not match pattern

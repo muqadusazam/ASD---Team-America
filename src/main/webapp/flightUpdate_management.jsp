@@ -13,7 +13,7 @@
 
 <div class="container pt-5" style = "margin: 10px;">
     <h1 style = "margin-bottom:30px">Update Flight</h1>
-    <form action="flightUpdateSuccess.jsp" method ="post" name="flight_update" onsubmit="return validate()">
+    <form action="flightUpdateSuccess.jsp" method ="post" name="flight_update">
         <div class="form-group col-md-6">
             <label for="inputAirline">Airline</label>
             <input type="text" class="form-control" id="inputAirline" value ="<%=flight.getAirline()%>" placeholder="Airline" name="airline" onpaste ="return true">

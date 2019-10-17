@@ -13,7 +13,7 @@
 
     <div class="container" style="margin-top: 50px; float: right">
         <h1 class ="bd-content-title">&nbsp;Delete Flight</h1>
-        <h2 style ="overflow-wrap:break-word; margin-top: 30px"> The flight ID (<%=flight.getID()%>) has been deleted from database </h2>
+        <h2 style ="overflow-wrap:break-word; margin-top: 30px"> The flight ID (<%=id%>) has been deleted from database </h2>
         <!--Table for the list of flights-->
         <table class="table"style="margin-top: 20px">
           <thead class="thead-dark">

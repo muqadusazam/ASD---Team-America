@@ -23,7 +23,7 @@ public class ViewBookingServlet extends HttpServlet{
     String searchDestination = request.getParameter("destination");
 
         if(!validate(inputPattern, searchOrigin)){
-            errors.put("Err", "departure cannot contain numbers or special characters");
+            errors.put("Err", "Departure cannot contain numbers or special characters");
         }
         if(!validate(inputPattern, searchDestination)){
             errors.put("Err", "Destination cannot contain numbers or special characters");

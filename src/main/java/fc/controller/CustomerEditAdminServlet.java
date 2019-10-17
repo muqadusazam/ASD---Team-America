@@ -43,6 +43,10 @@ public class CustomerEditAdminServlet extends HttpServlet {
         }
     }
 
+    /*
+        requests data from userAdd_management.jsp and validates input against regex
+     */
+
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -50,7 +54,8 @@ public class CustomerEditAdminServlet extends HttpServlet {
 
         //  processRequest(request, response);
         HttpSession session = request.getSession();
-
+        
+        //validates with regex for each fields
         String firstName = request.getParameter("fname");
         if (!validate(namePattern, firstName)) {
             errors.put("fNameErr", "Incorrect name format");

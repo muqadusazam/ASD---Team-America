@@ -98,6 +98,20 @@ public class MongoDBManager_Customers extends MongoDBConnector {
 
     }
     
+    //checks if customer exist in database
+    public Boolean customerExist(String search) {
+        MongoClientURI url = generateURI();
+        Customer customer;
+        try (MongoClient client = new MongoClient(url)) {
+            MongoDatabase db = client.getDatabase(url.getDatabase());
+            MongoCollection<Document> customerDB = db.getCollection(CUSTOMER_COLLECTION);
+            Document doc = customerDB.find(or(eq("first_name", search), eq("last_name", search), eq("id", search), eq("email", search))).first();
+            return doc != null;
+        } catch (NullPointerException x) {
+            return null;
+        }
+    }
+    
     //Changes a customer's current profile details in the Customer collection
     public void editCustomer(String id, String firstName, String lastName, String email, String password, String passport, String DOB){
         MongoClientURI uri = generateURI();

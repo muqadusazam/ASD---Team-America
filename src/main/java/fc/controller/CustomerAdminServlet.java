@@ -37,7 +37,9 @@ public class CustomerAdminServlet extends HttpServlet {
             out.println("</html>");
         }
     }
-
+    /*
+        requests data from userAdd_management.jsp and validates input against regex
+    */
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -46,6 +48,7 @@ public class CustomerAdminServlet extends HttpServlet {
       //  processRequest(request, response);
         HttpSession session = request.getSession();
         
+        //valids each field with regex
         String firstName = request.getParameter("fname");
         if (!validate(namePattern, firstName)){
             errors.put("fNameErr", "Incorrect name format");
@@ -59,6 +62,17 @@ public class CustomerAdminServlet extends HttpServlet {
         String email = request.getParameter("email");
         if (!validate(emailPattern, email)){
             errors.put("emailErr", "Incorrect email format");
+        } else {
+            MongoDBManager_Customers customerDB = new MongoDBManager_Customers();
+            ArrayList<Customer> customers = customerDB.getCustomers();
+
+            for (Customer customer : customers) {
+                System.out.println(customer.getEmail());
+                if (email.equals(customer.getEmail())) {
+                    errors.put("emailErr", "Email already exist!");
+                    break;
+                }
+            }
         }
         
         String password = request.getParameter("password");
@@ -73,9 +87,12 @@ public class CustomerAdminServlet extends HttpServlet {
         
         String DOB = request.getParameter("DOB");
         
+        //if form does not have any errors, adds customer to database
         if (errors.isEmpty()) {
             //redirect to next page if no error
+            
             int key = 100000 + (new Random().nextInt(99999));
+            
             MongoDBManager_Customers customerDB = new MongoDBManager_Customers();
             customerDB.add(new Customer(Integer.toString(key), firstName, lastName, email, password, passport, DOB));
 

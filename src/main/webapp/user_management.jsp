@@ -44,8 +44,12 @@
 
 <%--Retrieves all customer from database into arraylist--%>
 <%
-    if (session.getAttribute("customer") == null) {
+    //checks if user is logged and if use is admin
+    Customer logInCustomer = (Customer)session.getAttribute("customer");
+    if (logInCustomer == null) {
         response.sendRedirect("login.jsp");
+    } else if ((Integer.parseInt(logInCustomer.getID())/100000) != 9){
+        response.sendRedirect("noAccess_management.jsp");
     }
 
     ArrayList<Customer> customers;

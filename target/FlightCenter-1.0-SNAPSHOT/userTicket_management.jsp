@@ -10,9 +10,13 @@
     <jsp:param name="title" value="Flight Center/account/userTicket_management"/>
 </jsp:include>
 <%--Retrieves customer from database using "ID"--%>
-<%
-    if (session.getAttribute("customer") == null) {
+<%  
+    //checks if user is logged and if use is admin
+    Customer logInCustomer = (Customer)session.getAttribute("customer");
+    if (logInCustomer == null) {
         response.sendRedirect("login.jsp");
+    } else if ((Integer.parseInt(logInCustomer.getID())/100000) != 9){
+        response.sendRedirect("noAccess_management.jsp");
     }
 
     String id = request.getParameter("ID");

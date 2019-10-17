@@ -4,11 +4,16 @@
 <jsp:include page="fc_header.jsp">
     <jsp:param name="title" value="Flight Center/account/userDetail_management"/>
 </jsp:include>
-<%--Retrieves customer from database using "ID"--%>
-<%      
-    if (session.getAttribute("customer") == null) {
+<%--Retrieves customer from session--%>
+<%  
+    //checks if user is logged and if use is admin
+    Customer logInCustomer = (Customer)session.getAttribute("customer");
+    if (logInCustomer == null) {
         response.sendRedirect("login.jsp");
+    } else if ((Integer.parseInt(logInCustomer.getID())/100000) != 9){
+        response.sendRedirect("noAccess_management.jsp");
     }
+    //stores customer id inside customer
     String id = request.getParameter("ID");
     MongoDBManager_Customers customerDB = new MongoDBManager_Customers();
     Customer customer = customerDB.getCustomer(id);

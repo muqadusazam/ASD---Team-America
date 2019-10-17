@@ -14,9 +14,13 @@
 </jsp:include>
 <!-- Sends 'value' as parameter to update this page's title-->
 <%
-    if (session.getAttribute("customer") == null) {
+    //checks if user is logged and if use is admin
+    Customer logInCustomer = (Customer)session.getAttribute("customer");
+    if (logInCustomer == null) {
         response.sendRedirect("login.jsp");
-    } 
+    } else if ((Integer.parseInt(logInCustomer.getID())/100000) != 9){
+        response.sendRedirect("noAccess_management.jsp");
+    }
 %>
 <body>
     <!-- width 50 to not take up entire screen, margin to sit nicely in middle of screen -->

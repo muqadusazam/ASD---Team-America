@@ -17,7 +17,7 @@
         "steps": [
           {
             "result": {
-              "duration": 14429916077,
+              "duration": 12910965812,
               "status": "passed"
             },
             "line": 9,
@@ -39,7 +39,7 @@
           },
           {
             "result": {
-              "duration": 868327586,
+              "duration": 1112061030,
               "status": "passed"
             },
             "line": 10,
@@ -61,9 +61,8 @@
         "steps": [
           {
             "result": {
-              "duration": 25806409,
-              "error_message": "org.openqa.selenium.NoSuchElementException: Unable to locate element: #inputSearch\nFor documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html\nBuild info: version: \u00273.141.59\u0027, revision: \u0027e82be7d358\u0027, time: \u00272018-11-14T08:17:03\u0027\nSystem info: host: \u0027Williams-MacBook-Pro.local\u0027, ip: \u0027fe80:0:0:0:c98:84cd:5028:41d8%en0\u0027, os.name: \u0027Mac OS X\u0027, os.arch: \u0027x86_64\u0027, os.version: \u002710.14.4\u0027, java.version: \u00271.8.0_181\u0027\nDriver info: org.openqa.selenium.firefox.FirefoxDriver\nCapabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 69.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20190827005903, moz:geckodriverVersion: 0.26.0, moz:headless: false, moz:processID: 15087, moz:profile: /var/folders/vp/x3kzn9lx2px..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: MAC, platformName: MAC, platformVersion: 18.5.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}\nSession ID: 28fcd13e-67d7-3a41-9e6a-ba4422e62896\n*** Element info: {Using\u003did, value\u003dinputSearch}\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\n\tat sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\n\tat java.lang.reflect.Constructor.newInstance(Constructor.java:423)\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:372)\n\tat org.openqa.selenium.By$ById.findElement(By.java:188)\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)\n\tat fc.test.SearchCustomerFeature.i_fill_in(SearchCustomerFeature.java:49)\n\tat ✽.When I fill in \"William\"(SearchCustomerFeature.feature:13)\n",
-              "status": "failed"
+              "duration": 521583177,
+              "status": "passed"
             },
             "line": 13,
             "name": "I fill in \"William\"",
@@ -80,7 +79,8 @@
           },
           {
             "result": {
-              "status": "skipped"
+              "duration": 11391708,
+              "status": "passed"
             },
             "line": 14,
             "name": "I should see user management page with user William",
@@ -100,7 +100,7 @@
         "steps": [
           {
             "result": {
-              "duration": 8842073361,
+              "duration": 9267760593,
               "status": "passed"
             },
             "line": 9,
@@ -122,7 +122,7 @@
           },
           {
             "result": {
-              "duration": 768597456,
+              "duration": 981911930,
               "status": "passed"
             },
             "line": 10,
@@ -144,9 +144,8 @@
         "steps": [
           {
             "result": {
-              "duration": 7209566,
-              "error_message": "org.openqa.selenium.NoSuchElementException: Unable to locate element: #inputSearch\nFor documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html\nBuild info: version: \u00273.141.59\u0027, revision: \u0027e82be7d358\u0027, time: \u00272018-11-14T08:17:03\u0027\nSystem info: host: \u0027Williams-MacBook-Pro.local\u0027, ip: \u0027fe80:0:0:0:c98:84cd:5028:41d8%en0\u0027, os.name: \u0027Mac OS X\u0027, os.arch: \u0027x86_64\u0027, os.version: \u002710.14.4\u0027, java.version: \u00271.8.0_181\u0027\nDriver info: org.openqa.selenium.firefox.FirefoxDriver\nCapabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 69.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20190827005903, moz:geckodriverVersion: 0.26.0, moz:headless: false, moz:processID: 15093, moz:profile: /var/folders/vp/x3kzn9lx2px..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: MAC, platformName: MAC, platformVersion: 18.5.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}\nSession ID: 8a50764d-98b9-8247-82c7-97ea8b1ae8f5\n*** Element info: {Using\u003did, value\u003dinputSearch}\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\n\tat sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\n\tat java.lang.reflect.Constructor.newInstance(Constructor.java:423)\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:372)\n\tat org.openqa.selenium.By$ById.findElement(By.java:188)\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)\n\tat fc.test.SearchCustomerFeature.i_fill_in(SearchCustomerFeature.java:49)\n\tat ✽.When I fill in \"$%\u0026#^AKSDJ\"(SearchCustomerFeature.feature:17)\n",
-              "status": "failed"
+              "duration": 451519553,
+              "status": "passed"
             },
             "line": 17,
             "name": "I fill in \"$%\u0026#^AKSDJ\"",
@@ -163,7 +162,8 @@
           },
           {
             "result": {
-              "status": "skipped"
+              "duration": 12624857,
+              "status": "passed"
             },
             "line": 18,
             "name": "I should see error message for invalid search result",

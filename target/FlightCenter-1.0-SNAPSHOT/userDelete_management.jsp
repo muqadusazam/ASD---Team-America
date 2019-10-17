@@ -3,11 +3,16 @@
 <jsp:include page="fc_header.jsp">
     <jsp:param name="title" value="Flight Center/account/userDelete_management"/>
 </jsp:include>
-<%--Retrieves customer from database using "ID"--%>
+<%--Retrieves customer from session"--%>
 <%
-    if (session.getAttribute("customer") == null) {
+    //checks if user is logged and if use is admin
+    Customer logInCustomer = (Customer)session.getAttribute("customer");
+    if (logInCustomer == null) {
         response.sendRedirect("login.jsp");
+    } else if ((Integer.parseInt(logInCustomer.getID())/100000) != 9){
+        response.sendRedirect("noAccess_management.jsp");
     }
+    
     String id = request.getParameter("ID");
     MongoDBManager_Customers customerDB = new MongoDBManager_Customers();
     Customer customer = customerDB.getCustomer(id);

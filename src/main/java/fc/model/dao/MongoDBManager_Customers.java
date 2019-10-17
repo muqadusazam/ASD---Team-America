@@ -62,7 +62,7 @@ public class MongoDBManager_Customers extends MongoDBConnector {
         }
         return customer;
     }
-
+    //searching for customer with matching name or id or emails
     public ArrayList<Customer> getCustomerByNameOrID(String search) {
         MongoClientURI url = generateURI();
         ArrayList<Customer> customers = new ArrayList<>();

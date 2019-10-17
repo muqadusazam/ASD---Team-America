@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="10" failures="0" name="fc.test.RunBookingTest" time="25.611" errors="0" skipped="0">
+<testsuite tests="10" failures="0" name="fc.test.RunBookingTest" time="24.848" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/jre/lib"/>
@@ -63,14 +63,14 @@
     <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase classname="Scenario: Valid search result" name="Given I log in as \&quot;admin@one.com\&quot; and \&quot;abcde1\&quot;" time="0"/>
+  <testcase classname="Scenario: Valid search result" name="Given I log in as \&quot;admin@one.com\&quot; and \&quot;abcde1\&quot;" time="0.001"/>
   <testcase classname="Scenario: Valid search result" name="Then I go to User Management page" time="0"/>
   <testcase classname="Scenario: Valid search result" name="When I fill in \&quot;William\&quot;" time="0"/>
   <testcase classname="Scenario: Valid search result" name="Then I should see user management page with user William" time="0"/>
-  <testcase classname="Scenario: Valid search result" name="Scenario: Valid search result" time="0"/>
+  <testcase classname="Scenario: Valid search result" name="Scenario: Valid search result" time="0.001"/>
   <testcase classname="Scenario: Invalid search result" name="Given I log in as \&quot;admin@one.com\&quot; and \&quot;abcde1\&quot;" time="0"/>
   <testcase classname="Scenario: Invalid search result" name="Then I go to User Management page" time="0"/>
   <testcase classname="Scenario: Invalid search result" name="When I fill in \&quot;$%&amp;#^AKSDJ\&quot;" time="0"/>
-  <testcase classname="Scenario: Invalid search result" name="Then I should see error message for invalid search result" time="0.001"/>
+  <testcase classname="Scenario: Invalid search result" name="Then I should see error message for invalid search result" time="0"/>
   <testcase classname="Scenario: Invalid search result" name="Scenario: Invalid search result" time="0.001"/>
 </testsuite>

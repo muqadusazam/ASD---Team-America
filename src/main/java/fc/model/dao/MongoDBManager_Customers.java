@@ -78,7 +78,7 @@ public class MongoDBManager_Customers extends MongoDBConnector {
         return customers;
 
     }
-
+    //checks if customer exist in database
     public Boolean customerExist(String search) {
         MongoClientURI url = generateURI();
         Customer customer;

@@ -51,12 +51,13 @@
                                 <td>
                                         <div style="float: left;"> 
                                             <form action="flightUpdate_management.jsp" method="POST">
-                                                <button type="submit" name="upadetID" value="<%= currentFlight.getID() %>" class="btn btn-primary">Update</button> 
+                                                <button type="submit" name="ID" value="<%=currentFlight.getID()%>" class="btn btn-primary">Update</button> 
                                             </form>
-                                        </td>
+ 
+                                </td>
                                         <td>
                                             <form action="flightDelete_management.jsp" method="POST">
-                                                <button type="submit" name="daleteID" value="<%= currentFlight.getID() %>" class="btn btn-primary">Delete</button> 
+                                                <button type="submit" name="daleteID" value="<%=currentFlight.getID()%>" class="btn btn-danger">Delete</button> 
                                             </form>
                                         </div>
                                 </td>

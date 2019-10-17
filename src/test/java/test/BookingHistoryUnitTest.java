@@ -6,12 +6,8 @@
 //package test;
 //
 //import fc.model.Customer;
-//import fc.model.Flight;
-//import fc.model.Ticket;
-//import fc.model.dao.MongoDBConnector;
-//import fc.model.dao.MongoDBManager_Customers;
-//import fc.model.dao.MongoDBManager_Flights;
-//import fc.model.dao.MongoDBManager_Tickets;
+//import fc.model.*;
+//import fc.model.dao.*;
 //import java.net.UnknownHostException;
 //import java.util.ArrayList;
 //import org.junit.AfterClass;
@@ -40,8 +36,8 @@
 //    }
 //    
 //         @Test //Add a new customer to Flight Center
-//    public void loginCustomer(){
-//        String email = "user@three.com";
+//    public void listUsers(){
+//        String email = "user@eight.com";
 //        String password = "abcde1";
 //        MongoDBManager_Customers db = new MongoDBManager_Customers();
 //        Customer customer = db.getCustomer(email, password);
@@ -53,17 +49,17 @@
 //                MongoDBManager_Tickets dbt = new MongoDBManager_Tickets();
 //                ArrayList<Ticket> tickets = dbt.getTickets(customer);
 //                if (tickets != null){
-//                    MongoDBManager_Flights dbf = new MongoDBManager_Flights();
-//
+//            MongoDBManager_Flights dbf = new MongoDBManager_Flights();
 //            //Loop through all tickets in array and display in HTML table
 //            for (Ticket ticket : tickets) {
 //                Flight flight = dbf.getFlight(ticket.getFlightID());
+//                    System.out.println("Ticket ID:\t" + ticket.getID() + " Customer name:\t" + customer.getFullName() + " Flight Origin:\t" + flight.getOrigin() + " Flight Destination:\t" + flight.getDestination());
 //                }
-//        }
-//
+//                }else{
+//                    System.out.println("Tickets are not found!!!!");
+//                }
 //    }
 //    }
-//    
 //        @AfterClass
 //    public static void tearDownClass() {
 //        System.out.print("\n<-- Unit Test Finished : ");        

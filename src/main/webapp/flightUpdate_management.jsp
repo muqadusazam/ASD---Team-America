@@ -1,5 +1,6 @@
 <%@page import="fc.model.Flight"%>
 <%@page import="fc.model.dao.MongoDBManager_Flights"%>
+<%@page import="fc.model.dao.*"%>
 <jsp:include page="fc_header.jsp">
     <jsp:param name="title" value="Flight Management/Delete"/>
 </jsp:include>

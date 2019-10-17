@@ -4,14 +4,13 @@
     <jsp:param name="title" value="Flight Management/Delete"/>
 </jsp:include>
 
-
 <%
     String id = request.getParameter("deleteID");
     MongoDBManager_Flights flightDB = new MongoDBManager_Flights();
     Flight flight = flightDB.getFlight(id);
 %>
 
-    <div class="container" style="margin-top: 50px; float: right">
+    <div class="container" style="margin-top: 50px;">
         <h1 class ="bd-content-title">&nbsp;Delete Flight</h1>
         <h2 style ="overflow-wrap:break-word; margin-top: 30px"> The flight ID (<%=id%>) has been deleted from database </h2>
         <!--Table for the list of flights-->

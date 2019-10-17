@@ -9,6 +9,7 @@ import com.mongodb.MongoClientURI;
 import com.mongodb.client.MongoDatabase;
 import static com.mongodb.client.model.Filters.and;
 import static com.mongodb.client.model.Filters.eq;
+import static com.mongodb.client.model.Filters.or;
 
 //Sets up the structure of Customer collection and manages it
 public class MongoDBManager_Customers extends MongoDBConnector {
@@ -79,6 +80,22 @@ public class MongoDBManager_Customers extends MongoDBConnector {
             return null;
         }
         return customers; //ArrayList of all customers in Customer collection
+    }
+    
+    public ArrayList<Customer> getCustomerByNameOrID(String search) {
+        MongoClientURI url = generateURI();
+        ArrayList<Customer> customers = new ArrayList<>();
+        try (MongoClient client = new MongoClient(url)) {
+            MongoDatabase db = client.getDatabase(url.getDatabase());
+
+            MongoCollection<Document> customerDB = db.getCollection(CUSTOMER_COLLECTION);
+            for (Document doc : customerDB.find(or(eq("first_name", search), eq("last_name", search), eq("id", search), eq("email", search)))) {
+                Customer customer = convertToCustomer(doc);
+                customers.add(customer);
+            }
+        }
+        return customers;
+
     }
     
     //Changes a customer's current profile details in the Customer collection

@@ -1,11 +1,23 @@
+<%@page import="fc.model.Customer"%>
 <jsp:include page="fc_header.jsp">
     <jsp:param name="title" value="Flight Center/account/userAdd_management"/>
 </jsp:include>
 
+<!--checks if user is logged in, if no user is logged in will redirect to login.jsp page--!>
+<% 
+    //checks if user is logged and if use is admin
+    Customer logInCustomer = (Customer)session.getAttribute("customer");
+    if (logInCustomer == null) {
+        response.sendRedirect("login.jsp");
+    } else if ((Integer.parseInt(logInCustomer.getID())/100000) != 9){
+        response.sendRedirect("noAccess_management.jsp");
+    } 
+%>
 
 <div class="mx-auto" style="width: 800px; text-align: center;" >
     <h1>Create new user</h1>
 </div>
+<!--Table to create new user accounts-->
 
 <div class="mx-auto" style="width: 950px;">
     <form action="CustomerAdminServlet" method="post" class="margin1">

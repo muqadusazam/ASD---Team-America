@@ -5,7 +5,7 @@
     <jsp:param name="title" value="Flight Center/account/userDetail_management"/>
 </jsp:include>
 <%--Retrieves customer from database using "ID"--%>
-<%  
+<%      
     if (session.getAttribute("customer") == null) {
         response.sendRedirect("login.jsp");
     }

@@ -10,30 +10,30 @@ import com.mongodb.client.MongoDatabase;
 import static com.mongodb.client.model.Filters.and;
 import static com.mongodb.client.model.Filters.eq;
 
-/**
- *
- * @author Liam
- */
+//Sets up the structure of Flight collection and manages it
 public class MongoDBManager_Flights extends MongoDBConnector {
-    
+
+    //Adds a new flight to the Flight collection
     public void add(Flight flight) {
         MongoClientURI uri = generateURI();
         try (MongoClient client = new MongoClient(uri)) {
             MongoDatabase db = client.getDatabase(uri.getDatabase());
             MongoCollection<Document> flightDB = db.getCollection(FLIGHT_COLLECTION);
-            flightDB.insertOne(convertToDoc(flight));
+            flightDB.insertOne(convertToDoc(flight)); //Convert flight's details to MongoDB's format
         }
     }
-    
+
+    //Remove an existing flight from the Flight collection
     public void remove(Flight flight) {
         MongoClientURI uri = generateURI();
         try (MongoClient client = new MongoClient(uri)) {
             MongoDatabase db = client.getDatabase(uri.getDatabase());
             MongoCollection<Document> flightDB = db.getCollection(FLIGHT_COLLECTION);
-            flightDB.deleteOne(convertToDoc(flight));
+            flightDB.deleteOne(convertToDoc(flight)); //Convert flight's details to MongoDB's format
         }
     }
-    
+
+    //Fetches a single existing flight from the Flight collection by matching ID
     public Flight getFlight(String id) {
         MongoClientURI uri = generateURI();
         Flight flight;
@@ -41,12 +41,16 @@ public class MongoDBManager_Flights extends MongoDBConnector {
             MongoDatabase db = client.getDatabase(uri.getDatabase());
             MongoCollection<Document> flightDB = db.getCollection(FLIGHT_COLLECTION);
             Document doc = flightDB.find(and(eq("id", id))).first();
-            flight = convertToFlight(doc);
+            flight = convertToFlight(doc); //Convert flight's details to String format
+            System.out.println("IM hereeee");
+
+        } catch (NullPointerException x) { //Catch exception and return null if flight does not exist
+            return null;
         }
         return flight;
     }
-    
-    
+
+    //Fetches all flights from the Flight collection
     public ArrayList<Flight> getFlights() {
         MongoClientURI uri = generateURI();
         ArrayList<Flight> flights;
@@ -55,13 +59,95 @@ public class MongoDBManager_Flights extends MongoDBConnector {
             flights = new ArrayList<>();
             MongoCollection<Document> flightlist = db.getCollection(FLIGHT_COLLECTION);
             for (Document doc : flightlist.find()) {
-                Flight flight = convertToFlight(doc);
+                Flight flight = convertToFlight(doc); //Convert flight's details to String format
                 flights.add(flight);
             }
+        } catch (NullPointerException x) { //Catch exception and return null if Flight collection is empty
+            return null;
+        }
+        return flights; //ArrayList of all flights in the Flight collection
+    }
+
+    //Fetches all flights matching destination and flight ID
+    public ArrayList<Flight> getFlights(Flight flight) {
+        MongoClientURI uri = generateURI();
+        ArrayList<Flight> flights;
+        try (MongoClient client = new MongoClient(uri)) {
+            MongoDatabase db = client.getDatabase(uri.getDatabase());
+            flights = new ArrayList<>();
+            MongoCollection<Document> flightlist = db.getCollection(FLIGHT_COLLECTION);
+            for (Document doc : flightlist.find()) {
+                Flight f = convertToFlight(doc); //Convert flight's details to String format
+                if (f.getDestination().equals(flight.getDestination()) && !f.getID().equals(flight.getID())) {
+                    flights.add(f);
+                }
+            }
+        } catch (NullPointerException x) { //Catch exception and return null if Flight collection is empty
+            return null;
+        }
+        return flights; //ArrayList of all relevant flights in the Flight collection
+    }
+
+    //Return a list of origins from all of the available flights
+    public ArrayList<String> getAllOrigins() {
+        MongoClientURI uri = generateURI();
+        ArrayList<String> origins = new ArrayList<String>();
+        try (MongoClient client = new MongoClient(uri)) {
+            MongoDatabase db = client.getDatabase(uri.getDatabase());
+            MongoCollection<Document> flightlist = db.getCollection(FLIGHT_COLLECTION);
+            for (Document doc : flightlist.find()) {
+                Flight flight = convertToFlight(doc);
+                if (!origins.contains(flight.getOrigin())) {        //Checks if flight's origin is already included within arrayList
+                    origins.add(flight.getOrigin());                   //If not then add to list
+                }
+            }
+        } catch (NullPointerException ex) {
+            return null;
+        }
+        return origins;
+    }
+
+    //Return a list of destinations from all the available flights
+    public ArrayList<String> getAllDestinations() {
+        MongoClientURI uri = generateURI();
+        ArrayList<String> destinations = new ArrayList<String>();
+        try (MongoClient client = new MongoClient(uri)) {
+            MongoDatabase db = client.getDatabase(uri.getDatabase());
+            MongoCollection<Document> flightlist = db.getCollection(FLIGHT_COLLECTION);
+            for (Document doc : flightlist.find()) {
+                Flight flight = convertToFlight(doc);
+                if (!destinations.contains(flight.getDestination())) {      //Checks if flight's origin is already included within arrayList
+                    destinations.add(flight.getDestination());                 //If not then add to list
+                }
+            }
+        } catch (NullPointerException ex) {
+            return null;
+        }
+        return destinations;
+    }
+
+    //Returns a list of flights whose origin matches the 'origin' parameter
+    public ArrayList<Flight> getFlightsByOrigin(String origin) {
+        MongoClientURI uri = generateURI();
+        ArrayList<Flight> flights;
+        try (MongoClient client = new MongoClient(uri)) {
+            MongoDatabase db = client.getDatabase(uri.getDatabase());
+            flights = new ArrayList<>();
+            MongoCollection<Document> flightlist = db.getCollection(FLIGHT_COLLECTION);
+            for (Document doc : flightlist.find()) {
+                Flight flight = convertToFlight(doc);
+                //check if flight's origin matches target's
+                if (flight.getOrigin().equals(origin)) {
+                    flights.add(flight);
+                }
+            }
+        } catch (NullPointerException ex) {
+            return null;
         }
         return flights;
     }
-    
+
+    //Loop through flight list, return flights whose destination starts with argument
     public ArrayList<Flight> getFlightsByDestination(String destination) {
         MongoClientURI uri = generateURI();
         ArrayList<Flight> flights;
@@ -71,14 +157,42 @@ public class MongoDBManager_Flights extends MongoDBConnector {
             MongoCollection<Document> flightlist = db.getCollection(FLIGHT_COLLECTION);
             for (Document doc : flightlist.find()) {
                 Flight flight = convertToFlight(doc);
-                if (flight.getDestination().equals(destination)) {
+                //standardise flight's destination & target destination to lowercase
+                //then, check if flight's destination starts with target string
+                if (flight.getDestination().toLowerCase().startsWith(destination.toLowerCase())) {
                     flights.add(flight);
                 }
             }
+        } catch (NullPointerException ex) {
+            return null;
         }
         return flights;
     }
-    
+
+    //Loop through flight list, return flights whose origin and destination matches arguments
+    public ArrayList<Flight> getFlightsByOriginAndDestination(String origin, String destination) {
+        MongoClientURI uri = generateURI();
+        ArrayList<Flight> flights;
+        try (MongoClient client = new MongoClient(uri)) {
+            MongoDatabase db = client.getDatabase(uri.getDatabase());
+            flights = new ArrayList<>();
+            MongoCollection<Document> flightlist = db.getCollection(FLIGHT_COLLECTION);
+            for (Document doc : flightlist.find()) {
+                Flight flight = convertToFlight(doc);
+                //check if flight's origin matches target's
+                //then, standardise flight's destination & target destination to lowercase
+                //then, check if flight's destination starts with target string
+                if (flight.getOrigin().equals(origin) && flight.getDestination().toLowerCase().startsWith(destination.toLowerCase())) {
+                    flights.add(flight);
+                }
+            }
+        } catch (NullPointerException ex) {
+            return null;
+        }
+        return flights;
+    }
+
+    //Converts flight's details to String format for procressing by Java code
     private Flight convertToFlight(Document doc) {
         return new Flight((String) doc.get("id"),
                 (String) doc.get("airline"),
@@ -92,7 +206,8 @@ public class MongoDBManager_Flights extends MongoDBConnector {
                 (String) doc.get("price"),
                 (String) doc.get("available_seats"));
     }
-    
+
+    //Converts flight's details to document format for storing in MongoDB
     private Document convertToDoc(Flight flight) {
         return new Document("id", flight.getID())
                 .append("airline", flight.getAirline())

@@ -12,14 +12,14 @@
     if (session.getAttribute("customer") == null) {
         response.sendRedirect("login.jsp");
     }
+
     String id = request.getParameter("ID");
     MongoDBManager_Customers customerDB = new MongoDBManager_Customers();
-    Customer customer = customerDB.getCustomer(id);
-
+    MongoDBManager_Flights flightDB = new MongoDBManager_Flights();
     MongoDBManager_Tickets ticketDB = new MongoDBManager_Tickets();
+    Customer customer = customerDB.getCustomer(id);
     ArrayList<Ticket> tickets = ticketDB.getTickets(customer);
 
-    MongoDBManager_Flights flightDB = new MongoDBManager_Flights();
 
 %>
 
@@ -39,13 +39,22 @@
                 <th>Action</th>
             </tr>
         </thead>
-        <% for (Ticket ticket : tickets) {%>
+        <%
+            for (Ticket ticket : tickets) {
+        %>
+
         <tr>
             <td><%= ticket.getID()%></td>
+            <%System.out.println("1");%>
             <td><%= ticket.getFlightID()%></td>
+            <%System.out.println("2");%>
+            <%System.out.println(ticket.getFlightID());%>
             <td><%= flightDB.getFlight(ticket.getFlightID()).getDestination()%></td>
+            <%System.out.println("3");%>
             <td><%= flightDB.getFlight(ticket.getFlightID()).getDepartureDate()%></td>
+            <%System.out.println("4");%>
             <td><%= ticket.getPassengerSeatNum()%></td>
+            <%System.out.println("5");%>
             <td>
                 <div style="width:200px;">
                     <div style="float: left;"> 
@@ -64,7 +73,5 @@
         <% }%>
     </table>
 </div>
-
-
 
 <jsp:include page = "fc_footer.jsp"/>

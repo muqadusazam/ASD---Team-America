@@ -8,51 +8,31 @@
 <jsp:include page="fc_header.jsp">
     <jsp:param name="title" value="Flight Center/account/userEditTicket"/>
 </jsp:include>
- <%     
-        Customer customer = (Customer)session.getAttribute("customer");
-        
-        if (session.getAttribute("customer") == null) {
+<%
+    if (session.getAttribute("customer") == null) {
         response.sendRedirect("login.jsp");
-        }
-        //Get Ticket object from database
-        MongoDBManager_Tickets dbt = new MongoDBManager_Tickets();
-        Ticket ticket = dbt.getTicket((String) request.getParameter("ticketID"));
-        session.setAttribute("oldTicket", ticket);
-        
-        //Get flight from database based on ticket in session
-        MongoDBManager_Flights dbf = new MongoDBManager_Flights();
-        Flight flight = dbf.getFlight(ticket.getFlightID());
+    }
+    //MongoDBDatabase initiliazation
+    MongoDBManager_Tickets dbt = new MongoDBManager_Tickets();
+    MongoDBManager_Flights dbf = new MongoDBManager_Flights();
+    MongoDBManager_Customers dbc = new MongoDBManager_Customers();
 
-        //Set flight in session
-        session.setAttribute("oldFlight", flight);
+    Ticket ticket = dbt.getTicket((String) request.getParameter("ticketID"));
+    session.setAttribute("origTicket", ticket);
+
+    Flight flight = dbf.getFlight(ticket.getFlightID());
+    session.setAttribute("origFlight", flight);
+
+    Customer customer = dbc.getCustomer(ticket.getCustomerID());
 %>
 
 <div class="mx-auto" style="width: 800px; text-align: center;" >
     <h1>Reschedule Ticket</h1>
 </div>
 
-<div class="mx-auto" style="float: right;" >
-   
-    <%
-        //Check for errors passed from servlet
-        if (session.getAttribute("errors") != null) {
-    %>
-    <div class="alert alert-danger" role="alert">
-        <strong>Error!</strong> ${errors.dateErr}
-    </div>
-    <%
-        session.setAttribute("errors", null); //Reset after message displayed
-    } else if (session.getAttribute("success") != null) { //Check for successfull reschedule from servlet
-    %>
-    <div class="alert alert-success" role="alert">
-        <strong>Success!</strong> <%= session.getAttribute("success")%>
-    </div>
-    <%
-            session.setAttribute("success", null); //Reset after message displayed
-        }
+<div class="mx-auto" style="float: right; text-align: left;" >
+ 
 
-        //Display ticket + flight info
-    %>
     <table class="table table-hover">
         <tbody>
             <tr>
@@ -129,7 +109,7 @@
 
             <%
                 //Get all flights in database with same destination on ticket
-                ArrayList<Flight> flights = dbf.getFlights();
+                ArrayList<Flight> flights = dbf.getFlights(flight);
 
                 //Check if flights is empty
                 if (flights == null) {
@@ -139,7 +119,7 @@
         <tr>
             <td><b>Choose new ticket: &nbsp&nbsp</b></td>
             <td>
-                <form action="userTicket_management.jsp" method="POST">
+                <form action="AdminRescheduleServlet" method="POST">
                     <select name="newFlight" value="<%= flight.getID()%>">
                         <option selected="true" disabled="disabled">-- Select Ticket --</option>
                         <%

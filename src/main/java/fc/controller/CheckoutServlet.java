@@ -42,39 +42,18 @@ public class CheckoutServlet extends HttpServlet {
         
         MongoDBManager_Flights dbf = new MongoDBManager_Flights();
         Flight flight = dbf.getFlight(flightID);
-        
-        SimpleDateFormat formatter = new SimpleDateFormat("dd-MM-yyyy");
-        
-        try {
-            Date dep = formatter.parse(flight.getDepartureDate());
-            Date arr = formatter.parse(flight.getArrivalDate());
-            
-            for (Ticket t: tickets) {
-                if(!t.getFlightID().equals(flightID)) {
-                    Flight f = dbf.getFlight(t.getFlightID());
-                    
-                    Date t_dep = formatter.parse(f.getDepartureDate());
-                    Date t_arr = formatter.parse(f.getArrivalDate());
-                    
-                    if (!(t_dep.before(dep) || t_dep.after(arr) && t_arr.before(dep) || t_arr.after(arr))) {
-                        errors.put("errors", "Error! You already have a ticket with a flight within the same date.");
-                    }
-                }
-            }
-        } catch(Exception ex) {
-            errors.put("error", "Error! Couldnt convert flight date");
-        }
+
         
         if (errors.isEmpty()) { 
             String key = Integer.toString(100000 + (new Random().nextInt(99999)));
             Ticket ticket = new Ticket(key, customer.getID(), flightID, "1");
             dbt.add(ticket);
             session.setAttribute("success", true);
-            request.getRequestDispatcher("booking.jsp").forward(request, response);
+            response.sendRedirect("booking.jsp");
         }
         else { 
             session.setAttribute("errors", errors);
-            request.getRequestDispatcher("booking.jsp").forward(request, response);
+            response.sendRedirect("booking.jsp");
         }
     }
 }

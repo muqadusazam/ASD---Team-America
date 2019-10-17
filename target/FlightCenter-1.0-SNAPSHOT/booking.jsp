@@ -42,7 +42,7 @@
         <h1 class ="bd-content-title">Book flight</h1>
         <table class="table"style="margin-top: 20px">
             <h2 class="text-danger"> 
-                Your ticket has been successfully cancelled. Click <a href="flights_search.jsp">here</a> to go back to flights.
+                Your ticket has been successfully cancelled. Click <a href="flights.jsp">here</a> to go back to flights.
             </h2>
         </table>
     </div>
@@ -65,7 +65,7 @@
         <h1 class ="bd-content-title">Book flight</h1>
         <table class="table"style="margin-top: 20px">
             <h2 class="text-danger"> 
-                You already have this flight booked. Click <a href="flights_search.jsp">here</a> to go back to flights.
+                You already have this flight booked. Click <a href="flights.jsp">here</a> to go back to flights.
             </h2>
         </table>
     </div>

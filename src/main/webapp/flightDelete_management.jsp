@@ -1,6 +1,5 @@
 <%@page import="fc.model.Flight"%>
 <%@page import="fc.model.dao.MongoDBManager_Flights"%>
-<%@page import="fc.model.dao.*"%>
 <jsp:include page="fc_header.jsp">
     <jsp:param name="title" value="Flight Management/Delete"/>
 </jsp:include>
@@ -10,6 +9,7 @@
     MongoDBManager_Flights flightDB = new MongoDBManager_Flights();
     Flight flight = flightDB.getFlight(id);
 %>
+
 
     <div class="container" style="margin-top: 50px;">
         <h1 class ="bd-content-title">&nbsp;Delete Flight</h1>
@@ -41,7 +41,7 @@
                                 <td ><%=flight.getPrice()%></td>
                             </tr>
 <a href = "flight_management.jsp" class = "btn btn-lg btn-primary"style = "margin: 20px; float:right"> Back to the List </a>
-    </div>               
+                            
 <%
     flightDB.remove(flight);
 %>

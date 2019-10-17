@@ -5,7 +5,6 @@
 	<jsp:param name="title" value="Flight Center/Flight Management"/>
 </jsp:include>
 
-
 <%  
     //Call the database manager for "Flight" table
     MongoDBManager_Flights db = new MongoDBManager_Flights();   
@@ -51,15 +50,12 @@
                                 <td>
                                         <div style="float: left;"> 
                                             <form action="flightUpdate_management.jsp" method="POST">
-
                                                 <button type="submit" name="updateID" value="<%= currentFlight.getID() %>" class="btn btn-primary">Update</button> 
-
                                             </form>
- 
-                                </td>
+                                        </td>
                                         <td>
                                             <form action="flightDelete_management.jsp" method="POST">
-
+                                                <button type="submit" name="deleteID" value="<%= currentFlight.getID() %>" class="btn btn-primary">Delete</button> 
                                             </form>
                                         </div>
                                 </td>

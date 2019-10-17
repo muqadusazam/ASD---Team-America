@@ -1,5 +1,6 @@
 <%@page import="fc.model.Flight"%>
 <%@page import="fc.model.dao.MongoDBManager_Flights"%>
+<%@page import="fc.model.dao.*"%>
 <jsp:include page="fc_header.jsp">
     <jsp:param name="title" value="Flight Management/Delete"/>
 </jsp:include>
@@ -12,7 +13,7 @@
 
 <div class="container" style = "margin-top: 50px;">
     <h1 style = "margin-bottom:30px">Update Flight</h1>
-    <form action="flightUpdateSuccess.jsp" method ="post" name="flight_update" onsubmit="return validate()">
+    <form action="UpdateFlightServlet" method ="post" name="flight_update" onsubmit="return validate()">
         <div class="form-group col-md-6">
             <label for="inputAirline">Airline</label>
             <input type="text" class="form-control" id="inputAirline" value ="<%=flight.getAirline()%>" placeholder="Airline" name="airline" onpaste ="return true">

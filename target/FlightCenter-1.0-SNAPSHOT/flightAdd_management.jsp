@@ -64,53 +64,60 @@
 
 <div class="container" style = "margin-top: 50px;">
     <h1 style = "margin-bottom:30px">Add Flight</h1>
-    <form action="addFlightServlet" method ="post" name="flight_add" onsubmit="return validate()">
+    <form action="AddFlightServlet" method ="post" name="flight_add" onsubmit="return validate()">
         <div class="form-group col-md-6">
             <label for="inputAirline">Airline</label>
-            <input type="text" class="form-control" id="inputAirline" placeholder="Airline" name="airline" onpaste ="return true">
+            <input type="text" class="form-control" id="inputAirline" placeholder="Airline" name="airline" onpaste ="return true" value = "${param.airline}">
+            
         </div>
         <div class ="form-row">
             <div class ="form-group col-md-6">
                 <label for="inputOrigin">Origin</label>
-                <input type="text" class="form-control" id="inputOrigin" placeholder="Origin" name="origin" onpaste ="return true">
+                <input type="text" class="form-control" id="inputOrigin" placeholder="Origin" name="origin" onpaste ="return true" value = "${param.origin}">
             </div>
             <div class ="form-group col-md-6">
                 <label for="inputDestination">Destination</label>
-            <input type="text" class="form-control" id="inputDestination" placeholder="Destination" name="destination" onpaste ="return true">
+            <input type="text" class="form-control" id="inputDestination" placeholder="Destination" name="destination" onpaste ="return true"value = "${param.destination}">
             </div>
         </div>
         <div class ="form-row">
             <div class ="form-group col-md-6">
                 <label for="inputDepartTime">Departure Time</label>
-                <input type="text" class="form-control" id="inputDepartTime" placeholder="Departure Time" name="departureTime" onpaste ="return true">
+                <input type="text" class="form-control" id="inputDepartTime" placeholder="Departure Time" name="departureTime" onpaste ="return true"value = "${param.departure_time}">
+                <span class="error text-danger"><em>${errors.DtimeError}</em></span>
             </div>
             <div class ="form-group col-md-6">
                 <label for="inputArriveTime">Arrival Time</label>
-            <input type="text" class="form-control" id="inputArriveTime" placeholder="Arrival Time" name="arrivalTime" onpaste ="return true">
+            <input type="text" class="form-control" id="inputArriveTime" placeholder="Arrival Time" name="arrivalTime" onpaste ="return true"value = "${param.arrival_time}">
+            <span class="error text-danger"><em>${errors.AtimeError}</em></span>
             </div>
         </div>
         <div class ="form-row">
             <div class ="form-group col-md-6">
                 <label for="inputDepartDate">Departure Date</label>
-                <input type="text" class="form-control" id="inputDepartDate" placeholder="Departure Date" name="departureDate" onpaste ="return true">
+                <input type="text" class="form-control" id="inputDepartDate" placeholder="Departure Date" name="departureDate" onpaste ="return true"value = "${param.departure_date}">
+                <span class="error text-danger"><em>${errors.DdateError}</em></span>
             </div>
             <div class ="form-group col-md-6">
                 <label for="inputArriveDate">Arrival Date</label>
-            <input type="text" class="form-control" id="inputArriveDate" placeholder="Arrival Date" name="arrivalDate" onpaste ="return true">
+            <input type="text" class="form-control" id="inputArriveDate" placeholder="Arrival Date" name="arrivalDate" onpaste ="return true"value = "${param.arrival_date}">
+            <span class="error text-danger"><em>${errors.AdateError}</em></span>
             </div>
         </div>
         <div class="form-row">
                 <div class="form-group col-md-4">
                 <label for ="inputStatus">Status</label>
-                <input type="text" class="form-control" id="inputStatus" placeholder="Status" name = "status">
+                <input type="text" class="form-control" id="inputStatus" placeholder="Status" name = "status" value = "${param.status}">
                 </div>
                 <div class="form-group col-md-4">
                 <label for ="inputPrice">Price</label>
-                <input type="text" class="form-control" id="inputPrice" placeholder="price" name = "price">
+                <input type="text" class="form-control" id="inputPrice" placeholder="price" name = "price"value = "${param.price}">
+                <span class="error text-danger"><em>${errors.priceError}</em></span>
                 </div>
                 <div class="form-group col-md-4">
                 <label for ="inputSeats">Available Seats</label>
-                <input type="text" class="form-control" id="inputSeats" placeholder="Available Seats" name = "seats">
+                <input type="text" class="form-control" id="inputSeats" placeholder="Available Seats" name = "seats"value = "${param.available_seats}">
+                <span class="error text-danger"><em>${errors.avaSeatsError}</em></span>
                 </div>
         </div>
         <input style = "margin-top: 30px" type="submit" class="btn btn-primary"value = "Add">

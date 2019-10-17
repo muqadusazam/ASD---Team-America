@@ -67,7 +67,7 @@
     }
     if (!searchOrigin.isEmpty() && !searchDestination.isEmpty()){
         for (Flight currentFlight1 : flights){
-        if (currentFlight1.getOrigin().toLowerCase().contains(searchOrigin.toLowerCase()) && currentFlight1.getDestination().equals(searchDestination.toLowerCase())){
+        if (currentFlight1.getOrigin().toLowerCase().contains(searchOrigin.toLowerCase()) && currentFlight1.getDestination().toLowerCase().contains(searchDestination.toLowerCase())){
              sortedFlights.add(currentFlight1);
          }
         }

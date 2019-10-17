@@ -48,7 +48,7 @@
 </div>
 
 <div class="mx-auto" style="width: 900px; text-align: center;" >
-    <form action = "booking_History_Results.jsp" method = "post">
+    <form action = "ViewBookingServlet" method = "get">
         
     <label for="departure">Departure: </label> 
       <input id="departure" name="departure" type="text" />
@@ -57,6 +57,9 @@
       <input id="destination" name="destination" type="text" />
       
       <button type="submit" class="btn btn-primary">Search</button>
+      <div>
+      <span class="error text-danger"><em>${errors.Err}</em></span>
+      </div>
 </form>
 </div>
 

@@ -44,7 +44,7 @@ public class UpdateFlightServlet extends HttpServlet{
         errors = new HashMap<String,String>();
         HttpSession session = request.getSession(); //Gets the current http session
         
-        
+            String ID = request.getParameter("ID");
            String airline = request.getParameter("airline");
             String origin = request.getParameter("origin");
             String destination= request.getParameter("destination");
@@ -75,12 +75,9 @@ public class UpdateFlightServlet extends HttpServlet{
             if (!validate(numPattern,price)){ 
             errors.put("AvaSeatsError", "The number of seats should be a number");
         }
-            int key = 10000 +(new Random()).nextInt(9999);
-            String ID = "" + key;
 
         
         if (errors.isEmpty()) {
-            
             response.sendRedirect("flightUpdateSuccess.jsp");
                 MongoDBManager_Flights db = new MongoDBManager_Flights();   
                 Flight flight = new Flight(ID,airline,origin,destination,departure_time,departure_date,arrival_time,arrival_date,status,price,available_seats);

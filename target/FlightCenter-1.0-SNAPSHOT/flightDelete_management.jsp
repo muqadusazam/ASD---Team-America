@@ -10,6 +10,7 @@
     Flight flight = flightDB.getFlight(id);
 %>
 
+
     <div class="container" style="margin-top: 50px;">
         <h1 class ="bd-content-title">&nbsp;Delete Flight</h1>
         <h2 style ="overflow-wrap:break-word; margin-top: 30px"> The flight ID (<%=flight.getID()%>) has been deleted from database </h2>

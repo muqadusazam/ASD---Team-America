@@ -58,25 +58,23 @@ public class CheckoutServlet extends HttpServlet {
                     
                     if (!(t_dep.before(dep) || t_dep.after(arr) && t_arr.before(dep) || t_arr.after(arr))) {
                         errors.put("errors", "Error! You already have a ticket with a flight within the same date.");
-                        response.sendRedirect("booking.jsp");
                     }
                 }
             }
         } catch(Exception ex) {
             errors.put("error", "Error! Couldnt convert flight date");
-            response.sendRedirect("booking.jsp");
         }
         
         if (errors.isEmpty()) { 
-            response.sendRedirect("booking.jsp");
             String key = Integer.toString(100000 + (new Random().nextInt(99999)));
             Ticket ticket = new Ticket(key, customer.getID(), flightID, "1");
             dbt.add(ticket);
             session.setAttribute("success", true);
+            request.getRequestDispatcher("booking.jsp").forward(request, response);
         }
         else { 
             session.setAttribute("errors", errors);
-            response.sendRedirect("booking.jsp");
+            request.getRequestDispatcher("booking.jsp").forward(request, response);
         }
     }
 }

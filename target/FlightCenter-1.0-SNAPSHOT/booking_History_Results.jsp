@@ -40,35 +40,35 @@
 
 <% 
     MongoDBManager_Flights db = new MongoDBManager_Flights();       //Create connection to mLab
-    for (Ticket ticket : tickets) {
-        Flight flight = db.getFlight(ticket.getFlightID());
-        flights.add(flight);
+    for (Ticket ticket : tickets) { // looping through the tikets to find individual ticket within the list
+        Flight flight = db.getFlight(ticket.getFlightID()); // getting the flight data based on the ticket
+        flights.add(flight); // adding current flight to the list
     }
+    // saving the incoming parameters into string variables
     String searchOrigin = request.getParameter("departure");
     String searchDestination = request.getParameter("destination");
    
-
-    //flights = db.getFlightsByOrigin(searchOrigin);
-    
-    
+    // checking if origin is provided but destination is not
     if (!searchOrigin.isEmpty() && searchDestination.isEmpty()) {
-        for (Flight currentFlight1 : flights){
+        for (Flight currentFlight1 : flights){ // looping through the flights
         if (currentFlight1.getOrigin().toLowerCase().contains(searchOrigin.toLowerCase())){
-             sortedFlights.add(currentFlight1);
+             sortedFlights.add(currentFlight1); // and saving it into the sorted flights
          }
         }   
     }
+    // checking if origin is not provided but destination is
     if (searchOrigin.isEmpty() && !searchDestination.isEmpty()){
-         for (Flight currentFlight1 : flights){
+         for (Flight currentFlight1 : flights){ // looping through the flights
         if (currentFlight1.getDestination().toLowerCase().contains(searchDestination.toLowerCase())){
-             sortedFlights.add(currentFlight1);
+             sortedFlights.add(currentFlight1); // and saving it into the sorted flights
          }
         }
     }
+    // checking if both origin and destination are provided
     if (!searchOrigin.isEmpty() && !searchDestination.isEmpty()){
-        for (Flight currentFlight1 : flights){
+        for (Flight currentFlight1 : flights){ // looping through the flights
         if (currentFlight1.getOrigin().toLowerCase().contains(searchOrigin.toLowerCase()) && currentFlight1.getDestination().toLowerCase().contains(searchDestination.toLowerCase())){
-             sortedFlights.add(currentFlight1);
+             sortedFlights.add(currentFlight1); // and saving it into the sorted flights
          }
         }
     }
@@ -80,8 +80,9 @@
     //For loop on selects; for each destination -> display option
 %>
 
+<!-- input fields to search for the departure and destination -->
 <div class="container" style="margin-top: 50px; text-align: center">
-    <form action = "booking_History_Results.jsp" method = "post">
+    <form action = "ViewBookingServlet" method = "get">
         
     <label for="departure">Departure: </label> 
       <input id="departure" name="departure" type="text" />
@@ -91,7 +92,7 @@
       
       <button type="submit" class="btn btn-primary">Search</button>
 </form>
-        
+        <!-- Setting up the table and the row headings -->
         <table class="table"style="margin-top: 20px">
           <thead class="thead-dark">
              <th>Flight ID</th>
@@ -104,11 +105,12 @@
           </thead>
           <tbody>
               <%
+                  // looping through the sorted flights
                   for (Flight currentFlight : sortedFlights){
               %>
-
+              <!-- Showing the data of the current flight in the row -->
                             <tr>
-                                <td><%= currentFlight.getID() %></td>
+             <td><%= currentFlight.getID() %></td>
             <td><%=customer.getFirstName()%></td>
             <td><%=customer.getLastName()%></td>
             <td><%=currentFlight.getOrigin()%></td>

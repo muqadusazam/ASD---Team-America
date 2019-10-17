@@ -47,6 +47,7 @@
 </form>
 </div>
 
+<!-- below is the area where input is present based on the departure and destination search -->
 <div class="mx-auto" style="width: 900px; text-align: center;" >
     <form action = "ViewBookingServlet" method = "get">
         
@@ -56,13 +57,14 @@
       <label for="destination">Destination: </label> 
       <input id="destination" name="destination" type="text" />
       
-      <button type="submit" class="btn btn-primary">Search</button>
+      <button type="submit" id= "btnSubmit" class="btn btn-primary">Search</button>
       <div>
       <span class="error text-danger"><em>${errors.Err}</em></span>
       </div>
 </form>
 </div>
 
+      <!-- Setting up the table and the rows -->
 <div class="mx-auto" style="width: 900px; text-align: center;">
     <table class="table table-striped">
         <thead class="thead-dark">
@@ -83,6 +85,7 @@
             for (Ticket ticket : tickets) {
                 Flight flight = dbf.getFlight(ticket.getFlightID());
         %>
+        <!-- Showing the data in the row -->
         <tr>
             <td><%=ticket.getID()%></td>
             <td><%=customer.getFirstName()%></td>
@@ -92,6 +95,7 @@
             <td><%=flight.getDestination()%></td>
             <td><%=flight.getDepartureDate()%></td>
             <td>
+                <!-- rechedule option where a specific ticket can be rescheduled -->
                 <form action="reschedule.jsp" method="POST">
                     <button type="submit" class="btn btn-primary" name="ticketID" value="<%=ticket.getID()%>">Reschedule</button>
                 </form>

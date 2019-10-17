@@ -64,8 +64,7 @@
     //For loop on selects; for each origin -> display option
     //For loop on selects; for each destination -> display option
 %>
-
-        
+        <!-- Setting up the table and the row headings -->
         <table class="table"style="margin-top: 20px">
           <thead class="thead-dark">
              <th>Flight ID</th>
@@ -78,11 +77,12 @@
           </thead>
           <tbody>
               <%
+                  // loopng through the flights list
                   for (Flight currentFlight : flights){  
               %>
-
+              <!-- Showing individual data on the table row -->
                             <tr>
-                                <td><%= currentFlight.getID() %></td>
+            <td><%= currentFlight.getID() %></td>
             <td><%=customer.getFirstName()%></td>
             <td><%=customer.getLastName()%></td>
             <td><%=currentFlight.getOrigin()%></td>

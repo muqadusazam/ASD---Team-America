@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="4" failures="0" name="test.FlightManagementUuitTest" time="15.327" errors="0" skipped="0">
+<testsuite tests="25" failures="0" name="fc.test.RunTest" time="0.343" errors="0" skipped="20">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_221\jre\bin"/>
@@ -14,7 +14,7 @@
     <property name="user.country" value="AU"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="sun.os.patch.level" value=""/>
-    <property name="test" value="test.FlightManagementUuitTest"/>
+    <property name="test" value="test.RunTest"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
     <property name="user.dir" value="C:\Users\muqad\Documents\Uni Work\ASD\ASD---Team-America"/>
     <property name="java.runtime.version" value="1.8.0_221-b11"/>
@@ -45,7 +45,7 @@
     <property name="java.vm.specification.version" value="1.8"/>
     <property name="sun.arch.data.model" value="64"/>
     <property name="java.home" value="C:\Program Files\Java\jdk1.8.0_221\jre"/>
-    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher -Dtest=test.FlightManagementUuitTest -Dmaven.ext.class.path=C:\Program Files\NetBeans 8.2\java\maven-nblib\netbeans-eventspy.jar -Dfile.encoding=UTF-8 surefire:test"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher -Dtest=test.RunTest -Dmaven.ext.class.path=C:\Program Files\NetBeans 8.2\java\maven-nblib\netbeans-eventspy.jar -Dfile.encoding=UTF-8 surefire:test"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
     <property name="user.language" value="en"/>
     <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
@@ -62,8 +62,69 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="test.FlightManagementUuitTest" name="DeleteFlight" time="8.131"/>
-  <testcase classname="test.FlightManagementUuitTest" name="listFlight" time="3.546"/>
-  <testcase classname="test.FlightManagementUuitTest" name="testMongoDBConnect" time="0"/>
-  <testcase classname="test.FlightManagementUuitTest" name="AddFlight" time="3.59"/>
+  <testcase classname="Scenario: Search query meets requirements" name="Given I am on the booking history page" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="Scenario: Search query meets requirements" name="When I fill in departure with \&quot;London\&quot;" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="Scenario: Search query meets requirements" name="Then I should see booking_History_Results page" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="Scenario: Search query meets requirements" name="Scenario: Search query meets requirements" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="Scenario: Search query meets requirements" name="Scenario: Search query meets requirements" time="0"/>
+  <testcase classname="| 123 | Departure cannot contain numbers or special characters |" name="Given I am on the booking history page" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="| 123 | Departure cannot contain numbers or special characters |" name="When I fill in departure with \&quot;123\&quot;" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="| 123 | Departure cannot contain numbers or special characters |" name="Then I should return to booking history page" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="| 123 | Departure cannot contain numbers or special characters |" name="| 123 | Departure cannot contain numbers or special characters |" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="| 123 | Departure cannot contain numbers or special characters |" name="| 123 | Departure cannot contain numbers or special characters |" time="0"/>
+  <testcase classname="| !2% | Departure cannot contain numbers or special characters |" name="Given I am on the booking history page" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="| !2% | Departure cannot contain numbers or special characters |" name="When I fill in departure with \&quot;!2%\&quot;" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="| !2% | Departure cannot contain numbers or special characters |" name="Then I should return to booking history page" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="| !2% | Departure cannot contain numbers or special characters |" name="| !2% | Departure cannot contain numbers or special characters |" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="| !2% | Departure cannot contain numbers or special characters |" name="| !2% | Departure cannot contain numbers or special characters |" time="0"/>
+  <testcase classname="| hjk! | Departure cannot contain numbers or special characters |" name="Given I am on the booking history page" time="0.016">
+    <skipped/>
+  </testcase>
+  <testcase classname="| hjk! | Departure cannot contain numbers or special characters |" name="When I fill in departure with \&quot;hjk!\&quot;" time="0.016">
+    <skipped/>
+  </testcase>
+  <testcase classname="| hjk! | Departure cannot contain numbers or special characters |" name="Then I should return to booking history page" time="0.016">
+    <skipped/>
+  </testcase>
+  <testcase classname="| hjk! | Departure cannot contain numbers or special characters |" name="| hjk! | Departure cannot contain numbers or special characters |" time="0.016">
+    <skipped/>
+  </testcase>
+  <testcase classname="| hjk! | Departure cannot contain numbers or special characters |" name="| hjk! | Departure cannot contain numbers or special characters |" time="0.016"/>
+  <testcase classname="| S2eoul | Departure cannot contain numbers or special characters |" name="Given I am on the booking history page" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="| S2eoul | Departure cannot contain numbers or special characters |" name="When I fill in departure with \&quot;S2eoul\&quot;" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="| S2eoul | Departure cannot contain numbers or special characters |" name="Then I should return to booking history page" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="| S2eoul | Departure cannot contain numbers or special characters |" name="| S2eoul | Departure cannot contain numbers or special characters |" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="| S2eoul | Departure cannot contain numbers or special characters |" name="| S2eoul | Departure cannot contain numbers or special characters |" time="0"/>
 </testsuite>

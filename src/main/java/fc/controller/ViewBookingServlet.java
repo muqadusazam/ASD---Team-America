@@ -19,15 +19,19 @@ public class ViewBookingServlet extends HttpServlet{
             throws ServletException, IOException {
         Map<String,String> errors = new HashMap<String,String>(); 
         
+        // getting the parameters of departure and destination
     String searchOrigin = request.getParameter("departure");
     String searchDestination = request.getParameter("destination");
 
+    // validating oririn that is the departure
         if(!validate(inputPattern, searchOrigin)){
             errors.put("Err", "Departure cannot contain numbers or special characters");
         }
+        // validating destination for any error
         if(!validate(inputPattern, searchDestination)){
             errors.put("Err", "Destination cannot contain numbers or special characters");
         }
+        // validating both origin and destination for any error
         if(!validate(inputPattern, searchOrigin) && !validate(inputPattern, searchDestination)){
             errors.put("Err", "Both departure and destination cannot contain numbers or special characters");
         }

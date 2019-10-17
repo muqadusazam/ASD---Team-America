@@ -64,7 +64,7 @@
 
 <div class="container" style = "margin-top: 50px;">
     <h1 style = "margin-bottom:30px">Add Flight</h1>
-    <form action="flightAddSuccess.jsp" method ="post" name="flight_add" onsubmit="return validate()">
+    <form action="addFlightServlet" method ="post" name="flight_add" onsubmit="return validate()">
         <div class="form-group col-md-6">
             <label for="inputAirline">Airline</label>
             <input type="text" class="form-control" id="inputAirline" placeholder="Airline" name="airline" onpaste ="return true">

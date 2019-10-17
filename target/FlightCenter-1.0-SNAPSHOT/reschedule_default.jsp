@@ -107,6 +107,7 @@
             <td></td>
             <td>
                 <button type="submit" class="btn btn-success" style="float: right">Submit</button>
+                </td><td>
                 <button type="reset" class="btn btn-danger" style="float: right">Cancel</button>
             </td>
         </tr>

@@ -164,11 +164,13 @@
                         %>
                     </select>
                     <button type="submit" class="btn btn-success" style="float: right" id="rescheduleBtn">Submit</button>
+                </td></tr><tr>
                     <button type="reset" class="btn btn-danger" style="float: right">Cancel</button>
                     <input id="ticketID" name="ticketID" value="<%= request.getParameter("ticketID") %>" type="hidden">
+                    </tr>
                 </form>
-            </td>
-        </tr>
+            
+        
 
         <%
             }

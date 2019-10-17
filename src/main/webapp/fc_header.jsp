@@ -60,8 +60,19 @@
                             <a class="dropdown-item" href="account.jsp">Profile</a>
                             <a class="dropdown-item" href="booking_history.jsp">Booking History</a>
                             <a class="dropdown-item" href="cancelTicket.jsp">Cancel Ticket</a>
-                            <a class="dropdown-item" href="user_management.jsp">User Management (Staff only)</a>
-                            <a class="dropdown-item" href="flight_management.jsp">Flight Management (Staff only)</a>
+                            <%
+                    if (session.getAttribute("customer") != null) { //Redirect to login page if not logged in
+                       Customer customer = (Customer)session.getAttribute("customer");
+                           if((Integer.parseInt(customer.getID())/100000) == 9)
+                             {
+                               %>
+                                  <a class="dropdown-item" href="user_management.jsp">User Management (Staff only)</a>
+                                    <a class="dropdown-item" href="flight_management.jsp">Flight Management (Staff only)</a>
+                               <%
+                                    }
+                                }
+                            %>
+                            
                         </div>
                     </li>
                     <li class="nav-item h">

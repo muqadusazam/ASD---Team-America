@@ -4,6 +4,7 @@
     <jsp:param name="title" value="Flight Management/Delete"/>
 </jsp:include>
 
+
 <%
     String id = request.getParameter("updateID");
     MongoDBManager_Flights flightDB = new MongoDBManager_Flights();

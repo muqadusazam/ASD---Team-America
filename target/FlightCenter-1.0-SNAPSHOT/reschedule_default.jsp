@@ -7,7 +7,6 @@
 	<jsp:param name="title" value="Flight Center/account/reschedule"/>
 </jsp:include>
 
-
 <div class="mx-auto" style="float: left">
     <form>
     <h1><p>Reschedule ticket</p></h1>

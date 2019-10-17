@@ -62,7 +62,6 @@
     }
 </script>
 
-
 <div class="container pt-5" style = "margin: 30px; float:right">
 
     <h1 style = "margin-bottom:30px">Add Flight</h1>

@@ -32,9 +32,9 @@ public class CustomerSearchServlet extends HttpServlet {
         }
 
         ArrayList<Customer> customers;
-        //validate destination using pattern (only letters, no numbers, no special characters, length?
+        //validates searchCustomer by regex 
         //If error, send back error message
-        //If none, continue/set attributes$$$$$$$$$$$$$$$$$$$$$$$$$$
+        //and sort according to sortBy variable
         if (errors.isEmpty()) {
             if (searchCustomer != null && !searchCustomer.isEmpty() && customerDB.customerExist(searchCustomer)) {
                 customers = customerDB.getCustomerByNameOrID(searchCustomer);

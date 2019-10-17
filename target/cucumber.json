@@ -1,572 +1,190 @@
 [
   {
-    "line": 2,
+    "comments": [
+      {
+        "line": 1,
+        "value": "#This feature contains sample data as input for RescheduleFeature.java"
+      }
+    ],
+    "line": 3,
     "elements": [
       {
-        "line": 7,
-        "name": "Staff navigates to FlightCenter Add Customer page",
+        "line": 8,
+        "name": "Staff Navigates to FlightCenter User Management page",
         "description": "",
         "type": "background",
         "keyword": "Background",
         "steps": [
           {
             "result": {
-              "duration": 9622361584,
+              "duration": 14429916077,
               "status": "passed"
             },
-            "line": 8,
-            "name": "I am on Add Customer page",
+            "line": 9,
+            "name": "I log in as \"admin@one.com\" and \"abcde1\"",
             "match": {
-              "location": "CustomerAdminFeature.i_am_on_Add_Customer_page()"
+              "arguments": [
+                {
+                  "val": "admin@one.com",
+                  "offset": 13
+                },
+                {
+                  "val": "abcde1",
+                  "offset": 33
+                }
+              ],
+              "location": "SearchCustomerFeature.i_log_in_as(String,String)"
             },
             "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 868327586,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "I go to User Management page",
+            "match": {
+              "location": "SearchCustomerFeature.i_go_to_User_Management_page()"
+            },
+            "keyword": "Then "
           }
         ]
       },
       {
-        "line": 10,
-        "name": "Successful registration",
+        "line": 12,
+        "name": "Valid search result",
         "description": "",
-        "id": "customeradminfeature;successful-registration",
+        "id": "searchcustomerfeature.feature;valid-search-result",
         "type": "scenario",
         "keyword": "Scenario",
         "steps": [
           {
             "result": {
-              "duration": 1668013467,
-              "status": "passed"
+              "duration": 25806409,
+              "error_message": "org.openqa.selenium.NoSuchElementException: Unable to locate element: #inputSearch\nFor documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html\nBuild info: version: \u00273.141.59\u0027, revision: \u0027e82be7d358\u0027, time: \u00272018-11-14T08:17:03\u0027\nSystem info: host: \u0027Williams-MacBook-Pro.local\u0027, ip: \u0027fe80:0:0:0:c98:84cd:5028:41d8%en0\u0027, os.name: \u0027Mac OS X\u0027, os.arch: \u0027x86_64\u0027, os.version: \u002710.14.4\u0027, java.version: \u00271.8.0_181\u0027\nDriver info: org.openqa.selenium.firefox.FirefoxDriver\nCapabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 69.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20190827005903, moz:geckodriverVersion: 0.26.0, moz:headless: false, moz:processID: 15087, moz:profile: /var/folders/vp/x3kzn9lx2px..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: MAC, platformName: MAC, platformVersion: 18.5.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}\nSession ID: 28fcd13e-67d7-3a41-9e6a-ba4422e62896\n*** Element info: {Using\u003did, value\u003dinputSearch}\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\n\tat sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\n\tat java.lang.reflect.Constructor.newInstance(Constructor.java:423)\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:372)\n\tat org.openqa.selenium.By$ById.findElement(By.java:188)\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)\n\tat fc.test.SearchCustomerFeature.i_fill_in(SearchCustomerFeature.java:49)\n\tat ✽.When I fill in \"William\"(SearchCustomerFeature.feature:13)\n",
+              "status": "failed"
             },
-            "line": 11,
-            "name": "I fill in \"Customer\" and \"Test\" and \"cust@tester.com\" and \"abcde1\" and \"TT999\" and \"1992-12-12\"",
+            "line": 13,
+            "name": "I fill in \"William\"",
             "match": {
               "arguments": [
                 {
-                  "val": "Customer",
+                  "val": "William",
                   "offset": 11
-                },
+                }
+              ],
+              "location": "SearchCustomerFeature.i_fill_in(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 14,
+            "name": "I should see user management page with user William",
+            "match": {
+              "location": "SearchCustomerFeature.i_should_see_user_management_page_with_user_William()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 8,
+        "name": "Staff Navigates to FlightCenter User Management page",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 8842073361,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "I log in as \"admin@one.com\" and \"abcde1\"",
+            "match": {
+              "arguments": [
                 {
-                  "val": "Test",
-                  "offset": 26
-                },
-                {
-                  "val": "cust@tester.com",
-                  "offset": 37
+                  "val": "admin@one.com",
+                  "offset": 13
                 },
                 {
                   "val": "abcde1",
-                  "offset": 59
-                },
-                {
-                  "val": "TT999",
-                  "offset": 72
-                },
-                {
-                  "val": "1992-12-12",
-                  "offset": 84
-                }
-              ],
-              "location": "CustomerAdminFeature.i_fill_in(String,String,String,String,String,String)"
-            },
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "duration": 1023039476,
-              "status": "passed"
-            },
-            "line": 12,
-            "name": "I should see user management page",
-            "match": {
-              "location": "CustomerAdminFeature.i_should_see_user_management_page()"
-            },
-            "keyword": "Then "
-          }
-        ]
-      },
-      {
-        "line": 7,
-        "name": "Staff navigates to FlightCenter Add Customer page",
-        "description": "",
-        "type": "background",
-        "keyword": "Background",
-        "steps": [
-          {
-            "result": {
-              "duration": 6544422223,
-              "status": "passed"
-            },
-            "line": 8,
-            "name": "I am on Add Customer page",
-            "match": {
-              "location": "CustomerAdminFeature.i_am_on_Add_Customer_page()"
-            },
-            "keyword": "Given "
-          }
-        ]
-      },
-      {
-        "line": 19,
-        "name": "Unsuccessful registration",
-        "description": "",
-        "id": "customeradminfeature;unsuccessful-registration;;2",
-        "type": "scenario",
-        "keyword": "Scenario Outline",
-        "steps": [
-          {
-            "result": {
-              "duration": 471000268,
-              "status": "passed"
-            },
-            "line": 15,
-            "name": "I fill in \"\" and \"One\" and \"user@one.co\" and \"qwert1\" and \"UO001\" and \"1994-04-15\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "",
-                  "offset": 11
-                },
-                {
-                  "val": "One",
-                  "offset": 18
-                },
-                {
-                  "val": "user@one.co",
-                  "offset": 28
-                },
-                {
-                  "val": "qwert1",
-                  "offset": 46
-                },
-                {
-                  "val": "UO001",
-                  "offset": 59
-                },
-                {
-                  "val": "1994-04-15",
-                  "offset": 71
-                }
-              ],
-              "location": "CustomerAdminFeature.i_fill_in(String,String,String,String,String,String)"
-            },
-            "matchedColumns": [
-              0,
-              1,
-              2,
-              3,
-              4,
-              5
-            ],
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "duration": 104467,
-              "status": "passed"
-            },
-            "line": 16,
-            "name": "I should stay on userAdd management page",
-            "match": {
-              "location": "CustomerAdminFeature.i_should_stay_on_userAdd_management_page()"
-            },
-            "keyword": "Then "
-          }
-        ],
-        "tags": [
-          {
-            "line": 1,
-            "name": "@Customer_admin"
-          }
-        ]
-      },
-      {
-        "line": 7,
-        "name": "Staff navigates to FlightCenter Add Customer page",
-        "description": "",
-        "type": "background",
-        "keyword": "Background",
-        "steps": [
-          {
-            "result": {
-              "duration": 5882801193,
-              "status": "passed"
-            },
-            "line": 8,
-            "name": "I am on Add Customer page",
-            "match": {
-              "location": "CustomerAdminFeature.i_am_on_Add_Customer_page()"
-            },
-            "keyword": "Given "
-          }
-        ]
-      },
-      {
-        "line": 20,
-        "name": "Unsuccessful registration",
-        "description": "",
-        "id": "customeradminfeature;unsuccessful-registration;;3",
-        "type": "scenario",
-        "keyword": "Scenario Outline",
-        "steps": [
-          {
-            "result": {
-              "duration": 551379716,
-              "status": "passed"
-            },
-            "line": 15,
-            "name": "I fill in \"James\" and \"Ten\" and \"ben@ten.co\" and \"qwert1\" and \"\" and \"2000-01-01\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "James",
-                  "offset": 11
-                },
-                {
-                  "val": "Ten",
-                  "offset": 23
-                },
-                {
-                  "val": "ben@ten.co",
                   "offset": 33
-                },
-                {
-                  "val": "qwert1",
-                  "offset": 50
-                },
-                {
-                  "val": "",
-                  "offset": 63
-                },
-                {
-                  "val": "2000-01-01",
-                  "offset": 70
                 }
               ],
-              "location": "CustomerAdminFeature.i_fill_in(String,String,String,String,String,String)"
-            },
-            "matchedColumns": [
-              0,
-              1,
-              2,
-              3,
-              4,
-              5
-            ],
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "duration": 40763,
-              "status": "passed"
-            },
-            "line": 16,
-            "name": "I should stay on userAdd management page",
-            "match": {
-              "location": "CustomerAdminFeature.i_should_stay_on_userAdd_management_page()"
-            },
-            "keyword": "Then "
-          }
-        ],
-        "tags": [
-          {
-            "line": 1,
-            "name": "@Customer_admin"
-          }
-        ]
-      },
-      {
-        "line": 7,
-        "name": "Staff navigates to FlightCenter Add Customer page",
-        "description": "",
-        "type": "background",
-        "keyword": "Background",
-        "steps": [
-          {
-            "result": {
-              "duration": 6114290683,
-              "status": "passed"
-            },
-            "line": 8,
-            "name": "I am on Add Customer page",
-            "match": {
-              "location": "CustomerAdminFeature.i_am_on_Add_Customer_page()"
+              "location": "SearchCustomerFeature.i_log_in_as(String,String)"
             },
             "keyword": "Given "
-          }
-        ]
-      },
-      {
-        "line": 21,
-        "name": "Unsuccessful registration",
-        "description": "",
-        "id": "customeradminfeature;unsuccessful-registration;;4",
-        "type": "scenario",
-        "keyword": "Scenario Outline",
-        "steps": [
-          {
-            "result": {
-              "duration": 546208760,
-              "status": "passed"
-            },
-            "line": 15,
-            "name": "I fill in \"Donald\" and \"Kid\" and \"trump@gov.us\" and \"\" and \"DT001\" and \"1950-11-13\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "Donald",
-                  "offset": 11
-                },
-                {
-                  "val": "Kid",
-                  "offset": 24
-                },
-                {
-                  "val": "trump@gov.us",
-                  "offset": 34
-                },
-                {
-                  "val": "",
-                  "offset": 53
-                },
-                {
-                  "val": "DT001",
-                  "offset": 60
-                },
-                {
-                  "val": "1950-11-13",
-                  "offset": 72
-                }
-              ],
-              "location": "CustomerAdminFeature.i_fill_in(String,String,String,String,String,String)"
-            },
-            "matchedColumns": [
-              0,
-              1,
-              2,
-              3,
-              4,
-              5
-            ],
-            "keyword": "When "
           },
           {
             "result": {
-              "duration": 40844,
+              "duration": 768597456,
               "status": "passed"
             },
-            "line": 16,
-            "name": "I should stay on userAdd management page",
+            "line": 10,
+            "name": "I go to User Management page",
             "match": {
-              "location": "CustomerAdminFeature.i_should_stay_on_userAdd_management_page()"
+              "location": "SearchCustomerFeature.i_go_to_User_Management_page()"
             },
             "keyword": "Then "
-          }
-        ],
-        "tags": [
-          {
-            "line": 1,
-            "name": "@Customer_admin"
           }
         ]
       },
       {
-        "line": 7,
-        "name": "Staff navigates to FlightCenter Add Customer page",
+        "line": 16,
+        "name": "Invalid search result",
         "description": "",
-        "type": "background",
-        "keyword": "Background",
+        "id": "searchcustomerfeature.feature;invalid-search-result",
+        "type": "scenario",
+        "keyword": "Scenario",
         "steps": [
           {
             "result": {
-              "duration": 6749787499,
-              "error_message": "org.openqa.selenium.WebDriverException: Failed to decode response from marionette\nBuild info: version: \u00273.141.59\u0027, revision: \u0027e82be7d358\u0027, time: \u00272018-11-14T08:17:03\u0027\nSystem info: host: \u0027Williams-MacBook-Pro.local\u0027, ip: \u0027fe80:0:0:0:10a6:f70f:ba8e:98ca%en0\u0027, os.name: \u0027Mac OS X\u0027, os.arch: \u0027x86_64\u0027, os.version: \u002710.14.4\u0027, java.version: \u00271.8.0_181\u0027\nDriver info: org.openqa.selenium.firefox.FirefoxDriver\nCapabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 69.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20190827005903, moz:geckodriverVersion: 0.25.0, moz:headless: false, moz:processID: 3309, moz:profile: /var/folders/vp/x3kzn9lx2px..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: MAC, platformName: MAC, platformVersion: 18.5.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}\nSession ID: 6bba7771-05f7-9140-9379-b97596b35804\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\n\tat sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\n\tat java.lang.reflect.Constructor.newInstance(Constructor.java:423)\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:609)\n\tat org.openqa.selenium.remote.RemoteWebDriver.getCurrentUrl(RemoteWebDriver.java:287)\n\tat fc.test.CustomerAdminFeature.i_am_on_Add_Customer_page(CustomerAdminFeature.java:30)\n\tat ✽.Given I am on Add Customer page(CustomerAdminFeature.feature:8)\n",
+              "duration": 7209566,
+              "error_message": "org.openqa.selenium.NoSuchElementException: Unable to locate element: #inputSearch\nFor documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html\nBuild info: version: \u00273.141.59\u0027, revision: \u0027e82be7d358\u0027, time: \u00272018-11-14T08:17:03\u0027\nSystem info: host: \u0027Williams-MacBook-Pro.local\u0027, ip: \u0027fe80:0:0:0:c98:84cd:5028:41d8%en0\u0027, os.name: \u0027Mac OS X\u0027, os.arch: \u0027x86_64\u0027, os.version: \u002710.14.4\u0027, java.version: \u00271.8.0_181\u0027\nDriver info: org.openqa.selenium.firefox.FirefoxDriver\nCapabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 69.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20190827005903, moz:geckodriverVersion: 0.26.0, moz:headless: false, moz:processID: 15093, moz:profile: /var/folders/vp/x3kzn9lx2px..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: MAC, platformName: MAC, platformVersion: 18.5.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}\nSession ID: 8a50764d-98b9-8247-82c7-97ea8b1ae8f5\n*** Element info: {Using\u003did, value\u003dinputSearch}\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\n\tat sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\n\tat java.lang.reflect.Constructor.newInstance(Constructor.java:423)\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:372)\n\tat org.openqa.selenium.By$ById.findElement(By.java:188)\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)\n\tat fc.test.SearchCustomerFeature.i_fill_in(SearchCustomerFeature.java:49)\n\tat ✽.When I fill in \"$%\u0026#^AKSDJ\"(SearchCustomerFeature.feature:17)\n",
               "status": "failed"
             },
-            "line": 8,
-            "name": "I am on Add Customer page",
-            "match": {
-              "location": "CustomerAdminFeature.i_am_on_Add_Customer_page()"
-            },
-            "keyword": "Given "
-          }
-        ]
-      },
-      {
-        "line": 22,
-        "name": "Unsuccessful registration",
-        "description": "",
-        "id": "customeradminfeature;unsuccessful-registration;;5",
-        "type": "scenario",
-        "keyword": "Scenario Outline",
-        "steps": [
-          {
-            "result": {
-              "status": "skipped"
-            },
-            "line": 15,
-            "name": "I fill in \"Why\" and \"\" and \"dobby@do.b\" and \"qwert1\" and \"DD001\" and \"1960-12-28\"",
+            "line": 17,
+            "name": "I fill in \"$%\u0026#^AKSDJ\"",
             "match": {
               "arguments": [
                 {
-                  "val": "Why",
+                  "val": "$%\u0026#^AKSDJ",
                   "offset": 11
-                },
-                {
-                  "val": "",
-                  "offset": 21
-                },
-                {
-                  "val": "dobby@do.b",
-                  "offset": 28
-                },
-                {
-                  "val": "qwert1",
-                  "offset": 45
-                },
-                {
-                  "val": "DD001",
-                  "offset": 58
-                },
-                {
-                  "val": "1960-12-28",
-                  "offset": 70
                 }
               ],
-              "location": "CustomerAdminFeature.i_fill_in(String,String,String,String,String,String)"
+              "location": "SearchCustomerFeature.i_fill_in(String)"
             },
-            "matchedColumns": [
-              0,
-              1,
-              2,
-              3,
-              4,
-              5
-            ],
             "keyword": "When "
           },
           {
             "result": {
               "status": "skipped"
             },
-            "line": 16,
-            "name": "I should stay on userAdd management page",
+            "line": 18,
+            "name": "I should see error message for invalid search result",
             "match": {
-              "location": "CustomerAdminFeature.i_should_stay_on_userAdd_management_page()"
+              "location": "SearchCustomerFeature.i_should_see_error_message_for_invalid_search_result()"
             },
             "keyword": "Then "
-          }
-        ],
-        "tags": [
-          {
-            "line": 1,
-            "name": "@Customer_admin"
-          }
-        ]
-      },
-      {
-        "line": 7,
-        "name": "Staff navigates to FlightCenter Add Customer page",
-        "description": "",
-        "type": "background",
-        "keyword": "Background",
-        "steps": [
-          {
-            "result": {
-              "duration": 48169965510,
-              "error_message": "org.openqa.selenium.WebDriverException: invalid argument: can\u0027t kill an exited process\nBuild info: version: \u00273.141.59\u0027, revision: \u0027e82be7d358\u0027, time: \u00272018-11-14T08:17:03\u0027\nSystem info: host: \u0027Williams-MacBook-Pro.local\u0027, ip: \u0027fe80:0:0:0:10a6:f70f:ba8e:98ca%en0\u0027, os.name: \u0027Mac OS X\u0027, os.arch: \u0027x86_64\u0027, os.version: \u002710.14.4\u0027, java.version: \u00271.8.0_181\u0027\nDriver info: driver.version: FirefoxDriver\nremote stacktrace: \n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\n\tat sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\n\tat java.lang.reflect.Constructor.newInstance(Constructor.java:423)\n\tat org.openqa.selenium.remote.W3CHandshakeResponse.lambda$errorHandler$0(W3CHandshakeResponse.java:62)\n\tat org.openqa.selenium.remote.HandshakeResponse.lambda$getResponseFunction$0(HandshakeResponse.java:30)\n\tat org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$0(ProtocolHandshake.java:126)\n\tat java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)\n\tat java.util.Spliterators$ArraySpliterator.tryAdvance(Spliterators.java:958)\n\tat java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:126)\n\tat java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:498)\n\tat java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:485)\n\tat java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:471)\n\tat java.util.stream.FindOps$FindOp.evaluateSequential(FindOps.java:152)\n\tat java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)\n\tat java.util.stream.ReferencePipeline.findFirst(ReferencePipeline.java:464)\n\tat org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:128)\n\tat org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:74)\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)\n\tat org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)\n\tat org.openqa.selenium.remote.RemoteWebDriver.\u003cinit\u003e(RemoteWebDriver.java:131)\n\tat org.openqa.selenium.firefox.FirefoxDriver.\u003cinit\u003e(FirefoxDriver.java:147)\n\tat org.openqa.selenium.firefox.FirefoxDriver.\u003cinit\u003e(FirefoxDriver.java:125)\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\n\tat sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\n\tat java.lang.reflect.Constructor.newInstance(Constructor.java:423)\n\tat java.lang.Class.newInstance(Class.java:442)\n\tat fc.test.CustomerAdminFeature.i_am_on_Add_Customer_page(CustomerAdminFeature.java:28)\n\tat ✽.Given I am on Add Customer page(CustomerAdminFeature.feature:8)\n",
-              "status": "failed"
-            },
-            "line": 8,
-            "name": "I am on Add Customer page",
-            "match": {
-              "location": "CustomerAdminFeature.i_am_on_Add_Customer_page()"
-            },
-            "keyword": "Given "
-          }
-        ]
-      },
-      {
-        "line": 23,
-        "name": "Unsuccessful registration",
-        "description": "",
-        "id": "customeradminfeature;unsuccessful-registration;;6",
-        "type": "scenario",
-        "keyword": "Scenario Outline",
-        "steps": [
-          {
-            "result": {
-              "status": "skipped"
-            },
-            "line": 15,
-            "name": "I fill in \"Test\" and \"Name\" and \"poo@head.aus\" and \"qwert1\" and \"PH001\" and \"\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "Test",
-                  "offset": 11
-                },
-                {
-                  "val": "Name",
-                  "offset": 22
-                },
-                {
-                  "val": "poo@head.aus",
-                  "offset": 33
-                },
-                {
-                  "val": "qwert1",
-                  "offset": 52
-                },
-                {
-                  "val": "PH001",
-                  "offset": 65
-                },
-                {
-                  "val": "",
-                  "offset": 77
-                }
-              ],
-              "location": "CustomerAdminFeature.i_fill_in(String,String,String,String,String,String)"
-            },
-            "matchedColumns": [
-              0,
-              1,
-              2,
-              3,
-              4,
-              5
-            ],
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "status": "skipped"
-            },
-            "line": 16,
-            "name": "I should stay on userAdd management page",
-            "match": {
-              "location": "CustomerAdminFeature.i_should_stay_on_userAdd_management_page()"
-            },
-            "keyword": "Then "
-          }
-        ],
-        "tags": [
-          {
-            "line": 1,
-            "name": "@Customer_admin"
           }
         ]
       }
     ],
-    "name": "CustomerAdminFeature",
-    "description": "  As a Staff\n  I want to create customer accounts\n  So that I can add new customer to the database",
-    "id": "customeradminfeature",
+    "name": "SearchCustomerFeature.feature",
+    "description": "  As a Staff\n  I want to search for customer\n  So I can find the customer faster",
+    "id": "searchcustomerfeature.feature",
     "keyword": "Feature",
-    "uri": "CustomerAdminFeature.feature",
+    "uri": "SearchCustomerFeature.feature",
     "tags": [
       {
-        "line": 1,
-        "name": "@Customer_admin"
+        "line": 2,
+        "name": "@Search_customer"
       }
     ]
   }
-]]
+]

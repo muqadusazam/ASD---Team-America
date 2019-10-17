@@ -16,10 +16,7 @@
 <%
     if (session.getAttribute("customer") == null) {
         response.sendRedirect("login.jsp");
-    }
-    String id = request.getParameter("newticketID");
-    MongoDBManager_Tickets ticketDB = new MongoDBManager_Tickets();
-    String customerID = ticketDB.getTicket(id).getCustomerID();
+    } 
 %>
 <body>
     <!-- width 50 to not take up entire screen, margin to sit nicely in middle of screen -->
@@ -29,9 +26,10 @@
             <br>
             <p>You have successfully rescheduled the flight.</p>
             <br>
-            <!-- Redirect to login page or main page upon clicking buttons-->
+            <!-- Redirect to login page or userTicket_management.jsp upon clicking buttons-->
             <form action="userTicket_management.jsp" method="POST">
-                <button type="submit" name="ID" value=<%=customerID%> class="btn btn-primary">Ticket List</button> 
+                <%String customerID = (String) session.getAttribute("customerID");%>               
+                <button type="submit" name="ID" value="<%=customerID%>" class="btn btn-primary">Customer List</button> 
             </form>
         </center>
     </div>

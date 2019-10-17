@@ -4,6 +4,8 @@
 <%@page import="fc.model.dao.MongoDBManager_Tickets"%>
 <%@page import="fc.model.Customer"%>
 <%@page import="fc.model.dao.MongoDBManager_Customers"%>
+<%@page import="fc.model.Flight"%>
+
 <jsp:include page="fc_header.jsp">
     <jsp:param name="title" value="Flight Center/account/userTicket_management"/>
 </jsp:include>
@@ -33,28 +35,21 @@
             <tr>
                 <th>Ticket ID</th>
                 <th>Flight No.</th>
-                <th>Destination</th>
-                <th>Flight date</th>
+                <th>From</th>
+                <th>To</th>
+                <th>Departure</th>
                 <th>Seat Number</th>   
                 <th>Action</th>
             </tr>
         </thead>
-        <%
-            for (Ticket ticket : tickets) {
-        %>
-
+        <% for (Ticket ticket : tickets) {%>
         <tr>
             <td><%= ticket.getID()%></td>
-            <%System.out.println("1");%>
             <td><%= ticket.getFlightID()%></td>
-            <%System.out.println("2");%>
-            <%System.out.println(ticket.getFlightID());%>
+            <td><%= flightDB.getFlight(ticket.getFlightID()).getOrigin()%></td>
             <td><%= flightDB.getFlight(ticket.getFlightID()).getDestination()%></td>
-            <%System.out.println("3");%>
             <td><%= flightDB.getFlight(ticket.getFlightID()).getDepartureDate()%></td>
-            <%System.out.println("4");%>
             <td><%= ticket.getPassengerSeatNum()%></td>
-            <%System.out.println("5");%>
             <td>
                 <div style="width:200px;">
                     <div style="float: left;"> 

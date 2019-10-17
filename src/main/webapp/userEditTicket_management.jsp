@@ -16,10 +16,10 @@
     MongoDBManager_Tickets dbt = new MongoDBManager_Tickets();
     MongoDBManager_Flights dbf = new MongoDBManager_Flights();
     MongoDBManager_Customers dbc = new MongoDBManager_Customers();
-
+    //sets current ticket into session
     Ticket ticket = dbt.getTicket((String) request.getParameter("ticketID"));
     session.setAttribute("origTicket", ticket);
-
+    //sets current flight on ticket into session
     Flight flight = dbf.getFlight(ticket.getFlightID());
     session.setAttribute("origFlight", flight);
 
@@ -30,8 +30,7 @@
     <h1>Reschedule Ticket</h1>
 </div>
 
-<div class="mx-auto" style="float: right; text-align: left;" >
- 
+<div class="mx-auto" style="float: left; text-align: left;" >
 
     <table class="table table-hover">
         <tbody>
@@ -117,7 +116,7 @@
         <h2 class="text-warning"> There are no available tickets. </h2>
         <% } else { //Display all flights in array when not empty/null %>
         <tr>
-            <td><b>Choose new ticket: &nbsp&nbsp</b></td>
+            <td><b>Choose new flight: &nbsp&nbsp</b></td>
             <td>
                 <form action="AdminRescheduleServlet" method="POST">
                     <select name="newFlight" value="<%= flight.getID()%>">
@@ -134,8 +133,10 @@
                             }
                         %>
                     </select>
-                    <button type="submit" name="ID" value="<%=ticket.getCustomerID()%>" class="btn btn-success" style="float: right" id="rescheduleBtn">Submit</button>
-                    <button type="reset" class="btn btn-danger" style="float: right">Cancel</button>
+                    <button type="submit" name="ID" value="<%=ticket.getCustomerID()%>" class="btn btn-success" style="float: right" id="rescheduleBtn">Submit</button>                 
+                </form>
+                <form action="userTicket_management.jsp" method="POST">
+                    <button type="submit" name="ID" value="<%=ticket.getCustomerID()%>" style="float: right">Cancel</button>
                 </form>
             </td>
         </tr>

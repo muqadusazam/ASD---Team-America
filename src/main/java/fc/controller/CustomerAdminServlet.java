@@ -48,6 +48,7 @@ public class CustomerAdminServlet extends HttpServlet {
       //  processRequest(request, response);
         HttpSession session = request.getSession();
         
+        //valids each field with regex
         String firstName = request.getParameter("fname");
         if (!validate(namePattern, firstName)){
             errors.put("fNameErr", "Incorrect name format");

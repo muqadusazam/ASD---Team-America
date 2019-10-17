@@ -11,9 +11,9 @@
     <h1>Administration Page</h1>
     <form action="CustomerSearchServlet" method="GET" id="searchForm">
         <div class="input-group mb-3">
-            <input type="text" class="form-control" aria-label="Recipient's username" aria-describedby="button-addon2" type="text" name="search" placeholder="Search by Name or ID">
+            <input type="text" id="inputSearch" class="form-control" aria-label="Recipient's username" aria-describedby="button-addon2" type="text" name="search" placeholder="Search by Name or ID">
             <div class="input-group-append">
-                <button class="btn btn-outline-secondary" type="submit" id="button-addon2">Search</button>
+                <button class="btn btn-outline-secondary" type="submit" id="searchBtn">Search</button>
             </div>
         </div>
     </form>

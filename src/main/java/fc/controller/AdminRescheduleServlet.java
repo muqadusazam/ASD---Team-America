@@ -45,14 +45,15 @@ public class AdminRescheduleServlet extends HttpServlet {
         //Check errors empty and proceed to reschedule ticket 
         MongoDBManager_Tickets dbt = new MongoDBManager_Tickets();
 
-        System.out.println("***********TEST***********");
         Ticket newTicket = new Ticket(oldTicket.getID(),
                 oldTicket.getCustomerID(),
                 newFlightID,
                 oldTicket.getPassengerSeatNum());
-        System.out.println("***********TEST***********");
         dbt.remove(oldTicket);
         dbt.add(newTicket);
+        String customerID = newTicket.getCustomerID();
+        
+        session.setAttribute("customerID", newTicket.getCustomerID());
         request.getRequestDispatcher("userEditTicketSuccess_management.jsp").forward(request, response);
     }
 

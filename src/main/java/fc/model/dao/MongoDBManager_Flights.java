@@ -42,11 +42,10 @@ public class MongoDBManager_Flights extends MongoDBConnector {
             MongoCollection<Document> flightDB = db.getCollection(FLIGHT_COLLECTION);
             Document doc = flightDB.find(and(eq("id", id))).first();
             flight = convertToFlight(doc); //Convert flight's details to String format
-            System.out.println("IM hereeee");
-
-        } catch (NullPointerException x) { //Catch exception and return null if flight does not exist
+        } catch(NullPointerException x) { //Catch exception and return null if flight does not exist
             return null;
         }
+    
         return flight;
     }
 
@@ -87,7 +86,6 @@ public class MongoDBManager_Flights extends MongoDBConnector {
         }
         return flights; //ArrayList of all relevant flights in the Flight collection
     }
-
     //Return a list of origins from all of the available flights
     public ArrayList<String> getAllOrigins() {
         MongoClientURI uri = generateURI();

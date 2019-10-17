@@ -39,15 +39,13 @@ public class RescheduleServlet extends HttpServlet {
         Flight oldFlight = (Flight)session.getAttribute("flight");
         
         //Check if Flight ID match
-        if (oldFlight.getID().compareTo(oldTicket.getFlightID()) >= 0) {
+        if (oldFlight.getID().compareTo(oldTicket.getFlightID()) > 0) {
             session.setAttribute("error", "Flight ID does not match Flight ID on Ticket.");
-            request.getRequestDispatcher("reschedule.jsp").forward(request, response);
         }
         
         //Check if Flight ID match
-        if (oldFlight.getID().compareTo(oldTicket.getFlightID()) == 0) {
+        if (oldFlight.getID().compareTo(request.getParameter("newFlight")) == 0) {
             session.setAttribute("error", "You selected the same Flight on ticket.");
-            request.getRequestDispatcher("reschedule.jsp").forward(request, response);
         }
         
         //Get departure and arrival date from old flight
@@ -63,20 +61,8 @@ public class RescheduleServlet extends HttpServlet {
         String newDepDate = newFlight.getDepartureDate();
         String newDestDate = newFlight.getArrivalDate();
         
-        //Check if departure date is after the old departure date
-        if (oldDepDate.compareTo(newDepDate) >= 0) {
-            session.setAttribute("error", "The departure date must be after the old departure date.");
-            request.getRequestDispatcher("reschedule.jsp").forward(request, response);
-        }
-        
-        //Check if arrival date is after the old departure date
-        if (oldDestDate.compareTo(newDestDate) >= 0) {
-            session.setAttribute("error", "The destination date must be after the old departure date.");
-            request.getRequestDispatcher("reschedule.jsp").forward(request, response);
-        }
-        
         //Check errors empty and proceed to reschedule ticket 
-        if (session.getAttribute("error") != null) {
+        if (session.getAttribute("error") == null) {
             MongoDBManager_Tickets dbt = new MongoDBManager_Tickets();
             
             Ticket newTicket = new Ticket(oldTicket.getID(),
@@ -87,6 +73,8 @@ public class RescheduleServlet extends HttpServlet {
             dbt.add(newTicket);
             
             session.setAttribute("success", "The ticket has been successfully rescheduled!");
+            request.getRequestDispatcher("reschedule.jsp").forward(request, response);
+        } else {
             request.getRequestDispatcher("reschedule.jsp").forward(request, response);
         }
     }

@@ -25,6 +25,24 @@
     %>
     <h2 class="text-danger"> You must be logged in to Reschedule Ticket. Click <a href="login.jsp">here</a> to login. </h2>
     <%
+        } else if (session.getAttribute("success") != null) {
+    %>
+    <h1><p>Reschedule ticket</p></h1>
+    <div class="alert alert-success" role="alert">
+        <strong>Success!</strong> <%= session.getAttribute("success") %>. Click <a href="booking_history.jsp">here</a> to go back to booking history.
+    </div>
+    <%
+            session.setAttribute("success", null);
+            session.setAttribute("error", null);
+        } else if (session.getAttribute("error") != null) {
+    %>
+    <h1><p>Reschedule ticket</p></h1>
+    <div class="alert alert-error" role="alert">
+        <strong>Error!</strong> <%= session.getAttribute("error") %>
+    </div>
+    <%
+            session.setAttribute("success", null);
+            session.setAttribute("error", null);
         } else { //Customer & Ticket are contained in session
             Customer customer = (Customer)session.getAttribute("customer");
 
@@ -43,22 +61,6 @@
             //Display ticket + flight info
     %>
     <h1><p>Reschedule ticket</p></h1>
-    <%
-        if (session.getAttribute("success") != null) {
-    %>
-    <div class="alert alert-success" role="alert">
-        <strong>Success!</strong> <%= session.getAttribute("success") %>
-    </div>
-    <%
-            session.setAttribute("success", null);
-        } else if (session.getAttribute("error") != null) { //Check for errors passed from servlet 
-    %>
-        <div class="alert alert-danger" role="alert">
-        <strong>Error!</strong> <%= session.getAttribute("success") %>
-        </div>
-    <%
-        }
-    %>
     <table class="table table-hover">
         <tbody>
         <tr>
@@ -138,11 +140,7 @@
             ArrayList<Flight> flights = dbf.getFlights(flight);
             
             //Check if flights is empty
-            if (flights == null) {
-        %>
-                <h2 class="text-warning"> There are no available tickets. </h2>
-        <%
-            } else if (flights.size() == 1) {
+            if (flights == null || flights.size() == 1) {
         %>
         <tr>
             <td><b>Choose new ticket: &nbsp&nbsp</b></td>
@@ -154,7 +152,8 @@
             </td>
         </tr>
         <%
-            } else { //Display all flights in array when not empty/null
+            //Display all flights in array when not empty/null
+            } else {
         %>
         <tr>
             <td><b>Choose new ticket: &nbsp&nbsp</b></td>

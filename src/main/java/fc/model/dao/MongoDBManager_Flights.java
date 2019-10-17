@@ -78,7 +78,7 @@ public class MongoDBManager_Flights extends MongoDBConnector {
                 Flight f = convertToFlight(doc); //Convert flight's details to String format
                 if (f.getDestination().equals(flight.getDestination()) && 
                         f.getOrigin().equals(flight.getOrigin()) &&
-                        f.getID() != flight.getID()) {
+                        !f.getID().equals(flight.getID())) {
                     flights.add(f);
                 }
             }

@@ -58,12 +58,12 @@
                 <div style="width:200px;">
                     <div style="float: left;"> 
                         <form action="userEditTicket_management.jsp" method="POST">
-                            <button type="submit" name="ticketID" value=<%=ticket.getID()%> class="btn btn-primary">Reschedule</button> 
+                            <button type="submit" name="ticketID" value="<%=ticket.getID()%>" class="btn btn-primary">Reschedule</button> 
                         </form>
                     </div>
                     <div style="float: right;"> 
                         <form action="userDeleteTicket_management.jsp" method="POST">
-                            <button type="submit" name="deleteTicketID" value=<%=ticket.getID()%> class="btn btn-danger">Delete</button> 
+                            <button type="submit" name="deleteTicketID" value="<%=ticket.getID()%>" class = "btn btn-danger">Delete</button> 
                         </form>
                     </div>
                 </div>

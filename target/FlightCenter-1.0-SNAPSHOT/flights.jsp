@@ -1,13 +1,21 @@
 <%@page import="java.util.ArrayList"%>
-<%@page import="java.util.Collections"%>
 <%@page import="fc.model.Flight"%>
 <%@page import="fc.model.dao.*"%>
 <jsp:include page="fc_header.jsp">
 	<jsp:param name="title" value="Flight Center/flights"/>
 </jsp:include>
-<%
-    MongoDBManager_Flights db = new MongoDBManager_Flights();
+<%  
+    //Call the database manager for "Flight" table
+    MongoDBManager_Flights db = new MongoDBManager_Flights();   
+    
+    //Declare ArrayList for Flight object and initialize with flight data from database 
+    //getFlight returns ArrayList of Flight object in the database table 
     ArrayList<Flight> flights = db.getFlights();
+    
+    String ID = "111";//****get ID of current user here*****
+    //String ID = (String)session.getAttribute("current_user");
+    boolean staff = true;
+    //staff = manager.isStaff(ID); // check if the user is staff (authorised user for create/update/delete)
 %>
 
     <div class="container" style="margin-top: 50px">
@@ -41,23 +49,6 @@
         </div>
     <table class="table"style="margin-top: 20px">
         <thead class="thead-dark">
-            <tr>
-                <th scope="col">#</th>
-                <th scope="col">Airline</th>
-                <th scope="col">Origin</th>
-                <th scope="col">Destination</th>
-                <th scope="col">Departure</th>
-                <th scope="col">Arrival</th>
-                <th scope ="col">Status</th>
-                <th scope="col">Price</th>
-                    <%
-                        if (session.getAttribute("customer") != null) {
-                    %>
-                <th scope="col">Action</th>
-                    <%
-                        }
-                    %>
-            </tr>
         </thead>
         <tbody>
             <%
@@ -90,4 +81,5 @@
             %>
         </tbody>
     </table>
+
 <jsp:include page = "fc_footer.jsp"/>

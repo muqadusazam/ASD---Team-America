@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite tests="5" failures="4" name="test.FlightListUnitTest" time="24.799" errors="0" skipped="0">
+  <properties>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_201\jre\bin"/>
+    <property name="java.vm.version" value="25.201-b09"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="java.vendor.url" value="http://java.oracle.com/"/>
+    <property name="path.separator" value=";"/>
+    <property name="guice.disable.misplaced.annotation.check" value="true"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="file.encoding.pkg" value="sun.io"/>
+    <property name="user.script" value=""/>
+    <property name="user.country" value="KR"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="test" value="test.FlightListUnitTest"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="user.dir" value="C:\Users\el181\Documents\GitHub\ASD---Team-America\ASD---Team-America"/>
+    <property name="java.runtime.version" value="1.8.0_201-b09"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
+    <property name="java.endorsed.dirs" value="C:\Program Files\Java\jdk1.8.0_201\jre\lib\endorsed"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.io.tmpdir" value="C:\Users\el181\AppData\Local\Temp\"/>
+    <property name="line.separator" value="
+"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.variant" value=""/>
+    <property name="os.name" value="Windows 10"/>
+    <property name="maven.ext.class.path" value="C:\Program Files\NetBeans 8.2\java\maven-nblib\netbeans-eventspy.jar"/>
+    <property name="classworlds.conf" value="C:\Program Files\NetBeans 8.2\java\maven\bin\m2.conf"/>
+    <property name="sun.jnu.encoding" value="MS949"/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk1.8.0_201\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\Git\cmd;C:\Program Files\nodejs\;C:\Users\el181\AppData\Local\Microsoft\WindowsApps;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Users\el181\AppData\Local\GitHubDesktop\bin;C:\Users\el181\AppData\Roaming\npm;."/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.class.version" value="52.0"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="os.version" value="10.0"/>
+    <property name="user.home" value="C:\Users\el181"/>
+    <property name="user.timezone" value="Australia/Sydney"/>
+    <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
+    <property name="java.specification.version" value="1.8"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="user.name" value="el181"/>
+    <property name="java.class.path" value="C:\Program Files\NetBeans 8.2\java\maven\boot\plexus-classworlds-2.4.jar"/>
+    <property name="java.vm.specification.version" value="1.8"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.home" value="C:\Program Files\Java\jdk1.8.0_201\jre"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher -Dtest=test.FlightListUnitTest -Dmaven.ext.class.path=C:\Program Files\NetBeans 8.2\java\maven-nblib\netbeans-eventspy.jar -Dfile.encoding=UTF-8 surefire:test"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.language" value="ko"/>
+    <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.version" value="1.8.0_201"/>
+    <property name="java.ext.dirs" value="C:\Program Files\Java\jdk1.8.0_201\jre\lib\ext;C:\Windows\Sun\Java\lib\ext"/>
+    <property name="sun.boot.class.path" value="C:\Program Files\Java\jdk1.8.0_201\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_201\jre\lib\rt.jar;C:\Program Files\Java\jdk1.8.0_201\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.8.0_201\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_201\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_201\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_201\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_201\jre\classes"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="maven.home" value="C:\Program Files\NetBeans 8.2\java\maven"/>
+    <property name="file.separator" value="\"/>
+    <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="sun.desktop" value="windows"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+  </properties>
+  <testcase classname="test.FlightListUnitTest" name="testAdd" time="5.685">
+    <failure message="The test case is a prototype." type="java.lang.AssertionError">java.lang.AssertionError: The test case is a prototype.
+	at org.junit.Assert.fail(Assert.java:88)
+	at test.FlightListUnitTest.testAdd(FlightListUnitTest.java:63)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.apache.maven.surefire.junit4.JUnit4TestSet.execute(JUnit4TestSet.java:53)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:123)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:104)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:164)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:110)
+	at org.apache.maven.surefire.booter.SurefireStarter.invokeProvider(SurefireStarter.java:175)
+	at org.apache.maven.surefire.booter.SurefireStarter.runSuitesInProcessWhenForked(SurefireStarter.java:107)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:68)
+</failure>
+    <system-out>add
+18:13:18.449 [main] INFO org.mongodb.driver.cluster - Cluster created with settings {hosts=[ds263927.mlab.com:63927], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout=&apos;30000 ms&apos;, maxWaitQueueSize=500}
+18:13:18.541 [main] DEBUG org.mongodb.driver.cluster - Updating cluster description to  {type=UNKNOWN, servers=[{address=ds263927.mlab.com:63927, type=UNKNOWN, state=CONNECTING}]
+18:13:18.568 [main] INFO org.mongodb.driver.cluster - No server chosen by WritableServerSelector from cluster description ClusterDescription{type=UNKNOWN, connectionMode=SINGLE, serverDescriptions=[ServerDescription{address=ds263927.mlab.com:63927, type=UNKNOWN, state=CONNECTING}]}. Waiting for 30000 ms before timing out
+18:13:20.713 [cluster-ClusterId{value=&apos;5d7f441e1a47b137102668fd&apos;, description=&apos;null&apos;}-ds263927.mlab.com:63927] INFO org.mongodb.driver.connection - Opened connection [connectionId{localValue:1, serverValue:124136}] to ds263927.mlab.com:63927
+18:13:20.713 [cluster-ClusterId{value=&apos;5d7f441e1a47b137102668fd&apos;, description=&apos;null&apos;}-ds263927.mlab.com:63927] DEBUG org.mongodb.driver.cluster - Checking status of ds263927.mlab.com:63927
+18:13:21.022 [cluster-ClusterId{value=&apos;5d7f441e1a47b137102668fd&apos;, description=&apos;null&apos;}-ds263927.mlab.com:63927] INFO org.mongodb.driver.cluster - Monitor thread successfully connected to server with description ServerDescription{address=ds263927.mlab.com:63927, type=REPLICA_SET_PRIMARY, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 6, 9]}, minWireVersion=0, maxWireVersion=6, maxDocumentSize=16777216, roundTripTimeNanos=305681400, setName=&apos;rs-ds263927&apos;, canonicalAddress=ds263927-a.mlab.com:63927, hosts=[ds263927-a.mlab.com:63927], passives=[], arbiters=[], primary=&apos;ds263927-a.mlab.com:63927&apos;, tagSet=TagSet{[]}, electionId=7fffffff0000000000000001, setVersion=1, lastWriteDate=Mon Sep 16 18:13:14 AEST 2019, lastUpdateTimeNanos=1461209069727000}
+18:13:21.023 [cluster-ClusterId{value=&apos;5d7f441e1a47b137102668fd&apos;, description=&apos;null&apos;}-ds263927.mlab.com:63927] DEBUG org.mongodb.driver.cluster - Updating cluster description to  {type=REPLICA_SET, servers=[{address=ds263927.mlab.com:63927, type=REPLICA_SET_PRIMARY, roundTripTime=305.7 ms, state=CONNECTED}]
+18:13:22.972 [main] INFO org.mongodb.driver.connection - Opened connection [connectionId{localValue:2, serverValue:124139}] to ds263927.mlab.com:63927
+18:13:22.986 [main] DEBUG org.mongodb.driver.protocol.insert - Inserting 1 documents into namespace heroku_dlsrflnl.ASD.Flights(Anthea) on connection [connectionId{localValue:2, serverValue:124139}] to server ds263927.mlab.com:63927
+18:13:23.276 [main] DEBUG org.mongodb.driver.protocol.insert - Insert completed
+18:13:23.279 [main] INFO org.mongodb.driver.connection - Closed connection [connectionId{localValue:2, serverValue:124139}] to ds263927.mlab.com:63927 because the pool has been closed.
+18:13:23.279 [main] DEBUG org.mongodb.driver.connection - Closing connection connectionId{localValue:2, serverValue:124139}
+18:13:23.280 [cluster-ClusterId{value=&apos;5d7f441e1a47b137102668fd&apos;, description=&apos;null&apos;}-ds263927.mlab.com:63927] DEBUG org.mongodb.driver.connection - Closing connection connectionId{localValue:1, serverValue:124136}
+</system-out>
+  </testcase>
+  <testcase classname="test.FlightListUnitTest" name="testGetFlightsByDestination" time="4.599">
+    <failure message="expected:&lt;null&gt; but was:&lt;[]&gt;" type="java.lang.AssertionError">java.lang.AssertionError: expected:&lt;null&gt; but was:&lt;[]&gt;
+	at org.junit.Assert.fail(Assert.java:88)
+	at org.junit.Assert.failNotEquals(Assert.java:834)
+	at org.junit.Assert.assertEquals(Assert.java:118)
+	at org.junit.Assert.assertEquals(Assert.java:144)
+	at test.FlightListUnitTest.testGetFlightsByDestination(FlightListUnitTest.java:99)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.apache.maven.surefire.junit4.JUnit4TestSet.execute(JUnit4TestSet.java:53)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:123)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:104)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:164)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:110)
+	at org.apache.maven.surefire.booter.SurefireStarter.invokeProvider(SurefireStarter.java:175)
+	at org.apache.maven.surefire.booter.SurefireStarter.runSuitesInProcessWhenForked(SurefireStarter.java:107)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:68)
+</failure>
+    <system-out>getFlightsByDestination
+18:13:23.293 [main] INFO org.mongodb.driver.cluster - Cluster created with settings {hosts=[ds263927.mlab.com:63927], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout=&apos;30000 ms&apos;, maxWaitQueueSize=500}
+18:13:23.295 [main] DEBUG org.mongodb.driver.cluster - Updating cluster description to  {type=UNKNOWN, servers=[{address=ds263927.mlab.com:63927, type=UNKNOWN, state=CONNECTING}]
+18:13:23.303 [main] INFO org.mongodb.driver.cluster - No server chosen by ReadPreferenceServerSelector{readPreference=primary} from cluster description ClusterDescription{type=UNKNOWN, connectionMode=SINGLE, serverDescriptions=[ServerDescription{address=ds263927.mlab.com:63927, type=UNKNOWN, state=CONNECTING}]}. Waiting for 30000 ms before timing out
+18:13:25.420 [cluster-ClusterId{value=&apos;5d7f44231a47b137102668ff&apos;, description=&apos;null&apos;}-ds263927.mlab.com:63927] INFO org.mongodb.driver.connection - Opened connection [connectionId{localValue:3, serverValue:124141}] to ds263927.mlab.com:63927
+18:13:25.423 [cluster-ClusterId{value=&apos;5d7f44231a47b137102668ff&apos;, description=&apos;null&apos;}-ds263927.mlab.com:63927] DEBUG org.mongodb.driver.cluster - Checking status of ds263927.mlab.com:63927
+18:13:25.730 [cluster-ClusterId{value=&apos;5d7f44231a47b137102668ff&apos;, description=&apos;null&apos;}-ds263927.mlab.com:63927] INFO org.mongodb.driver.cluster - Monitor thread successfully connected to server with description ServerDescription{address=ds263927.mlab.com:63927, type=REPLICA_SET_PRIMARY, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 6, 9]}, minWireVersion=0, maxWireVersion=6, maxDocumentSize=16777216, roundTripTimeNanos=306405200, setName=&apos;rs-ds263927&apos;, canonicalAddress=ds263927-a.mlab.com:63927, hosts=[ds263927-a.mlab.com:63927], passives=[], arbiters=[], primary=&apos;ds263927-a.mlab.com:63927&apos;, tagSet=TagSet{[]}, electionId=7fffffff0000000000000001, setVersion=1, lastWriteDate=Mon Sep 16 18:13:22 AEST 2019, lastUpdateTimeNanos=1461213779347900}
+18:13:25.730 [cluster-ClusterId{value=&apos;5d7f44231a47b137102668ff&apos;, description=&apos;null&apos;}-ds263927.mlab.com:63927] DEBUG org.mongodb.driver.cluster - Updating cluster description to  {type=REPLICA_SET, servers=[{address=ds263927.mlab.com:63927, type=REPLICA_SET_PRIMARY, roundTripTime=306.4 ms, state=CONNECTED}]
+18:13:27.573 [main] INFO org.mongodb.driver.connection - Opened connection [connectionId{localValue:4, serverValue:124143}] to ds263927.mlab.com:63927
+18:13:27.586 [main] DEBUG org.mongodb.driver.protocol.command - Sending command {find : BsonString{value=&apos;ASD.Flights(Anthea)&apos;}} to database heroku_dlsrflnl on connection [connectionId{localValue:4, serverValue:124143}] to server ds263927.mlab.com:63927
+18:13:27.893 [main] DEBUG org.mongodb.driver.protocol.command - Command execution completed
+18:13:27.896 [main] INFO org.mongodb.driver.connection - Closed connection [connectionId{localValue:4, serverValue:124143}] to ds263927.mlab.com:63927 because the pool has been closed.
+18:13:27.896 [main] DEBUG org.mongodb.driver.connection - Closing connection connectionId{localValue:4, serverValue:124143}
+18:13:27.896 [cluster-ClusterId{value=&apos;5d7f44231a47b137102668ff&apos;, description=&apos;null&apos;}-ds263927.mlab.com:63927] DEBUG org.mongodb.driver.connection - Closing connection connectionId{localValue:3, serverValue:124141}
+</system-out>
+  </testcase>
+  <testcase classname="test.FlightListUnitTest" name="testGetFlights" time="4.798">
+    <failure message="The test case is a prototype." type="java.lang.AssertionError">java.lang.AssertionError: The test case is a prototype.
+	at org.junit.Assert.fail(Assert.java:88)
+	at test.FlightListUnitTest.testGetFlights(FlightListUnitTest.java:75)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.apache.maven.surefire.junit4.JUnit4TestSet.execute(JUnit4TestSet.java:53)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:123)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:104)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:164)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:110)
+	at org.apache.maven.surefire.booter.SurefireStarter.invokeProvider(SurefireStarter.java:175)
+	at org.apache.maven.surefire.booter.SurefireStarter.runSuitesInProcessWhenForked(SurefireStarter.java:107)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:68)
+</failure>
+    <system-out>getFlights
+18:13:27.898 [main] INFO org.mongodb.driver.cluster - Cluster created with settings {hosts=[ds263927.mlab.com:63927], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout=&apos;30000 ms&apos;, maxWaitQueueSize=500}
+18:13:27.899 [main] DEBUG org.mongodb.driver.cluster - Updating cluster description to  {type=UNKNOWN, servers=[{address=ds263927.mlab.com:63927, type=UNKNOWN, state=CONNECTING}]
+18:13:27.902 [main] INFO org.mongodb.driver.cluster - No server chosen by ReadPreferenceServerSelector{readPreference=primary} from cluster description ClusterDescription{type=UNKNOWN, connectionMode=SINGLE, serverDescriptions=[ServerDescription{address=ds263927.mlab.com:63927, type=UNKNOWN, state=CONNECTING}]}. Waiting for 30000 ms before timing out
+18:13:29.956 [cluster-ClusterId{value=&apos;5d7f44271a47b13710266900&apos;, description=&apos;null&apos;}-ds263927.mlab.com:63927] INFO org.mongodb.driver.connection - Opened connection [connectionId{localValue:5, serverValue:124145}] to ds263927.mlab.com:63927
+18:13:29.956 [cluster-ClusterId{value=&apos;5d7f44271a47b13710266900&apos;, description=&apos;null&apos;}-ds263927.mlab.com:63927] DEBUG org.mongodb.driver.cluster - Checking status of ds263927.mlab.com:63927
+18:13:30.342 [cluster-ClusterId{value=&apos;5d7f44271a47b13710266900&apos;, description=&apos;null&apos;}-ds263927.mlab.com:63927] INFO org.mongodb.driver.cluster - Monitor thread successfully connected to server with description ServerDescription{address=ds263927.mlab.com:63927, type=REPLICA_SET_PRIMARY, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 6, 9]}, minWireVersion=0, maxWireVersion=6, maxDocumentSize=16777216, roundTripTimeNanos=385125700, setName=&apos;rs-ds263927&apos;, canonicalAddress=ds263927-a.mlab.com:63927, hosts=[ds263927-a.mlab.com:63927], passives=[], arbiters=[], primary=&apos;ds263927-a.mlab.com:63927&apos;, tagSet=TagSet{[]}, electionId=7fffffff0000000000000001, setVersion=1, lastWriteDate=Mon Sep 16 18:13:28 AEST 2019, lastUpdateTimeNanos=1461218391456600}
+18:13:30.343 [cluster-ClusterId{value=&apos;5d7f44271a47b13710266900&apos;, description=&apos;null&apos;}-ds263927.mlab.com:63927] DEBUG org.mongodb.driver.cluster - Updating cluster description to  {type=REPLICA_SET, servers=[{address=ds263927.mlab.com:63927, type=REPLICA_SET_PRIMARY, roundTripTime=385.1 ms, state=CONNECTED}]
+18:13:32.389 [main] INFO org.mongodb.driver.connection - Opened connection [connectionId{localValue:6, serverValue:124147}] to ds263927.mlab.com:63927
+18:13:32.389 [main] DEBUG org.mongodb.driver.protocol.command - Sending command {find : BsonString{value=&apos;ASD.Flights(Anthea)&apos;}} to database heroku_dlsrflnl on connection [connectionId{localValue:6, serverValue:124147}] to server ds263927.mlab.com:63927
+18:13:32.693 [main] DEBUG org.mongodb.driver.protocol.command - Command execution completed
+18:13:32.693 [main] INFO org.mongodb.driver.connection - Closed connection [connectionId{localValue:6, serverValue:124147}] to ds263927.mlab.com:63927 because the pool has been closed.
+18:13:32.694 [main] DEBUG org.mongodb.driver.connection - Closing connection connectionId{localValue:6, serverValue:124147}
+18:13:32.694 [cluster-ClusterId{value=&apos;5d7f44271a47b13710266900&apos;, description=&apos;null&apos;}-ds263927.mlab.com:63927] DEBUG org.mongodb.driver.connection - Closing connection connectionId{localValue:5, serverValue:124145}
+flight id: idtest is departing from origintest
+</system-out>
+  </testcase>
+  <testcase classname="test.FlightListUnitTest" name="testMongoDBConnect" time="0"/>
+  <testcase classname="test.FlightListUnitTest" name="testRemove" time="9.638">
+    <failure message="The test case is a prototype." type="java.lang.AssertionError">java.lang.AssertionError: The test case is a prototype.
+	at org.junit.Assert.fail(Assert.java:88)
+	at test.FlightListUnitTest.testRemove(FlightListUnitTest.java:87)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.apache.maven.surefire.junit4.JUnit4TestSet.execute(JUnit4TestSet.java:53)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:123)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:104)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:164)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:110)
+	at org.apache.maven.surefire.booter.SurefireStarter.invokeProvider(SurefireStarter.java:175)
+	at org.apache.maven.surefire.booter.SurefireStarter.runSuitesInProcessWhenForked(SurefireStarter.java:107)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:68)
+</failure>
+    <system-out>remove
+18:13:32.696 [main] INFO org.mongodb.driver.cluster - Cluster created with settings {hosts=[ds263927.mlab.com:63927], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout=&apos;30000 ms&apos;, maxWaitQueueSize=500}
+18:13:32.698 [main] DEBUG org.mongodb.driver.cluster - Updating cluster description to  {type=UNKNOWN, servers=[{address=ds263927.mlab.com:63927, type=UNKNOWN, state=CONNECTING}]
+18:13:32.701 [main] INFO org.mongodb.driver.cluster - No server chosen by ReadPreferenceServerSelector{readPreference=primary} from cluster description ClusterDescription{type=UNKNOWN, connectionMode=SINGLE, serverDescriptions=[ServerDescription{address=ds263927.mlab.com:63927, type=UNKNOWN, state=CONNECTING}]}. Waiting for 30000 ms before timing out
+18:13:34.946 [cluster-ClusterId{value=&apos;5d7f442c1a47b13710266901&apos;, description=&apos;null&apos;}-ds263927.mlab.com:63927] INFO org.mongodb.driver.connection - Opened connection [connectionId{localValue:7, serverValue:124149}] to ds263927.mlab.com:63927
+18:13:34.946 [cluster-ClusterId{value=&apos;5d7f442c1a47b13710266901&apos;, description=&apos;null&apos;}-ds263927.mlab.com:63927] DEBUG org.mongodb.driver.cluster - Checking status of ds263927.mlab.com:63927
+18:13:35.253 [cluster-ClusterId{value=&apos;5d7f442c1a47b13710266901&apos;, description=&apos;null&apos;}-ds263927.mlab.com:63927] INFO org.mongodb.driver.cluster - Monitor thread successfully connected to server with description ServerDescription{address=ds263927.mlab.com:63927, type=REPLICA_SET_PRIMARY, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 6, 9]}, minWireVersion=0, maxWireVersion=6, maxDocumentSize=16777216, roundTripTimeNanos=306138600, setName=&apos;rs-ds263927&apos;, canonicalAddress=ds263927-a.mlab.com:63927, hosts=[ds263927-a.mlab.com:63927], passives=[], arbiters=[], primary=&apos;ds263927-a.mlab.com:63927&apos;, tagSet=TagSet{[]}, electionId=7fffffff0000000000000001, setVersion=1, lastWriteDate=Mon Sep 16 18:13:30 AEST 2019, lastUpdateTimeNanos=1461223302323800}
+18:13:35.253 [cluster-ClusterId{value=&apos;5d7f442c1a47b13710266901&apos;, description=&apos;null&apos;}-ds263927.mlab.com:63927] DEBUG org.mongodb.driver.cluster - Updating cluster description to  {type=REPLICA_SET, servers=[{address=ds263927.mlab.com:63927, type=REPLICA_SET_PRIMARY, roundTripTime=306.1 ms, state=CONNECTED}]
+18:13:37.220 [main] INFO org.mongodb.driver.connection - Opened connection [connectionId{localValue:8, serverValue:124151}] to ds263927.mlab.com:63927
+18:13:37.220 [main] DEBUG org.mongodb.driver.protocol.command - Sending command {find : BsonString{value=&apos;ASD.Flights(Anthea)&apos;}} to database heroku_dlsrflnl on connection [connectionId{localValue:8, serverValue:124151}] to server ds263927.mlab.com:63927
+18:13:37.509 [main] DEBUG org.mongodb.driver.protocol.command - Command execution completed
+18:13:37.509 [main] INFO org.mongodb.driver.connection - Closed connection [connectionId{localValue:8, serverValue:124151}] to ds263927.mlab.com:63927 because the pool has been closed.
+18:13:37.509 [main] DEBUG org.mongodb.driver.connection - Closing connection connectionId{localValue:8, serverValue:124151}
+18:13:37.510 [cluster-ClusterId{value=&apos;5d7f442c1a47b13710266901&apos;, description=&apos;null&apos;}-ds263927.mlab.com:63927] DEBUG org.mongodb.driver.connection - Closing connection connectionId{localValue:7, serverValue:124149}
+18:13:37.510 [main] INFO org.mongodb.driver.cluster - Cluster created with settings {hosts=[ds263927.mlab.com:63927], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout=&apos;30000 ms&apos;, maxWaitQueueSize=500}
+18:13:37.511 [main] DEBUG org.mongodb.driver.cluster - Updating cluster description to  {type=UNKNOWN, servers=[{address=ds263927.mlab.com:63927, type=UNKNOWN, state=CONNECTING}]
+18:13:37.512 [main] INFO org.mongodb.driver.cluster - No server chosen by WritableServerSelector from cluster description ClusterDescription{type=UNKNOWN, connectionMode=SINGLE, serverDescriptions=[ServerDescription{address=ds263927.mlab.com:63927, type=UNKNOWN, state=CONNECTING}]}. Waiting for 30000 ms before timing out
+18:13:39.758 [cluster-ClusterId{value=&apos;5d7f44311a47b13710266902&apos;, description=&apos;null&apos;}-ds263927.mlab.com:63927] INFO org.mongodb.driver.connection - Opened connection [connectionId{localValue:9, serverValue:124152}] to ds263927.mlab.com:63927
+18:13:39.758 [cluster-ClusterId{value=&apos;5d7f44311a47b13710266902&apos;, description=&apos;null&apos;}-ds263927.mlab.com:63927] DEBUG org.mongodb.driver.cluster - Checking status of ds263927.mlab.com:63927
+18:13:39.985 [cluster-ClusterId{value=&apos;5d7f44311a47b13710266902&apos;, description=&apos;null&apos;}-ds263927.mlab.com:63927] INFO org.mongodb.driver.cluster - Monitor thread successfully connected to server with description ServerDescription{address=ds263927.mlab.com:63927, type=REPLICA_SET_PRIMARY, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 6, 9]}, minWireVersion=0, maxWireVersion=6, maxDocumentSize=16777216, roundTripTimeNanos=225998000, setName=&apos;rs-ds263927&apos;, canonicalAddress=ds263927-a.mlab.com:63927, hosts=[ds263927-a.mlab.com:63927], passives=[], arbiters=[], primary=&apos;ds263927-a.mlab.com:63927&apos;, tagSet=TagSet{[]}, electionId=7fffffff0000000000000001, setVersion=1, lastWriteDate=Mon Sep 16 18:13:36 AEST 2019, lastUpdateTimeNanos=1461228034088500}
+18:13:39.986 [cluster-ClusterId{value=&apos;5d7f44311a47b13710266902&apos;, description=&apos;null&apos;}-ds263927.mlab.com:63927] DEBUG org.mongodb.driver.cluster - Updating cluster description to  {type=REPLICA_SET, servers=[{address=ds263927.mlab.com:63927, type=REPLICA_SET_PRIMARY, roundTripTime=226.0 ms, state=CONNECTED}]
+18:13:42.013 [main] INFO org.mongodb.driver.connection - Opened connection [connectionId{localValue:10, serverValue:124153}] to ds263927.mlab.com:63927
+18:13:42.015 [main] DEBUG org.mongodb.driver.protocol.delete - Deleting documents from namespace heroku_dlsrflnl.ASD.Flights(Anthea) on connection [connectionId{localValue:10, serverValue:124153}] to server ds263927.mlab.com:63927
+18:13:42.323 [main] DEBUG org.mongodb.driver.protocol.delete - Delete completed
+18:13:42.332 [main] INFO org.mongodb.driver.connection - Closed connection [connectionId{localValue:10, serverValue:124153}] to ds263927.mlab.com:63927 because the pool has been closed.
+18:13:42.333 [main] DEBUG org.mongodb.driver.connection - Closing connection connectionId{localValue:10, serverValue:124153}
+18:13:42.333 [cluster-ClusterId{value=&apos;5d7f44311a47b13710266902&apos;, description=&apos;null&apos;}-ds263927.mlab.com:63927] DEBUG org.mongodb.driver.connection - Closing connection connectionId{localValue:9, serverValue:124152}
+</system-out>
+  </testcase>
+</testsuite>

@@ -6,7 +6,7 @@ Feature: SearchCustomerFeature.feature
     So I can find the customer faster
 
 Background: Staff Navigates to FlightCenter User Management page
-    Given I log in "admin@one.com" and "abcde1"
+    Given I log in as "admin@one.com" and "abcde1"
     Then I go to User Management page
 
 Scenario: Valid search result

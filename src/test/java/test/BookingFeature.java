@@ -18,8 +18,8 @@ public class BookingFeature{
     WebDriver driver;
     
     //Login to Flight Centre
-    @Given("^I log in as \"([^\"]*)\" and \"([^\"]*)\"$")
-    public void i_log_in_as(String arg1, String arg2) throws Throwable{
+    @Given("^log in as \"([^\"]*)\" and \"([^\"]*)\"$")
+    public void log_in_as(String arg1, String arg2) throws Throwable{
         Class<? extends WebDriver> driverClass = FirefoxDriver.class;
         WebDriverManager.getInstance(driverClass).setup();
         driver = driverClass.newInstance();

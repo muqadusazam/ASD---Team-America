@@ -24,7 +24,7 @@ public class FlightmanagementAcceptanceTest {
     
     //Login to Flight Centre
     @Given("^I log \"([^\"]*)\" and \"([^\"]*)\"$")
-    public void i_log_in_as(String arg1, String arg2) throws Throwable{
+    public void i_log(String arg1, String arg2) throws Throwable{
         Class<? extends WebDriver> driverClass = FirefoxDriver.class;
         WebDriverManager.getInstance(driverClass).setup();
         driver = driverClass.newInstance();

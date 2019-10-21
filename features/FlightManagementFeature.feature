@@ -8,6 +8,7 @@ Feature: FlightManagementFeature
   So that I can check list of flights in database. 
 
   Background: Staff has navigated to the flights management page
+    Given I log "admin@one.com" and "abcde1"
     Given I am on the flights management page
 
   Scenario: Search query meets requirements

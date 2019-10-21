@@ -22,8 +22,8 @@ public class SearchCustomerFeature {
     WebDriver driver;
 
     //Login to flight centre
-    @Given("^I log in as \"([^\"]*)\" and \"([^\"]*)\"$")
-    public void i_log_in_as(String arg1, String arg2) throws Throwable {
+    @Given("^I log in \"([^\"]*)\" and \"([^\"]*)\"$")
+    public void i_log_in(String arg1, String arg2) throws Throwable {
         Class<? extends WebDriver> driverClass = FirefoxDriver.class;
         WebDriverManager.getInstance(driverClass).setup();
         driver = driverClass.newInstance();

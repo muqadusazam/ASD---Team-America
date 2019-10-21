@@ -8,6 +8,7 @@ Feature: FlightManagementFeature
   So that I can check list of flights in database. 
 
   Background: Staff has navigated to the flights management page
+    Given I log "admin@one.com" and "abcde1"
     Given I am on the flights management page
 
   Scenario: Search query meets requirements
@@ -23,4 +24,7 @@ Scenario Outline: Input values are invalid type
     | !@3   | Time must be hh:mm am/pm format |
     | Seo!  | Time must be hh:mm am/pm format  |
     | sydn3y    | Time must be hh:mm am/pm format |
+<<<<<<< HEAD
+=======
   
+>>>>>>> 5262b153f67253f21409e4857932180bdaa13ff4

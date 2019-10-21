@@ -7,7 +7,7 @@ Feature: cancelTicketFeature
     So that I can cancel a booked flight
 
 Background: User is logged in and navigates to FlightCenter Cancel Ticket page
-    Given I log in as "user@eight.com" and "abcde1"
+    Given I logg in as "user@eight.com" and "abcde1"
     Given I go to cancel ticket page
 
 Scenario: Successful cancellation

@@ -65,7 +65,11 @@ public class FlightManagementUuitTest {
     public void AddFlight()
    {
        MongoDBManager_Flights db = new MongoDBManager_Flights();
-       Flight flight = new Flight("11111","Quantas","Seoul","Sydney","d_time","d_date","a_time","a_date","status","500","233");
+<<<<<<< HEAD
+       Flight flight = new Flight("11111","Quantas","Seoul","Sydney","12:00pm","12-09-2019","12:00pm","12-09-2019","status","500","233");
+=======
+       Flight flight = new Flight("11111","Quantas","Seoul","Sydney","12:00pm","12-08-12","12:00pm","12-08-12","status","500","233");
+>>>>>>> 5262b153f67253f21409e4857932180bdaa13ff4
        assertNotNull("Failed to create flight",flight);
        db.add(flight);
        System.out.println("\n\nFlight is added to the database! \n");

@@ -8,7 +8,9 @@ Feature: BookingHistorySearchFeature
   So that I can find a specific flight that matches my criteria
 
   Background: User has navigated to the booking history page
+    Given log in "user@eight.com" and "abcde1"
     Given I am on the booking history page
+    
 
   Scenario: Search query meets requirements
     When I fill in departure with "London"

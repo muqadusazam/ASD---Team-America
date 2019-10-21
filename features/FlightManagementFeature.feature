@@ -24,7 +24,3 @@ Scenario Outline: Input values are invalid type
     | !@3   | Time must be hh:mm am/pm format |
     | Seo!  | Time must be hh:mm am/pm format  |
     | sydn3y    | Time must be hh:mm am/pm format |
-<<<<<<< HEAD
-=======
-  
->>>>>>> 5262b153f67253f21409e4857932180bdaa13ff4

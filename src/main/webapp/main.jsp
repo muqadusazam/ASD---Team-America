@@ -57,5 +57,63 @@
 
                 </div>
         </section>
+  <div class="album py-5 bg-light">
+    <div class="container">
+        <h2 class="mb-4">Where to, Adventures?</h2>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card mb-4 shadow-sm">
+              <a href="flights.jsp">
+                <img class="bd-placeholder-img card-img-top movieCard" height="464" src="./resources/canada.jpg" /> <!--movie poster-->
+              </a>
+            <div class="card-body">
+                <a href="flights.jsp" style="text-decoration:none; color:black;"><h3>Canada</h3></a>
+              <p class="card-text">Overview:<br>Have a look at our Canada travel guide for all the information you need on this beautiful, diverse country. For great savings book with Flight Centre.</p><!--synopsis -->
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                    <button type="button" class="btn btn-sm btn-outline-secondary" onclick="flights.jsp">Book a trip</button> <!--go to movie detail page-->
+                </div>
+                <small class="text-muted">Price $350 </small> <!--runtime-->
+              </div>
+            </div>
+          </div>
+        </div>
+          <div class="col-md-4">
+                      <div class="card mb-4 shadow-sm">
+              <a href="flights.jsp">
+                <img class="bd-placeholder-img card-img-top movieCard" height="464" src="./resources/japan.jpg" /> <!--movie poster-->
+              </a>
+            <div class="card-body">
+                <a href="flights.jsp" style="text-decoration:none; color:black;"><h3>Japan</h3></a>
+              <p class="card-text">Overview:<br>Japan is truly timeless, a place where ancient traditions are fused with modern life as if it were the most natural thing in the world.</p><!--synopsis -->
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                    <button type="button" class="btn btn-sm btn-outline-secondary" onclick="flights.jsp">Book a trip</button> <!--go to movie detail page-->
+                </div>
+                <small class="text-muted">Price $580 </small> <!--runtime-->
+              </div>
+            </div>
+          </div>
+          </div>
+          <div class="col-md-4">
+                      <div class="card mb-4 shadow-sm">
+              <a href="flights.jsp">
+                <img class="bd-placeholder-img card-img-top movieCard" height="464" src="./resources/italy.jpg" /> <!--movie poster-->
+              </a>
+            <div class="card-body">
+                <a href="flights.jsp" style="text-decoration:none; color:black;"><h3>Italy</h3></a>
+              <p class="card-text">Overview:<br>Arguably Europe?s most enticing country, Italy charms visitors with irresistible food, awesome architecture, diverse scenery and unparalleled art.</p><!--synopsis -->
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                    <button type="button" class="btn btn-sm btn-outline-secondary" onclick="flights.jsp">Book a trip</button> <!--go to movie detail page-->
+                </div>
+                <small class="text-muted">Price $430 </small> <!--runtime-->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
 <jsp:include page = "fc_footer.jsp"/>

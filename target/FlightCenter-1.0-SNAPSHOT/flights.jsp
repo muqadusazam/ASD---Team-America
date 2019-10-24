@@ -1,3 +1,4 @@
+<%@page import="java.util.Collections"%>
 <%@page import="java.util.ArrayList"%>
 <%@page import="fc.model.Flight"%>
 <%@page import="fc.model.dao.*"%>

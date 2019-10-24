@@ -57,8 +57,7 @@
 
                 </div>
         </section>
-  <div class="album py-5 bg-light">
-    <div class="container">
+
         <h2 class="mb-4">Where to, Adventures?</h2>
       <div class="row">
         <div class="col-md-4">
@@ -113,7 +112,6 @@
           </div>
         </div>
       </div>
-    </div>
-  </div>
+
 
 <jsp:include page = "fc_footer.jsp"/>

@@ -57,8 +57,12 @@
 
                 </div>
         </section>
-
-        <h2 class="mb-4">Where to, Adventures?</h2>
+  <div class="album py-5 bg-light">
+    <div class="container">
+        <h2 class="mb-4" style ="margin:30px;">Flight Centre</h2>
+        <p>As the world's lagerst student and youth trevel company, we've been booking affordagle adventures for awesome humans since 2015. Start your adventure right here.</p>
+    </div></div>
+        <h2 class="mb-4" style ="margin:30px;">Where to, Adventures?</h2>
       <div class="row">
         <div class="col-md-4">
           <div class="card mb-4 shadow-sm">
